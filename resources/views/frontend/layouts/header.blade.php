@@ -86,7 +86,7 @@
                         <a class="nav-link {{request()->Is('AboutUs') ? 'active' : ''}}" aria-current="page" href="{{ url('AboutUs') }}">@lang('frontend.about_us')</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">@lang('frontend.buy_sell')</a>
+                        <a class="nav-link {{request()->Is('BuySell') ? 'active' : ''}}" aria-current="page" href="{{url('/BuySell')}}">@lang('frontend.buy_sell')</a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="#">@lang('frontend.result')</a>

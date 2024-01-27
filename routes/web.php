@@ -33,6 +33,7 @@ Route::get('/', function () {
  * Frontend Routes Goes here
  */
 Route::get('/AboutUs',[FrontendController::class,'about_us']);
+Route::get('BuySell',[FrontendController::class,'buy_sell']);
  /**
   *
   */

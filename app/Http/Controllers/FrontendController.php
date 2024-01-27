@@ -19,4 +19,9 @@ class FrontendController extends Controller
     {
         return $this->view($this->path,'about_us');
     }
+
+    public function buy_sell()
+    {
+        return $this->view($this->path,'buy_sell');
+    }
 }
