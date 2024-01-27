@@ -1,0 +1,207 @@
+*{
+    padding : 0;
+    margin : 0;
+}
+a{
+    text-decoration: none !important;
+}
+body{
+    font-family: 'Ubuntu', sans-serif;
+}
+.header {
+    background: #09524b;
+    padding: 2px 0px;
+}
+
+.logo__header img {
+    height: 60px;
+    width : 100px;
+}
+.login_register_area{
+    padding-top: 10px;
+    text-align: right;
+}
+.login_register_area a{
+    border-radius: 0px;
+}
+
+.navbar{
+    background-color: #0092D2;
+    text-align: center;
+    padding : 0px !important;
+}
+nav.navbar.navbar-expand-lg.bg-body-tertiary {
+    background: none !important;
+    padding: 0px !important;
+    margin: auto;
+}
+.nav-item{
+    padding: 0px 5px;
+}
+.nav-link{
+    font-weight: bold;
+    color : white;
+}
+.nav-link.active{
+    background-color: white;
+}
+section.section_div {
+    background: #043b35;
+    padding: 4px 4px;
+}
+.section-title{
+    text-align: center;
+}
+div#prize_box {
+    color: white;
+    text-align: center;
+    border: 1px solid white;
+    outline: none;
+    margin-top: 14px;
+    padding: 0px !important;
+}
+
+.prize_number {
+    background: #ff4300;
+    margin-top: 11px;
+    padding: 4px;
+}
+.footer-top{
+    background-color: #252525;
+}
+.footer-bottom{
+    background-color: #09524b;
+}
+.page-title {
+    background: #dafbff;
+    padding: 44px 3px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* general styling */
+:root {
+    --smaller: .75;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
+
+
+  .container {
+    color: #333;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  /* h1 {
+    font-weight: normal;
+    letter-spacing: .125rem;
+    text-transform: uppercase;
+  } */
+
+  #countdown li {
+    display: inline-block;
+    font-size: 1em;
+    list-style-type: none;
+    padding: 1em;
+    text-transform: uppercase;
+  }
+
+  #countdown li span {
+    display: block;
+    font-size: 1.5rem;
+    color : white;
+  }
+  #countdown2 li {
+    display: inline-block;
+    font-size: 1em;
+    list-style-type: none;
+    padding: 1em;
+    text-transform: uppercase;
+  }
+
+  #countdown2 li span {
+    display: block;
+    font-size: 1.5rem;
+    color : white;
+  }
+  #countdown3 li {
+    display: inline-block;
+    font-size: 1em;
+    list-style-type: none;
+    padding: 1em;
+    text-transform: uppercase;
+  }
+
+  #countdown3 li span {
+    display: block;
+    font-size: 1.5rem;
+    color : white;
+  }
+
+  #timer_sub{
+    font-size: 15px !important;
+  }
+
+  .emoji {
+    display: none;
+    padding: 1rem;
+  }
+
+  .emoji span {
+    font-size: 4rem;
+    padding: 0 .5rem;
+  }
+
+  .section_div_blue{
+    background-color: #0092D2;
+    padding: 4px 4px;
+  }
+  .section_div_black{
+    background-color: #252525;
+    padding: 4px 4px;
+  }
+
+  .text-left{
+    text-align: left;
+  }
+  .blog_single {
+    background: #ececec;
+    padding: 10px;
+    /* border-radius: 9px; */
+    margin-top: 12px;
+}
+
+  @media all and (max-width: 768px) {
+    h1 {
+      font-size: calc(1.5rem * var(--smaller));
+    }
+
+    li {
+      font-size: calc(1.125rem * var(--smaller));
+    }
+
+    li span {
+      font-size: calc(3.375rem * var(--smaller));
+    }
+  }
