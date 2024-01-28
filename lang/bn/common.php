@@ -56,4 +56,5 @@ return array(
     'calendar' => 'ক্যালেন্ডার',
     'total_users' => 'মোট অ্যাডমিন',
     'total_roles' => 'মোট রোল',
+    'submit' => 'সাবমিট'
 );

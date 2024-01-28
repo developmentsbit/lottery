@@ -54,6 +54,10 @@ class AppServiceProvider extends ServiceProvider
             'App\Interfaces\UserThemeInterface',
             'App\Repositories\UserThemeRepository',
         );
+        $this->app->bind(
+            'App\Interfaces\MemberInterface',
+            'App\Repositories\MemberRepository',
+        );
     }
 
     /**

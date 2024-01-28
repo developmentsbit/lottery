@@ -50,9 +50,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/v4-shims.min.js"></script>
 <!-- font awsome js -->
 
-<!-- timer js -->
-<script src="{{ asset('Frontend/timer.js') }}"></script>
-<!-- timer js -->
+@stack('footer_script')
 
 <!-- UIkit JS -->
 <script src="https://cdn.jsdelivr.net/npm/uikit@3.17.11/dist/js/uikit.min.js"></script>
