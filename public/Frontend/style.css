@@ -84,6 +84,17 @@ ul.header_side_nav li {
 img#flag_up {
     max-width: 50px;
 }
+.form-control, .form-select{
+    border-radius: 0px;
+}
+.form-control:focus, .form-select:focus{
+    box-shadow: none;
+}
+.alert.alert-danger {
+    padding: 3px;
+    font-size: 13px;
+    border-radius: 0px;
+}
 
 
 

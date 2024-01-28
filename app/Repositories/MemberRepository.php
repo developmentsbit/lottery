@@ -1,3 +1,8 @@
+<?php
+namespace App\Repositories;
+use App\Interfaces\MemberInterface;
+
+class MemberRepository implements MemberInterface{
     public function index($datatable)
     {
 
@@ -47,3 +52,4 @@
     public function print(){
 
     }
+}

@@ -387,7 +387,11 @@
 </section>
 <!-- thai lottery section about -->
 
-
+@push('footer_script')
+<!-- timer js -->
+<script src="{{ asset('Frontend/timer.js') }}"></script>
+<!-- timer js -->
+@endpush
 
 @endsection
 
