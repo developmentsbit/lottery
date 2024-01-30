@@ -55,6 +55,12 @@ return array(
     'country_required' => 'দেশ নির্বাচন করুন',
     'email_required' => 'ইমেইল প্রদান করুন',
     'nationality_required' => 'জাতীয়তা নির্বাচন করুন',
+    'password_not_matched' => 'পাসওয়ার্ডের মধ্যে মিল পাওয়া যায়নি',
+    'registration_success' => 'আপনার রেজিষ্ট্রেশন সফল হয়েছে',
+    'something_went_wrong' => 'অনুগ্রহপূর্বক আবার চেষ্টা করুন',
+    'login_title' => 'আপনার একাউন্টে লগইন করুন',
+    'didnt_have_account' => 'আপনার কি একাউন্ট নেই ',
+    'member_dashboard' => 'ড্যাশবোর্ড',
 
 
 );

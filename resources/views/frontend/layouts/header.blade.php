@@ -90,12 +90,12 @@
                                 </form>
                             </li>
                             <li>
-                                <a href="{{ route('member.registration') }}" class="btn btn-sm btn-info">
+                                <a href="{{ route('member.login') }}" class="btn btn-sm btn-info">
                                     <i class="fa fa-user"></i> @lang('frontend.login')
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="btn btn-sm btn-secondary">
+                                <a href="{{ route('member.registration') }}" class="btn btn-sm btn-secondary">
                                     <i class="fa fa-users"></i> @lang('frontend.register')
                                 </a>
                             </li>

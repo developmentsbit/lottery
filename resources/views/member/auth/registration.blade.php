@@ -35,14 +35,14 @@
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 form-group mt-2">
                             <label>@lang('frontend.password')</label><span class="text-danger">*</span>
-                            <input type="text" class="form-control form-control-sm @error('password') is-invalid @enderror" name="password" id="password" value="{{ old('password') }}">
+                            <input type="text" class="form-control form-control-sm @error('password') is-invalid @enderror" name="password" id="password" value="{{ old('password') }}" onkeyup="checkPass()">
                             @error('password')
                                 <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 form-group mt-2">
                             <label>@lang('frontend.confirm_password')</label><span class="text-danger">*</span>
-                            <input type="text" class="form-control form-control-sm @error('confirm_password') is-invalid @enderror" name="confirm_password" id="confirm_password" value="{{ old('confirm_password') }}">
+                            <input type="text" class="form-control form-control-sm @error('confirm_password') is-invalid @enderror" name="confirm_password" id="confirm_password" value="{{ old('confirm_password') }}" onkeyup="checkPass()">
                             @error('confirm_password')
                                 <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
@@ -116,16 +116,16 @@
                             <b class="text-success">@lang('frontend.terms_condition')</b>
                         </div>
                         <div class="form-group">
-                            <input type="checkbox" name="terms_condition" id="terms_condition">
+                            <input type="checkbox" name="terms_condition" id="terms_condition" onclick="checkPass()">
                             <label for="terms_condition">@lang('frontend.terms_conditions_accept')</label>
                         </div>
                         <div class="form-group">
-                            <input type="checkbox" name="terms_condition" id="personalized_offer">
-                            <label for="terms_condition">@lang('frontend.personalized_offer')</label>
+                            <input type="checkbox" name="personalized_offer" id="personalized_offer">
+                            <label for="personalized_offer">@lang('frontend.personalized_offer')</label>
                         </div>
                         <hr>
                         <div class="col-12 mt-4 text-center">
-                            <button type="submit" class="btn btn-info btn-sm btn-block"> <i class="fa fa-save"></i> @lang('common.submit')</button>
+                            <button id="submit" type="submit" class="btn btn-info btn-sm btn-block"> <i class="fa fa-save"></i> @lang('common.submit')</button>
                             <br>
                             <span>@lang('frontend.already_have_account') ? </span> <a href="">@lang('frontend.login')</a>
                         </div>
@@ -135,6 +135,47 @@
         </div>
     </div>
 </div>
+
+@push('footer_script')
+<script>
+    function checkPass()
+    {
+        if($('#terms_condition').is(':checked'))
+        {
+            $('#submit').attr('disabled',false);
+        }
+        else
+        {
+            $('#submit').attr('disabled',true);
+        }
+
+
+        let pass = $('#password').val();
+        let confirm_pass = $('#confirm_password').val();
+
+        if(pass != '' || confirm_pass != '')
+        {
+            if(pass != confirm_pass)
+            {
+                $('#submit').attr('disabled',true);
+            }
+            else
+            {
+                $('#submit').attr('disabled',false);
+
+            }
+        }
+        else
+        {
+            $('#submit').attr('disabled',true);
+        }
+
+
+
+
+    }
+</script>
+@endpush
 
 @endsection
 

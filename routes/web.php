@@ -23,10 +23,10 @@ use App\Http\Controllers\FrontendController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+    Route::get('/', function () {
+       return view('frontend.layouts.home');
+    });
 
-Route::get('/', function () {
-   return view('frontend.layouts.home');
-});
 
 /**
  *

@@ -8,6 +8,8 @@ use App\Traits\ViewDirective;
 use App\Http\Requests\MemberRequest;
 use App\Interfaces\MemberInterface;
 use Toastr;
+use RealRashid\SweetAlert\Facades\Alert;
+use Auth;
 
 class MemberAuthController extends Controller
 {
@@ -29,8 +31,29 @@ class MemberAuthController extends Controller
     {
         if($request->password != $request->confirm_password)
         {
-            toastr()->error( __('frontend.password_not_matched'),__('common.error'));
+            Alert::warning(__('common.warning'), __('frontend.password_not_matched'));
             return redirect()->back();
+        }
+
+        return $this->interface->store($request);
+    }
+
+    public function showLoginForm()
+    {
+
+        return $this->view($this->path,'login');
+
+    }
+
+    public function loginAttempt(Request $request)
+    {
+        if(Auth::guard('member')->attempt(['mobile_no' => $request->mobile_no, 'password' => $request->password]))
+        {
+            return redirect(route('member.dashboard'));
+        }
+        else
+        {
+            return redirect(route('member.login'));
         }
     }
 }

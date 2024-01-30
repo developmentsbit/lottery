@@ -1,8 +1,13 @@
 <?php
 namespace App\Repositories;
 use App\Interfaces\MemberInterface;
+use Hash;
+use App\Models\Member;
+use App\Traits\Idgenerator;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class MemberRepository implements MemberInterface{
+    use Idgenerator;
     public function index($datatable)
     {
 
@@ -13,8 +18,31 @@ class MemberRepository implements MemberInterface{
 
     }
 
-    public function store($data){
+    public function store($request)
+    {
+        $data = array(
+            'member_id' => Idgenerator::AutoCode('members','member_id','M-','8'),
+            'referral_no' => $request->referral_no,
+            'mobile_no' => $request->mobile_no,
+            'password' => Hash::make($request->password),
+            'first_name' => $request->first_name,
+            'last_name' => $request->last_name,
+            'gender' => $request->gender,
+            'city' => $request->city,
+            'country' => $request->country,
+            'email' => $request->email,
+            'nationality' => $request->nationality,
+            'profile' => '0',
+        );
 
+        try {
+            Member::create($data);
+            Alert::success(__('common.success'), __('frontend.registration_success'));
+            return redirect()->back();
+        } catch (\Throwable $th) {
+            Alert::warning(__('common.error'), __('frontend.something_went_wrong'));
+            return redirect()->back();
+        }
     }
 
     public function show($id){
