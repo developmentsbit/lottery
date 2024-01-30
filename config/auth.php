@@ -105,10 +105,11 @@ return [
             'expire' => 60,
             'throttle' => 60,
         ],
-        // 'members' => [
-        //     'provider' => 'members',
-        //     'table' => ''
-        // ]
+        'members' => [
+            'provider' => 'members',
+            'expire' => 60,
+            'throttle' => 60,
+        ]
     ],
 
     /*

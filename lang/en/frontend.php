@@ -55,4 +55,10 @@ return array(
     'country_required' => 'Please Select Country',
     'email_required' => 'Please Give Email',
     'nationality_required' => 'Please Select Nationality',
+    'password_not_matched' => 'Password Does Not Matched',
+    'registration_success' => 'Your Registration Is Successfull',
+    'something_went_wrong' => 'Please Try Again',
+    'login_title' => 'Login To Your Account',
+    'didnt_have_account' => 'Didn`t Have Any Account',
+    'member_dashboard' => 'Dashboard'
 );

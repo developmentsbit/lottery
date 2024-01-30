@@ -56,5 +56,6 @@ return array(
     'calendar' => 'Calendar',
     'total_users' => 'Total Admin',
     'total_roles' => 'Total Roles',
-    'submit' => 'Submit'
+    'submit' => 'Submit',
+    'warning' => 'Warning',
 );
