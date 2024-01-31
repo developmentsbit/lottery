@@ -51,7 +51,11 @@ td, th {
                         <td>1</td>
                         <td>Super Agent</td>
                         <td>Uchit Wai</td>
-                        <td>USD</td>
+                        <td>
+                            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="#"><i class="fa-brands fa-facebook-messenger"></i></a>
+                        </td>
                         <td>Burma</td>
                         <td>
                             <span class="btn btn-success btn-sm">@lang('common.active')</span>
