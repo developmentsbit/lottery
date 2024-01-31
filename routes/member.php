@@ -13,4 +13,6 @@ Route::post('memberLoginAttempt',[MemberAuthController::class,'loginAttempt'])->
 
 Route::get('dashboard',[MemberDashboardController::class,'dashboard'])->name('member.dashboard')->middleware('member_auth');
 
+Route::get('member_lottery',[MemberDashboardController::class,'lottery'])->name('member.lottery');
+
 Route::Get('memberLogout',[MemberDashboardController::class,'logout'])->name('member.logout');

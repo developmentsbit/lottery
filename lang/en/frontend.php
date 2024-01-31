@@ -60,5 +60,11 @@ return array(
     'something_went_wrong' => 'Please Try Again',
     'login_title' => 'Login To Your Account',
     'didnt_have_account' => 'Didn`t Have Any Account',
-    'member_dashboard' => 'Dashboard'
+    'member_dashboard' => 'Dashboard',
+    'thai_national_lottery' => 'Thai National Lottery',
+    'profile' => 'Profile',
+    'lottery' => 'Lottery',
+    'personal_profile' => 'Personal Profile',
+    'change_password' => 'Change Password',
+    'thai_lottery' => 'Thai Lottery',
 );
