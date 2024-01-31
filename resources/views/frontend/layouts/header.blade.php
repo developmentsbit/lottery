@@ -127,19 +127,19 @@
                         <a class="nav-link {{request()->Is('BuySell') ? 'active' : ''}}" aria-current="page" href="{{url('/BuySell')}}">@lang('frontend.buy_sell')</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">@lang('frontend.result')</a>
+                        <a class="nav-link {{request()->Is('LotteryResult') ? 'active' : ''}}" aria-current="page" href="{{url('/LotteryResult')}}">@lang('frontend.result')</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">@lang('frontend.award_prize')</a>
+                        <a class="nav-link {{request()->Is('AwardsPrize') ? 'active' : ''}}" aria-current="page" href="{{url('/AwardsPrize')}}">@lang('frontend.award_prize')</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">@lang('frontend.deposit')</a>
+                        <a class="nav-link {{request()->Is('Deposit') ? 'active' : ''}}" aria-current="page" href="{{url('/Deposit')}}">@lang('frontend.deposit')</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">@lang('frontend.payout')</a>
+                        <a class="nav-link {{request()->Is('Payout') ? 'active' : ''}}" aria-current="page" href="{{url('/Payout')}}">@lang('frontend.payout')</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">@lang('frontend.agent_list')</a>
+                        <a class="nav-link {{request()->Is('AgentList') ? 'active' : ''}}" aria-current="page" href="{{url('/AgentList')}}">@lang('frontend.agent_list')</a>
                       </li>
                     </ul>
                   </div>

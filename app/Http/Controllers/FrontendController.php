@@ -24,4 +24,29 @@ class FrontendController extends Controller
     {
         return $this->view($this->path,'buy_sell');
     }
+    
+    public function lottery_result()
+    {
+        return $this->view($this->path,'lottery_result');
+    }
+    
+    public function awards_prize()
+    {
+        return $this->view($this->path,'awards_prize');
+    }
+    
+    public function deposit()
+    {
+        return $this->view($this->path,'deposit');
+    }
+    
+    public function payout()
+    {
+        return $this->view($this->path,'payout');
+    }
+    
+    public function agent_list()
+    {
+        return $this->view($this->path,'agent_list');
+    }
 }

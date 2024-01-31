@@ -21,6 +21,8 @@ return array(
     'thai_lotter_draw_live' => 'থাইল্যান্ড ড্র লাইভ',
     'thai_lottery_draw_post' => 'থাই লটারি ড্র নিউজ',
     'pay_method' => 'পেমেন্ট মেথড',
+    'buy_request' => 'রিকোইস্ট কিনুন',
+    'sell_dollar' => 'ডলার বিক্রি করুন',
     'registration' => 'রেজিষ্ট্রেশন করুন',
     'account_details' => 'একাউন্ট বিস্তারিত তথ্য',
     'referral_no' => 'রেফারেল নং',
@@ -67,5 +69,4 @@ return array(
     'personal_profile' => 'পার্সোনাল প্রোফাইল',
     'change_password' => 'পাসওয়ার্ড পরিবর্তন',
     'thai_lottery' => 'থাই লটারি',
-
 );

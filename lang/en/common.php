@@ -56,6 +56,8 @@ return array(
     'calendar' => 'Calendar',
     'total_users' => 'Total Admin',
     'total_roles' => 'Total Roles',
+    'active' => 'Active',
+    'inactive' => 'Inactive',
     'submit' => 'Submit',
     'warning' => 'Warning',
 );
