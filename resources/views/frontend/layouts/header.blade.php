@@ -19,6 +19,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/v5-font-face.min.css">
     <!-- font awsome css -->
 
+    <!-- toastr css -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
+    <!-- toastr css -->
+
     <!-- style csss -->
     <link rel="stylesheet" href="{{ asset('Frontend/style.css') }}">
     <link rel="stylesheet" href="{{ asset('Frontend/timer.scss') }}">
@@ -32,7 +36,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.17.11/dist/css/uikit.min.css" />
 
     <!-- jqyery cdn -->
-    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     @if(config('app.locale') == 'bn')
     <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -86,12 +90,12 @@
                                 </form>
                             </li>
                             <li>
-                                <a href="#" class="btn btn-sm btn-info">
+                                <a href="{{ route('member.login') }}" class="btn btn-sm btn-info">
                                     <i class="fa fa-user"></i> @lang('frontend.login')
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="btn btn-sm btn-secondary">
+                                <a href="{{ route('member.registration') }}" class="btn btn-sm btn-secondary">
                                     <i class="fa fa-users"></i> @lang('frontend.register')
                                 </a>
                             </li>

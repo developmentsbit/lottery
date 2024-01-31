@@ -58,4 +58,6 @@ return array(
     'total_roles' => 'Total Roles',
     'active' => 'Active',
     'inactive' => 'Inactive',
+    'submit' => 'Submit',
+    'warning' => 'Warning',
 );

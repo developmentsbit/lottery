@@ -1,4 +1,4 @@
-public function index($datatable)
+    public function index($datatable)
     {
 
     }
