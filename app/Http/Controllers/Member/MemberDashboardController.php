@@ -25,4 +25,9 @@ class MemberDashboardController extends Controller
         Auth::guard('member')->logout();
         return redirect('/');
     }
+
+    public function lottery()
+    {
+        return $this->view($this->path,'lottery');
+    }
 }

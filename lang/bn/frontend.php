@@ -61,6 +61,11 @@ return array(
     'login_title' => 'আপনার একাউন্টে লগইন করুন',
     'didnt_have_account' => 'আপনার কি একাউন্ট নেই ',
     'member_dashboard' => 'ড্যাশবোর্ড',
-
+    'thai_national_lottery' => 'থাইল্যান্ড ন্যাশানাল লটারি',
+    'profile' => 'প্রোফাইল',
+    'lottery' => 'লটারি',
+    'personal_profile' => 'পার্সোনাল প্রোফাইল',
+    'change_password' => 'পাসওয়ার্ড পরিবর্তন',
+    'thai_lottery' => 'থাই লটারি',
 
 );

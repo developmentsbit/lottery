@@ -2,7 +2,7 @@
     <ul class="nav">
       <li class="nav-item nav-category">@lang('frontend.menus')</li>
       <li class="nav-item">
-        <a class="nav-link" href="index.html">
+        <a class="nav-link" href="{{ route('member.dashboard') }}">
           <span class="icon-bg"><i class="fa fa-home"></i></span>
           <span class="menu-title">@lang('frontend.home')</span>
         </a>
@@ -28,7 +28,7 @@
         </a>
         <div class="collapse" id="ui-lottery">
           <ul class="nav flex-column sub-menu">
-            <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">@lang('frontend.thai_lottery')</a></li>
+            <li class="nav-item"> <a class="nav-link" href="{{route('member.lottery')}}">@lang('frontend.thai_lottery')</a></li>
           </ul>
         </div>
       </li>
