@@ -21,4 +21,8 @@ return array(
     'thai_lotter_draw_live' => 'Thai Lottery Live Draw',
     'thai_lottery_draw_post' => 'Thai Lottery Draw News',
     'pay_method' => 'Payment Method',
+    'buy_request' => 'Buy Request',
+    'sell_dollar' => 'Sell Dollar',
+    'agentsignup' => 'Agent SignUp',
+    'complain' => 'Complain',
 );

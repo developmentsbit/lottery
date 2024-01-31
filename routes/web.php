@@ -34,6 +34,11 @@ Route::get('/', function () {
  */
 Route::get('/AboutUs',[FrontendController::class,'about_us']);
 Route::get('BuySell',[FrontendController::class,'buy_sell']);
+Route::get('LotteryResult',[FrontendController::class,'lottery_result']);
+Route::get('AwardsPrize',[FrontendController::class,'awards_prize']);
+Route::get('Deposit',[FrontendController::class,'deposit']);
+Route::get('Payout',[FrontendController::class,'payout']);
+Route::get('AgentList',[FrontendController::class,'agent_list']);
  /**
   *
   */

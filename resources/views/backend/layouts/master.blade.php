@@ -220,6 +220,12 @@
 
                     @else
 
+
+                    @endif
+
+                    @endforeach
+                    @endif
+
                     @foreach ($single as $sm)
                     @if($label->id == $sm->label_id)
                     @if(Auth::user()->can($sm->system_name.' '.$sm->slug))
@@ -240,10 +246,7 @@
                     @endforeach
 
 
-                    @endif
-
-                    @endforeach
-                    @endif
+                    
 
                     @endif
                     @endforeach
