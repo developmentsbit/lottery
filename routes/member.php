@@ -13,6 +13,11 @@ Route::post('memberLoginAttempt',[MemberAuthController::class,'loginAttempt'])->
 
 Route::get('dashboard',[MemberDashboardController::class,'dashboard'])->name('member.dashboard')->middleware('member_auth');
 
-Route::get('member_lottery',[MemberDashboardController::class,'lottery'])->name('member.lottery');
+Route::get('member_lottery',[MemberDashboardController::class,'lottery'])->name('member.lottery')->middleware('member_auth');
+
+Route::get('member_cash_in',[MemberDashboardController::class,'cash_in'])->name('member.cash_in')->middleware('member_auth');
+
+Route::get('get_method_info',[MemberDashboardController::class,'get_method_info'])->name('member.get_method_info');
+Route::post('store_cash_in',[MemberDashboardController::class,'cash_in_store'])->name('member.store_cash_in');
 
 Route::Get('memberLogout',[MemberDashboardController::class,'logout'])->name('member.logout');

@@ -12,6 +12,8 @@ use App\Http\Controllers\SoftwareSettingsController;
 use App\Http\Controllers\BackendController;
 use App\Http\Controllers\UserThemeController;
 use App\Http\Controllers\FrontendController;
+use App\Http\Controllers\PaymentMethodController;
+use App\Http\Controllers\CashInRequestController;
 
 /*
 |--------------------------------------------------------------------------
@@ -79,6 +81,8 @@ Route::middleware('auth')->group(function () {
         'menu'          => MenuController::class,
         'software_info' => SoftwareSettingsController::class,
         'user_theme' => UserThemeController::class,
+        'payment_method' => PaymentMethodController::class,
+        'cash_in_request' => CashInRequestController::class,
    ]);
 
     /*
@@ -134,6 +138,15 @@ Route::middleware('auth')->group(function () {
     Route::get('menu_properties/{id}',[MenuController::class,'properties'])->name('menu.properties');
 
     /* ==== */
+
+    /** pay method extra routes */
+
+    Route::get('pay_method_status',[PaymentMethodController::class,'status'])->name('payment_method.status');
+    Route::get('payment_method_trash',[PaymentMethodController::class,'trash_list'])->name('payment_method.trash_list');
+    Route::get('payment_method_restore/{id}',[PaymentMethodController::class,'restore'])->name('payment_method.restore');
+    Route::get('payment_method_delete/{id}',[PaymentMethodController::class,'delete'])->name('payment_method.delete');
+
+    Route::get('cash_in_status/{id}',[CashInRequestController::class,'status'])->name('cash_in_request.status');
 
 });
 

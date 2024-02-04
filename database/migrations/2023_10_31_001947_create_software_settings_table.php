@@ -17,6 +17,12 @@ return new class extends Migration
             $table->string('favicon',100)->default('0');
             $table->string('title_en')->nullable();
             $table->string('title_bn')->nullable();
+            $table->string('bkash1')->nullable();
+            $table->string('bkash2')->nullable();
+            $table->string('nagad1')->nullable();
+            $table->string('nagad2')->nullable();
+            $table->string('rocket1')->nullable();
+            $table->string('rocket2')->nullable();
             $table->text('meta_tag')->nullable();
             $table->text('meta_title')->nullable();
             $table->text('meta_description')->nullable();
