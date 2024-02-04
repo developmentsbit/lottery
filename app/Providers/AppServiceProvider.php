@@ -58,6 +58,14 @@ class AppServiceProvider extends ServiceProvider
             'App\Interfaces\MemberInterface',
             'App\Repositories\MemberRepository',
         );
+        $this->app->bind(
+            'App\Interfaces\PaymentMethodInterface',
+            'App\Repositories\PaymentMethodRepository',
+        );
+        $this->app->bind(
+            'App\Interfaces\CashInInterface',
+            'App\Repositories\CashInRepository',
+        );
     }
 
     /**

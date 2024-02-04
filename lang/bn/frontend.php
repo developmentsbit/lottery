@@ -69,4 +69,5 @@ return array(
     'personal_profile' => 'পার্সোনাল প্রোফাইল',
     'change_password' => 'পাসওয়ার্ড পরিবর্তন',
     'thai_lottery' => 'থাই লটারি',
+    'cash_in' => 'ক্যাশ ইন',
 );

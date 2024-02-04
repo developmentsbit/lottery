@@ -140,6 +140,8 @@
     </div>
     <!-- container-scroller -->
     <!-- plugins:js -->
+    @include('sweetalert::alert')
+
     <script src="{{ asset('MemberAsset') }}/vendors/js/vendor.bundle.base.js"></script>
     <!-- endinject -->
     <!-- Plugin js for this page -->

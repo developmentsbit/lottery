@@ -71,4 +71,5 @@ return array(
     'personal_profile' => 'Personal Profile',
     'change_password' => 'Change Password',
     'thai_lottery' => 'Thai Lottery',
+    'cash_in' => 'Cash In',
 );
