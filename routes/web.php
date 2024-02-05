@@ -14,6 +14,7 @@ use App\Http\Controllers\UserThemeController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\PaymentMethodController;
 use App\Http\Controllers\CashInRequestController;
+use App\Http\Controllers\GameSetupController;
 
 /*
 |--------------------------------------------------------------------------
@@ -83,7 +84,15 @@ Route::middleware('auth')->group(function () {
         'user_theme' => UserThemeController::class,
         'payment_method' => PaymentMethodController::class,
         'cash_in_request' => CashInRequestController::class,
+        'game_setup' => GameSetupController::class,
    ]);
+   /*
+    game setup extra routes are below
+    */
+   Route::get('game_setup_status',[GameSetupController::class,'status'])->name('game_setup.status');
+   Route::get('game_setup_trash',[GameSetupController::class,'trash_list'])->name('game_setup.trash_list');
+   Route::get('game_setup_restore/{id}',[GameSetupController::class,'restore'])->name('game_setup.restore');
+   Route::get('game_setup_delete/{id}',[GameSetupController::class,'delete'])->name('game_setup.delete');
 
     /*
     menu label extra routes are below
