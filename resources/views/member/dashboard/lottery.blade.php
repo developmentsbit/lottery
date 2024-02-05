@@ -14,6 +14,8 @@
             Lottery Information
         </div>
         <div class="card-body">
+            <form method="post" action="{{ route('member.lottery_store') }}">
+                @csrf
             <table class="table">
                 <tr>
                     <th>Select Game</th>
@@ -51,6 +53,7 @@
             <div class="show_form mt-2">
 
             </div>
+        </form>
         </div>
     </div>
 </div>
@@ -115,13 +118,13 @@
                                     formData += sl = sl + 1;
                                 formData += `</td>
                                 <td>
-                                    <input type="text" class="form-control form-control-sm" name="lottery_number[]" id="lottery_number-${index}" maxlength="${max_length}">
+                                    <input type="text" class="form-control form-control-sm" name="lottery_number[]" id="lottery_number-${index}" maxlength="${max_length}" required>
                                 </td>
                                 <td>
-                                    <input type="text" class="form-control form-control-sm" name="direct_amount[]" id="direct_amount-${index}" onkeyup="calculateDirectAmount()" value="0">
+                                    <input type="text" class="form-control form-control-sm" name="direct_amount[]" id="direct_amount-${index}" onkeyup="calculateDirectAmount()" value="0" required>
                                 </td>
                                 <td>
-                                    <input type="text" class="form-control form-control-sm" onkeyup="calculateDirectAmount()" name="rumble_amount[]" id="rumble_amount-${index}" value="0">
+                                    <input type="text" class="form-control form-control-sm" onkeyup="calculateDirectAmount()" name="rumble_amount[]" id="rumble_amount-${index}" value="0" required>
                                 </td>
                             </tr>`;
                         }
@@ -182,10 +185,10 @@
                                     formData += sl = sl + 1;
                                 formData += `</td>
                                 <td>
-                                    <input type="text" class="form-control form-control-sm" name="lottery_number[]" id="lottery_number-${index}" maxlength="${max_length}">
+                                    <input type="text" class="form-control form-control-sm" name="lottery_number[]" id="lottery_number-${index}" maxlength="${max_length}" required>
                                 </td>
                                 <td>
-                                    <input type="text" class="form-control form-control-sm" name="direct_amount[]" id="direct_amount-${index}" onkeyup="calculateDirectAmount()" value="0">
+                                    <input type="text" class="form-control form-control-sm" name="direct_amount[]" id="direct_amount-${index}" onkeyup="calculateDirectAmount()" value="0" required>
                                 </td>
                             </tr>`;
                         }

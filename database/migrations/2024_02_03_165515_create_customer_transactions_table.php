@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('customer_transactions', function (Blueprint $table) {
             $table->id();
+            $table->date('date')->nullable();
+            $table->time('time')->nullable();
             $table->string('member_id')->nullable();
             $table->string('payment_type')->nullable();
             $table->integer('transaction_type')->nullable()->comment('1 = Cash In, 2 = Transfer, 3 = Expense, 4 = Withdraw, 5 = Win Balance,');

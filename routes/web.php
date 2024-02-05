@@ -148,6 +148,9 @@ Route::middleware('auth')->group(function () {
 
     Route::get('cash_in_status/{id}',[CashInRequestController::class,'status'])->name('cash_in_request.status');
 
+    Route::get('cash_in_request_trash',[CashInRequestController::class,'trash'])->name('cash_in_request.trash_list');
+    Route::get('cash_in_request_restore/{id}',[CashInRequestController::class,'restore'])->name('cash_in_request.restore');
+
 });
 
 require __DIR__.'/auth.php';
