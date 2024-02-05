@@ -59,6 +59,8 @@ class MemberDashboardController extends Controller
     {
         // dd($request->all());
         $data = array(
+            'date' => date('Y-m-d'),
+            'time' => date('h:i:s'),
             'member_id' => Auth::guard('member')->user()->member_id,
             'payment_type' => $request->method,
             'transaction_type' => 1,
@@ -79,5 +81,16 @@ class MemberDashboardController extends Controller
         CustomerTransaction::create($data);
         Alert::success('Success', 'Your Request Is Submitted. Wait For Approval');
         return redirect()->back();
+    }
+
+    public function cash_in_history()
+    {
+        $param['data'] = CustomerTransaction::withTrashed()->where('member_id',Auth::guard('member')->user()->member_id)->where('transaction_type',1)->orderBy('date','DESC')->get();
+        return $this->view($this->path,'cash_in_history',$param);
+    }
+
+    public function lottery_store(Request $request)
+    {
+        dd($request->all());
     }
 }

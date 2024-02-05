@@ -1,5 +1,10 @@
 <nav class="sidebar sidebar-offcanvas" id="sidebar">
     <ul class="nav">
+        <li class="nav-item nav-category" style="background: white;color:black;padding:10px;">
+            <b>Cash : $ {{App\Traits\Member::getBalance(Auth::guard('member')->user()->member_id)}}</b><br>
+            <hr>
+            <b>Win Balance : $ 10</b>
+        </li>
       <li class="nav-item nav-category">@lang('frontend.menus')</li>
       <li class="nav-item">
         <a class="nav-link" href="{{ route('member.dashboard') }}">
@@ -30,6 +35,7 @@
         <div class="collapse" id="ui-cash-in">
           <ul class="nav flex-column sub-menu">
             <li class="nav-item"> <a class="nav-link" href="{{route('member.cash_in')}}">@lang('frontend.cash_in')</a></li>
+            <li class="nav-item"> <a class="nav-link" href="{{route('member.cash_in_history')}}">Cash In History</a></li>
           </ul>
         </div>
       </li>

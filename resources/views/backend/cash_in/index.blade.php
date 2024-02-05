@@ -26,15 +26,15 @@
         @endslot --}}
         @endif
 
-        @if(Auth::user()->can('Payment Method trash'))
+        @if(Auth::user()->can('Cash In Request trash'))
         {{-- for deleted list index --}}
-        {{-- @slot('deleted_list_btn_name')
-        @lang('payment_method.deleted_list')
+        @slot('deleted_list_btn_name')
+        Rejected List
         @endslot
 
         @slot('deleted_list_route')
-        payment_method.trash_list
-        @endslot --}}
+        cash_in_request.trash_list
+        @endslot
         @endif
 
 
@@ -49,11 +49,13 @@
                                 <thead>
                                     <tr>
                                         <th>@lang('common.sl')</th>
+                                        <th>Date & Time</th>
                                         <th>@lang('cash_in.member')</th>
                                         <th>@lang('cash_in.method')</th>
                                         <th>@lang('cash_in.amount')</th>
                                         <th>@lang('cash_in.payment_account')</th>
                                         <th>@lang('cash_in.trx_id')</th>
+                                        <th>Document</th>
                                         <th>@lang('common.status')</th>
                                         <th>@lang('common.actions')</th>
                                     </tr>
@@ -81,11 +83,13 @@
             ajax: "{{ route('cash_in_request.index') }}",
             columns: [
                 {data: 'sl', name: 'sl'},
+                {data: 'date_time', name: 'date_time'},
                 {data: 'member', name: 'member'},
                 {data: 'method', name: 'method'},
                 {data: 'balance', name: 'balance'},
                 {data: 'payment_account', name: 'payment_account'},
                 {data: 'transaction_id', name: 'transaction_id'},
+                {data: 'document', name: 'document'},
                 {data: 'status', name: 'status'},
                 {data: 'action', name: 'action', orderable: false, searchable: false},
             ]

@@ -19,5 +19,8 @@ Route::get('member_cash_in',[MemberDashboardController::class,'cash_in'])->name(
 
 Route::get('get_method_info',[MemberDashboardController::class,'get_method_info'])->name('member.get_method_info');
 Route::post('store_cash_in',[MemberDashboardController::class,'cash_in_store'])->name('member.store_cash_in');
+Route::get('cash_in_hoistory',[MemberDashboardController::class,'cash_in_history'])->name('member.cash_in_history');
+
+Route::post('lottery_store',[MemberDashboardController::class,'lottery_store'])->name('member.lottery_store');
 
 Route::Get('memberLogout',[MemberDashboardController::class,'logout'])->name('member.logout');

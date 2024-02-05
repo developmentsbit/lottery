@@ -71,7 +71,7 @@ class CashInRequestController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        return $this->interface->destroy($id);
     }
 
     public function status($id)
@@ -85,5 +85,20 @@ class CashInRequestController extends Controller
         }
         toastr()->success('The Request Is Accepted','success');
         return redirect()->back();
+    }
+
+    public function trash(Request $request)
+    {
+        $datatable = '';
+        if($request->ajax())
+        {
+            $datatable = true;
+        }
+        return $this->interface->trash_list($datatable);
+    }
+
+    public function restore($id)
+    {
+        return $this->interface->restore($id);
     }
 }
