@@ -25,8 +25,8 @@
         <div class="carousel-item active">
         <img src="{{ asset('Frontend/image/slider-2.jpg') }}" class="d-block w-100" alt="...">
         <div class="carousel-caption d-none d-md-block">
-            <h5>Slide Title</h5>
-            <p>Slide Sub Title</p>
+            <h1 style="color: #fff;font-weight:bold;margin-bottom: 0px;">THAI NATIONAL LOTTERY</h1>
+            <h4 style="color: #fff;padding: 78px;margin-top: -59px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, accusantium.</h4>
         </div>
         </div>
     </div>
@@ -295,35 +295,17 @@
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/lplVzgRdoCc?si=e1i8iM0YU3QQI3Gr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-6 col-12 p-2" style="text-align: left">
-                    <h4 style="margin: 0px;">@lang('frontend.thai_lottery_draw_post')</h4>
+                <div class="col-lg-6 col-md-6 col-12 p-2" style="text-align: left;margin-top: -9px;">
+                    <h4 style="margin: 0px;border-bottom: 1px solid #000;padding: 4px;">@lang('frontend.thai_lottery_draw_post')</h4>
                     <div class="blog_single">
                         <div class="row">
-                            <div class="col-lg-9 col-md-9 col-9" style="text-align: left;">
+                            <div class="col-lg-12 col-md-12 col-12" style="text-align: left;">
                                 <a>
                                     <h4>Thai Goverment Lottery Office Draw on 2 May 2024</h4>
                                 </a>
-                                <p>
-                                    Government Lottery Office The government lottery prize will be drawn at the prize draw building. The Government Lottery Office, Nonthaburi Road, Mueang Nonthaburi District Nonthaburi Province, And the awarding is in accordance with the international standard ISO 9001: 2
+                                <p style="font-size: 15px;">
+                                Issuing lottery tickets etc. In Thailand, according to history, it began to exist in the reign of King Chulalongkorn, King Rama V, with a British foreigner named "Teacher Albaster" was the first to introduce the European lottery drawing style by calling it the "Lottery" by His Majesty King Chulalongkorn. Royal permission was given to the Royal Thai Chamberlain to issue lotteries for the first time in Thailand in 1874 on the occasion of His Majesty the King's birthday. The objective is to help foreign merchants who bring their products to be displayed in the museum at the Concadia Building in the Grand Palace. And later, during the reign of King Rama VI in the year 1917, which was during World War 1, the United Kingdom, England, which was a country on the Allied Powers. Intending to borrow money from Thailand to use in the war effort But cannot borrow directly from the Thai government. Because it will affect the budget of the National Patriotic Council of England. Therefore, the policy is to borrow money from the people by issuing lotteries. It received royal permission from His Majesty King Mongkut Klao.
                                 </p>
-                            </div>
-                            <div class="col-lg-3 col-md-3 col-3">
-                                <img src="{{ asset('Frontend/image/post_image_19.jpg') }}" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="blog_single">
-                        <div class="row">
-                            <div class="col-lg-9 col-md-9 col-9" style="text-align: left;">
-                                <a>
-                                    <h4>Thai Goverment Lottery Office Draw on 2 May 2024</h4>
-                                </a>
-                                <p>
-                                    Government Lottery Office The government lottery prize will be drawn at the prize draw building. The Government Lottery Office, Nonthaburi Road, Mueang Nonthaburi District Nonthaburi Province, And the awarding is in accordance with the international standard ISO 9001: 2
-                                </p>
-                            </div>
-                            <div class="col-lg-3 col-md-3 col-3">
-                                <img src="{{ asset('Frontend/image/post_image_19.jpg') }}" alt="">
                             </div>
                         </div>
                     </div>
@@ -334,9 +316,70 @@
 </section>
 <!-- section for post -->
 
+<!-- thai goverment lottery online -->
+<section class="section-box">
+    <div class="card-box">
+        <div class="col-lg-6 col-md-6 col-12">
+            <div class="card-item">
+                <div class="content">
+                    <div class="imgBx">
+                        <img src="https://www.thailotto.club/image_directory/logo/logo.png">
+                    </div>
+                    <div class="section_title">
+                        <h2>National Lottery Result</h2>
+                        <!-- <b class="text-light">THURSDAY (2024/02/01)</b> -->
+                    </div>
+                    <div class="contentBx">
+                        <div id="countdown">
+                            <ul>
+                                <li><span id="days"><br></span><span id="timer_sub">days</span></li>
+                                <li><span id="hours"><br></span><span id="timer_sub">Hours</span></li>
+                                <li><span id="minutes"><br></span><span id="timer_sub">Minutes</span></li>
+                                <li><span id="seconds"><br></span><span id="timer_sub">Seconds</span></li>
+                            </ul>
+                        </div>
+                        <div id="content" class="emoji">
+                            <span>🥳</span>
+                            <span>🎉</span>
+                            <span>🎂</span>
+                        </div>
+                        <div class="play_now text-center">
+                            <a href="#" class="btn btn-sm btn-outline-info">@lang('frontend.play_now')</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-12">
+            <div class="card-item">
+                <div class="content">
+                    <div class="imgBx">
+                        <img src="https://image.flaticon.com/icons/png/256/4213/4213732.png">
+                    </div>
+                    <div class="contentBx">
+                        <h3>Lion<br><span>Happy Birthday</span></h3>
+                    </div>
+                </div>
+                <ul class="sci">
+                    <li>
+                        <a href="">happy</a>
+                    </li>
+                    <li>
+                        <a href="">birth</a>
+                    </li>
+                    <li>
+                        <a href="">day</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+  </section>
+
+<!-- thai goverment lottery online -->
 
 <!-- thai lottery section about -->
-<section class="section_div p-4">
+<section class="section_div p-4" style="margin-top: 15px;">
     <div class="row">
         <div class="col-lg-4 col-md-4 col-12">
             <div class="card">

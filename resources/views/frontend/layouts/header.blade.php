@@ -132,9 +132,9 @@
                       <li class="nav-item">
                         <a class="nav-link {{request()->Is('AwardsPrize') ? 'active' : ''}}" aria-current="page" href="{{url('/AwardsPrize')}}">@lang('frontend.award_prize')</a>
                       </li>
-                      <li class="nav-item">
+                      <!-- <li class="nav-item">
                         <a class="nav-link {{request()->Is('Deposit') ? 'active' : ''}}" aria-current="page" href="{{url('/Deposit')}}">@lang('frontend.deposit')</a>
-                      </li>
+                      </li> -->
                       <li class="nav-item">
                         <a class="nav-link {{request()->Is('Payout') ? 'active' : ''}}" aria-current="page" href="{{url('/Payout')}}">@lang('frontend.payout')</a>
                       </li>
