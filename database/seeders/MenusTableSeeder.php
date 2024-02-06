@@ -304,6 +304,25 @@ class MenusTableSeeder extends Seeder
                 'type' => 2,
                 'updated_at' => '2024-02-04 21:10:30',
             ),
+            15 => 
+            array (
+                'create_by' => 1,
+                'created_at' => '2024-02-05 16:49:23',
+                'deleted_at' => NULL,
+                'icon' => NULL,
+                'id' => 22,
+                'label_id' => NULL,
+                'menu_name_bn' => 'গেইম সেটআপ',
+                'menu_name_en' => 'Game Setup',
+                'order_by' => 4,
+                'parent_id' => 15,
+                'route' => 'game_setup',
+                'slug' => 'create',
+                'status' => 1,
+                'system_name' => 'Game Setup',
+                'type' => 2,
+                'updated_at' => '2024-02-05 16:49:23',
+            ),
         ));
         
         

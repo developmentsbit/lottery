@@ -83,13 +83,13 @@
                                 <label for="status">@lang('common.status')</label><span class="text-danger">*</span>
                                 <div>
                                     <label class="form-check">
-                                        <input class="form-check-input" type="radio" value="1" name="status" @if($data['game_setup']->status == 1) checked @endif>
+                                        <input class="form-check-input" type="radio" value="1" name="status" @if($data->status == '1') checked @endif>
                                         <span class="form-check-label">
                                             @lang('common.active')
                                         </span>
                                     </label>
                                     <label class="form-check">
-                                        <input class="form-check-input" type="radio" value="0" name="status" @if($data['game_setup']->status == 0) checked @endif>
+                                        <input class="form-check-input" type="radio" value="0" name="status" @if($data->status == '0') checked @endif>
                                         <span class="form-check-label">
                                             @lang('common.inactive')
                                         </span>
