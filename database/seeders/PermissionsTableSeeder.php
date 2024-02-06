@@ -928,6 +928,105 @@ class PermissionsTableSeeder extends Seeder
                 'parent' => 'Cash In Request',
                 'updated_at' => '2024-02-05 12:35:52',
             ),
+            101 => 
+            array (
+                'created_at' => '2024-02-05 16:49:23',
+                'guard_name' => 'web',
+                'id' => 305,
+                'name' => 'Game Setup create',
+                'parent' => 'Game Setup',
+                'updated_at' => '2024-02-05 16:49:23',
+            ),
+            102 => 
+            array (
+                'created_at' => '2024-02-05 16:49:23',
+                'guard_name' => 'web',
+                'id' => 306,
+                'name' => 'Game Setup index',
+                'parent' => 'Game Setup',
+                'updated_at' => '2024-02-05 16:49:23',
+            ),
+            103 => 
+            array (
+                'created_at' => '2024-02-05 16:49:23',
+                'guard_name' => 'web',
+                'id' => 307,
+                'name' => 'Game Setup show',
+                'parent' => 'Game Setup',
+                'updated_at' => '2024-02-05 16:49:23',
+            ),
+            104 => 
+            array (
+                'created_at' => '2024-02-05 16:49:23',
+                'guard_name' => 'web',
+                'id' => 308,
+                'name' => 'Game Setup edit',
+                'parent' => 'Game Setup',
+                'updated_at' => '2024-02-05 16:49:23',
+            ),
+            105 => 
+            array (
+                'created_at' => '2024-02-05 16:49:23',
+                'guard_name' => 'web',
+                'id' => 309,
+                'name' => 'Game Setup destroy',
+                'parent' => 'Game Setup',
+                'updated_at' => '2024-02-05 16:49:23',
+            ),
+            106 => 
+            array (
+                'created_at' => '2024-02-05 16:49:23',
+                'guard_name' => 'web',
+                'id' => 310,
+                'name' => 'Game Setup trash',
+                'parent' => 'Game Setup',
+                'updated_at' => '2024-02-05 16:49:23',
+            ),
+            107 => 
+            array (
+                'created_at' => '2024-02-05 16:49:23',
+                'guard_name' => 'web',
+                'id' => 311,
+                'name' => 'Game Setup restore',
+                'parent' => 'Game Setup',
+                'updated_at' => '2024-02-05 16:49:23',
+            ),
+            108 => 
+            array (
+                'created_at' => '2024-02-05 16:49:23',
+                'guard_name' => 'web',
+                'id' => 312,
+                'name' => 'Game Setup delete',
+                'parent' => 'Game Setup',
+                'updated_at' => '2024-02-05 16:49:23',
+            ),
+            109 => 
+            array (
+                'created_at' => '2024-02-05 16:49:23',
+                'guard_name' => 'web',
+                'id' => 313,
+                'name' => 'Game Setup status',
+                'parent' => 'Game Setup',
+                'updated_at' => '2024-02-05 16:49:23',
+            ),
+            110 => 
+            array (
+                'created_at' => '2024-02-05 16:49:23',
+                'guard_name' => 'web',
+                'id' => 314,
+                'name' => 'Game Setup properties',
+                'parent' => 'Game Setup',
+                'updated_at' => '2024-02-05 16:49:23',
+            ),
+            111 => 
+            array (
+                'created_at' => '2024-02-05 16:49:23',
+                'guard_name' => 'web',
+                'id' => 315,
+                'name' => 'Game Setup print',
+                'parent' => 'Game Setup',
+                'updated_at' => '2024-02-05 16:49:23',
+            ),
         ));
         
         

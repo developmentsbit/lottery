@@ -58,4 +58,10 @@ return array(
     'total_roles' => 'মোট রোল',
     'submit' => 'সাবমিট',
     'warning' => 'ওয়ার্নিং',
+    "deleted_permanently" => "স্থায়ীভাবে মুছে ফেলা হয়েছে!",
+    "deleted_list" => "বাতিলকৃত",
+    'restore' => 'পুনরুদ্ধার',
+    'retrive' => 'পুনরুদ্ধার',
+    'permenantly_delete' => 'স্থায়ীভাবে মুছে ফেলুন',
+    "all" => "সব",
 );

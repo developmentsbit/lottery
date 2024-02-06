@@ -50,7 +50,7 @@
 </head>
 <body>
     <div class="uk-background-muted">
-    <div class=" uk-position-z-index" uk-sticky="start: 100; animation: uk-animation-slide-top">
+    <div class=" uk-position-z-index" uk-sticky="start: 100; animation: uk-animation-slide-top" style="z-index: 999 !important;">
     <!-- header start from here -->
     <section class="header">
         <div class="container-fluid">

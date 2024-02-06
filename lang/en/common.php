@@ -60,4 +60,10 @@ return array(
     'inactive' => 'Inactive',
     'submit' => 'Submit',
     'warning' => 'Warning',
+    "deleted_permanently" => "Deleted permanently!",
+    "deleted_list" => "Deleted",
+    'restore' => 'Restore',
+    'retrive' => 'Retrive',
+    'permenantly_delete' => 'Permenantly Delete',
+    "all" => "ALL",
 );

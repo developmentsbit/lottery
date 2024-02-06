@@ -27,13 +27,6 @@
         </div>
     </div>
 </div>
-<div class="footer-bottom">
-    <div class="container">
-        <div class="text-center p-3" style="color: white">
-            Copyright © 2024 <a href="https://sbit.com.bd">Skill Based IT</a> | <a href="#">Privacy & Policy</a>
-        </div>
-    </div>
-</div>
 </footer>
 <!-- footer starts from here -->
 @include('sweetalert::alert')

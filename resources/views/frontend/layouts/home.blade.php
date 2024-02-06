@@ -216,7 +216,7 @@
 <!-- thai goverment lottery online -->
 <section class="section_div_black">
     <div class="container-fluid">
-        <div class="section-title pt-2">
+        <div class="sectiontitle pt-2">
             <h4 class="text-light">@lang('frontend.bingo_lotto_3d')</h4>
         </div>
         <div class="section_body">
@@ -318,64 +318,310 @@
 
 <!-- thai goverment lottery online -->
 <section class="section-box">
-    <div class="card-box">
-        <div class="col-lg-6 col-md-6 col-12">
-            <div class="card-item">
-                <div class="content">
-                    <div class="imgBx">
-                        <img src="https://www.thailotto.club/image_directory/logo/logo.png">
-                    </div>
-                    <div class="section_title">
-                        <h2>National Lottery Result</h2>
-                        <!-- <b class="text-light">THURSDAY (2024/02/01)</b> -->
-                    </div>
-                    <div class="contentBx">
-                        <div id="countdown">
-                            <ul>
-                                <li><span id="days"><br></span><span id="timer_sub">days</span></li>
-                                <li><span id="hours"><br></span><span id="timer_sub">Hours</span></li>
-                                <li><span id="minutes"><br></span><span id="timer_sub">Minutes</span></li>
-                                <li><span id="seconds"><br></span><span id="timer_sub">Seconds</span></li>
-                            </ul>
+    <div class="container">
+        <div class="section_title">
+            <h1>Lottery Result</h1>
+        </div>
+        <div class="card-box">
+            <div class="col-lg-6 col-md-6 col-12">
+                <div class="card-item">
+                    <div class="content">
+                        <div class="imgBx">
+                            <img src="https://www.thailotto.club/image_directory/logo/logo.png">
+                            <h3>National Lottery Result</h3>
+                            <h4>Draw Date: 01 Feb 2567</h4>
                         </div>
-                        <div id="content" class="emoji">
-                            <span>🥳</span>
-                            <span>🎉</span>
-                            <span>🎂</span>
-                        </div>
-                        <div class="play_now text-center">
-                            <a href="#" class="btn btn-sm btn-outline-info">@lang('frontend.play_now')</a>
+                        <div class="result-inner">
+                            <div class="result-single">
+                                <h4>1st Prize</h4>
+                                <ul>
+                                    <li>6 </li>
+                                    <li>0 </li>
+                                    <li>7 </li>
+                                    <li>0 </li>
+                                    <li>6 </li>
+                                    <li>3 </li>
+                                </ul>
+                            </div>
+                            <div class="result-single">
+                                <h4>3Up</h4>
+                                <ul>
+                                    <li>0 </li>
+                                    <li>6 </li>
+                                    <li>3 </li>
+                                </ul>
+                            </div>
+                            <div class="result-single">
+                                <h4>2Up</h4>
+                                <ul>
+                                    <li>6 </li>
+                                    <li>3 </li>
+                                </ul>
+                            </div>
+                            <div class="result-single">
+                                <h4>2Down</h4>
+                                <ul>
+                                    <li>0 </li>
+                                    <li>9 </li>
+                                </ul>
+                            </div>
+                            <div class="result-single pt-20 remain-time">
+                                <h5>Next Draw Date:
+                                    <span>16 Feb 2567 </span>
+                                </h5>
+                                <ul>
+                                    <li id="day">10</li><span> D</span>
+                                    <li id="hour">16</li><span> H</span>
+                                    <li id="min">15</li><span> M</span>
+                                    <li id="sec">0</li><span> S</span>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-lg-6 col-md-6 col-12">
-            <div class="card-item">
-                <div class="content">
-                    <div class="imgBx">
-                        <img src="https://image.flaticon.com/icons/png/256/4213/4213732.png">
-                    </div>
-                    <div class="contentBx">
-                        <h3>Lion<br><span>Happy Birthday</span></h3>
+            <div class="col-lg-6 col-md-6 col-12">
+                <div class="card-item">
+                    <div class="content">
+                        <div class="imgBx">
+                            <img src="https://www.thailotto.club/image_directory/logo/logo.png">
+                            <h3>Bangkok Lottery Result</h3>
+                            <h4>Draw Date: 02 Feb 2567</h4>
+                        </div>
+                        <div class="result-inner">
+                            <div class="result-single">
+                                <h4>6 Ball</h4>
+                                <ul>
+                                    <li>3 </li>
+                                    <li>6 </li>
+                                    <li>2 </li>
+                                    <li>1 </li>
+                                    <li>7 </li>
+                                    <li>3 </li>
+                                </ul>
+                            </div>
+                            <div class="result-single">
+                                <h4>3 Ball</h4>
+                                <ul>
+                                    <li>0 </li>
+                                    <li>6 </li>
+                                    <li>3 </li>
+                                </ul>
+                            </div>
+                            <div class="result-single">
+                                <h4>2 Ball</h4>
+                                <ul>
+                                    <li>5 </li>
+                                    <li>7 </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="result-single pt-120 remain-time">
+                                <h5>Next Draw Date:
+                                    <span>16 Feb 2567 </span>
+                                </h5>
+                                <ul>
+                                    <li id="day">10</li><span> D</span>
+                                    <li id="hour">16</li><span> H</span>
+                                    <li id="min">15</li><span> M</span>
+                                    <li id="sec">0</li><span> S</span>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <ul class="sci">
-                    <li>
-                        <a href="">happy</a>
-                    </li>
-                    <li>
-                        <a href="">birth</a>
-                    </li>
-                    <li>
-                        <a href="">day</a>
-                    </li>
-                </ul>
             </div>
         </div>
     </div>
-  </section>
+</section>
+<!-- thai goverment lottery online -->
 
+<!-- thai goverment lottery online -->
+    <div class="featuresSection">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-12">
+                    <div class="card" style="background: #104747;padding: 23px 62px 0px 0px;margin-left: 50px;">
+                        <div class="d-flex flex-row">
+                            <div class="col-lg-4 col-md-4 col-12">
+                                <img src="https://www.thailotto.club/image_directory/about/achive1.png" alt="" />
+                            </div>
+                            <div class="col-lg-8 col-md-8 col-12" style="padding: 30px 0px 0px 0px;">
+                                <h2>16600+</h2>
+                                <h6>LIVE ONLINE</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-12">
+                    <div class="card" style="background: #104747;padding: 23px 62px 0px 0px;margin-left: 50px;">
+                        <div class="d-flex flex-row">
+                            <div class="col-lg-4 col-md-4 col-12">
+                                <img src="https://www.thailotto.club/image_directory/about/achive2.png" alt="" />
+                            </div>
+                            <div class="col-lg-8 col-md-8 col-12" style="padding: 30px 0px 0px 0px;">
+                                <h2>183300+</h2>
+                                <h6>TOTAL MEMBERS</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-12">
+                    <div class="card" style="background: #104747;padding: 23px 62px 0px 0px;margin-left: 50px;">
+                        <div class="d-flex flex-row">
+                            <div class="col-lg-4 col-md-4 col-12">
+                                <img src="https://www.thailotto.club/image_directory/about/achive3.png" alt="" />
+                            </div>
+                            <div class="col-lg-8 col-md-8 col-12" style="padding: 30px 0px 0px 0px;">
+                                <h2>13800+</h2>
+                                <h6>MONTHLY REWARD</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- thai goverment lottery online -->
+
+<!-- thai goverment lottery online -->
+    <div class="featureSection" style="background: #325e59;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="card">
+                        <div class="d-flex flex-row">
+                            <div class="col-lg-2 col-md-2 col-12">
+                                <img src="https://www.thailotto.club/image_directory/about/ab-icon.png" alt="" />
+                            </div>
+                            <div class="col-lg-10 col-md-10 col-12 text">
+                                <h2>Safe & Secure Playing</h2>
+                                <p>All transactions are 100% safe and protected.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="card">
+                        <div class="d-flex flex-row">
+                            <div class="col-lg-2 col-md-2 col-12">
+                                <img src="https://www.thailotto.club/image_directory/about/ab-icon3.png" alt="" />
+                            </div>
+                            <div class="col-lg-10 col-md-10 col-12 text">
+                                <h2>No Comission On Winning</h2>
+                                <p>There is no commission to win the lottery.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="card">
+                        <div class="d-flex flex-row">
+                            <div class="col-lg-2 col-md-2 col-12">
+                                <img src="https://www.thailotto.club/image_directory/about/ab-icon2.png" alt="" />
+                            </div>
+                            <div class="col-lg-10 col-md-10 col-12 text">
+                                <h2>Biggest Lottery Jackpots</h2>
+                                <p>4 winners, 12 million people in the latest lottery</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="card">
+                        <div class="d-flex flex-row">
+                            <div class="col-lg-2 col-md-2 col-12">
+                                <img src="https://www.thailotto.club/image_directory/about/ab-icon4.png" alt="" />
+                            </div>
+                            <div class="col-lg-10 col-md-10 col-12 text">
+                                <h2>Instant Payout System</h2>
+                                <p>We have an immediate payment system for our customers.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="card">
+                        <div class="d-flex flex-row">
+                            <div class="col-lg-2 col-md-2 col-12">
+                                <img src="https://www.thailotto.club/image_directory/about/ab-icon6.png" alt="" />
+                            </div>
+                            <div class="col-lg-10 col-md-10 col-12 text">
+                                <h2>Dedicated Support</h2>
+                                <p>Customer satisfaction insurance And full support</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="card">
+                        <div class="d-flex flex-row">
+                            <div class="col-lg-2 col-md-2 col-12">
+                                <img src="https://www.thailotto.club/image_directory/about/ab-icon5.png" alt="" />
+                            </div>
+                            <div class="col-lg-10 col-md-10 col-12 text">
+                                <h2>Performance Bonuses</h2>
+                                <p>Bonuses based on contributions will be given to eligible applicants.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- thai goverment lottery online -->
+
+<!-- thai goverment lottery online -->
+<section id="services">
+    <div class="col-md-10 offset-1">
+        <!-- Section Title !-->
+        <div class="section-title">
+            <h2>Services</h2>
+        </div>
+    </div>
+    <!-- SERVICES !-->
+    <div class="container">
+        <div class="row grid">
+            <!-- SERVICE 01 !-->
+            <div class="col-xs-12 col-md-6 col-lg-4 element-item service01" data-category="service01">
+                <!-- CARD SERVICE 01 !-->
+                <div class="card"><div class="circle"><p>Level</p><p>01</p></div>
+                <!-- CARD SERVICE IMAGE !--> 
+                <i class="fa-solid fa-coins"></i>
+                <!-- CARD TEXT !-->
+                <div class="card-block">
+                    <h4 class="card-title">Refferal Bonus</h4>
+                </div>
+            </div>
+        </div>
+        <!-- SERVICE 02 !-->
+        <div class="col-xs-12 col-md-6 col-lg-4 element-item service02 service03" data-category="service02">
+            <!-- CARD SERVICE 02 !-->
+            <div class="card">
+                <div class="circle"><p>Level</p><p>02</p></div>
+                <!-- CARD SERVICE IMAGE !--> 
+                <i class="fa-solid fa-layer-group"></i>
+                <!-- CARD TEXT !-->
+                <div class="card-block">
+                    <h4 class="card-title">Refferal Bonus</h4>
+                </div>
+            </div>
+        </div>
+        <!-- SERVICE 03 !-->
+        <div class="col-xs-12 col-md-6 col-lg-4 element-item service01 service03" data-category="service03">
+            <!-- CARD SERVICE 03 !-->
+            <div class="card">
+                <div class="circle"><p>Level</p><p>03</p></div>
+                <!-- CARD SERVICE IMAGE !--> 
+                <i class="fa-solid fa-chart-simple"></i>
+                <!-- CARD TEXT !-->
+                <div class="card-block">
+                    <h4 class="card-title">Refferal Bonus</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <!-- thai goverment lottery online -->
 
 <!-- thai lottery section about -->
