@@ -1,8 +1,8 @@
 <!-- section pay method -->
-<section class="p-4">
-    <div class="container">
+<section class="p-4" style="background: #043b35;">
+    <div class="container" style="background: #104747;padding: 34px;border-radius: 1% 1% 1% 1%;">
         <div class="title">
-            <h3>@lang('frontend.pay_method')</h3>
+            <h3 style="padding: 12px;color: #fff;font-size: 45px;font-weight: 500;">@lang('frontend.pay_method')</h3>
         </div>
         <div class="method_images">
             <img src="{{ asset('Frontend/image/pay_method/bank.png') }}" alt="" class="img-fluid">
@@ -24,13 +24,6 @@
         <div class="text-center p-3" style="color: white">
             THE GOVERNMENT LOTTERY OFFICE<br>
 359 SANAMABAIN NAM ROAD, TAMBON THA SAI, MUEANG NONTHUBURI DISTRICT, NONTHUBURI 40160 THAILAND.
-        </div>
-    </div>
-</div>
-<div class="footer-bottom">
-    <div class="container">
-        <div class="text-center p-3" style="color: white">
-            Copyright © 2024 <a href="https://sbit.com.bd">Skill Based IT</a> | <a href="#">Privacy & Policy</a>
         </div>
     </div>
 </div>

@@ -119,7 +119,7 @@ class GameSetupController extends Controller
      */
     public function edit(string $id)
     {
-        $data = game_setup::find($id);
+        $data = game_setup::where('id',$id)->first();
 
         return view('backend.game_setup.edit',compact('data'));
     }
