@@ -1,8 +1,8 @@
 <!-- section pay method -->
-<section class="p-4">
-    <div class="container">
+<section class="p-4" style="background: #043b35;">
+    <div class="container" style="background: #104747;padding: 34px;border-radius: 1% 1% 1% 1%;">
         <div class="title">
-            <h3>@lang('frontend.pay_method')</h3>
+            <h3 style="padding: 12px;color: #fff;font-size: 45px;font-weight: 500;">@lang('frontend.pay_method')</h3>
         </div>
         <div class="method_images">
             <img src="{{ asset('Frontend/image/pay_method/bank.png') }}" alt="" class="img-fluid">

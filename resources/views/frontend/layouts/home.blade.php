@@ -7,7 +7,7 @@
 @section('body')
 
 <!-- slider area -->
-<section class="carousel">
+<!-- <section class="carousel">
     <div id="carouselExampleCaptions" class="carousel slide">
     <div class="carousel-indicators">
         {{-- <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button> --}}
@@ -39,7 +39,26 @@
         <span class="visually-hidden">Next</span>
     </button>
     </div>
-</section>
+</section> -->
+
+<div id="carouselExample" class="carousel slide">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{{ asset('Frontend/image/slider-1.jpg') }}" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{{ asset('Frontend/image/slider-2.jpg') }}" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
 <!-- slider area -->
 
 <!-- sponsor image -->
@@ -283,7 +302,6 @@
 </section>
 <!-- thai goverment lottery online -->
 
-
 <!-- section for post -->
 <section class="youtube_live_blog_post mt-4">
     <div class="section">
@@ -296,13 +314,15 @@
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-12 p-2" style="text-align: left;margin-top: -9px;">
-                    <h4 style="margin: 0px;border-bottom: 1px solid #000;padding: 4px;">@lang('frontend.thai_lottery_draw_post')</h4>
+                    <h4 style="margin: 0px;
+    border-bottom: 3px solid #fff;
+    padding: 5px;
+    margin-top: 21px;
+    margin-left: 32px;
+    font-size: 29px;">Welcome To The Govt. Lottery Office</h4>
                     <div class="blog_single">
                         <div class="row">
-                            <div class="col-lg-12 col-md-12 col-12" style="text-align: left;">
-                                <a>
-                                    <h4>Thai Goverment Lottery Office Draw on 2 May 2024</h4>
-                                </a>
+                            <div class="col-lg-12 col-md-12 col-12" style="text-align: left;margin-top: -24px;">
                                 <p style="font-size: 15px;">
                                 Issuing lottery tickets etc. In Thailand, according to history, it began to exist in the reign of King Chulalongkorn, King Rama V, with a British foreigner named "Teacher Albaster" was the first to introduce the European lottery drawing style by calling it the "Lottery" by His Majesty King Chulalongkorn. Royal permission was given to the Royal Thai Chamberlain to issue lotteries for the first time in Thailand in 1874 on the occasion of His Majesty the King's birthday. The objective is to help foreign merchants who bring their products to be displayed in the museum at the Concadia Building in the Grand Palace. And later, during the reign of King Rama VI in the year 1917, which was during World War 1, the United Kingdom, England, which was a country on the Allied Powers. Intending to borrow money from Thailand to use in the war effort But cannot borrow directly from the Thai government. Because it will affect the budget of the National Patriotic Council of England. Therefore, the policy is to borrow money from the people by issuing lotteries. It received royal permission from His Majesty King Mongkut Klao.
                                 </p>
@@ -485,7 +505,7 @@
 <!-- thai goverment lottery online -->
 
 <!-- thai goverment lottery online -->
-    <div class="featureSection" style="background: #325e59;">
+    <div class="featureSection">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-12">
@@ -576,47 +596,50 @@
     <div class="col-md-10 offset-1">
         <!-- Section Title !-->
         <div class="section-title">
-            <h2>Services</h2>
+            <h2>Bonus Level</h2>
+            <p>We provide bonuses at various levels.</p>
         </div>
     </div>
     <!-- SERVICES !-->
     <div class="container">
-        <div class="row grid">
+        <div class="row grid" style="margin-top: 80px;">
             <!-- SERVICE 01 !-->
             <div class="col-xs-12 col-md-6 col-lg-4 element-item service01" data-category="service01">
                 <!-- CARD SERVICE 01 !-->
-                <div class="card"><div class="circle"><p>Level</p><p>01</p></div>
-                <!-- CARD SERVICE IMAGE !--> 
-                <i class="fa-solid fa-coins"></i>
-                <!-- CARD TEXT !-->
-                <div class="card-block">
-                    <h4 class="card-title">Refferal Bonus</h4>
+                <div class="card" style="background: #043b35;border: none;">
+                    <div class="circle point-blue"><p>Level</p><p>01</p></div>
+                    <!-- CARD SERVICE IMAGE !--> 
+                    <i class="fa-solid fa-coins blue"></i>
+                    <!-- CARD TEXT !-->
+                    <div class="card-block">
+                        <h4 class="card-title">Refferal Bonus</h4>
+                    </div>
                 </div>
             </div>
-        </div>
-        <!-- SERVICE 02 !-->
-        <div class="col-xs-12 col-md-6 col-lg-4 element-item service02 service03" data-category="service02">
-            <!-- CARD SERVICE 02 !-->
-            <div class="card">
-                <div class="circle"><p>Level</p><p>02</p></div>
-                <!-- CARD SERVICE IMAGE !--> 
-                <i class="fa-solid fa-layer-group"></i>
-                <!-- CARD TEXT !-->
-                <div class="card-block">
-                    <h4 class="card-title">Refferal Bonus</h4>
+            <!-- SERVICE 02 !-->
+            <div class="col-xs-12 col-md-6 col-lg-4 element-item service02 service03" data-category="service02">
+                <!-- CARD SERVICE 02 !-->
+                <div class="card" style="background: #043b35;border: none;">
+                    <div class="circle point-orange"><p>Level</p><p>02</p></div>
+                    <!-- CARD SERVICE IMAGE !--> 
+                    <i class="fa-solid fa-layer-group orange"></i>
+                    <!-- CARD TEXT !-->
+                    <div class="card-block">
+                        <h4 class="card-title">Current Offer Bonus</h4>
+                    </div>
                 </div>
             </div>
-        </div>
-        <!-- SERVICE 03 !-->
-        <div class="col-xs-12 col-md-6 col-lg-4 element-item service01 service03" data-category="service03">
-            <!-- CARD SERVICE 03 !-->
-            <div class="card">
-                <div class="circle"><p>Level</p><p>03</p></div>
-                <!-- CARD SERVICE IMAGE !--> 
-                <i class="fa-solid fa-chart-simple"></i>
-                <!-- CARD TEXT !-->
-                <div class="card-block">
-                    <h4 class="card-title">Refferal Bonus</h4>
+            <!-- SERVICE 03 !-->
+            <div class="col-xs-12 col-md-6 col-lg-4 element-item service01 service03" data-category="service03">
+                <!-- CARD SERVICE 03 !-->
+                <div class="card" style="background: #043b35;border: none;">
+                    <div class="circle point-green"><p>Level</p><p>03</p></div>
+                    <!-- CARD SERVICE IMAGE !--> 
+                    <i class="fa-solid fa-chart-simple green"></i>
+                    <!-- CARD TEXT !-->
+                    <div class="card-block">
+                        <h4 class="card-title">Affiliate Commission Bonus</h4>
+                    </div>
                 </div>
             </div>
         </div>
@@ -625,7 +648,7 @@
 <!-- thai goverment lottery online -->
 
 <!-- thai lottery section about -->
-<section class="section_div p-4" style="margin-top: 15px;">
+<section class="section_div p-4">
     <div class="row">
         <div class="col-lg-4 col-md-4 col-12">
             <div class="card">
