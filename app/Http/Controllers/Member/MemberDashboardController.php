@@ -9,12 +9,17 @@ use Auth;
 use App\Models\PaymentMethod;
 use App\Models\CustomerTransaction;
 use RealRashid\SweetAlert\Facades\Alert;
+use App\Models\game_setup;
+use App\Traits\Idgenerator;
+use App\Models\GameLedger;
+use App\Models\GameEntry;
+use App\Traits\Member;
 
 
 class MemberDashboardController extends Controller
 {
     protected $path;
-    use ViewDirective;
+    use ViewDirective,Idgenerator,Member;
     public function __construct()
     {
         $this->path = 'member.dashboard';
@@ -32,7 +37,9 @@ class MemberDashboardController extends Controller
 
     public function lottery()
     {
-        return $this->view($this->path,'lottery');
+        $param['check'] = game_setup::where('status',1)->count();
+        $param['game'] = game_setup::where('status',1)->first();
+        return $this->view($this->path,'lottery',$param);
     }
 
     public function cash_in()
@@ -91,6 +98,58 @@ class MemberDashboardController extends Controller
 
     public function lottery_store(Request $request)
     {
-        dd($request->all());
+        // dd($request->all());
+
+        $balance = Member::getBalance(Auth::guard('member')->user()->member_id);
+        if($request->bet_amount > $balance)
+        {
+            Alert::error('Error', 'Insuficient Balance');
+            return redirect()->back();
+        }
+        $check = game_setup::where('id',$request->game_id)->first();
+        if($check->status == 0)
+        {
+            Alert::error('Error', 'Game Expired');
+            return redirect()->back();
+        }
+        $invoice_no = Idgenerator::AutoCode('game_ledgers','invoice_no','INV-','10');
+        $ledger_data = array(
+            'invoice_no' => $invoice_no,
+            'member_id' => Auth::guard('member')->user()->member_id,
+            'date' => date('Y-m-d'),
+            'time' => date('h:i:s'),
+            'game_id' => $request->game_id,
+            'game_name' => $request->game,
+            'slot' => $request->set,
+            'total_amount' => $request->totalAmount,
+            'discount' => $request->discount,
+            'bet_amount' => $request->bet_amount,
+        );
+
+        GameLedger::create($ledger_data);
+
+        for ($i=0; $i < count($request->lottery_number) ; $i++)
+        {
+            $data = array(
+                'invoice_no' => $invoice_no,
+                'lottery_number' => $request->lottery_number[$i],
+                'direct_amount' => $request->direct_amount[$i],
+                'rumble_amount'=> $request->rumble_amount[$i],
+            );
+
+            GameEntry::create($data);
+        }
+
+        CustomerTransaction::create([
+            'date' => date('Y-m-d'),
+            'time' => date('h:i:s'),
+            'member_id' => Auth::guard('member')->user()->member_id,
+            'transaction_type' => 3,
+            'expense' => $request->bet_amount,
+            'status' => 1,
+        ]);
+
+        Alert::success('Success', 'Your Game Is Successfully Stored');
+        return redirect()->back();
     }
 }

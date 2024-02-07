@@ -78,23 +78,6 @@
                                     <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
                             </div>
-                            <div class="col-lg-4 col-md-6 col-12 mt-2">
-                                <label for="status">@lang('common.status')</label><span class="text-danger">*</span>
-                                <div>
-                                    <label class="form-check">
-                                        <input class="form-check-input" type="radio" value="1" name="status" checked>
-                                        <span class="form-check-label">
-                                            @lang('common.active')
-                                        </span>
-                                    </label>
-                                    <label class="form-check">
-                                        <input class="form-check-input" type="radio" value="0" name="status">
-                                        <span class="form-check-label">
-                                            @lang('common.inactive')
-                                        </span>
-                                    </label>
-                                </div>
-                            </div>
 
                             <div class="col-12 mt-4" style="text-align: right">
                                 <button type="submit" id="submit" class="btn  btn-success"> <i class="fa fa-save"></i> @lang('common.save_now')</button>

@@ -16,6 +16,8 @@
         <div class="card-body">
             <form method="post" action="{{ route('member.lottery_store') }}">
                 @csrf
+                <input type="hidden" name="game_status" value="{{ $params['check'] }}">
+                <input type="hidden" name="game_id" value="{{ $params['game']->id }}">
             <table class="table">
                 <tr>
                     <th>Select Game</th>
@@ -57,6 +59,63 @@
         </div>
     </div>
 </div>
+
+<script>
+    function calculateDirectAmount()
+    {
+        let totalAmount = 0;
+        let game = $('#game').val();
+       let direct_amount_array = $('input[name="direct_amount[]"]').length;
+
+       for (let index = 0; index < direct_amount_array; index++)
+       {
+            let direct_amount = $('#direct_amount-'+index).val();
+
+            if(game == '1st_prize_six_digit' || game == '3up' || game == '2up' || game =='2down')
+            {
+
+                let rumble_amount = $('#rumble_amount-'+index).val();
+                totalAmount = parseInt(totalAmount) + parseInt(direct_amount) + parseInt(rumble_amount);
+            }
+            else
+            {
+                totalAmount = parseInt(totalAmount) + parseInt(direct_amount);
+            }
+
+       }
+    //    console.log(totalAmount);
+       $('#totalAmount').html('$'+totalAmount);
+       $('#total_amount').val(totalAmount);
+
+       let discount_per = $('#contDiscount').val();
+
+       let discount = parseInt(totalAmount) * parseInt(discount_per) / 100;
+
+       $('#discount').val(discount);
+
+       $('#discountedAmount').html('$ '+ discount);
+
+       let bet_amount = parseInt(totalAmount) - parseInt(discount);
+
+       $('#betAmountText').html('$ '+ bet_amount);
+       $('#betAmount').val(bet_amount);
+    }
+</script>
+
+<script>
+    function showSet()
+    {
+        let game = $('#game').val();
+        if(game == '1st_prize_six_digit' || game == '3up' || game == '2up' || game =='2down')
+        {
+            $('.set').removeClass('d-none');
+        }
+        else
+        {
+            $('.set').addClass('d-none');
+        }
+    }
+</script>
 
 <script>
     function showLotteryForm()
@@ -146,6 +205,7 @@
                             <td>
                                     <span id="discountedAmount">$</span>
                                     <input type="hidden" name="cont_discount" id="contDiscount" value="${show_discount_per}">
+                                    <input type="hidden" name="discount" id="discount" value="">
                             </td>
                         </tr>
                         <tr>
@@ -232,59 +292,6 @@
     }
 </script>
 
-<script>
-    function calculateDirectAmount()
-    {
-        let totalAmount = 0;
-        let game = $('#game').val();
-       let direct_amount_array = $('input[name="direct_amount[]"]').length;
 
-       for (let index = 0; index < direct_amount_array; index++)
-       {
-            let direct_amount = $('#direct_amount-'+index).val();
-
-            if(game == '1st_prize_six_digit' || game == '3up' || game == '2up' || game =='2down')
-            {
-
-                let rumble_amount = $('#rumble_amount-'+index).val();
-                totalAmount = parseInt(totalAmount) + parseInt(direct_amount) + parseInt(rumble_amount);
-            }
-            else
-            {
-                totalAmount = parseInt(totalAmount) + parseInt(direct_amount);
-            }
-
-       }
-    //    console.log(totalAmount);
-       $('#totalAmount').html('$'+totalAmount);
-       $('#total_amount').val(totalAmount);
-
-       let discount_per = $('#contDiscount').val();
-
-       let discount = parseInt(totalAmount) * parseInt(discount_per) / 100;
-
-       $('#discountedAmount').html('$ '+ discount);
-
-       let bet_amount = parseInt(totalAmount) - parseInt(discount);
-
-       $('#betAmountText').html('$ '+ bet_amount);
-       $('#betAmount').val(bet_amount);
-    }
-</script>
-
-<script>
-    function showSet()
-    {
-        let game = $('#game').val();
-        if(game == '1st_prize_six_digit' || game == '3up' || game == '2up' || game =='2down')
-        {
-            $('.set').removeClass('d-none');
-        }
-        else
-        {
-            $('.set').addClass('d-none');
-        }
-    }
-</script>
 
 @endsection

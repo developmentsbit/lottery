@@ -77,17 +77,20 @@ class GameSetupController extends Controller
      */
     public function store(Request $request)
     {
+        // return $request->start_time;
         $data = array(
 
             'start_date'=>$request->start_date,
             'end_date'=>$request->end_date,
             'game_title'=>$request->game_title,
             'game_title_bn'=>$request->game_title_bn,
-            'start_time'=>$request->start_time,
-            'end_time'=>$request->end_time,
+            'start_time'=>$request->start_time.':00',
+            'end_time'=>$request->end_time.':00',
             'status'=>$request->status,
-            
+
         );
+
+        // return $data;
 
         $insert = game_setup::create($data);
 
@@ -133,7 +136,7 @@ class GameSetupController extends Controller
             'game_title_bn'=>$request->game_title_bn,
             'start_time'=>$request->start_time,
             'end_time'=>$request->end_time,
-            'status'=>$request->status,
+            'status'=>1,
         ]);
 
         if($update)
@@ -165,7 +168,7 @@ class GameSetupController extends Controller
         Toastr::success('Deleted Data Restore', 'success');
         return redirect(route('game_setup.index'));
     }
-    
+
     public function deletedListIndex($id)
     {
         game_setup::where('id',$id)->withTrashed()->forceDelete();
