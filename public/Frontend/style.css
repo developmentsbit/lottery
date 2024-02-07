@@ -80,6 +80,11 @@ div#prize_box {
   padding: 44px 3px;
 }
 
+.method_images img {
+  padding: 19px;
+  width: 14%;
+}
+
 ul.header_side_nav li {
   list-style: none;
   display: inline-block;
@@ -98,9 +103,6 @@ img#flag_up {
     font-size: 13px;
     border-radius: 0px;
 }
-
-
-
 .card-text {
 background-color: #09524b;
 width: 64%;
@@ -235,11 +237,25 @@ html, body {
 .text-left{
   text-align: left;
 }
+
+.youtube_live_blog_post{
+  background: #043b35;
+}
+
+.youtube_live_blog_post h4{
+  color: #fff;
+  margin-top: 24px;
+}
+
 .blog_single {
-  background: #ececec;
-  padding: 10px;
+  /* background: #ececec; */
+  padding: 33px;
   /* border-radius: 9px; */
-  margin-top: 12px;
+  /* margin-top: 12px; */
+}
+
+.blog_single p{
+  color: #fff;
 }
 
 @media all and (max-width: 768px) {
@@ -415,7 +431,6 @@ font-size: 16px;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(#da22ff, #9733ee);
   clip-path: circle(30% at right 70%);
 }
 
@@ -426,7 +441,6 @@ font-size: 16px;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(#e55d87, #5fc3e4);
   clip-path: circle(20% at 10% 10%);
 }
 
@@ -662,63 +676,27 @@ font-size: 16px;
 
 .section-title h2 {
   position: relative;
-  text-align:center;
+  text-align: center;
   font-size: 36px;
   font-weight: 400;
   text-transform: uppercase;
   margin-top: 35px;
+  color: #fff;
+  padding: 27px;
 }
 
-.section-title h2:after {
-  content: "";
-  position: absolute;
-  bottom: -20px;
-  left: 44%;
-  width: 135px;
-  height: 2px;
-  background-color: #8DC648;
-}
 .section-title p {
   font-size: 18px;
-  line-height:28px;
-  text-align:center;
-  margin-top:40px;
-}
-
-/* Button Filter */
-.button-group {
-  text-align:center;
-}
-.button {
-  display: inline-block;
-  font-family: sans-serif;
-  font-size: 16px;
-  cursor: pointer;
-  color: #000;
-  border:none;
-  background:none;
-  text-transform: lowercase;
-}
-.button:hover {
-  color: #8DC648;
-}
-
-.button:active,
-.button.is-checked {
-  color: #8DC648;
-}
-
-.button:after {
-    content: " | ";
-    color: #000;
-    font-weight: 100;
-    padding-left: 10px;
-}
-.button:last-child:after{
-    content: ""; 
+  line-height: 0px;
+  text-align: center;
+  color: #9aa5b1;
 }
 
 /* CARD */
+#services {
+  background: #043b35;
+  color: #fff;
+}
 .card {
   margin: 25px 0px;
 }
@@ -728,31 +706,59 @@ font-size: 16px;
 }
 
 .element-item svg {
-    align-self: center;
-    width: 150px;
-    height: 150px;
-    padding: 20px;
-    background: #000;
+  align-self: center;
+  width: 50px;
+  height: 50px;
+  padding: 20px;
+  background: #104747;
+  border-radius: 50%;
 }
 
 .circle{
   border-radius: 50%;
-  width: 75px;
-  height: 74px;
-  border: 2px solid #8DC648;
+  width: 50px;
+  height: 50px;
   position: absolute;
-  top: -40px;
-  left: 85px;
+  top: -30px;
+  left: 140px;
   background: #000;
   z-index: 0;
   margin-top: 15px;
   line-height: 0px;
+  font-size: 12px;
 }
 
 .circle p {
-  margin-top: 26px;
+  margin-top: 18px;
   color: #fff;
   /* font-weight: 600; */
+}
+
+.point-orange{
+  background: #F39D36;
+  border: 1px solid #F39D36;
+}
+
+.orange {
+  color: #F39D36 !important;
+}
+
+.point-blue{
+  background: #0098D7;
+  border: 1px solid #0098D7;
+}
+
+.blue {
+  color: #0098D7 !important;
+}
+
+.point-green{
+  background: #1AA15F;
+  border: 1px solid #1AA15F;
+}
+
+.green {
+  color: #1AA15F !important;
 }
 
 .card-title {
@@ -760,6 +766,8 @@ font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 18px;
+  font-weight: 700;
+  color: #fff;
 }
 .card-text{
   clear: both;
@@ -778,17 +786,4 @@ font-size: 16px;
 }
 .card-text:hover {
   color:#649726;
-}
-
-/* MODALS */
-.modal-header {
-background-color: #8DC648;
-color: #fff;
-}
-.modal-body {
-height: 150px;
-}
-.modal-footer {
-background-color: #8DC648;
-color: #fff;
 }
