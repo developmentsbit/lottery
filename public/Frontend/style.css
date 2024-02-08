@@ -272,6 +272,56 @@ html, body {
   }
 }
 
+@media all and (max-width: 620px) {
+
+  .featureSection .card {
+    margin-right: -8px !important;
+}
+
+  .featuresSection img {
+    width: 35% !important;
+    padding: 16px 5px 9px 12px !important;
+    margin-left: -45% !important;
+    margin-top: -19px !important;
+}
+.featuresSection h2 {
+  margin-left: -40% !important;
+    margin-top: -12px !important;
+    float: left !important;
+}
+.featuresSection h6 {
+  float: left !important;
+  margin-left: -40% !important;
+  margin-top: 39px !important;
+}
+
+  .featureSection img {
+    width: 20% !important;
+    padding: 22px 2px 15px 6px !important;
+    margin-left: -70% !important;
+}
+.featureSection .text {
+  padding: 30px 0px 0px 0px !important;
+  margin-left: -90% !important;
+}
+.featureSection p {
+  font-size: 12px !important;
+}
+
+.circle {
+  top: -38px !important;
+  left: 37% !important;
+}
+.row_grid {
+  margin-left: 52px !important;
+}
+.method_images img {
+  width: 13% !important;
+  padding: 0% !important;
+}
+
+}
+
 
 /* tabs */
 
