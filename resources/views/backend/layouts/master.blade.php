@@ -198,9 +198,15 @@
                             </span>
 						</a>
 						<ul id="{{$m->id}}" class="sidebar-dropdown list-unstyled collapse @if($currentMenuId->parent_id == $m->id) show @else @endif" data-bs-parent="#{{$m->id}}">
-                            @if($module)
-                            @foreach ($module as $vm)
+
+                            @php
+                            $thisModuleMenu = App\Models\Menu::where('type',2)->where('parent_id',$m->id)->get();
+                            @endphp
+
+                            @if($thisModuleMenu)
+                            @foreach ($thisModuleMenu as $vm)
                             @if($vm->parent_id == $m->id)
+
                             @if(Auth::user()->can($vm->system_name.' '.$vm->slug))
 							<li class="sidebar-item @if($currentMenuId->id == $vm->id) active @endif"><a class='sidebar-link' href='@if(Route::has($vm->route.'.'.$vm->slug)) {{route($vm->route.'.'.$vm->slug)}} @else javascript:; @endif'>
                                 @if(config('app.locale') == 'en')
@@ -219,7 +225,6 @@
                     @endif
 
                     @else
-
 
                     @endif
 
@@ -246,7 +251,7 @@
                     @endforeach
 
 
-                    
+
 
                     @endif
                     @endforeach

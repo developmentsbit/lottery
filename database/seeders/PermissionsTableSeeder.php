@@ -750,15 +750,6 @@ class PermissionsTableSeeder extends Seeder
             ),
             81 => 
             array (
-                'id' => 279,
-                'name' => 'Test Menu index',
-                'parent' => 'Test Menu',
-                'guard_name' => 'web',
-                'created_at' => '2023-11-02 11:14:50',
-                'updated_at' => '2023-11-02 11:14:50',
-            ),
-            82 => 
-            array (
                 'id' => 280,
                 'name' => 'Payment Method create',
                 'parent' => 'Payment Method',
@@ -766,7 +757,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2024-02-03 17:38:27',
                 'updated_at' => '2024-02-03 17:38:27',
             ),
-            83 => 
+            82 => 
             array (
                 'id' => 281,
                 'name' => 'Payment Method index',
@@ -775,7 +766,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2024-02-03 17:38:27',
                 'updated_at' => '2024-02-03 17:38:27',
             ),
-            84 => 
+            83 => 
             array (
                 'id' => 282,
                 'name' => 'Payment Method show',
@@ -784,7 +775,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2024-02-03 17:38:27',
                 'updated_at' => '2024-02-03 17:38:27',
             ),
-            85 => 
+            84 => 
             array (
                 'id' => 283,
                 'name' => 'Payment Method edit',
@@ -793,7 +784,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2024-02-03 17:38:27',
                 'updated_at' => '2024-02-03 17:38:27',
             ),
-            86 => 
+            85 => 
             array (
                 'id' => 284,
                 'name' => 'Payment Method destroy',
@@ -802,7 +793,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2024-02-03 17:38:27',
                 'updated_at' => '2024-02-03 17:38:27',
             ),
-            87 => 
+            86 => 
             array (
                 'id' => 285,
                 'name' => 'Payment Method trash',
@@ -811,7 +802,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2024-02-03 17:38:27',
                 'updated_at' => '2024-02-03 17:38:27',
             ),
-            88 => 
+            87 => 
             array (
                 'id' => 286,
                 'name' => 'Payment Method restore',
@@ -820,7 +811,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2024-02-03 17:38:27',
                 'updated_at' => '2024-02-03 17:38:27',
             ),
-            89 => 
+            88 => 
             array (
                 'id' => 287,
                 'name' => 'Payment Method delete',
@@ -829,7 +820,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2024-02-03 17:38:27',
                 'updated_at' => '2024-02-03 17:38:27',
             ),
-            90 => 
+            89 => 
             array (
                 'id' => 288,
                 'name' => 'Payment Method status',
@@ -838,7 +829,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2024-02-03 17:38:27',
                 'updated_at' => '2024-02-03 17:38:27',
             ),
-            91 => 
+            90 => 
             array (
                 'id' => 289,
                 'name' => 'Payment Method properties',
@@ -847,7 +838,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2024-02-03 17:38:27',
                 'updated_at' => '2024-02-03 17:38:27',
             ),
-            92 => 
+            91 => 
             array (
                 'id' => 296,
                 'name' => 'Cash In Request create',
@@ -856,7 +847,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2024-02-05 12:35:52',
                 'updated_at' => '2024-02-05 12:35:52',
             ),
-            93 => 
+            92 => 
             array (
                 'id' => 297,
                 'name' => 'Cash In Request index',
@@ -865,7 +856,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2024-02-05 12:35:52',
                 'updated_at' => '2024-02-05 12:35:52',
             ),
-            94 => 
+            93 => 
             array (
                 'id' => 298,
                 'name' => 'Cash In Request show',
@@ -874,7 +865,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2024-02-05 12:35:52',
                 'updated_at' => '2024-02-05 12:35:52',
             ),
-            95 => 
+            94 => 
             array (
                 'id' => 299,
                 'name' => 'Cash In Request edit',
@@ -883,7 +874,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2024-02-05 12:35:52',
                 'updated_at' => '2024-02-05 12:35:52',
             ),
-            96 => 
+            95 => 
             array (
                 'id' => 300,
                 'name' => 'Cash In Request destroy',
@@ -892,7 +883,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2024-02-05 12:35:52',
                 'updated_at' => '2024-02-05 12:35:52',
             ),
-            97 => 
+            96 => 
             array (
                 'id' => 301,
                 'name' => 'Cash In Request trash',
@@ -901,7 +892,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2024-02-05 12:35:52',
                 'updated_at' => '2024-02-05 12:35:52',
             ),
-            98 => 
+            97 => 
             array (
                 'id' => 302,
                 'name' => 'Cash In Request restore',
@@ -910,7 +901,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2024-02-05 12:35:52',
                 'updated_at' => '2024-02-05 12:35:52',
             ),
-            99 => 
+            98 => 
             array (
                 'id' => 303,
                 'name' => 'Cash In Request delete',
@@ -919,7 +910,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2024-02-05 12:35:52',
                 'updated_at' => '2024-02-05 12:35:52',
             ),
-            100 => 
+            99 => 
             array (
                 'id' => 304,
                 'name' => 'Cash In Request status',
@@ -928,7 +919,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2024-02-05 12:35:52',
                 'updated_at' => '2024-02-05 12:35:52',
             ),
-            101 => 
+            100 => 
             array (
                 'id' => 305,
                 'name' => 'Game Setup create',
@@ -937,7 +928,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2024-02-05 16:49:23',
                 'updated_at' => '2024-02-05 16:49:23',
             ),
-            102 => 
+            101 => 
             array (
                 'id' => 306,
                 'name' => 'Game Setup index',
@@ -946,7 +937,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2024-02-05 16:49:23',
                 'updated_at' => '2024-02-05 16:49:23',
             ),
-            103 => 
+            102 => 
             array (
                 'id' => 307,
                 'name' => 'Game Setup show',
@@ -955,7 +946,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2024-02-05 16:49:23',
                 'updated_at' => '2024-02-05 16:49:23',
             ),
-            104 => 
+            103 => 
             array (
                 'id' => 308,
                 'name' => 'Game Setup edit',
@@ -964,7 +955,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2024-02-05 16:49:23',
                 'updated_at' => '2024-02-05 16:49:23',
             ),
-            105 => 
+            104 => 
             array (
                 'id' => 309,
                 'name' => 'Game Setup destroy',
@@ -973,7 +964,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2024-02-05 16:49:23',
                 'updated_at' => '2024-02-05 16:49:23',
             ),
-            106 => 
+            105 => 
             array (
                 'id' => 310,
                 'name' => 'Game Setup trash',
@@ -982,7 +973,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2024-02-05 16:49:23',
                 'updated_at' => '2024-02-05 16:49:23',
             ),
-            107 => 
+            106 => 
             array (
                 'id' => 311,
                 'name' => 'Game Setup restore',
@@ -991,7 +982,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2024-02-05 16:49:23',
                 'updated_at' => '2024-02-05 16:49:23',
             ),
-            108 => 
+            107 => 
             array (
                 'id' => 312,
                 'name' => 'Game Setup delete',
@@ -1000,7 +991,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2024-02-05 16:49:23',
                 'updated_at' => '2024-02-05 16:49:23',
             ),
-            109 => 
+            108 => 
             array (
                 'id' => 313,
                 'name' => 'Game Setup status',
@@ -1009,7 +1000,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2024-02-05 16:49:23',
                 'updated_at' => '2024-02-05 16:49:23',
             ),
-            110 => 
+            109 => 
             array (
                 'id' => 314,
                 'name' => 'Game Setup properties',
@@ -1018,7 +1009,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2024-02-05 16:49:23',
                 'updated_at' => '2024-02-05 16:49:23',
             ),
-            111 => 
+            110 => 
             array (
                 'id' => 315,
                 'name' => 'Game Setup print',
@@ -1027,203 +1018,104 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2024-02-05 16:49:23',
                 'updated_at' => '2024-02-05 16:49:23',
             ),
+            111 => 
+            array (
+                'id' => 349,
+                'name' => 'Photo Info create',
+                'parent' => 'Photo Info',
+                'guard_name' => 'web',
+                'created_at' => '2024-02-09 01:18:49',
+                'updated_at' => '2024-02-09 01:18:49',
+            ),
             112 => 
             array (
-                'id' => 316,
-                'name' => 'Website Settings create',
-                'parent' => 'Website Settings',
+                'id' => 350,
+                'name' => 'Photo Info index',
+                'parent' => 'Photo Info',
                 'guard_name' => 'web',
-                'created_at' => '2024-02-07 15:37:03',
-                'updated_at' => '2024-02-07 15:37:03',
+                'created_at' => '2024-02-09 01:18:49',
+                'updated_at' => '2024-02-09 01:18:49',
             ),
             113 => 
             array (
-                'id' => 317,
-                'name' => 'Website Settings index',
-                'parent' => 'Website Settings',
+                'id' => 351,
+                'name' => 'Photo Info show',
+                'parent' => 'Photo Info',
                 'guard_name' => 'web',
-                'created_at' => '2024-02-07 15:37:03',
-                'updated_at' => '2024-02-07 15:37:03',
+                'created_at' => '2024-02-09 01:18:49',
+                'updated_at' => '2024-02-09 01:18:49',
             ),
             114 => 
             array (
-                'id' => 318,
-                'name' => 'Website Settings show',
-                'parent' => 'Website Settings',
+                'id' => 352,
+                'name' => 'Photo Info edit',
+                'parent' => 'Photo Info',
                 'guard_name' => 'web',
-                'created_at' => '2024-02-07 15:37:03',
-                'updated_at' => '2024-02-07 15:37:03',
+                'created_at' => '2024-02-09 01:18:49',
+                'updated_at' => '2024-02-09 01:18:49',
             ),
             115 => 
             array (
-                'id' => 319,
-                'name' => 'Website Settings edit',
-                'parent' => 'Website Settings',
+                'id' => 353,
+                'name' => 'Photo Info destroy',
+                'parent' => 'Photo Info',
                 'guard_name' => 'web',
-                'created_at' => '2024-02-07 15:37:03',
-                'updated_at' => '2024-02-07 15:37:03',
+                'created_at' => '2024-02-09 01:18:49',
+                'updated_at' => '2024-02-09 01:18:49',
             ),
             116 => 
             array (
-                'id' => 320,
-                'name' => 'Website Settings destroy',
-                'parent' => 'Website Settings',
+                'id' => 354,
+                'name' => 'Photo Info trash',
+                'parent' => 'Photo Info',
                 'guard_name' => 'web',
-                'created_at' => '2024-02-07 15:37:03',
-                'updated_at' => '2024-02-07 15:37:03',
+                'created_at' => '2024-02-09 01:18:49',
+                'updated_at' => '2024-02-09 01:18:49',
             ),
             117 => 
             array (
-                'id' => 321,
-                'name' => 'Website Settings trash',
-                'parent' => 'Website Settings',
+                'id' => 355,
+                'name' => 'Photo Info restore',
+                'parent' => 'Photo Info',
                 'guard_name' => 'web',
-                'created_at' => '2024-02-07 15:37:03',
-                'updated_at' => '2024-02-07 15:37:03',
+                'created_at' => '2024-02-09 01:18:49',
+                'updated_at' => '2024-02-09 01:18:49',
             ),
             118 => 
             array (
-                'id' => 322,
-                'name' => 'Website Settings restore',
-                'parent' => 'Website Settings',
+                'id' => 356,
+                'name' => 'Photo Info delete',
+                'parent' => 'Photo Info',
                 'guard_name' => 'web',
-                'created_at' => '2024-02-07 15:37:03',
-                'updated_at' => '2024-02-07 15:37:03',
+                'created_at' => '2024-02-09 01:18:49',
+                'updated_at' => '2024-02-09 01:18:49',
             ),
             119 => 
             array (
-                'id' => 323,
-                'name' => 'Website Settings delete',
-                'parent' => 'Website Settings',
+                'id' => 357,
+                'name' => 'Photo Info status',
+                'parent' => 'Photo Info',
                 'guard_name' => 'web',
-                'created_at' => '2024-02-07 15:37:03',
-                'updated_at' => '2024-02-07 15:37:03',
+                'created_at' => '2024-02-09 01:18:49',
+                'updated_at' => '2024-02-09 01:18:49',
             ),
             120 => 
             array (
-                'id' => 324,
-                'name' => 'Website Settings status',
-                'parent' => 'Website Settings',
+                'id' => 358,
+                'name' => 'Photo Info properties',
+                'parent' => 'Photo Info',
                 'guard_name' => 'web',
-                'created_at' => '2024-02-07 15:37:03',
-                'updated_at' => '2024-02-07 15:37:03',
+                'created_at' => '2024-02-09 01:18:49',
+                'updated_at' => '2024-02-09 01:18:49',
             ),
             121 => 
             array (
-                'id' => 325,
-                'name' => 'Website Settings properties',
-                'parent' => 'Website Settings',
+                'id' => 359,
+                'name' => 'Photo Info print',
+                'parent' => 'Photo Info',
                 'guard_name' => 'web',
-                'created_at' => '2024-02-07 15:37:03',
-                'updated_at' => '2024-02-07 15:37:03',
-            ),
-            122 => 
-            array (
-                'id' => 326,
-                'name' => 'Website Settings print',
-                'parent' => 'Website Settings',
-                'guard_name' => 'web',
-                'created_at' => '2024-02-07 15:37:03',
-                'updated_at' => '2024-02-07 15:37:03',
-            ),
-            123 => 
-            array (
-                'id' => 338,
-                'name' => 'Slider Infos create',
-                'parent' => 'Slider Infos',
-                'guard_name' => 'web',
-                'created_at' => '2024-02-07 16:37:29',
-                'updated_at' => '2024-02-07 16:37:29',
-            ),
-            124 => 
-            array (
-                'id' => 339,
-                'name' => 'Slider Infos index',
-                'parent' => 'Slider Infos',
-                'guard_name' => 'web',
-                'created_at' => '2024-02-07 16:37:29',
-                'updated_at' => '2024-02-07 16:37:29',
-            ),
-            125 => 
-            array (
-                'id' => 340,
-                'name' => 'Slider Infos show',
-                'parent' => 'Slider Infos',
-                'guard_name' => 'web',
-                'created_at' => '2024-02-07 16:37:29',
-                'updated_at' => '2024-02-07 16:37:29',
-            ),
-            126 => 
-            array (
-                'id' => 341,
-                'name' => 'Slider Infos edit',
-                'parent' => 'Slider Infos',
-                'guard_name' => 'web',
-                'created_at' => '2024-02-07 16:37:29',
-                'updated_at' => '2024-02-07 16:37:29',
-            ),
-            127 => 
-            array (
-                'id' => 342,
-                'name' => 'Slider Infos destroy',
-                'parent' => 'Slider Infos',
-                'guard_name' => 'web',
-                'created_at' => '2024-02-07 16:37:29',
-                'updated_at' => '2024-02-07 16:37:29',
-            ),
-            128 => 
-            array (
-                'id' => 343,
-                'name' => 'Slider Infos trash',
-                'parent' => 'Slider Infos',
-                'guard_name' => 'web',
-                'created_at' => '2024-02-07 16:37:29',
-                'updated_at' => '2024-02-07 16:37:29',
-            ),
-            129 => 
-            array (
-                'id' => 344,
-                'name' => 'Slider Infos restore',
-                'parent' => 'Slider Infos',
-                'guard_name' => 'web',
-                'created_at' => '2024-02-07 16:37:29',
-                'updated_at' => '2024-02-07 16:37:29',
-            ),
-            130 => 
-            array (
-                'id' => 345,
-                'name' => 'Slider Infos delete',
-                'parent' => 'Slider Infos',
-                'guard_name' => 'web',
-                'created_at' => '2024-02-07 16:37:29',
-                'updated_at' => '2024-02-07 16:37:29',
-            ),
-            131 => 
-            array (
-                'id' => 346,
-                'name' => 'Slider Infos status',
-                'parent' => 'Slider Infos',
-                'guard_name' => 'web',
-                'created_at' => '2024-02-07 16:37:29',
-                'updated_at' => '2024-02-07 16:37:29',
-            ),
-            132 => 
-            array (
-                'id' => 347,
-                'name' => 'Slider Infos properties',
-                'parent' => 'Slider Infos',
-                'guard_name' => 'web',
-                'created_at' => '2024-02-07 16:37:29',
-                'updated_at' => '2024-02-07 16:37:29',
-            ),
-            133 => 
-            array (
-                'id' => 348,
-                'name' => 'Slider Infos print',
-                'parent' => 'Slider Infos',
-                'guard_name' => 'web',
-                'created_at' => '2024-02-07 16:37:29',
-                'updated_at' => '2024-02-07 16:37:29',
+                'created_at' => '2024-02-09 01:18:49',
+                'updated_at' => '2024-02-09 01:18:49',
             ),
         ));
         
