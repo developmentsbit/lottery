@@ -435,7 +435,7 @@
                                     <li>7 </li>
                                 </ul>
                             </div>
-                            
+
                             <div class="result-single pt-120 remain-time">
                                 <h5>Next Draw Date:
                                     <span>16 Feb 2567 </span>
@@ -608,7 +608,7 @@
                 <!-- CARD SERVICE 01 !-->
                 <div class="card" style="background: #043b35;border: none;">
                     <div class="circle point-blue"><p>Level</p><p>01</p></div>
-                    <!-- CARD SERVICE IMAGE !--> 
+                    <!-- CARD SERVICE IMAGE !-->
                     <i class="fa-solid fa-coins blue"></i>
                     <!-- CARD TEXT !-->
                     <div class="card-block">
@@ -621,7 +621,7 @@
                 <!-- CARD SERVICE 02 !-->
                 <div class="card" style="background: #043b35;border: none;">
                     <div class="circle point-orange"><p>Level</p><p>02</p></div>
-                    <!-- CARD SERVICE IMAGE !--> 
+                    <!-- CARD SERVICE IMAGE !-->
                     <i class="fa-solid fa-layer-group orange"></i>
                     <!-- CARD TEXT !-->
                     <div class="card-block">
@@ -634,7 +634,7 @@
                 <!-- CARD SERVICE 03 !-->
                 <div class="card" style="background: #043b35;border: none;">
                     <div class="circle point-green"><p>Level</p><p>03</p></div>
-                    <!-- CARD SERVICE IMAGE !--> 
+                    <!-- CARD SERVICE IMAGE !-->
                     <i class="fa-solid fa-chart-simple green"></i>
                     <!-- CARD TEXT !-->
                     <div class="card-block">

@@ -39,6 +39,54 @@
 /*-------------------------------------------------------------------*/
 /* === SCSS Compass Functions === */
 
+
+@import url("https://fonts.googleapis.com/css?family=Lato");
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Lato, sans-serif;
+  background-color: #222;
+}
+.wrapper {
+  text-align: center;
+}
+.time {
+  color: #fff;
+  font-size: 6em;
+}
+.label {
+  font-size: 2em;
+  display: block;
+  color: #aaa;
+}
+.bg {
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+.timer-count {
+    border: 2px solid green;
+}
+
+.wrapper span {
+    color: red;
+    text-transform: uppercase;
+    font-size: 35px;
+    font-family: 'DS-Digital', sans-serif;
+}
+
+.timer-title {
+    text-align: center;
+    background: green;
+    color: white;
+    text-transform: uppercase;
+    padding: 6px;
+}
+
+.timer-count {
+    width: 575px;
+}
+
 @-webkit-keyframes flash {
   0% {
     opacity: 1; }
