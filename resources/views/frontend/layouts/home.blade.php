@@ -6,6 +6,14 @@
 <!--page title -->
 @section('body')
 
+@php
+
+use App\Models\photo_info;
+
+$slider = photo_info::where("slider",1)->orderBy('id','DESC')->get();
+
+@endphp
+
 <!-- slider area -->
 <!-- <section class="carousel">
     <div id="carouselExampleCaptions" class="carousel slide">
@@ -43,12 +51,13 @@
 
 <div id="carouselExample" class="carousel slide">
   <div class="carousel-inner">
+    @if(isset($slider))
+    @foreach($slider as $s)
     <div class="carousel-item active">
-      <img src="{{ asset('Frontend/image/slider-1.jpg') }}" class="d-block w-100" alt="...">
+        <img src="{{asset('/Backend/img/photo_info')}}/{{$s->image}}" class="d-block w-100" alt="...">
     </div>
-    <div class="carousel-item">
-      <img src="{{ asset('Frontend/image/slider-2.jpg') }}" class="d-block w-100" alt="...">
-    </div>
+    @endforeach
+    @endif
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -602,7 +611,7 @@
     </div>
     <!-- SERVICES !-->
     <div class="container">
-        <div class="row grid" style="margin-top: 80px;">
+        <div class="row grid row_grid" style="margin-top: 80px;">
             <!-- SERVICE 01 !-->
             <div class="col-xs-12 col-md-6 col-lg-4 element-item service01" data-category="service01">
                 <!-- CARD SERVICE 01 !-->
