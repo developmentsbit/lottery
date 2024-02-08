@@ -14,12 +14,12 @@ class MenusTableSeeder extends Seeder
      */
     public function run()
     {
+        
 
-        \DB::statement('SET FOREIGN_KEY_CHECKS=0;');
         \DB::table('menus')->delete();
-
+        
         \DB::table('menus')->insert(array (
-            0 =>
+            0 => 
             array (
                 'id' => 1,
                 'label_id' => NULL,
@@ -38,7 +38,7 @@ class MenusTableSeeder extends Seeder
                 'created_at' => '2023-10-28 12:08:51',
                 'updated_at' => '2023-10-28 12:08:51',
             ),
-            1 =>
+            1 => 
             array (
                 'id' => 2,
                 'label_id' => 1,
@@ -57,7 +57,7 @@ class MenusTableSeeder extends Seeder
                 'created_at' => '2023-10-28 12:20:25',
                 'updated_at' => '2023-10-28 14:44:36',
             ),
-            2 =>
+            2 => 
             array (
                 'id' => 3,
                 'label_id' => NULL,
@@ -76,7 +76,7 @@ class MenusTableSeeder extends Seeder
                 'created_at' => '2023-10-28 12:45:30',
                 'updated_at' => '2023-10-28 12:45:30',
             ),
-            3 =>
+            3 => 
             array (
                 'id' => 4,
                 'label_id' => NULL,
@@ -95,7 +95,7 @@ class MenusTableSeeder extends Seeder
                 'created_at' => '2023-10-28 12:51:14',
                 'updated_at' => '2023-10-28 12:51:14',
             ),
-            4 =>
+            4 => 
             array (
                 'id' => 5,
                 'label_id' => 2,
@@ -114,7 +114,7 @@ class MenusTableSeeder extends Seeder
                 'created_at' => '2023-10-28 13:57:37',
                 'updated_at' => '2023-10-28 13:57:37',
             ),
-            5 =>
+            5 => 
             array (
                 'id' => 6,
                 'label_id' => NULL,
@@ -133,7 +133,7 @@ class MenusTableSeeder extends Seeder
                 'created_at' => '2023-10-28 13:58:11',
                 'updated_at' => '2023-10-28 13:58:11',
             ),
-            6 =>
+            6 => 
             array (
                 'id' => 7,
                 'label_id' => NULL,
@@ -152,7 +152,7 @@ class MenusTableSeeder extends Seeder
                 'created_at' => '2023-10-28 14:09:00',
                 'updated_at' => '2023-10-28 14:09:00',
             ),
-            7 =>
+            7 => 
             array (
                 'id' => 8,
                 'label_id' => NULL,
@@ -171,7 +171,7 @@ class MenusTableSeeder extends Seeder
                 'created_at' => '2023-10-28 14:10:55',
                 'updated_at' => '2023-10-28 14:10:55',
             ),
-            8 =>
+            8 => 
             array (
                 'id' => 15,
                 'label_id' => 6,
@@ -190,7 +190,7 @@ class MenusTableSeeder extends Seeder
                 'created_at' => '2023-10-30 23:57:24',
                 'updated_at' => '2023-10-30 23:57:24',
             ),
-            9 =>
+            9 => 
             array (
                 'id' => 16,
                 'label_id' => NULL,
@@ -209,7 +209,7 @@ class MenusTableSeeder extends Seeder
                 'created_at' => '2023-10-30 23:58:47',
                 'updated_at' => '2023-10-30 23:58:47',
             ),
-            10 =>
+            10 => 
             array (
                 'id' => 17,
                 'label_id' => NULL,
@@ -228,26 +228,7 @@ class MenusTableSeeder extends Seeder
                 'created_at' => '2023-11-01 17:02:46',
                 'updated_at' => '2023-11-01 17:02:46',
             ),
-            11 =>
-            array (
-                'id' => 18,
-                'label_id' => 6,
-                'parent_id' => NULL,
-                'menu_name_en' => 'Test Menu',
-                'menu_name_bn' => 'টেস্ট মেনু',
-                'system_name' => 'Test Menu',
-                'route' => 'test_menu',
-                'slug' => 'index',
-                'order_by' => 3,
-                'status' => 1,
-                'type' => 3,
-                'icon' => 'fa fa-users',
-                'create_by' => 1,
-                'deleted_at' => '2023-11-02',
-                'created_at' => '2023-11-02 11:14:50',
-                'updated_at' => '2023-11-02 11:18:19',
-            ),
-            12 =>
+            11 => 
             array (
                 'id' => 19,
                 'label_id' => NULL,
@@ -266,7 +247,7 @@ class MenusTableSeeder extends Seeder
                 'created_at' => '2024-02-03 17:38:27',
                 'updated_at' => '2024-02-03 17:38:27',
             ),
-            13 =>
+            12 => 
             array (
                 'id' => 20,
                 'label_id' => 7,
@@ -285,7 +266,7 @@ class MenusTableSeeder extends Seeder
                 'created_at' => '2024-02-04 21:09:16',
                 'updated_at' => '2024-02-04 21:09:16',
             ),
-            14 =>
+            13 => 
             array (
                 'id' => 21,
                 'label_id' => NULL,
@@ -304,7 +285,7 @@ class MenusTableSeeder extends Seeder
                 'created_at' => '2024-02-04 21:10:30',
                 'updated_at' => '2024-02-04 21:10:30',
             ),
-            15 =>
+            14 => 
             array (
                 'id' => 22,
                 'label_id' => NULL,
@@ -321,48 +302,29 @@ class MenusTableSeeder extends Seeder
                 'create_by' => 1,
                 'deleted_at' => NULL,
                 'created_at' => '2024-02-05 16:49:23',
-                'updated_at' => '2024-02-07 17:11:45',
+                'updated_at' => '2024-02-09 01:11:45',
             ),
-            16 => 
+            15 => 
             array (
-                'id' => 24,
-                'label_id' => 6,
-                'parent_id' => NULL,
-                'menu_name_en' => 'Website Settings',
-                'menu_name_bn' => 'ওয়েবসাইট সেটিংস',
-                'system_name' => 'Website Settings',
-                'route' => NULL,
-                'slug' => NULL,
-                'order_by' => 4,
-                'status' => 1,
-                'type' => 1,
-                'icon' => 'fa fa-gears',
-                'create_by' => 1,
-                'deleted_at' => NULL,
-                'created_at' => '2024-02-07 16:20:04',
-                'updated_at' => '2024-02-07 16:20:04',
-            ),
-            17 => 
-            array (
-                'id' => 25,
+                'id' => 26,
                 'label_id' => NULL,
-                'parent_id' => 24,
+                'parent_id' => 15,
                 'menu_name_en' => 'Photo Info',
-                'menu_name_bn' => 'ফটো তথ্য',
-                'system_name' => 'Slider Infos',
+                'menu_name_bn' => 'ছবি তথ্য',
+                'system_name' => 'Photo Info',
                 'route' => 'photo_info',
-                'slug' => 'create',
-                'order_by' => 1,
+                'slug' => 'index',
+                'order_by' => 5,
                 'status' => 1,
                 'type' => 2,
                 'icon' => NULL,
                 'create_by' => 1,
                 'deleted_at' => NULL,
-                'created_at' => '2024-02-07 16:20:55',
-                'updated_at' => '2024-02-07 16:37:29',
+                'created_at' => '2024-02-09 01:18:49',
+                'updated_at' => '2024-02-09 01:18:49',
             ),
         ));
-
-
+        
+        
     }
 }
