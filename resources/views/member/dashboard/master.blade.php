@@ -19,8 +19,10 @@
     <!-- Layout styles -->
     <link rel="stylesheet" href="//cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="{{ asset('MemberAsset') }}/css/style.css">
+    <link rel="stylesheet" href="{{ asset('MemberAsset') }}/css/flip.min.css">
     <!-- End layout styles -->
     <link rel="shortcut icon" href="{{ asset('Backend/settings/') }}/{{ $settings->logo }}" />
+    <link href="https://fonts.cdnfonts.com/css/ds-digital" rel="stylesheet">
   </head>
   <body>
     <div class="container-scroller">
@@ -143,6 +145,8 @@
     <!-- plugins:js -->
     @include('sweetalert::alert')
 
+    @stack('footer_script')
+
     <script src="{{ asset('MemberAsset') }}/vendors/js/vendor.bundle.base.js"></script>
     <!-- endinject -->
     <!-- Plugin js for this page -->
@@ -151,6 +155,7 @@
     <!-- End plugin js for this page -->
     <!-- inject:js -->
     <script src="{{ asset('MemberAsset') }}/js/off-canvas.js"></script>
+    <script src="{{ asset('MemberAsset') }}/js/flip.min.js"></script>
     <script src="{{ asset('MemberAsset') }}/js/hoverable-collapse.js"></script>
     <script src="{{ asset('MemberAsset') }}/js/misc.js"></script>
     <!-- endinject -->

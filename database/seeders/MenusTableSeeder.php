@@ -14,13 +14,12 @@ class MenusTableSeeder extends Seeder
      */
     public function run()
     {
-        
-        \DB::statement('SET FOREIGN_KEY_CHECKS=0;');
 
+        \DB::statement('SET FOREIGN_KEY_CHECKS=0;');
         \DB::table('menus')->delete();
-        
+
         \DB::table('menus')->insert(array (
-            0 => 
+            0 =>
             array (
                 'id' => 1,
                 'label_id' => NULL,
@@ -39,7 +38,7 @@ class MenusTableSeeder extends Seeder
                 'created_at' => '2023-10-28 12:08:51',
                 'updated_at' => '2023-10-28 12:08:51',
             ),
-            1 => 
+            1 =>
             array (
                 'id' => 2,
                 'label_id' => 1,
@@ -58,7 +57,7 @@ class MenusTableSeeder extends Seeder
                 'created_at' => '2023-10-28 12:20:25',
                 'updated_at' => '2023-10-28 14:44:36',
             ),
-            2 => 
+            2 =>
             array (
                 'id' => 3,
                 'label_id' => NULL,
@@ -77,7 +76,7 @@ class MenusTableSeeder extends Seeder
                 'created_at' => '2023-10-28 12:45:30',
                 'updated_at' => '2023-10-28 12:45:30',
             ),
-            3 => 
+            3 =>
             array (
                 'id' => 4,
                 'label_id' => NULL,
@@ -96,7 +95,7 @@ class MenusTableSeeder extends Seeder
                 'created_at' => '2023-10-28 12:51:14',
                 'updated_at' => '2023-10-28 12:51:14',
             ),
-            4 => 
+            4 =>
             array (
                 'id' => 5,
                 'label_id' => 2,
@@ -115,7 +114,7 @@ class MenusTableSeeder extends Seeder
                 'created_at' => '2023-10-28 13:57:37',
                 'updated_at' => '2023-10-28 13:57:37',
             ),
-            5 => 
+            5 =>
             array (
                 'id' => 6,
                 'label_id' => NULL,
@@ -134,7 +133,7 @@ class MenusTableSeeder extends Seeder
                 'created_at' => '2023-10-28 13:58:11',
                 'updated_at' => '2023-10-28 13:58:11',
             ),
-            6 => 
+            6 =>
             array (
                 'id' => 7,
                 'label_id' => NULL,
@@ -153,7 +152,7 @@ class MenusTableSeeder extends Seeder
                 'created_at' => '2023-10-28 14:09:00',
                 'updated_at' => '2023-10-28 14:09:00',
             ),
-            7 => 
+            7 =>
             array (
                 'id' => 8,
                 'label_id' => NULL,
@@ -172,7 +171,7 @@ class MenusTableSeeder extends Seeder
                 'created_at' => '2023-10-28 14:10:55',
                 'updated_at' => '2023-10-28 14:10:55',
             ),
-            8 => 
+            8 =>
             array (
                 'id' => 15,
                 'label_id' => 6,
@@ -191,7 +190,7 @@ class MenusTableSeeder extends Seeder
                 'created_at' => '2023-10-30 23:57:24',
                 'updated_at' => '2023-10-30 23:57:24',
             ),
-            9 => 
+            9 =>
             array (
                 'id' => 16,
                 'label_id' => NULL,
@@ -210,7 +209,7 @@ class MenusTableSeeder extends Seeder
                 'created_at' => '2023-10-30 23:58:47',
                 'updated_at' => '2023-10-30 23:58:47',
             ),
-            10 => 
+            10 =>
             array (
                 'id' => 17,
                 'label_id' => NULL,
@@ -229,7 +228,7 @@ class MenusTableSeeder extends Seeder
                 'created_at' => '2023-11-01 17:02:46',
                 'updated_at' => '2023-11-01 17:02:46',
             ),
-            11 => 
+            11 =>
             array (
                 'id' => 18,
                 'label_id' => 6,
@@ -248,7 +247,7 @@ class MenusTableSeeder extends Seeder
                 'created_at' => '2023-11-02 11:14:50',
                 'updated_at' => '2023-11-02 11:18:19',
             ),
-            12 => 
+            12 =>
             array (
                 'id' => 19,
                 'label_id' => NULL,
@@ -267,7 +266,7 @@ class MenusTableSeeder extends Seeder
                 'created_at' => '2024-02-03 17:38:27',
                 'updated_at' => '2024-02-03 17:38:27',
             ),
-            13 => 
+            13 =>
             array (
                 'id' => 20,
                 'label_id' => 7,
@@ -286,7 +285,7 @@ class MenusTableSeeder extends Seeder
                 'created_at' => '2024-02-04 21:09:16',
                 'updated_at' => '2024-02-04 21:09:16',
             ),
-            14 => 
+            14 =>
             array (
                 'id' => 21,
                 'label_id' => NULL,
@@ -305,7 +304,7 @@ class MenusTableSeeder extends Seeder
                 'created_at' => '2024-02-04 21:10:30',
                 'updated_at' => '2024-02-04 21:10:30',
             ),
-            15 => 
+            15 =>
             array (
                 'id' => 22,
                 'label_id' => NULL,
@@ -363,7 +362,7 @@ class MenusTableSeeder extends Seeder
                 'updated_at' => '2024-02-07 16:37:29',
             ),
         ));
-        
-        
+
+
     }
 }
