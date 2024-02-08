@@ -15,6 +15,7 @@ use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\PaymentMethodController;
 use App\Http\Controllers\CashInRequestController;
 use App\Http\Controllers\GameSetupController;
+use App\Http\Controllers\PhotoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -85,7 +86,9 @@ Route::middleware('auth')->group(function () {
         'payment_method' => PaymentMethodController::class,
         'cash_in_request' => CashInRequestController::class,
         'game_setup' => GameSetupController::class,
+        'photo_info' => PhotoController::class,
    ]);
+
    /*
     game setup extra routes are below
     */
@@ -93,6 +96,13 @@ Route::middleware('auth')->group(function () {
    Route::get('game_setup_trash',[GameSetupController::class,'trash_list'])->name('game_setup.trash_list');
    Route::get('game_setup_restore/{id}',[GameSetupController::class,'restore'])->name('game_setup.restore');
    Route::get('game_setup_delete/{id}',[GameSetupController::class,'delete'])->name('game_setup.delete');
+
+   /*
+    pphoto info extra routes are below
+    */
+   Route::get('photo_info_status',[PhotoController::class,'status'])->name('photo_info.status');
+   Route::get('photo_info_trash',[PhotoController::class,'trash_list'])->name('photo_info.trash_list');
+   Route::get('photo_info_restore/{id}',[PhotoController::class,'restore'])->name('photo_info.restore');
 
     /*
     menu label extra routes are below
