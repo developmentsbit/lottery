@@ -5,11 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\GameLedger;
 use App\Models\GameEntry;
+use App\Models\game_setup;
 use App\Traits\ViewDirective;
+use App\Traits\Date;
 use DataTables;
 
 class LotteryHistoryController extends Controller
 {
+    use Date;
     /**
      * Display a listing of the resource.
      */
@@ -21,7 +24,8 @@ class LotteryHistoryController extends Controller
     {
         $this->sl = 0;
         if ($request->ajax()) {
-            $data = GameLedger::select('*');
+            $game = game_setup::where('status',1)->first();
+            $data = GameLedger::where('game_id',$game->id)->orderBy('date','DESC')->get();
             return Datatables::of($data)
                     ->addIndexColumn()
                     ->addColumn('sl',function($row){
@@ -49,13 +53,7 @@ class LotteryHistoryController extends Controller
                         return $row->bet_amount;
                     })
                     ->addColumn('action', function($row){
-                        return '<div class="btn-group">
-                        <a href="'.route('lottery_info.edit',$row->id).'" class="btn btn-info">'.__('common.edit').'</a>
-                        <form action="'.route('lottery_info.destroy',$row->id).'" method="POST">
-                        '.csrf_field().'
-                        '.method_field('DELETE').'
-                            <button type="submit" class="btn btn-danger">'.__('common.delete').'</button>
-                        </form></div>';
+                        return '<a target="_blank" class="btn btn-sm btn-info" href="'.route('lottery_info.show_report',$row->id).'"><i class="fa fa-eye"></i> View Report</a>';
                     })
                     ->rawColumns(['action','sl','date_time','invoice_no','game_name','slot','total_amount','discount','bet_amount'])
                     ->make(true);

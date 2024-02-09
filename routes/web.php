@@ -44,6 +44,8 @@ Route::get('AwardsPrize',[FrontendController::class,'awards_prize']);
 Route::get('Deposit',[FrontendController::class,'deposit']);
 Route::get('Payout',[FrontendController::class,'payout']);
 Route::get('AgentList',[FrontendController::class,'agent_list']);
+Route::get('show_lottery_report/{id}',[FrontendController::class,'show_lottery'])->name('lottery_info.show_report');
+
  /**
   *
   */

@@ -53,7 +53,7 @@ Lottery
                             {{ $v->bet_amount }}
                         </td>
                         <td>
-                            <a style="float: left;margin-bottom:4px;" href="{{ url('lottery_invoice/'.$v->invoice_no) }}" class="btn btn-sm btn-success" target="blank">View Report</a>
+                            <a style="float: left;margin-bottom:4px;" href="{{ route('lottery_info.show_report',$v->id) }}" class="btn btn-sm btn-success" target="blank">View Report</a>
                         </td>
                     </tr>
                     @endforeach
