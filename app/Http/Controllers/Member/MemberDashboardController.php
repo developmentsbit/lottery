@@ -152,4 +152,10 @@ class MemberDashboardController extends Controller
         Alert::success('Success', 'Your Game Is Successfully Stored');
         return redirect()->back();
     }
+
+    public function lottery_history()
+    {
+        $param['data'] = GameLedger::withTrashed()->where('member_id',Auth::guard('member')->user()->member_id)->orderBy('date','DESC')->get();
+        return $this->view($this->path,'lottery_history',$param);
+    }
 }

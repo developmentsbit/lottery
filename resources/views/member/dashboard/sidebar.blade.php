@@ -48,6 +48,7 @@
         <div class="collapse" id="ui-lottery">
           <ul class="nav flex-column sub-menu">
             <li class="nav-item"> <a class="nav-link" href="{{route('member.lottery')}}">@lang('frontend.thai_lottery')</a></li>
+            <li class="nav-item"> <a class="nav-link" href="{{route('member.lottery_history')}}">Thai Lottery History</a></li>
           </ul>
         </div>
       </li>

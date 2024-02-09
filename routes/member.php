@@ -22,5 +22,6 @@ Route::post('store_cash_in',[MemberDashboardController::class,'cash_in_store'])-
 Route::get('cash_in_hoistory',[MemberDashboardController::class,'cash_in_history'])->name('member.cash_in_history');
 
 Route::post('lottery_store',[MemberDashboardController::class,'lottery_store'])->name('member.lottery_store');
+Route::get('lottery_hoistory',[MemberDashboardController::class,'lottery_history'])->name('member.lottery_history');
 
 Route::Get('memberLogout',[MemberDashboardController::class,'logout'])->name('member.logout');
