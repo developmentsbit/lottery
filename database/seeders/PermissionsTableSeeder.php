@@ -1117,6 +1117,69 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2024-02-09 01:18:49',
                 'updated_at' => '2024-02-09 01:18:49',
             ),
+            122 => 
+            array (
+                'id' => 382,
+                'name' => 'Lottery Request index',
+                'parent' => 'Lottery Request',
+                'guard_name' => 'web',
+                'created_at' => '2024-02-09 10:24:02',
+                'updated_at' => '2024-02-09 10:24:02',
+            ),
+            123 => 
+            array (
+                'id' => 383,
+                'name' => 'Lottery Request show',
+                'parent' => 'Lottery Request',
+                'guard_name' => 'web',
+                'created_at' => '2024-02-09 10:24:02',
+                'updated_at' => '2024-02-09 10:24:02',
+            ),
+            124 => 
+            array (
+                'id' => 384,
+                'name' => 'Lottery Request edit',
+                'parent' => 'Lottery Request',
+                'guard_name' => 'web',
+                'created_at' => '2024-02-09 10:24:02',
+                'updated_at' => '2024-02-09 10:24:02',
+            ),
+            125 => 
+            array (
+                'id' => 385,
+                'name' => 'Lottery Request destroy',
+                'parent' => 'Lottery Request',
+                'guard_name' => 'web',
+                'created_at' => '2024-02-09 10:24:02',
+                'updated_at' => '2024-02-09 10:24:02',
+            ),
+            126 => 
+            array (
+                'id' => 386,
+                'name' => 'Lottery Request trash',
+                'parent' => 'Lottery Request',
+                'guard_name' => 'web',
+                'created_at' => '2024-02-09 10:24:02',
+                'updated_at' => '2024-02-09 10:24:02',
+            ),
+            127 => 
+            array (
+                'id' => 387,
+                'name' => 'Lottery Request restore',
+                'parent' => 'Lottery Request',
+                'guard_name' => 'web',
+                'created_at' => '2024-02-09 10:24:02',
+                'updated_at' => '2024-02-09 10:24:02',
+            ),
+            128 => 
+            array (
+                'id' => 388,
+                'name' => 'Lottery Request delete',
+                'parent' => 'Lottery Request',
+                'guard_name' => 'web',
+                'created_at' => '2024-02-09 10:24:02',
+                'updated_at' => '2024-02-09 10:24:02',
+            ),
         ));
         
         
