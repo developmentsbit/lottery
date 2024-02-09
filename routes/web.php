@@ -15,6 +15,7 @@ use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\PaymentMethodController;
 use App\Http\Controllers\CashInRequestController;
 use App\Http\Controllers\GameSetupController;
+use App\Http\Controllers\LotteryHistoryController;
 use App\Http\Controllers\PhotoController;
 
 /*
@@ -87,6 +88,7 @@ Route::middleware('auth')->group(function () {
         'cash_in_request' => CashInRequestController::class,
         'game_setup' => GameSetupController::class,
         'photo_info' => PhotoController::class,
+        'lottery_info' => LotteryHistoryController::class,
    ]);
 
    /*
@@ -169,6 +171,11 @@ Route::middleware('auth')->group(function () {
 
     Route::get('cash_in_request_trash',[CashInRequestController::class,'trash'])->name('cash_in_request.trash_list');
     Route::get('cash_in_request_restore/{id}',[CashInRequestController::class,'restore'])->name('cash_in_request.restore');
+
+    Route::get('lottery_status/{id}',[LotteryHistoryController::class,'status'])->name('lottery_request.status');
+
+    Route::get('lottery_request_trash',[LotteryHistoryController::class,'trash'])->name('lottery_request.trash_list');
+    Route::get('lottery_request_restore/{id}',[LotteryHistoryController::class,'restore'])->name('lottery_request.restore');
 
 });
 
