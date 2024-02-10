@@ -17,6 +17,8 @@ use App\Http\Controllers\CashInRequestController;
 use App\Http\Controllers\GameSetupController;
 use App\Http\Controllers\LotteryHistoryController;
 use App\Http\Controllers\PhotoController;
+use App\Http\Controllers\WelcomeMessageController;
+use App\Http\Controllers\YouTubeVideoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -91,12 +93,14 @@ Route::middleware('auth')->group(function () {
         'game_setup' => GameSetupController::class,
         'photo_info' => PhotoController::class,
         'lottery_info' => LotteryHistoryController::class,
+        'welcome_message' => WelcomeMessageController::class,
+        'youtube_live' => YouTubeVideoController::class,
    ]);
 
    /*
     game setup extra routes are below
     */
-   Route::get('game_setup_status',[GameSetupController::class,'status'])->name('game_setup.status');
+   Route::get('game_setup_status/{id}',[GameSetupController::class,'status'])->name('game_setup.status');
    Route::get('game_setup_trash',[GameSetupController::class,'trash_list'])->name('game_setup.trash_list');
    Route::get('game_setup_restore/{id}',[GameSetupController::class,'restore'])->name('game_setup.restore');
    Route::get('game_setup_delete/{id}',[GameSetupController::class,'delete'])->name('game_setup.delete');

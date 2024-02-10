@@ -9,8 +9,13 @@
 @php
 
 use App\Models\photo_info;
+use App\Models\welcomemessage;
+use App\Models\youtubelive;
 
 $slider = photo_info::where("slider",1)->orderBy('id','DESC')->get();
+
+$welmessage = welcomemessage::get();
+$youlive = youtubelive::get();
 
 @endphp
 
@@ -317,27 +322,30 @@ $slider = photo_info::where("slider",1)->orderBy('id','DESC')->get();
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-12" style="text-align: left">
-                    <h4>@lang('frontend.thai_lotter_draw_live')</h4>
+                    @if($youlive)
+                    @foreach($youlive as $y)
+                    <h4>@if(config('app.locale') == 'en'){{$y->title ?: $y->title_bn}}@else {{$y->title_bn ?: $y->title}}@endif</h4>
                     <div class="youtube_blog_post">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/lplVzgRdoCc?si=e1i8iM0YU3QQI3Gr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="{{$y->url}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
+                    @endforeach
+                    @endif
                 </div>
                 <div class="col-lg-6 col-md-6 col-12 p-2" style="text-align: left;margin-top: -9px;">
-                    <h4 style="margin: 0px;
-    border-bottom: 3px solid #fff;
-    padding: 5px;
-    margin-top: 21px;
-    margin-left: 32px;
-    font-size: 29px;">Welcome To The Govt. Lottery Office</h4>
+                    @if($welmessage)
+                    @foreach($welmessage as $w)
+                    <h4 style="margin: 0px;border-bottom: 3px solid #fff;padding: 5px;margin-top: 21px;margin-left: 32px;font-size: 29px;">@if(config('app.locale') == 'en'){{$w->title ?: $w->title_bn}}@else {{$w->title_bn ?: $w->title}}@endif</h4>
                     <div class="blog_single">
                         <div class="row">
                             <div class="col-lg-12 col-md-12 col-12" style="text-align: left;margin-top: -24px;">
                                 <p style="font-size: 15px;">
-                                Issuing lottery tickets etc. In Thailand, according to history, it began to exist in the reign of King Chulalongkorn, King Rama V, with a British foreigner named "Teacher Albaster" was the first to introduce the European lottery drawing style by calling it the "Lottery" by His Majesty King Chulalongkorn. Royal permission was given to the Royal Thai Chamberlain to issue lotteries for the first time in Thailand in 1874 on the occasion of His Majesty the King's birthday. The objective is to help foreign merchants who bring their products to be displayed in the museum at the Concadia Building in the Grand Palace. And later, during the reign of King Rama VI in the year 1917, which was during World War 1, the United Kingdom, England, which was a country on the Allied Powers. Intending to borrow money from Thailand to use in the war effort But cannot borrow directly from the Thai government. Because it will affect the budget of the National Patriotic Council of England. Therefore, the policy is to borrow money from the people by issuing lotteries. It received royal permission from His Majesty King Mongkut Klao.
+                                @if(config('app.locale') == 'en'){!! $w->details ?: $w->details_bn !!}@elseif(config('app.locale') == 'bn'){!! $w->details_bn ?: $w->details !!}@endif
                                 </p>
                             </div>
                         </div>
                     </div>
+                    @endforeach
+                    @endif
                 </div>
             </div>
         </div>

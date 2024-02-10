@@ -111,7 +111,13 @@
                                             <td>{{$v->end_date}}</td>
                                             <td>{{$v->start_time}}</td>
                                             <td>{{$v->end_time}}</td>
-                                            <td>{{$v->status}}</td>
+                                            <td>
+												@if($v->status == 1)
+												<span class="btn btn-success btn-sm">@lang('common.active')</span>
+												@else
+												<span class="btn btn-danger btn-sm">@lang('common.inactive')</span>
+												@endif
+											</td>
                                             <td>
                                             <a href="{{ url('game_setup_restore') }}/{{ $v->id }}" class="btn btn-sm btn-info">@lang('common.restore')</a>
                                             <a href="{{ url('game_setup_delete') }}/{{ $v->id }}" class="btn btn-sm btn-danger">@lang('common.permenantly_delete')</a>  
@@ -152,38 +158,6 @@
             ]
         });
     });
-</script>
-
-<script>
-
-    function GameSetupStatus(id)
-    {
-        $.ajax({
-            headers : {
-                'X-CSRF-TOKEN' : '{{ csrf_token() }}'
-            },
-
-            url : '{{ route('game_setup.status') }}',
-
-            type : 'GET',
-
-            data : {id},
-
-            success : (res) => {
-                window.notyf.open({
-                    type: "success",
-                    message: @json(__('game_setup.status_message')),
-                    duration: 1000,
-                    ripple: true,
-                    dismissible: false,
-                    position: {
-                        x: "right",
-                        y: "top"
-                    }
-                });
-            }
-        })
-    }
 </script>
 
 @endpush
