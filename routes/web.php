@@ -19,6 +19,7 @@ use App\Http\Controllers\LotteryHistoryController;
 use App\Http\Controllers\PhotoController;
 use App\Http\Controllers\WelcomeMessageController;
 use App\Http\Controllers\YouTubeVideoController;
+use App\Http\Controllers\BannerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,6 +47,9 @@ Route::get('AwardsPrize',[FrontendController::class,'awards_prize']);
 Route::get('Deposit',[FrontendController::class,'deposit']);
 Route::get('Payout',[FrontendController::class,'payout']);
 Route::get('AgentList',[FrontendController::class,'agent_list']);
+Route::get('VisionMission',[FrontendController::class,'mission_vision']);
+Route::get('fees',[FrontendController::class,'fees']);
+Route::get('ContactUs',[FrontendController::class,'contact_us']);
 Route::get('show_lottery_report/{id}',[FrontendController::class,'show_lottery'])->name('lottery_info.show_report');
 
  /**
@@ -95,6 +99,7 @@ Route::middleware('auth')->group(function () {
         'lottery_info' => LotteryHistoryController::class,
         'welcome_message' => WelcomeMessageController::class,
         'youtube_live' => YouTubeVideoController::class,
+        'banner' => BannerController::class,
    ]);
 
    /*

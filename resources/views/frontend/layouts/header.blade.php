@@ -124,6 +124,9 @@
                         <a class="nav-link {{request()->Is('AboutUs') ? 'active' : ''}}" aria-current="page" href="{{ url('AboutUs') }}">@lang('frontend.about_us')</a>
                       </li>
                       <li class="nav-item">
+                        <a class="nav-link {{request()->Is('VisionMission') ? 'active' : ''}}" aria-current="page" href="{{ url('VisionMission') }}">@lang('frontend.mission_vision')</a>
+                      </li>
+                      <li class="nav-item">
                         <a class="nav-link {{request()->Is('BuySell') ? 'active' : ''}}" aria-current="page" href="{{url('/BuySell')}}">@lang('frontend.buy_sell')</a>
                       </li>
                       <li class="nav-item">
@@ -131,6 +134,9 @@
                       </li>
                       <li class="nav-item">
                         <a class="nav-link {{request()->Is('AwardsPrize') ? 'active' : ''}}" aria-current="page" href="{{url('/AwardsPrize')}}">@lang('frontend.award_prize')</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link {{request()->Is('fees') ? 'active' : ''}}" aria-current="page" href="{{url('/fees')}}">@lang('frontend.fees')</a>
                       </li>
                       <!-- <li class="nav-item">
                         <a class="nav-link {{request()->Is('Deposit') ? 'active' : ''}}" aria-current="page" href="{{url('/Deposit')}}">@lang('frontend.deposit')</a>
@@ -140,6 +146,9 @@
                       </li>
                       <li class="nav-item">
                         <a class="nav-link {{request()->Is('AgentList') ? 'active' : ''}}" aria-current="page" href="{{url('/AgentList')}}">@lang('frontend.agent_list')</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link {{request()->Is('ContactUs') ? 'active' : ''}}" aria-current="page" href="{{url('/ContactUs')}}">@lang('frontend.contact_us')</a>
                       </li>
                     </ul>
                   </div>

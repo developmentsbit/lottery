@@ -7,6 +7,8 @@ a{
 }
 body{
   font-family: 'Ubuntu', sans-serif;
+  background: #043b35;
+  color: #fff;
 }
 .header {
   background: #09524b;
@@ -76,8 +78,16 @@ div#prize_box {
   background-color: #09524b;
 }
 .page-title {
-  background: #dafbff;
+  background: #043b35;
   padding: 44px 3px;
+}
+
+.page-title h2{
+  color: #fff !important;
+}
+
+.page-title .container{
+  color: #fff !important;
 }
 
 .method_images img {
@@ -160,9 +170,13 @@ html, body {
 
 
 .container {
-  color: #333;
+  color: #fff;
   margin: 0 auto;
   text-align: center;
+}
+
+.container h1{
+  color: #fff;
 }
 
 /* h1 {
@@ -836,4 +850,17 @@ font-size: 16px;
 }
 .card-text:hover {
   color:#649726;
+}
+
+/* mission_vision */
+.blog_content {
+  padding: 10px;
+}
+
+.blog_content img{
+  border-radius: 2%;
+}
+
+.blog_text h3{
+  color: #fff !important;
 }
