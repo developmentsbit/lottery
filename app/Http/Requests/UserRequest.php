@@ -36,7 +36,7 @@ class UserRequest extends FormRequest
             'role_id' => 'required',
             'branch_id' => 'required',
             'user_name_en' => 'required',
-            'email' => 'required|unique:users,email,'.$request->user.'|email_checker',
+            'email' => 'required|unique:users,email,'.$request->user,
             'phone' => 'required|unique:users,phone,'.$request->user,
             'password' => $required.''.$min,
         ];
