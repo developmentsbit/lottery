@@ -1,21 +1,35 @@
-@extends('frontend.layouts.master')
-<!--page title -->
-@section('page_title')
-@lang('frontend.register')
-@endsection
-<!--page title -->
-@section('body')
-
-<div class="registration_area">
-    <div class="container">
-        <div class="card mt-2" style="max-width: 650px;margin:auto">
-            <div class="card-header">
-                <h4>@lang('frontend.registration')</h4>
-            </div>
-            <div class="card-body" style="text-align: left;">
-                <div class="card-sec-title">
-                    <b class="text-success">@lang('frontend.account_details')</b>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>User Registration</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="{{ asset('MemberAsset') }}/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="{{ asset('MemberAsset') }}/vendors/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="{{ asset('MemberAsset') }}/vendors/css/vendor.bundle.base.css">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <!-- endinject -->
+    <!-- Layout styles -->
+    <link rel="stylesheet" href="{{ asset('MemberAsset') }}/css/style.css">
+    <!-- End layout styles -->
+    <link rel="shortcut icon" href="{{ asset('MemberAsset') }}/images/favicon.png" />
+  </head>
+  <body>
+    <div class="container-scroller">
+      <div class="container-fluid page-body-wrapper full-page-wrapper">
+        <div class="content-wrapper d-flex align-items-center auth">
+          <div class="row flex-grow">
+            <div class="col-lg-8 mx-auto">
+              <div class="auth-form-light text-left p-5">
+                <div class="brand-logo">
+                  <img src="{{ asset('Backend/settings/') }}/{{ $settings->logo }}">
                 </div>
+                <h6 class="font-weight-light">Sign In To Create Your Account    </h6>
                 <form method="post" action="{{ route('member.store') }}">
                     @csrf
                     <div class="row mt-2">
@@ -69,7 +83,7 @@
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 form-group mt-2">
                             <label>@lang('frontend.gender')</label><span class="text-danger">*</span>
-                            <select class="form-select form-select-sm @error('gender') is-invalid @enderror" name="gender" id="gender">
+                            <select class="form-control form-control-sm @error('gender') is-invalid @enderror" name="gender" id="gender">
                                 <option value="">@lang('common.select_one')</option>
                                 <option @if(old('gender') == 'Male') selected @endif value="Male">@lang('frontend.male')</option>
                                 <option @if(old('gender') == 'Female') selected @endif value="Female">@lang('frontend.female')</option>
@@ -88,7 +102,7 @@
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 form-group mt-2">
                             <label>@lang('frontend.country')</label><span class="text-danger">*</span>
-                            <select class="form-select form-select-sm @error('country') is-invalid @enderror" name="country" id="country">
+                            <select class="form-control form-control-sm @error('country') is-invalid @enderror" name="country" id="country">
                                 <option value="Bangladesh">@lang('frontend.bangladesh')</option>
                             </select>
                             @error('country')
@@ -104,22 +118,26 @@
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 form-group mt-2">
                             <label>@lang('frontend.nationality')</label><span class="text-danger">*</span>
-                            <select class="form-select form-select-sm @error('nationality') is-invalid @enderror" name="nationality" id="nationality">
+                            <select class="form-control form-control-sm @error('nationality') is-invalid @enderror" name="nationality" id="nationality">
                                 <option value="Bangladesh">@lang('frontend.bangladesh')</option>
                             </select>
                             @error('nationality')
                                 <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
                         </div>
+                        <div class="col-lg-6 col-md-6 col-12 form-group mt-2">
+
+                        </div>
                         <hr>
-                        <div class="card-sec-title mt-2">
+                        <div class="card-sec-title mt-2 col-12">
                             <b class="text-success">@lang('frontend.terms_condition')</b>
                         </div>
-                        <div class="form-group">
+                        <br>
+                        <div class="form-group col-12">
                             <input type="checkbox" name="terms_condition" id="terms_condition" onclick="checkPass()">
                             <label for="terms_condition">@lang('frontend.terms_conditions_accept')</label>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group col-12">
                             <input type="checkbox" name="personalized_offer" id="personalized_offer">
                             <label for="personalized_offer">@lang('frontend.personalized_offer')</label>
                         </div>
@@ -127,55 +145,67 @@
                         <div class="col-12 mt-4 text-center">
                             <button id="submit" type="submit" class="btn btn-info btn-sm btn-block"> <i class="fa fa-save"></i> @lang('common.submit')</button>
                             <br>
-                            <span>@lang('frontend.already_have_account') ? </span> <a href="">@lang('frontend.login')</a>
+                            <span>@lang('frontend.already_have_account') ? </span> <a href="{{ route('member.login') }}">@lang('frontend.login')</a>
                         </div>
                     </div>
                 </form>
+              </div>
             </div>
+          </div>
         </div>
+        <!-- content-wrapper ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
     </div>
-</div>
-
-@push('footer_script')
-<script>
-    function checkPass()
-    {
-        if($('#terms_condition').is(':checked'))
+    @include('sweetalert::alert')
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="{{ asset('MemberAsset') }}/vendors/js/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page -->
+    <!-- End plugin js for this page -->
+    <!-- inject:js -->
+    <script src="{{ asset('MemberAsset') }}/js/off-canvas.js"></script>
+    <script src="{{ asset('MemberAsset') }}/js/hoverable-collapse.js"></script>
+    <script src="{{ asset('MemberAsset') }}/js/misc.js"></script>
+    <!-- endinject -->
+    <script>
+        function checkPass()
         {
-            $('#submit').attr('disabled',false);
-        }
-        else
-        {
-            $('#submit').attr('disabled',true);
-        }
-
-
-        let pass = $('#password').val();
-        let confirm_pass = $('#confirm_password').val();
-
-        if(pass != '' || confirm_pass != '')
-        {
-            if(pass != confirm_pass)
+            if($('#terms_condition').is(':checked'))
             {
-                $('#submit').attr('disabled',true);
+                $('#submit').attr('disabled',false);
             }
             else
             {
-                $('#submit').attr('disabled',false);
-
+                $('#submit').attr('disabled',true);
             }
+
+
+            let pass = $('#password').val();
+            let confirm_pass = $('#confirm_password').val();
+
+            if(pass != '' || confirm_pass != '')
+            {
+                if(pass != confirm_pass)
+                {
+                    $('#submit').attr('disabled',true);
+                }
+                else
+                {
+                    $('#submit').attr('disabled',false);
+
+                }
+            }
+            else
+            {
+                $('#submit').attr('disabled',true);
+            }
+
+
+
+
         }
-        else
-        {
-            $('#submit').attr('disabled',true);
-        }
-
-
-
-
-    }
-</script>
-@endpush
-
-@endsection
-
+    </script>
+  </body>
+</html>

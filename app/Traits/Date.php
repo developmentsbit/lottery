@@ -138,4 +138,41 @@ trait Date
 
         return $result;
     }
+
+    public static function getYear($sign, $date)
+    {
+        $explode = explode($sign, $date);
+
+        return $explode['0'];
+    }
+    public static function getMonth($sign, $date)
+    {
+        $explode = explode($sign, $date);
+
+        return $explode['1'];
+    }
+    public static function getDay($sign, $date)
+    {
+        $explode = explode($sign, $date);
+
+        return $explode['2'];
+    }
+    public static function getHours($sign, $date)
+    {
+        $explode = explode($sign, $date);
+
+        return $explode['0'];
+    }
+    public static function getMin($sign, $date)
+    {
+        $explode = explode($sign, $date);
+
+        return $explode['1'];
+    }
+    public static function getSec($sign, $date)
+    {
+        $explode = explode($sign, $date);
+
+        return $explode['2'];
+    }
 }
