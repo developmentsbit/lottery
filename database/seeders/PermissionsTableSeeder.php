@@ -1378,6 +1378,15 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2024-02-10 11:36:40',
                 'updated_at' => '2024-02-10 11:36:40',
             ),
+            151 => 
+            array (
+                'id' => 411,
+                'name' => 'Add Cash Balance create',
+                'parent' => 'Add Cash Balance',
+                'guard_name' => 'web',
+                'created_at' => '2024-02-10 16:40:16',
+                'updated_at' => '2024-02-10 16:40:16',
+            ),
         ));
         
         

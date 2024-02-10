@@ -36,7 +36,10 @@ Cash In
                     <tr>
                         <th>Amount</th>
                         <td>
-                        <input type="text" class="form-control" name="amount" id="amount" placeholder="Enter Amount in $" required>
+                            <div class="input-group">
+                                <input type="number" class="form-control" name="amount" id="amount" placeholder="Enter Amount" required>
+                                <span class="input-group-append btn btn-dark" style="border-radius: 0px;">$</span>
+                            </div>
                         </td>
                     </tr>
                     <tr>

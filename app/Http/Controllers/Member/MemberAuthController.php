@@ -10,6 +10,7 @@ use App\Interfaces\MemberInterface;
 use Toastr;
 use RealRashid\SweetAlert\Facades\Alert;
 use Auth;
+use App\Models\Country;
 
 class MemberAuthController extends Controller
 {
@@ -22,9 +23,14 @@ class MemberAuthController extends Controller
         $this->interface = $interface;
     }
 
-    public function registration()
+    public function registration(Request $request)
     {
-        return $this->view($this->path,'registration');
+        if(isset($request->refer))
+        {
+            $param['referral_no'] = base64_decode($request->refer);
+        }
+        $param['country'] = Country::all();
+        return $this->view($this->path,'registration',$param);
     }
 
     public function store(MemberRequest $request)

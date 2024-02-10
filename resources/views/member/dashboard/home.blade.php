@@ -110,7 +110,14 @@
                         </tr>
                         <tr>
                             <th>Affiliation Link : </th>
-                            <th></th>
+                            <th>
+                                <div class="input-group">
+                                    <input type="readonly" value="{{ url('member/registration') }}/?refer={{ base64_encode(Auth::guard('member')->user()->member_id) }}" class="form-control" id="link">
+                                    <span onclick="coppyClipBoard()" class="input-group-append btn btn-secondary">
+                                        <i class="fa fa-copy"></i>
+                                    </span>
+                                </div>
+                            </th>
                         </tr>
                     </table>
                 </div>
@@ -146,5 +153,23 @@
     </div>
 
   </div>
+
+  <script>
+    function coppyClipBoard() {
+        // alert();
+    // Get the text field
+    var copyText = document.getElementById("link");
+
+    // Select the text field
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); // For mobile devices
+
+    // Copy the text inside the text field
+    navigator.clipboard.writeText(copyText.value);
+
+    // Alert the copied text
+    alert("Copied the text: " + copyText.value);
+    }
+  </script>
 
   @endsection
