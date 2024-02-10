@@ -20,9 +20,9 @@ class MemberRepository implements MemberInterface{
 
     public function store($request)
     {
+       
         $data = array(
             'member_id' => Idgenerator::AutoCode('members','member_id','M-','8'),
-            'referral_no' => $request->referral_no,
             'mobile_no' => $request->mobile_no,
             'password' => Hash::make($request->password),
             'first_name' => $request->first_name,
@@ -34,6 +34,11 @@ class MemberRepository implements MemberInterface{
             'nationality' => $request->nationality,
             'profile' => '0',
         );
+        
+         if(isset($request->referral_no))
+        {
+            $data['referral_no'] = $request->referral_no;
+        }
 
         try {
             Member::create($data);
