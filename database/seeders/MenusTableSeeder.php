@@ -15,8 +15,7 @@ class MenusTableSeeder extends Seeder
     public function run()
     {
         
-        \DB::statement('SET FOREIGN_KEY_CHECKS=0');
-        
+
         \DB::table('menus')->delete();
         
         \DB::table('menus')->insert(array (
@@ -361,6 +360,44 @@ class MenusTableSeeder extends Seeder
                 'deleted_at' => NULL,
                 'created_at' => '2024-02-09 10:24:02',
                 'updated_at' => '2024-02-09 10:24:02',
+            ),
+            18 => 
+            array (
+                'id' => 32,
+                'label_id' => NULL,
+                'parent_id' => 15,
+                'menu_name_en' => 'Welcome Message',
+                'menu_name_bn' => 'স্বাগত বার্তা',
+                'system_name' => 'Welcome Message',
+                'route' => 'welcome_message',
+                'slug' => 'create',
+                'order_by' => 7,
+                'status' => 1,
+                'type' => 2,
+                'icon' => NULL,
+                'create_by' => 1,
+                'deleted_at' => NULL,
+                'created_at' => '2024-02-10 10:51:04',
+                'updated_at' => '2024-02-10 10:51:04',
+            ),
+            19 => 
+            array (
+                'id' => 33,
+                'label_id' => NULL,
+                'parent_id' => 15,
+                'menu_name_en' => 'YouTube Live',
+                'menu_name_bn' => 'ইউটিউব লাইভ',
+                'system_name' => 'YouTube Live',
+                'route' => 'youtube_live',
+                'slug' => 'create',
+                'order_by' => 1,
+                'status' => 1,
+                'type' => 2,
+                'icon' => NULL,
+                'create_by' => 1,
+                'deleted_at' => NULL,
+                'created_at' => '2024-02-10 11:36:40',
+                'updated_at' => '2024-02-10 11:36:40',
             ),
         ));
         

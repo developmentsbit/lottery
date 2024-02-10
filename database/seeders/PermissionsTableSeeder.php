@@ -1180,6 +1180,204 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2024-02-09 10:24:02',
                 'updated_at' => '2024-02-09 10:24:02',
             ),
+            129 => 
+            array (
+                'id' => 389,
+                'name' => 'Welcome Message create',
+                'parent' => 'Welcome Message',
+                'guard_name' => 'web',
+                'created_at' => '2024-02-10 10:51:04',
+                'updated_at' => '2024-02-10 10:51:04',
+            ),
+            130 => 
+            array (
+                'id' => 390,
+                'name' => 'Welcome Message index',
+                'parent' => 'Welcome Message',
+                'guard_name' => 'web',
+                'created_at' => '2024-02-10 10:51:04',
+                'updated_at' => '2024-02-10 10:51:04',
+            ),
+            131 => 
+            array (
+                'id' => 391,
+                'name' => 'Welcome Message show',
+                'parent' => 'Welcome Message',
+                'guard_name' => 'web',
+                'created_at' => '2024-02-10 10:51:04',
+                'updated_at' => '2024-02-10 10:51:04',
+            ),
+            132 => 
+            array (
+                'id' => 392,
+                'name' => 'Welcome Message edit',
+                'parent' => 'Welcome Message',
+                'guard_name' => 'web',
+                'created_at' => '2024-02-10 10:51:04',
+                'updated_at' => '2024-02-10 10:51:04',
+            ),
+            133 => 
+            array (
+                'id' => 393,
+                'name' => 'Welcome Message destroy',
+                'parent' => 'Welcome Message',
+                'guard_name' => 'web',
+                'created_at' => '2024-02-10 10:51:04',
+                'updated_at' => '2024-02-10 10:51:04',
+            ),
+            134 => 
+            array (
+                'id' => 394,
+                'name' => 'Welcome Message trash',
+                'parent' => 'Welcome Message',
+                'guard_name' => 'web',
+                'created_at' => '2024-02-10 10:51:04',
+                'updated_at' => '2024-02-10 10:51:04',
+            ),
+            135 => 
+            array (
+                'id' => 395,
+                'name' => 'Welcome Message restore',
+                'parent' => 'Welcome Message',
+                'guard_name' => 'web',
+                'created_at' => '2024-02-10 10:51:04',
+                'updated_at' => '2024-02-10 10:51:04',
+            ),
+            136 => 
+            array (
+                'id' => 396,
+                'name' => 'Welcome Message delete',
+                'parent' => 'Welcome Message',
+                'guard_name' => 'web',
+                'created_at' => '2024-02-10 10:51:04',
+                'updated_at' => '2024-02-10 10:51:04',
+            ),
+            137 => 
+            array (
+                'id' => 397,
+                'name' => 'Welcome Message status',
+                'parent' => 'Welcome Message',
+                'guard_name' => 'web',
+                'created_at' => '2024-02-10 10:51:04',
+                'updated_at' => '2024-02-10 10:51:04',
+            ),
+            138 => 
+            array (
+                'id' => 398,
+                'name' => 'Welcome Message properties',
+                'parent' => 'Welcome Message',
+                'guard_name' => 'web',
+                'created_at' => '2024-02-10 10:51:05',
+                'updated_at' => '2024-02-10 10:51:05',
+            ),
+            139 => 
+            array (
+                'id' => 399,
+                'name' => 'Welcome Message print',
+                'parent' => 'Welcome Message',
+                'guard_name' => 'web',
+                'created_at' => '2024-02-10 10:51:05',
+                'updated_at' => '2024-02-10 10:51:05',
+            ),
+            140 => 
+            array (
+                'id' => 400,
+                'name' => 'YouTube Live create',
+                'parent' => 'YouTube Live',
+                'guard_name' => 'web',
+                'created_at' => '2024-02-10 11:36:40',
+                'updated_at' => '2024-02-10 11:36:40',
+            ),
+            141 => 
+            array (
+                'id' => 401,
+                'name' => 'YouTube Live index',
+                'parent' => 'YouTube Live',
+                'guard_name' => 'web',
+                'created_at' => '2024-02-10 11:36:40',
+                'updated_at' => '2024-02-10 11:36:40',
+            ),
+            142 => 
+            array (
+                'id' => 402,
+                'name' => 'YouTube Live show',
+                'parent' => 'YouTube Live',
+                'guard_name' => 'web',
+                'created_at' => '2024-02-10 11:36:40',
+                'updated_at' => '2024-02-10 11:36:40',
+            ),
+            143 => 
+            array (
+                'id' => 403,
+                'name' => 'YouTube Live edit',
+                'parent' => 'YouTube Live',
+                'guard_name' => 'web',
+                'created_at' => '2024-02-10 11:36:40',
+                'updated_at' => '2024-02-10 11:36:40',
+            ),
+            144 => 
+            array (
+                'id' => 404,
+                'name' => 'YouTube Live destroy',
+                'parent' => 'YouTube Live',
+                'guard_name' => 'web',
+                'created_at' => '2024-02-10 11:36:40',
+                'updated_at' => '2024-02-10 11:36:40',
+            ),
+            145 => 
+            array (
+                'id' => 405,
+                'name' => 'YouTube Live trash',
+                'parent' => 'YouTube Live',
+                'guard_name' => 'web',
+                'created_at' => '2024-02-10 11:36:40',
+                'updated_at' => '2024-02-10 11:36:40',
+            ),
+            146 => 
+            array (
+                'id' => 406,
+                'name' => 'YouTube Live restore',
+                'parent' => 'YouTube Live',
+                'guard_name' => 'web',
+                'created_at' => '2024-02-10 11:36:40',
+                'updated_at' => '2024-02-10 11:36:40',
+            ),
+            147 => 
+            array (
+                'id' => 407,
+                'name' => 'YouTube Live delete',
+                'parent' => 'YouTube Live',
+                'guard_name' => 'web',
+                'created_at' => '2024-02-10 11:36:40',
+                'updated_at' => '2024-02-10 11:36:40',
+            ),
+            148 => 
+            array (
+                'id' => 408,
+                'name' => 'YouTube Live status',
+                'parent' => 'YouTube Live',
+                'guard_name' => 'web',
+                'created_at' => '2024-02-10 11:36:40',
+                'updated_at' => '2024-02-10 11:36:40',
+            ),
+            149 => 
+            array (
+                'id' => 409,
+                'name' => 'YouTube Live properties',
+                'parent' => 'YouTube Live',
+                'guard_name' => 'web',
+                'created_at' => '2024-02-10 11:36:40',
+                'updated_at' => '2024-02-10 11:36:40',
+            ),
+            150 => 
+            array (
+                'id' => 410,
+                'name' => 'YouTube Live print',
+                'parent' => 'YouTube Live',
+                'guard_name' => 'web',
+                'created_at' => '2024-02-10 11:36:40',
+                'updated_at' => '2024-02-10 11:36:40',
+            ),
         ));
         
         
