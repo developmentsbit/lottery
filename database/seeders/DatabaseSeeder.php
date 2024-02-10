@@ -24,5 +24,6 @@ class DatabaseSeeder extends Seeder
         $this->call(UserThemesTableSeeder::class);
         $this->call(WelcomemessagesTableSeeder::class);
         $this->call(YoutubelivesTableSeeder::class);
+        $this->call(CountriesTableSeeder::class);
     }
 }
