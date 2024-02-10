@@ -23,7 +23,6 @@ class MemberRequest extends FormRequest
     public function rules(Request $request)
     {
         return [
-            'referral_no' => 'required',
             'mobile_no' => 'required|unique:members,mobile_no,'.$request->mobile_no,
             'password' => 'required',
             'confirm_password' => 'required',
