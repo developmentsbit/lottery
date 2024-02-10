@@ -42,7 +42,6 @@ td, th {
                         <th>#</th>
                         <th>AGENT TYPE</th>
                         <th>NAME</th>
-                        <th>CONTACT US</th>
                         <th>COUNTRY</th>
                         <th>REMARK</th>
                         <th>ACTION</th>
@@ -51,11 +50,54 @@ td, th {
                         <td>1</td>
                         <td>Super Agent</td>
                         <td>Uchit Wai</td>
+                        <td>Burma</td>
                         <td>
-                            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
-                            <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                            <a href="#"><i class="fa-brands fa-facebook-messenger"></i></a>
+                            <span class="btn btn-success btn-sm">@lang('common.active')</span>
                         </td>
+                        <td>
+                            <a  class="btn btn-info border-0 edit text-light" data-toggle="modal" data-target="#exampleModalCenters" href="#">@lang('frontend.complain')</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Super Agent</td>
+                        <td>Uchit Wai</td>
+                        <td>Burma</td>
+                        <td>
+                            <span class="btn btn-success btn-sm">@lang('common.active')</span>
+                        </td>
+                        <td>
+                            <a  class="btn btn-info border-0 edit text-light" data-toggle="modal" data-target="#exampleModalCenters" href="#">@lang('frontend.complain')</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Super Agent</td>
+                        <td>Uchit Wai</td>
+                        <td>Burma</td>
+                        <td>
+                            <span class="btn btn-success btn-sm">@lang('common.active')</span>
+                        </td>
+                        <td>
+                            <a  class="btn btn-info border-0 edit text-light" data-toggle="modal" data-target="#exampleModalCenters" href="#">@lang('frontend.complain')</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Super Agent</td>
+                        <td>Uchit Wai</td>
+                        <td>Burma</td>
+                        <td>
+                            <span class="btn btn-success btn-sm">@lang('common.active')</span>
+                        </td>
+                        <td>
+                            <a  class="btn btn-info border-0 edit text-light" data-toggle="modal" data-target="#exampleModalCenters" href="#">@lang('frontend.complain')</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Super Agent</td>
+                        <td>Uchit Wai</td>
                         <td>Burma</td>
                         <td>
                             <span class="btn btn-success btn-sm">@lang('common.active')</span>

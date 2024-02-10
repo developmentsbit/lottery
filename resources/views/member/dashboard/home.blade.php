@@ -17,6 +17,17 @@
       </div>
     </div>
 
+    @php
+    use App\Models\banner;
+    $banner = banner::first();
+    @endphp
+    
+    <div class="row mb-2" id="proBanner">
+      <div class="col-12 bg-white p-2">
+        <img src="{{ asset('Backend/settings/') }}/{{ $banner->image }}" alt="">
+      </div>
+    </div>
+
     <div class="commision_list mt-2 card">
         <div class="card-header">
             <b>@lang('frontend.thai_national_lottery')</b>

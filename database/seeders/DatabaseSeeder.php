@@ -22,5 +22,7 @@ class DatabaseSeeder extends Seeder
         $this->call(RoleHasPermissionsTableSeeder::class);
         $this->call(SoftwareSettingsTableSeeder::class);
         $this->call(UserThemesTableSeeder::class);
+        $this->call(WelcomemessagesTableSeeder::class);
+        $this->call(YoutubelivesTableSeeder::class);
     }
 }

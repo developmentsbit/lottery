@@ -23,6 +23,11 @@ class FrontendController extends Controller
         return $this->view($this->path,'about_us');
     }
 
+    public function mission_vision()
+    {
+        return $this->view($this->path,'mission_vision');
+    }
+
     public function buy_sell()
     {
         return $this->view($this->path,'buy_sell');
@@ -51,6 +56,16 @@ class FrontendController extends Controller
     public function agent_list()
     {
         return $this->view($this->path,'agent_list');
+    }
+
+    public function fees()
+    {
+        return $this->view($this->path,'fees');
+    }
+
+    public function contact_us()
+    {
+        return $this->view($this->path,'contact_us');
     }
 
     public function show_lottery($id)

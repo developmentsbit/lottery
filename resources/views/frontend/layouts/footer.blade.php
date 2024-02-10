@@ -17,17 +17,73 @@
 </section>
 <!-- section pay method -->
 
-<!-- footer starts from here -->
-<footer>
-<div class="footer-top">
-    <div class="container">
-        <div class="text-center p-3" style="color: white">
-            THE GOVERNMENT LOTTERY OFFICE<br>
-359 SANAMABAIN NAM ROAD, TAMBON THA SAI, MUEANG NONTHUBURI DISTRICT, NONTHUBURI 40160 THAILAND.
+<!-- Remove the container if you want to extend the Footer to full width. -->
+<div class="container my-5">
+    <!-- Footer -->
+    <footer class="text-center text-lg-start text-white"style="background-color: #104747">
+        <div class="container p-4 pb-0">
+            <section class="">
+                <div class="row">
+                    <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold">
+                            <img src="{{ asset('Backend/settings/') }}/{{ $settings->logo }}">
+                        </h6>
+                        <p style="color: #fff;">
+                            Here you can use rows and columns to organize your footer
+                            content. Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit.
+                        </p>
+                    </div>
+                    <hr class="w-100 clearfix d-md-none" />
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                        <h4 class="text-uppercase mb-4" style="color: #fff; font-weight: 600;">USEFUL LINKS</h4>
+                        <p>
+                            <a href="{{ url('/') }}" class="text-white">Home</a>
+                        </p>
+                        <p>
+                            <a href="{{ url('AboutUs') }}" class="text-white">About Us</a>
+                        </p>
+                        <p>
+                            <a href="{{url('VisionMission')}}" class="text-white">Vision & Mission</a>
+                        </p>
+                        <p>
+                            <a href="{{url('VisionMission')}}" class="text-white">Discount</a>
+                        </p>
+                        <p>
+                            <a href="{{url('fees')}}" class="text-white">Our Fees</a>
+                        </p>
+                    </div>
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                        <h4 class="text-uppercase mb-4" style="color: #fff; font-weight: 600;">SUPPORT</h4>
+                        <p>
+                            <a class="text-white">Customer Care</a>
+                        </p>
+                        <p>
+                            <a class="text-white">Live Chat</a>
+                        </p>
+                        <p>
+                            <a class="text-white">Email Chat</a>
+                        </p>
+                        <p>
+                            <a href="{{url('contact_us')}}" class="text-white">Contact</a>
+                        </p>
+                    </div>
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3" style="color: #fff;">
+                        <h4 class="text-uppercase mb-4" style="color: #fff; font-weight: 600;">CONTACT</h4>
+                        <p>Email: support@thailotto.club</p>
+                        <p>Address: The Government Lottery Office (Sanambin Nam)</p>
+                        <p>359 Nonthaburi Road, Tha Sai Amphoe Mueang Nonthaburi, NONTHABURI 11000</p>
+                    </div>
+                </section>
+            </div>
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)"> Copyright © <?php echo date('Y'); ?> - GLO - by <a class="text-white">Thai Lotto Club</a> All Rights Reserved
         </div>
-    </div>
+    </footer>
 </div>
-</footer>
+
+</div>
+<!-- End of .container -->
 <!-- footer starts from here -->
 @include('sweetalert::alert')
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js
