@@ -15,7 +15,8 @@ class MenuLabelsTableSeeder extends Seeder
     public function run()
     {
         
-
+        \DB::statement('SET FOREIGN_KEY_CHECKS=0');
+        
         \DB::table('menu_labels')->delete();
         
         \DB::table('menu_labels')->insert(array (

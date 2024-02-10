@@ -47,15 +47,26 @@ class GameSetupController extends Controller
                         return $row->end_time;
                     })
                     ->addColumn('status',function($row){
-                        return $row->status;
+                        if($row->status == '1')
+                        {
+                            $status = 'Active';
+                            $class = 'btn btn-sm btn-success';
+                        }
+                        else
+                        {
+                            $status = 'Inactive';
+                            $class = 'btn btn-sm btn-danger';
+                        }
+                        return '<div class="btn-group">
+                        <a href="'.route('game_setup.status',$row->id).'" class="'.$class.'">'.$status.'</a></div>';
                     })
                     ->addColumn('action', function($row){
                         return '<div class="btn-group">
-                        <a href="'.route('game_setup.edit',$row->id).'" class="btn btn-info">'.__('common.edit').'</a>
+                        <a href="'.route('game_setup.edit',$row->id).'" class="btn btn-info">'.'<i class="fa-regular fa-pen-to-square"></i>'.'</a>
                         <form action="'.route('game_setup.destroy',$row->id).'" method="POST">
                         '.csrf_field().'
                         '.method_field('DELETE').'
-                            <button type="submit" class="btn btn-danger">'.__('common.delete').'</button>
+                            <button type="submit" class="btn btn-danger"><i class="fa fa-trash"></i></button>
                         </form></div>';
                     })
                     ->rawColumns(['action','sl','game_title','game_title_bn','start_date','end_date','start_time','end_time','status'])
@@ -174,6 +185,25 @@ class GameSetupController extends Controller
         game_setup::where('id',$id)->withTrashed()->forceDelete();
 
         Toastr::success('Data Permanently Deleted', 'success');
+        return redirect(route('game_setup.index'));
+    }
+
+    public function status($id)
+    {
+        $games = game_setup::all();
+        
+        foreach($games as $g)
+        {
+            $g->update([
+                'status' => 0,
+            ]);
+        }
+
+        game_setup::where('id',$id)->update([
+            'status' => 1,
+        ]);
+
+        Toastr::success('Status Changed', 'success');
         return redirect(route('game_setup.index'));
     }
 }
