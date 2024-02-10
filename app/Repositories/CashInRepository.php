@@ -105,7 +105,7 @@ class CashInRepository implements CashInInterface {
 
     public function create()
     {
-
+        return $this->view($this->path,'create');
     }
 
     public function store($data){

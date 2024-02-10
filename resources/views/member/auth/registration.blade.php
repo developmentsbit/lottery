@@ -33,13 +33,15 @@
                 <form method="post" action="{{ route('member.store') }}">
                     @csrf
                     <div class="row mt-2">
+                        @if(isset($params['referral_no']))
                         <div class="col-lg-6 col-md-6 col-12 form-group mt-2">
                             <label>@lang('frontend.referral_no')</label><span class="text-danger">*</span>
-                            <input type="text" class="form-control form-control-sm @error('referral_no') is-invalid @enderror" name="referral_no" id="referral_no" value="{{ old('referral_no') }}">
+                            <input type="text" class="form-control form-control-sm @error('referral_no') is-invalid @enderror" name="referral_no" id="referral_no" value="{{ $params['referral_no'] }}" readonly>
                             @error('referral_no')
                                 <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
                         </div>
+                        @endif
                         <div class="col-lg-6 col-md-6 col-12 form-group mt-2">
                             <label>@lang('frontend.mobile_no')</label><span class="text-danger">*</span>
                             <input type="text" class="form-control form-control-sm @error('mobile_no') is-invalid @enderror" name="mobile_no" id="mobile_no" value="{{ old('mobile_no') }}">
@@ -103,7 +105,12 @@
                         <div class="col-lg-6 col-md-6 col-12 form-group mt-2">
                             <label>@lang('frontend.country')</label><span class="text-danger">*</span>
                             <select class="form-control form-control-sm @error('country') is-invalid @enderror" name="country" id="country">
-                                <option value="Bangladesh">@lang('frontend.bangladesh')</option>
+                                @if(isset($params['country']))
+                                @foreach ($params['country'] as $v)
+
+                                <option value="{{$v->name}}">{{$v->name}}</option>
+                                @endforeach
+                                @endif
                             </select>
                             @error('country')
                                 <div class="alert alert-danger">{{ $message }}</div>
@@ -119,7 +126,12 @@
                         <div class="col-lg-6 col-md-6 col-12 form-group mt-2">
                             <label>@lang('frontend.nationality')</label><span class="text-danger">*</span>
                             <select class="form-control form-control-sm @error('nationality') is-invalid @enderror" name="nationality" id="nationality">
-                                <option value="Bangladesh">@lang('frontend.bangladesh')</option>
+                                @if(isset($params['country']))
+                                @foreach ($params['country'] as $v)
+
+                                <option value="{{$v->name}}">{{$v->name}}</option>
+                                @endforeach
+                                @endif
                             </select>
                             @error('nationality')
                                 <div class="alert alert-danger">{{ $message }}</div>

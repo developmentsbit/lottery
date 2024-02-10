@@ -31,7 +31,7 @@ class CashInRequestController extends Controller
      */
     public function create()
     {
-        //
+        return $this->interface->create();
     }
 
     /**
