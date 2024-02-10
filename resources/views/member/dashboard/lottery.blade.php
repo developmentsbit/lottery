@@ -7,6 +7,10 @@
     th, td{
         border-top: 0px !important;
     }
+    span.label {
+    font-family: popins;
+    font-size: 19px;
+}
 </style>
 <div class="content-wrapper" style="color: black">
     <div class="timer-count">
@@ -303,14 +307,13 @@
 <script>
     // alert();
     const cd = new Date().getFullYear() + 1;
-    // alert(new Date());
     $('#countdown').countdown({
-        year: 2024, // YYYY Format
-        month: 2, // 1-12
-        day: 08, // 1-31
-        hour: 10, // 24 hour format 0-23
-        minute: 59, // 0-59
-        second: 0, // 0-59s
+        year: '{{ $params['year'] }}', // YYYY Format
+        month: '{{ $params['month'] }}', // 1-12
+        day: '{{ $params['day'] }}', // 1-31
+        hour: '{{ $params['hour'] }}', // 24 hour format 0-23
+        minute: '{{ $params['min'] }}', // 0-59
+        second: '{{ $params['sec'] }}', // 0-59s
     });
 </script>
 <script type="text/javascript">

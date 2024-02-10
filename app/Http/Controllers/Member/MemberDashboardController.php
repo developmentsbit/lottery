@@ -13,6 +13,7 @@ use App\Models\game_setup;
 use App\Traits\Idgenerator;
 use App\Models\GameLedger;
 use App\Models\GameEntry;
+use App\Traits\Date;
 use App\Traits\Member;
 
 
@@ -39,6 +40,15 @@ class MemberDashboardController extends Controller
     {
         $param['check'] = game_setup::where('status',1)->count();
         $param['game'] = game_setup::where('status',1)->first();
+
+        $param['year'] = Date::getYear('-', $param['game']->end_date);
+        $param['month'] = Date::getMonth('-', $param['game']->end_date);
+        $param['day'] = Date::getDay('-', $param['game']->end_date);
+
+        $param['hour'] = Date::getHours(':',$param['game']->end_time);
+        $param['min'] = Date::getMin(':',$param['game']->end_time);
+        $param['sec'] = Date::getSec(':',$param['game']->end_time);
+
         return $this->view($this->path,'lottery',$param);
     }
 
