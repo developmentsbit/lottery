@@ -1,6 +1,6 @@
 @extends('member.dashboard.master')
 @section('member_dash_title')
-Cash In
+Cash Out
 @endsection
 @section('body')
 <style>
@@ -11,8 +11,7 @@ Cash In
 <div class="content-wrapper" style="color: black">
     <div class="card">
         <div class="card-header">
-            Cash In
-        </div>
+            Cash Out History
         <div class="card-body">
             <table class="table table-borderd" id="myTable">
                 <thead>
@@ -20,9 +19,8 @@ Cash In
                         <th>Date & Time</th>
                         <th>Payment Method</th>
                         <th>Payment Account</th>
-                        <th>Trx ID</th>
-                        <th>Document</th>
                         <th>Amount</th>
+                        <th>Vat</th>
                         <th>Status</th>
                     </tr>
                 </thead>
@@ -45,16 +43,12 @@ Cash In
                         <td>
                             {{ $v->payment_account }}
                         </td>
+
                         <td>
-                            {{ $v->transaction_id }}
+                            ${{ $v->withdraw -  $v->vat}}
                         </td>
                         <td>
-                            @if($v->document != NULL)
-                            <img src="{{ asset('CashInDoc') }}/{{ $v->document }}" alt="" style="height: 60px;">
-                            @endif
-                        </td>
-                        <td>
-                            {{ $v->balance }}
+                            {{ $v->vat }}
                         </td>
                         <td>
                             @if($v->deleted_at == NULL)

@@ -1,6 +1,6 @@
 @extends('member.dashboard.master')
 @section('member_dash_title')
-Cash In
+Cash Out
 @endsection
 @section('body')
 <style>
@@ -11,17 +11,20 @@ Cash In
 <div class="content-wrapper" style="color: black">
     <div class="card">
         <div class="card-header">
-            Cash In
+            Cash Out
         </div>
         <div class="card-body">
-            <form method="post" action="{{ route('member.store_cash_in') }}" enctype="multipart/form-data">
+            <div class="alert alert-warning">
+                Cashout Charge 10%.
+            </div>
+            <form method="post" action="{{ route('member.store_cash_out') }}" enctype="multipart/form-data">
                 @csrf
                 <table class="table">
                     <tr>
                         <th>Select Method</th>
                         <td>
                             <select class="form-control form-control-sm" name="method" id="method" onchange="return getMethodInfo()" required>
-                                <option value="">Select Method</option>
+                                <option value="">Select Cashout Method</option>
                                 @if(isset($params['method']))
                                 @foreach ($params['method'] as $m)
                                 <option value="{{ $m->id }}">{{ $m->method_name }}</option>
@@ -43,21 +46,9 @@ Cash In
                         </td>
                     </tr>
                     <tr>
-                        <th>Payment Account</th>
+                        <th>Your Payment Account</th>
                         <td>
-                        <input type="text" class="form-control" name="payment_account" id="payment_account" placeholder="Payment Account Number" required>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Transaction ID</th>
-                        <td>
-                        <input type="text" class="form-control" name="transaction_id" id="transaction_id" placeholder="Transaction ID" required>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Document</th>
-                        <td>
-                        <input type="file" class="form-control" name="document" id="document">
+                        <input type="text" class="form-control" name="payment_account" id="payment_account" placeholder="Your Payment Account Number" required>
                         </td>
                     </tr>
                     <tr>
@@ -71,34 +62,34 @@ Cash In
     </div>
 </div>
 
-<script>
-    function getMethodInfo()
-    {
-        let method = $('#method').val();
-
-        if(method != '')
+    {{-- <script>
+        function getMethodInfo()
         {
-            $.ajax({
-                headers : {
-                    'X-CSRF-TOKEN' : '{{ csrf_token() }}'
-                },
+            let method = $('#method').val();
 
-                url : '{{ route('member.get_method_info') }}',
+            if(method != '')
+            {
+                $.ajax({
+                    headers : {
+                        'X-CSRF-TOKEN' : '{{ csrf_token() }}'
+                    },
 
-                type : 'GET',
+                    url : '{{ route('member.get_method_info') }}',
 
-                data : {method},
+                    type : 'GET',
 
-                success : (res) => {
-                    $('.message').html(res);
-                },
-            })
+                    data : {method},
+
+                    success : (res) => {
+                        $('.message').html(res);
+                    },
+                })
+            }
+            else
+            {
+                $('.message').html('');
+            }
         }
-        else
-        {
-            $('.message').html('');
-        }
-    }
-</script>
+    </script> --}}
 
 @endsection
