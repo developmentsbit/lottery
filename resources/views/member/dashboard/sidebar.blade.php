@@ -60,8 +60,8 @@
         </a>
         <div class="collapse" id="ui-cash-out">
           <ul class="nav flex-column sub-menu">
-            <li class="nav-item"> <a class="nav-link" href="#">Cash Out</a></li>
-            <li class="nav-item"> <a class="nav-link" href="#">Cash Out History</a></li>
+            <li class="nav-item"> <a class="nav-link" href="{{route('member.cash_out')}}">Cash Out</a></li>
+            <li class="nav-item"> <a class="nav-link" href="{{route('member.cash_out_history')}}">Cash Out History</a></li>
           </ul>
         </div>
       </li>

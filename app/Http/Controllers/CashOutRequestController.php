@@ -3,16 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Interfaces\CashInInterface;
-use App\Models\CustomerTransaction;
-use App\Http\Requests\CashInRequest;
+use App\Interfaces\CashOutRequestInterface;
 
-class CashInRequestController extends Controller
+class CashOutRequestController extends Controller
 {
     protected $interface;
-    public function __construct(CashInInterface $interface)
+    public function __construct(CashOutRequestInterface $interface)
     {
         $this->interface = $interface;
+        $this->middleware(['permission:Cash Out Requst index'])->only(['index']);
     }
     /**
      * Display a listing of the resource.
@@ -24,6 +23,7 @@ class CashInRequestController extends Controller
         {
             $datatable = true;
         }
+
         return $this->interface->index($datatable);
     }
 
@@ -32,15 +32,15 @@ class CashInRequestController extends Controller
      */
     public function create()
     {
-        return $this->interface->create();
+        //
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(CashInRequest $request)
+    public function store(Request $request)
     {
-        return $this->interface->store($request);
+        //
     }
 
     /**
@@ -72,34 +72,17 @@ class CashInRequestController extends Controller
      */
     public function destroy(string $id)
     {
-        return $this->interface->destroy($id);
+        //
     }
 
-    public function status($id)
-    {
-        $check = CustomerTransaction::find($id);
-        if($check->status == 0)
-        {
-            $check->update([
-                'status' => 1,
-            ]);
-        }
-        toastr()->success('The Request Is Accepted','success');
-        return redirect()->back();
-    }
-
-    public function trash(Request $request)
+    public function trash_list(Request $request)
     {
         $datatable = '';
         if($request->ajax())
         {
             $datatable = true;
         }
-        return $this->interface->trash_list($datatable);
-    }
 
-    public function restore($id)
-    {
-        return $this->interface->restore($id);
+        return $this->interface->trash_list($datatable);
     }
 }

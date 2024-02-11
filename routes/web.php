@@ -20,6 +20,7 @@ use App\Http\Controllers\PhotoController;
 use App\Http\Controllers\WelcomeMessageController;
 use App\Http\Controllers\YouTubeVideoController;
 use App\Http\Controllers\BannerController;
+use App\Http\Controllers\CashOutRequestController;
 
 /*
 |--------------------------------------------------------------------------
@@ -100,7 +101,10 @@ Route::middleware('auth')->group(function () {
         'welcome_message' => WelcomeMessageController::class,
         'youtube_live' => YouTubeVideoController::class,
         'banner' => BannerController::class,
+        'cash_out_request' => CashOutRequestController::class,
    ]);
+
+   Route::get('add_cash_balance',[CashInRequestController::class,'create'])->name('add_cash_balance.create');
 
    /*
     game setup extra routes are below
@@ -187,6 +191,9 @@ Route::middleware('auth')->group(function () {
 
     Route::get('lottery_request_trash',[LotteryHistoryController::class,'trash'])->name('lottery_request.trash_list');
     Route::get('lottery_request_restore/{id}',[LotteryHistoryController::class,'restore'])->name('lottery_request.restore');
+
+    Route::get('cash_out_request_trash',[CashOutRequestController::class,'trash_list'])->name('cash_out_request.trash_list');
+
 
 });
 
