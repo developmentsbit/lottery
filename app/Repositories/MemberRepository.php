@@ -20,7 +20,7 @@ class MemberRepository implements MemberInterface{
 
     public function store($request)
     {
-       
+
         $data = array(
             'member_id' => Idgenerator::AutoCode('members','member_id','M-','8'),
             'mobile_no' => $request->mobile_no,
@@ -34,20 +34,20 @@ class MemberRepository implements MemberInterface{
             'nationality' => $request->nationality,
             'profile' => '0',
         );
-        
+
          if(isset($request->referral_no))
         {
             $data['referral_no'] = $request->referral_no;
         }
 
-        try {
+        // try {
             Member::create($data);
             Alert::success(__('common.success'), __('frontend.registration_success'));
             return redirect()->back();
-        } catch (\Throwable $th) {
-            Alert::warning(__('common.error'), __('frontend.something_went_wrong'));
-            return redirect()->back();
-        }
+        // } catch (\Throwable $th) {
+        //     Alert::warning(__('common.error'), __('frontend.something_went_wrong'));
+        //     return redirect()->back();
+        // }
     }
 
     public function show($id){
