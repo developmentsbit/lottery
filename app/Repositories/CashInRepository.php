@@ -31,14 +31,21 @@ class CashInRepository implements CashInInterface {
                 return Date::DbtoOriginal('-',$row->date).' <br> '.Date::twelveHrTime($row->time);
             })
             ->addColumn('method',function($row){
-                $method = PaymentMethod::find($row->payment_type)->first();
-                if(config('app.locale') == 'en')
+                if(isset($row->payment_type))
                 {
-                    return $method->method_name ?: $method->method_name_bn;
+                    $method = PaymentMethod::find($row->payment_type)->first();
+                    if(config('app.locale') == 'en')
+                    {
+                        return $method->method_name ?: $method->method_name_bn;
+                    }
+                    else
+                    {
+                        return $method->method_name_bn ?: $method->method_name;
+                    }
                 }
                 else
                 {
-                    return $method->method_name_bn ?: $method->method_name;
+                    return '-';
                 }
             })
             ->addColumn('member',function($row){
@@ -105,11 +112,38 @@ class CashInRepository implements CashInInterface {
 
     public function create()
     {
-        return $this->view($this->path,'create');
+        $param['member'] = Member::all();
+        return $this->view($this->path,'create',$param);
     }
 
-    public function store($data){
+    public function store($request)
+    {
+        $data = array(
+            'date' => date('Y-m-d'),
+            'time' => date('H:i:s'),
+            'member_id' => $request->member_id,
+            'transaction_type' => $request->transaction_type,
+            'payment_account' => $request->payment_account,
+            'status' => 1,
+            'approved_by' => Auth::user()->id,
+        );
+        if($request->transaction_type == 1)
+        {
+            $data['balance'] = $request->amount;
+        }
+        else
+        {
+            $data['win_balance'] = $request->amount;
+        }
 
+        try {
+            CustomerTransaction::create($data);
+            toastr()->success('Success','Cash In Successfully Done');
+            return redirect()->back();
+        } catch (\Throwable $th) {
+            toastr()->error('Error','Cash In Not Added');
+            return redirect()->back();
+        }
     }
 
     public function show($id){

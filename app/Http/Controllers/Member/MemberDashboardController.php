@@ -79,12 +79,12 @@ class MemberDashboardController extends Controller
         // dd($request->all());
         $data = array(
             'date' => date('Y-m-d'),
-            'time' => date('h:i:s'),
+            'time' => date('H:i:s'),
             'member_id' => Auth::guard('member')->user()->member_id,
             'payment_type' => $request->method,
             'transaction_type' => 1,
             'balance' => $request->amount,
-            'payment_account' => $request->payment_acccount,
+            'payment_account' => $request->payment_account,
             'transaction_id' => $request->transaction_id,
             'status' => '0',
         );
@@ -104,7 +104,13 @@ class MemberDashboardController extends Controller
 
     public function cash_in_history()
     {
-        $param['data'] = CustomerTransaction::withTrashed()->where('member_id',Auth::guard('member')->user()->member_id)->where('transaction_type',1)->orderBy('date','DESC')->get();
+        $param['data'] = CustomerTransaction::withTrashed()
+        ->where('member_id',Auth::guard('member')
+        ->user()->member_id)
+        ->where('transaction_type',1)
+        ->orderBy('date','DESC')
+        ->with('method')
+        ->get();
         return $this->view($this->path,'cash_in_history',$param);
     }
 
@@ -169,5 +175,66 @@ class MemberDashboardController extends Controller
     {
         $param['data'] = GameLedger::withTrashed()->where('member_id',Auth::guard('member')->user()->member_id)->orderBy('date','DESC')->get();
         return $this->view($this->path,'lottery_history',$param);
+    }
+
+    public function cash_out()
+    {
+        $param['method'] = PaymentMethod::all();
+        return $this->view($this->path,'cash_out',$param);
+    }
+
+    public function store_cash_out(Request $request)
+    {
+        // dd($request->all());
+        $data = array(
+            'date' => date('Y-m-d'),
+            'time' => date('H:i:s'),
+            'transaction_type' => '4',
+            'member_id' => Auth::guard('member')->user()->member_id,
+            'payment_type' => $request->method,
+            'payment_account' => $request->payment_account,
+            'status' => '0',
+        );
+
+        $amount = $request->amount;
+        $vatper = 10;
+        $vat = ($amount * $vatper) / 100;
+
+        $amountWithVat = $amount + $vat;
+
+        $data['withdraw'] = $amountWithVat;
+
+        $data['vat'] = $vat;
+
+        $balance = Member::getBalance(Auth::guard('member')->user()->member_id);
+
+        // return $amountWithVat;
+
+
+        if($amountWithVat > $balance)
+        {
+            Alert::warning('Warning', 'Insuficient Balance');
+            return redirect()->back();
+        }
+
+        try {
+            CustomerTransaction::create($data);
+            Alert::success('Success', 'Your Request Is Sent Wait For Confirmation');
+            return redirect()->back();
+        } catch (\Throwable $th) {
+            Alert::error('Error', 'Something Went Wrong');
+            return redirect()->back();
+        }
+    }
+
+    public function cash_out_history()
+    {
+        $param['data'] = CustomerTransaction::withTrashed()
+        ->where('member_id',Auth::guard('member')
+        ->user()->member_id)->where('transaction_type',4)
+        ->orderBy('date','DESC')
+        ->with('method')
+        ->get();
+        return $this->view($this->path,'cash_out_history',$param);
     }
 }

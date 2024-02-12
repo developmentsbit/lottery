@@ -45,7 +45,7 @@ Cash In
                     <tr>
                         <th>Payment Account</th>
                         <td>
-                        <input type="text" class="form-control" name="payment_acccount" id="payment_acccount" placeholder="Payment Account Number" required>
+                        <input type="text" class="form-control" name="payment_account" id="payment_account" placeholder="Payment Account Number" required>
                         </td>
                     </tr>
                     <tr>

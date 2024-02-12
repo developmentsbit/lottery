@@ -66,6 +66,10 @@ class AppServiceProvider extends ServiceProvider
             'App\Interfaces\CashInInterface',
             'App\Repositories\CashInRepository',
         );
+        $this->app->bind(
+            'App\Interfaces\CashOutRequestInterface',
+            'App\Repositories\CashOutRequestRepository',
+        );
     }
 
     /**

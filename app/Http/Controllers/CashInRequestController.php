@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Interfaces\CashInInterface;
 use App\Models\CustomerTransaction;
+use App\Http\Requests\CashInRequest;
 
 class CashInRequestController extends Controller
 {
@@ -37,9 +38,9 @@ class CashInRequestController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(CashInRequest $request)
     {
-        //
+        return $this->interface->store($request);
     }
 
     /**

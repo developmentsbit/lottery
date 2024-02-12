@@ -11,4 +11,9 @@ class CustomerTransaction extends Model
     use HasFactory,SoftDeletes;
 
     protected $guarded = [];
+
+    public function method()
+    {
+        return $this->belongsTo('App\Models\PaymentMethod','payment_type');
+    }
 }
