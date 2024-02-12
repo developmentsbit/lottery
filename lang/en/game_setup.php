@@ -2,6 +2,7 @@
 return array(
     'create_title' => 'Create Game Setup',
     'index_title' => 'All Game Setup',
+    'edit_title' => 'Update Game Setup',
     'trash_title' => 'All Deleted Game Setup',
     'create_new' => 'New Game Setup',
     'view' => 'All Game Setup',

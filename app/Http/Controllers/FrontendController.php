@@ -63,6 +63,11 @@ class FrontendController extends Controller
         return $this->view($this->path,'fees');
     }
 
+    public function terms_conditions()
+    {
+        return $this->view($this->path,'terms_conditions');
+    }
+
     public function contact_us()
     {
         return $this->view($this->path,'contact_us');

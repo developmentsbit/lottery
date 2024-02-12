@@ -7,13 +7,22 @@
 
         {{-- /*Page Title Goese Here in this slot variable*/ --}}
         @slot('title')
-        @lang('welcome_message.create_title')
+        @lang('mission_vision.edit_title')
         @endslot
 
         @if(Auth::user()->can('Branch index'))
         {{-- /* Create New Route Will Be goes here */ --}}
         @slot('route_name')
-        welcome_message.index
+        mission_vision.index
+        @endslot
+        @slot('btn_class')
+        btn btn-primary
+        @endslot
+        @slot('icon')
+        fa fa-eye
+        @endslot
+        @slot('btn_name')
+        @lang('mission_vision.view')
         @endslot
 
         @endif
@@ -24,37 +33,63 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                        <form action="{{route('welcome_message.store')}}" method="post" enctype="multipart/form-data" id="formData">
+                        <form action="{{ route('mission_vision.update',$data->id) }}" method="post" enctype="multipart/form-data" id="formData">
                             @csrf
                             @method('PUT')
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-12 mt-2">
-                                <label for="title ">@lang('welcome_message.title_en')</label><span class="text-danger">*</span>
+                                <label for="title ">@lang('mission_vision.title_en')</label><span class="text-danger">*</span>
                                 <input type="text" name="title" class="form-control  mt-1 @error('title') is-invalid @enderror" id="title" value="{{ $data->title }}">
                                 @error('title')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-12 mt-2">
-                                <label for="title_bn">@lang('welcome_message.title_bn')</label>
+                                <label for="title_bn">@lang('mission_vision.title_bn')</label>
                                 <input type="text" name="title_bn" class="form-control  mt-1  @error('title_bn') is-invalid @enderror" id="title_bn" value="{{ $data->title_bn }}">
                                 @error('title_bn')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-12 mt-2">
-                                <label for="details">@lang('welcome_message.details_en')</label>
-                                <textarea class="form-control w-100" rows="16" type="text" name="details" placeholder="@lang('welcome_message.details')">{!! $data->details !!}</textarea>
+                                <label for="details">@lang('mission_vision.details_en')</label>
+                                <textarea class="form-control w-100" rows="8" type="text" name="details" placeholder="@lang('mission_vision.details')">{!! $data->details !!}</textarea>
                                 @error('details')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-12 mt-2">
-                                <label for="details_bn">@lang('welcome_message.details_bn')</label>
-                                <textarea class="form-control w-100" rows="16" type="text" name="details_bn" placeholder="@lang('welcome_message.details_bn')">{!! $data->details_bn !!}</textarea>
+                                <label for="details_bn">@lang('mission_vision.details_bn')</label>
+                                <textarea class="form-control w-100" rows="8" type="text" name="details_bn" placeholder="@lang('mission_vision.details_bn')">{!! $data->details_bn !!}</textarea>
                                 @error('details_bn')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 mt-2">
+                                <label for="image">@lang('mission_vision.image')</label>
+                                <input type="file" name="image" class="form-control  mt-1  @error('image') is-invalid @enderror" id="image">
+                                <img src="{{ asset($data->image) }}" style="max-height: 100px;">
+                                @error('image')
+                                    <div class="alert alert-danger">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            
+                            <div class="col-lg-4 col-md-6 col-12 mt-2">
+                                <label for="status">@lang('common.status')</label><span class="text-danger">*</span>
+                                <div>
+                                    <label class="form-check">
+                                        <input class="form-check-input" type="radio" value="1" name="status" checked>
+                                        <span class="form-check-label">
+                                            @lang('common.active')
+                                        </span>
+                                    </label>
+                                    <label class="form-check">
+                                        <input class="form-check-input" type="radio" value="0" name="status">
+                                        <span class="form-check-label">
+                                            @lang('common.inactive')
+                                        </span>
+                                    </label>
+                                </div>
                             </div>
 
                             <div class="col-12 mt-4" style="text-align: right">

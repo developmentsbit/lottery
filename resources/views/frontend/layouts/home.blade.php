@@ -83,7 +83,7 @@ $youlive = youtubelive::get();
 
 
 <!-- thai goverment lottery online -->
-<section class="section_div">
+<!-- <section class="section_div">
     <div class="container-fluid">
         <div class="section-title pt-2">
             <h4 class="text-light">@lang('frontend.thai_gov_lottery')</h4>
@@ -188,13 +188,13 @@ $youlive = youtubelive::get();
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <!-- thai goverment lottery online -->
 
 
 
 <!-- thai goverment lottery online -->
-<section class="section_div_blue">
+<!-- <section class="section_div_blue">
     <div class="container-fluid">
         <div class="section-title pt-2">
             <h4 class="text-light">@lang('frontend.global_weekly_lottery_online')</h4>
@@ -243,11 +243,11 @@ $youlive = youtubelive::get();
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <!-- thai goverment lottery online -->
 
 <!-- thai goverment lottery online -->
-<section class="section_div_black">
+<!-- <section class="section_div_black">
     <div class="container-fluid">
         <div class="sectiontitle pt-2">
             <h4 class="text-light">@lang('frontend.bingo_lotto_3d')</h4>
@@ -313,7 +313,7 @@ $youlive = youtubelive::get();
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <!-- thai goverment lottery online -->
 
 <!-- section for post -->
@@ -326,7 +326,7 @@ $youlive = youtubelive::get();
                     @foreach($youlive as $y)
                     <h4>@if(config('app.locale') == 'en'){{$y->title ?: $y->title_bn}}@else {{$y->title_bn ?: $y->title}}@endif</h4>
                     <div class="youtube_blog_post">
-                        <iframe width="560" height="315" src="{{$y->url}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="500" height="315" src="{{$y->url}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                     @endforeach
                     @endif

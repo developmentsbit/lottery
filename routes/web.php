@@ -20,7 +20,10 @@ use App\Http\Controllers\PhotoController;
 use App\Http\Controllers\WelcomeMessageController;
 use App\Http\Controllers\YouTubeVideoController;
 use App\Http\Controllers\BannerController;
+use App\Http\Controllers\AboutUsController;
+use App\Http\Controllers\MissionVisionController;
 use App\Http\Controllers\CashOutRequestController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -50,6 +53,7 @@ Route::get('Payout',[FrontendController::class,'payout']);
 Route::get('AgentList',[FrontendController::class,'agent_list']);
 Route::get('VisionMission',[FrontendController::class,'mission_vision']);
 Route::get('fees',[FrontendController::class,'fees']);
+Route::get('TermsCondition',[FrontendController::class,'terms_conditions']);
 Route::get('ContactUs',[FrontendController::class,'contact_us']);
 Route::get('show_lottery_report/{id}',[FrontendController::class,'show_lottery'])->name('lottery_info.show_report');
 
@@ -101,6 +105,8 @@ Route::middleware('auth')->group(function () {
         'welcome_message' => WelcomeMessageController::class,
         'youtube_live' => YouTubeVideoController::class,
         'banner' => BannerController::class,
+        'about_us' => AboutUsController::class,
+        'mission_vision' => MissionVisionController::class,
         'cash_out_request' => CashOutRequestController::class,
    ]);
 
@@ -115,11 +121,18 @@ Route::middleware('auth')->group(function () {
    Route::get('game_setup_delete/{id}',[GameSetupController::class,'delete'])->name('game_setup.delete');
 
    /*
-    pphoto info extra routes are below
+    photo info extra routes are below
     */
-   Route::get('photo_info_status',[PhotoController::class,'status'])->name('photo_info.status');
+   Route::get('ChangedPhotoInfoStatus/{id}',[PhotoController::class,'ChangedPhotoInfoStatus']);
    Route::get('photo_info_trash',[PhotoController::class,'trash_list'])->name('photo_info.trash_list');
    Route::get('photo_info_restore/{id}',[PhotoController::class,'restore'])->name('photo_info.restore');
+
+   /*
+    mission vision extra routes are below
+    */
+   Route::get('ChangedMissionVisionStatus/{id}',[MissionVisionController::class,'ChangedMissionVisionStatus']);
+   Route::get('mission_vision_trash',[MissionVisionController::class,'trash_list'])->name('mission_vision.trash_list');
+   Route::get('mission_vision_restore/{id}',[MissionVisionController::class,'restore'])->name('mission_vision.restore');
 
     /*
     menu label extra routes are below

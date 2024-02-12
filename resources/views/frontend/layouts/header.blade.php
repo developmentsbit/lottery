@@ -109,54 +109,62 @@
     <!-- header end here -->
 
     <!-- nav area start -->
-    <section class="navbar">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                      <li class="nav-item">
-                        <a class="nav-link {{request()->Is('/') ? 'active' : ''}}" aria-current="page" href="{{url('/')}}">@lang('frontend.home')</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link {{request()->Is('AboutUs') ? 'active' : ''}}" aria-current="page" href="{{ url('AboutUs') }}">@lang('frontend.about_us')</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link {{request()->Is('VisionMission') ? 'active' : ''}}" aria-current="page" href="{{ url('VisionMission') }}">@lang('frontend.mission_vision')</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link {{request()->Is('BuySell') ? 'active' : ''}}" aria-current="page" href="{{url('/BuySell')}}">@lang('frontend.buy_sell')</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link {{request()->Is('LotteryResult') ? 'active' : ''}}" aria-current="page" href="{{url('/LotteryResult')}}">@lang('frontend.result')</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link {{request()->Is('AwardsPrize') ? 'active' : ''}}" aria-current="page" href="{{url('/AwardsPrize')}}">@lang('frontend.award_prize')</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link {{request()->Is('fees') ? 'active' : ''}}" aria-current="page" href="{{url('/fees')}}">@lang('frontend.fees')</a>
-                      </li>
-                      <!-- <li class="nav-item">
-                        <a class="nav-link {{request()->Is('Deposit') ? 'active' : ''}}" aria-current="page" href="{{url('/Deposit')}}">@lang('frontend.deposit')</a>
-                      </li> -->
-                      <li class="nav-item">
-                        <a class="nav-link {{request()->Is('Payout') ? 'active' : ''}}" aria-current="page" href="{{url('/Payout')}}">@lang('frontend.payout')</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link {{request()->Is('AgentList') ? 'active' : ''}}" aria-current="page" href="{{url('/AgentList')}}">@lang('frontend.agent_list')</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link {{request()->Is('ContactUs') ? 'active' : ''}}" aria-current="page" href="{{url('/ContactUs')}}">@lang('frontend.contact_us')</a>
-                      </li>
-                    </ul>
-                  </div>
+    <section class="navigation">
+        <div class="nav-container">
+            <div class="row">
+            <nav>
+              <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+              <ul class="nav-list">
+                <li>
+                  <a class="{{request()->Is('/') ? 'active' : ''}}" aria-current="page" href="{{url('/')}}">@lang('frontend.home')</a>
+                </li>
+                <li>
+                  <a href="#!">About</a>
+                  <ul class="nav-dropdown">
+                    <li>
+                      <a class="{{request()->Is('AboutUs') ? 'active' : ''}}" aria-current="page" href="{{ url('AboutUs') }}">@lang('frontend.about_us')</a>
+                    </li>
+                    <li>
+                      <a class="{{request()->Is('VisionMission') ? 'active' : ''}}" aria-current="page" href="{{ url('VisionMission') }}">@lang('frontend.mission_vision')</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a class="{{request()->Is('LotteryResult') ? 'active' : ''}}" aria-current="page" href="{{url('/LotteryResult')}}">@lang('frontend.result')</a>
+                </li>
+                <li>
+                  <a href="#!">Our Services</a>
+                  <ul class="nav-dropdown">
+                    <li>
+                      <a class="{{request()->Is('TermsCondition') ? 'active' : ''}}" aria-current="page" href="{{url('/TermsCondition')}}">@lang('frontend.terms_condition')</a>
+                    </li>
+                    <li>
+                      <a class="{{request()->Is('BuySell') ? 'active' : ''}}" aria-current="page" href="{{url('/BuySell')}}">@lang('frontend.buy_sell')</a>
+                    </li>
+                    <li>
+                      <a class="{{request()->Is('AwardsPrize') ? 'active' : ''}}" aria-current="page" href="{{url('/AwardsPrize')}}">@lang('frontend.award_prize')</a>
+                    </li>
+                    <li>
+                      <a class="{{request()->Is('fees') ? 'active' : ''}}" aria-current="page" href="{{url('/fees')}}">@lang('frontend.fees')</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a class="{{request()->Is('Payout') ? 'active' : ''}}" aria-current="page" href="{{url('/Payout')}}">@lang('frontend.payout')</a>
+                </li>
+                <li>
+                  <a class="{{request()->Is('AgentList') ? 'active' : ''}}" aria-current="page" href="{{url('/AgentList')}}">@lang('frontend.agent_list')</a>
+                </li>
+                <li>
+                  <a class="{{request()->Is('ContactUs') ? 'active' : ''}}" aria-current="page" href="{{url('/ContactUs')}}">@lang('frontend.contact_us')</a>
+                </li>
+              </ul>
             </nav>
+            </div>
         </div>
-    </section>
+      </section>
     </div>
-    </div>
+  </div>
     <!-- nav area end -->
 
-
+    
