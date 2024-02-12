@@ -14,9 +14,6 @@ Cash Out
             Cash Out
         </div>
         <div class="card-body">
-            <div class="alert alert-warning">
-                Cashout Charge 10%.
-            </div>
             <form method="post" action="{{ route('member.store_cash_out') }}" enctype="multipart/form-data">
                 @csrf
                 <table class="table">
@@ -62,7 +59,7 @@ Cash Out
     </div>
 </div>
 
-    {{-- <script>
+    <script>
         function getMethodInfo()
         {
             let method = $('#method').val();
@@ -74,7 +71,7 @@ Cash Out
                         'X-CSRF-TOKEN' : '{{ csrf_token() }}'
                     },
 
-                    url : '{{ route('member.get_method_info') }}',
+                    url : '{{ route('member.get_method_vat') }}',
 
                     type : 'GET',
 
@@ -90,6 +87,6 @@ Cash Out
                 $('.message').html('');
             }
         }
-    </script> --}}
+    </script>
 
 @endsection

@@ -3,7 +3,7 @@
         <li class="nav-item nav-category" style="background: white;color:black;padding:10px;">
             <b>Cash : $ {{App\Traits\Member::getBalance(Auth::guard('member')->user()->member_id)}}</b><br>
             <hr>
-            <b>Win Balance : $ 10</b>
+            <b>Win Balance : $ {{App\Traits\Member::getWinBalance(Auth::guard('member')->user()->member_id)}}</b>
         </li>
       {{-- <li class="nav-item nav-category">@lang('frontend.menus')</li> --}}
       <li class="nav-item">
@@ -74,7 +74,7 @@
         </a>
         <div class="collapse" id="ui-referral">
           <ul class="nav flex-column sub-menu">
-            <li class="nav-item"> <a class="nav-link" href="#">Referral History</a></li>
+            <li class="nav-item"> <a class="nav-link" href="{{ route('member.referral_history') }}">Referral History</a></li>
           </ul>
         </div>
       </li>
@@ -86,8 +86,21 @@
         </a>
         <div class="collapse" id="ui-balance-convert">
           <ul class="nav flex-column sub-menu">
-            <li class="nav-item"> <a class="nav-link" href="#">Cash To Win</a></li>
-            <li class="nav-item"> <a class="nav-link" href="#">Win To Cash</a></li>
+            <li class="nav-item"> <a class="nav-link" href="{{ route('member.cash_to_win') }}">Cash To Win</a></li>
+            <li class="nav-item"> <a class="nav-link" href="{{ route('member.win_to_cash') }}">Win To Cash</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="collapse" href="#ui-balance-transfer" aria-expanded="false" aria-controls="ui-lottery">
+          <span class="icon-bg"><i class="fa fa-sign-out"></i></span>
+          <span class="menu-title">Balance Transfer</span>
+          <i class="menu-arrow"></i>
+        </a>
+        <div class="collapse" id="ui-balance-transfer">
+          <ul class="nav flex-column sub-menu">
+            <li class="nav-item"> <a class="nav-link" href="{{ route('member.cash_transfer') }}">Cash Balance Transfer</a></li>
+            <li class="nav-item"> <a class="nav-link" href="{{ route('member.win_transfer') }}">Win Balance Transfer</a></li>
           </ul>
         </div>
       </li>

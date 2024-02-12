@@ -50,6 +50,7 @@
                                     <th>@lang('common.sl')</th>
                                     <th>@lang('payment_method.method_name')</th>
                                     <th>@lang('payment_method.number')</th>
+                                    <th>Withdraw Vat(%)</th>
                                     <th>@lang('common.status')</th>
                                     <th>@lang('common.actions')</th>
                                 </tr>
@@ -78,6 +79,7 @@
                 {data: 'sl', name: 'sl'},
                 {data: 'method_name', name: 'method_name'},
                 {data: 'number', name: 'number'},
+                {data: 'vat', name: 'vat'},
                 {data: 'status', name: 'status'},
                 {data: 'action', name: 'action', orderable: false, searchable: false},
             ]

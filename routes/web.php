@@ -194,6 +194,8 @@ Route::middleware('auth')->group(function () {
 
     Route::get('cash_out_request_trash',[CashOutRequestController::class,'trash_list'])->name('cash_out_request.trash_list');
 
+    
+
 
 });
 
