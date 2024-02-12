@@ -18,6 +18,7 @@ Cash In
                 <thead>
                     <tr>
                         <th>Date & Time</th>
+                        <th>Payment Method</th>
                         <th>Payment Account</th>
                         <th>Trx ID</th>
                         <th>Document</th>
@@ -31,6 +32,15 @@ Cash In
                     <tr>
                         <td>
                             {{ App\Traits\Date::DbToOriginal('-',$v->date) }} || {{ App\Traits\Date::twelveHrTime($v->time) }}
+                        </td>
+                        <td>
+                            @if(isset($v->payment_type))
+                            @if(config('app.locale') == 'en')
+                            {{ $v->method->method_name ?: $v->method->name_bn}}
+                            @else
+                            {{ $v->method->method_name_bn ?: $v->method->name}}
+                            @endif
+                            @endif
                         </td>
                         <td>
                             {{ $v->payment_account }}

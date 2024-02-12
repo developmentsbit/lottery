@@ -1774,6 +1774,105 @@ class PermissionsTableSeeder extends Seeder
                 'parent' => 'Terms & Conditions',
                 'updated_at' => '2024-02-12 14:14:32',
             ),
+            152 => 
+            array (
+                'id' => 412,
+                'name' => 'Cash Out Requst create',
+                'parent' => 'Cash Out Requst',
+                'guard_name' => 'web',
+                'created_at' => '2024-02-12 00:05:57',
+                'updated_at' => '2024-02-12 00:05:57',
+            ),
+            153 => 
+            array (
+                'id' => 413,
+                'name' => 'Cash Out Requst index',
+                'parent' => 'Cash Out Requst',
+                'guard_name' => 'web',
+                'created_at' => '2024-02-12 00:05:57',
+                'updated_at' => '2024-02-12 00:05:57',
+            ),
+            154 => 
+            array (
+                'id' => 414,
+                'name' => 'Cash Out Requst show',
+                'parent' => 'Cash Out Requst',
+                'guard_name' => 'web',
+                'created_at' => '2024-02-12 00:05:57',
+                'updated_at' => '2024-02-12 00:05:57',
+            ),
+            155 => 
+            array (
+                'id' => 415,
+                'name' => 'Cash Out Requst edit',
+                'parent' => 'Cash Out Requst',
+                'guard_name' => 'web',
+                'created_at' => '2024-02-12 00:05:57',
+                'updated_at' => '2024-02-12 00:05:57',
+            ),
+            156 => 
+            array (
+                'id' => 416,
+                'name' => 'Cash Out Requst destroy',
+                'parent' => 'Cash Out Requst',
+                'guard_name' => 'web',
+                'created_at' => '2024-02-12 00:05:57',
+                'updated_at' => '2024-02-12 00:05:57',
+            ),
+            157 => 
+            array (
+                'id' => 417,
+                'name' => 'Cash Out Requst trash',
+                'parent' => 'Cash Out Requst',
+                'guard_name' => 'web',
+                'created_at' => '2024-02-12 00:05:57',
+                'updated_at' => '2024-02-12 00:05:57',
+            ),
+            158 => 
+            array (
+                'id' => 418,
+                'name' => 'Cash Out Requst restore',
+                'parent' => 'Cash Out Requst',
+                'guard_name' => 'web',
+                'created_at' => '2024-02-12 00:05:57',
+                'updated_at' => '2024-02-12 00:05:57',
+            ),
+            159 => 
+            array (
+                'id' => 419,
+                'name' => 'Cash Out Requst delete',
+                'parent' => 'Cash Out Requst',
+                'guard_name' => 'web',
+                'created_at' => '2024-02-12 00:05:57',
+                'updated_at' => '2024-02-12 00:05:57',
+            ),
+            160 => 
+            array (
+                'id' => 420,
+                'name' => 'Cash Out Requst status',
+                'parent' => 'Cash Out Requst',
+                'guard_name' => 'web',
+                'created_at' => '2024-02-12 00:05:58',
+                'updated_at' => '2024-02-12 00:05:58',
+            ),
+            161 => 
+            array (
+                'id' => 421,
+                'name' => 'Cash Out Requst properties',
+                'parent' => 'Cash Out Requst',
+                'guard_name' => 'web',
+                'created_at' => '2024-02-12 00:05:58',
+                'updated_at' => '2024-02-12 00:05:58',
+            ),
+            162 => 
+            array (
+                'id' => 422,
+                'name' => 'Cash Out Requst print',
+                'parent' => 'Cash Out Requst',
+                'guard_name' => 'web',
+                'created_at' => '2024-02-12 00:05:58',
+                'updated_at' => '2024-02-12 00:05:58',
+            ),
         ));
         
         
