@@ -71,7 +71,7 @@
                                     @endphp
                                     <div class="col-lg-3 col-md-6 col-6">
                                         <label class="form-check">
-                                            <input class="form-check-input permission" type="checkbox" value="{{$p->id}}" name="permissions[]" id="" @if($permission_id == $p->id) checked @endif>
+                                            <input class="form-check-input permission" type="checkbox" value="{{$p->name}}" name="permissions[]" id="" @if($permission_id == $p->id) checked @endif>
                                             <span class="form-check-label">
                                                 {{$p->name}}
                                             </span>

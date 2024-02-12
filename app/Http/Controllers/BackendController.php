@@ -14,6 +14,7 @@ use DeviceDetector\DeviceDetector;
 use DeviceDetector\Parser\Device\AbstractDeviceParser;
 use DeviceDetector\Parser\OperatingSystem;
 use DeviceDetector\Parser\Client\Browser;
+use App\Models\Menu;
 
 class BackendController extends Controller
 {
@@ -30,7 +31,8 @@ class BackendController extends Controller
         $data = [];
         $data['total_users'] = User::totalUsers();
         $data['total_roles'] = Role::count();
-        // return $data['total_users'];
+        // return $data['total_users']; 
+
         return view($this->path.'.home',compact('data'));
     }
 

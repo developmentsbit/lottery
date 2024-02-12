@@ -38,7 +38,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::disableForeignKeyConstraints();
+        \DB::statement('SET FOREIGN_KEY_CHECKS = 1');
         Schema::dropIfExists('menus');
     }
 };
