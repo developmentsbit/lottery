@@ -7,13 +7,13 @@
 
         {{-- /*Page Title Goese Here in this slot variable*/ --}}
         @slot('title')
-        @lang('welcome_message.create_title')
+        @lang('about_us.create_title')
         @endslot
 
         @if(Auth::user()->can('Branch index'))
         {{-- /* Create New Route Will Be goes here */ --}}
         @slot('route_name')
-        welcome_message.index
+        about_us.index
         @endslot
 
         @endif
@@ -24,34 +24,19 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                        <form action="{{route('welcome_message.store')}}" method="post" enctype="multipart/form-data" id="formData">
+                        <form action="{{route('about_us.store')}}" method="post" enctype="multipart/form-data" id="formData">
                             @csrf
-                            @method('PUT')
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-12 mt-2">
-                                <label for="title ">@lang('welcome_message.title_en')</label><span class="text-danger">*</span>
-                                <input type="text" name="title" class="form-control  mt-1 @error('title') is-invalid @enderror" id="title" value="{{ $data->title }}">
-                                @error('title')
-                                    <div class="alert alert-danger">{{ $message }}</div>
-                                @enderror
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-12 mt-2">
-                                <label for="title_bn">@lang('welcome_message.title_bn')</label>
-                                <input type="text" name="title_bn" class="form-control  mt-1  @error('title_bn') is-invalid @enderror" id="title_bn" value="{{ $data->title_bn }}">
-                                @error('title_bn')
-                                    <div class="alert alert-danger">{{ $message }}</div>
-                                @enderror
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-12 mt-2">
-                                <label for="details">@lang('welcome_message.details_en')</label>
-                                <textarea class="form-control w-100" rows="16" type="text" name="details" placeholder="@lang('welcome_message.details')">{!! $data->details !!}</textarea>
+                                <label for="details">@lang('about_us.details_en')</label>
+                                <textarea class="form-control w-100" rows="8" type="text" name="details" placeholder="@lang('about_us.details')">{!! $data->details !!}</textarea>
                                 @error('details')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-12 mt-2">
-                                <label for="details_bn">@lang('welcome_message.details_bn')</label>
-                                <textarea class="form-control w-100" rows="16" type="text" name="details_bn" placeholder="@lang('welcome_message.details_bn')">{!! $data->details_bn !!}</textarea>
+                                <label for="details_bn">@lang('about_us.details_bn')</label>
+                                <textarea class="form-control w-100" rows="8" type="text" name="details_bn" placeholder="@lang('about_us.details_bn')">{!! $data->details_bn !!}</textarea>
                                 @error('details_bn')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
