@@ -153,8 +153,8 @@
 
                         if($tl->type == 3)
                         {
-                            $module = App\Models\Menu::where('label_id',$label->id)->where('type',3)->get();
-                            foreach ($module as $m)
+                            $single = App\Models\Menu::where('label_id',$label->id)->where('type',3)->get();
+                            foreach ($single as $m)
                             {
                                 $thispermission = $m->system_name.' '.$m->slug;
                                 $getPermission = DB::table('permissions')->where('name',$thispermission)->first();
@@ -186,7 +186,7 @@
                     @endphp
                     @if($m->type == 1 && $label->id == $m->label_id)
 
-                    @if($totalParentPermission != 0)
+                    @if($totalParentPermission > 0)
                     <li class="sidebar-item @if($currentMenuId->parent_id == $m->id) active @endif">
 						<a data-bs-target="#{{$m->id}}" data-bs-toggle="collapse" class="sidebar-link @if($currentMenuId->parent_id == $m->id) @else collapsed @endif" aria-expanded="@if($currentMenuId->parent_id == $m->id)true @else false @endif">
 							<i class="{{$m->icon}}"></i> <span class="align-middle">

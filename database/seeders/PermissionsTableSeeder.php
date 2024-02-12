@@ -1380,498 +1380,138 @@ class PermissionsTableSeeder extends Seeder
             ),
             151 => 
             array (
-                'created_at' => '2024-02-10 15:29:21',
+                'created_at' => '2024-02-12 00:05:57',
                 'guard_name' => 'web',
-                'id' => 411,
-                'name' => 'User Banner create',
-                'parent' => 'User Banner',
-                'updated_at' => '2024-02-10 15:29:21',
-            ),
-            152 => 
-            array (
-                'created_at' => '2024-02-10 15:29:21',
-                'guard_name' => 'web',
-                'id' => 412,
-                'name' => 'User Banner index',
-                'parent' => 'User Banner',
-                'updated_at' => '2024-02-10 15:29:21',
-            ),
-            153 => 
-            array (
-                'created_at' => '2024-02-10 15:29:21',
-                'guard_name' => 'web',
-                'id' => 413,
-                'name' => 'User Banner show',
-                'parent' => 'User Banner',
-                'updated_at' => '2024-02-10 15:29:21',
-            ),
-            154 => 
-            array (
-                'created_at' => '2024-02-10 15:29:21',
-                'guard_name' => 'web',
-                'id' => 414,
-                'name' => 'User Banner edit',
-                'parent' => 'User Banner',
-                'updated_at' => '2024-02-10 15:29:21',
-            ),
-            155 => 
-            array (
-                'created_at' => '2024-02-10 15:29:21',
-                'guard_name' => 'web',
-                'id' => 415,
-                'name' => 'User Banner destroy',
-                'parent' => 'User Banner',
-                'updated_at' => '2024-02-10 15:29:21',
-            ),
-            156 => 
-            array (
-                'created_at' => '2024-02-10 15:29:21',
-                'guard_name' => 'web',
-                'id' => 416,
-                'name' => 'User Banner trash',
-                'parent' => 'User Banner',
-                'updated_at' => '2024-02-10 15:29:21',
-            ),
-            157 => 
-            array (
-                'created_at' => '2024-02-10 15:29:21',
-                'guard_name' => 'web',
-                'id' => 417,
-                'name' => 'User Banner restore',
-                'parent' => 'User Banner',
-                'updated_at' => '2024-02-10 15:29:21',
-            ),
-            158 => 
-            array (
-                'created_at' => '2024-02-10 15:29:21',
-                'guard_name' => 'web',
-                'id' => 418,
-                'name' => 'User Banner delete',
-                'parent' => 'User Banner',
-                'updated_at' => '2024-02-10 15:29:21',
-            ),
-            159 => 
-            array (
-                'created_at' => '2024-02-10 15:29:21',
-                'guard_name' => 'web',
-                'id' => 419,
-                'name' => 'User Banner status',
-                'parent' => 'User Banner',
-                'updated_at' => '2024-02-10 15:29:21',
-            ),
-            160 => 
-            array (
-                'created_at' => '2024-02-10 15:29:21',
-                'guard_name' => 'web',
-                'id' => 420,
-                'name' => 'User Banner properties',
-                'parent' => 'User Banner',
-                'updated_at' => '2024-02-10 15:29:21',
-            ),
-            161 => 
-            array (
-                'created_at' => '2024-02-10 15:29:21',
-                'guard_name' => 'web',
-                'id' => 421,
-                'name' => 'User Banner print',
-                'parent' => 'User Banner',
-                'updated_at' => '2024-02-10 15:29:21',
-            ),
-            162 => 
-            array (
-                'created_at' => '2024-02-12 12:37:23',
-                'guard_name' => 'web',
-                'id' => 444,
-                'name' => 'About Us create',
-                'parent' => 'About Us',
-                'updated_at' => '2024-02-12 12:37:23',
-            ),
-            163 => 
-            array (
-                'created_at' => '2024-02-12 12:37:23',
-                'guard_name' => 'web',
-                'id' => 445,
-                'name' => 'About Us index',
-                'parent' => 'About Us',
-                'updated_at' => '2024-02-12 12:37:23',
-            ),
-            164 => 
-            array (
-                'created_at' => '2024-02-12 12:37:23',
-                'guard_name' => 'web',
-                'id' => 446,
-                'name' => 'About Us show',
-                'parent' => 'About Us',
-                'updated_at' => '2024-02-12 12:37:23',
-            ),
-            165 => 
-            array (
-                'created_at' => '2024-02-12 12:37:23',
-                'guard_name' => 'web',
-                'id' => 447,
-                'name' => 'About Us edit',
-                'parent' => 'About Us',
-                'updated_at' => '2024-02-12 12:37:23',
-            ),
-            166 => 
-            array (
-                'created_at' => '2024-02-12 12:37:23',
-                'guard_name' => 'web',
-                'id' => 448,
-                'name' => 'About Us destroy',
-                'parent' => 'About Us',
-                'updated_at' => '2024-02-12 12:37:23',
-            ),
-            167 => 
-            array (
-                'created_at' => '2024-02-12 12:37:24',
-                'guard_name' => 'web',
-                'id' => 449,
-                'name' => 'About Us trash',
-                'parent' => 'About Us',
-                'updated_at' => '2024-02-12 12:37:24',
-            ),
-            168 => 
-            array (
-                'created_at' => '2024-02-12 12:37:24',
-                'guard_name' => 'web',
-                'id' => 450,
-                'name' => 'About Us restore',
-                'parent' => 'About Us',
-                'updated_at' => '2024-02-12 12:37:24',
-            ),
-            169 => 
-            array (
-                'created_at' => '2024-02-12 12:37:24',
-                'guard_name' => 'web',
-                'id' => 451,
-                'name' => 'About Us delete',
-                'parent' => 'About Us',
-                'updated_at' => '2024-02-12 12:37:24',
-            ),
-            170 => 
-            array (
-                'created_at' => '2024-02-12 12:37:24',
-                'guard_name' => 'web',
-                'id' => 452,
-                'name' => 'About Us status',
-                'parent' => 'About Us',
-                'updated_at' => '2024-02-12 12:37:24',
-            ),
-            171 => 
-            array (
-                'created_at' => '2024-02-12 12:37:24',
-                'guard_name' => 'web',
-                'id' => 453,
-                'name' => 'About Us properties',
-                'parent' => 'About Us',
-                'updated_at' => '2024-02-12 12:37:24',
-            ),
-            172 => 
-            array (
-                'created_at' => '2024-02-12 12:37:24',
-                'guard_name' => 'web',
-                'id' => 454,
-                'name' => 'About Us print',
-                'parent' => 'About Us',
-                'updated_at' => '2024-02-12 12:37:24',
-            ),
-            173 => 
-            array (
-                'created_at' => '2024-02-12 13:15:59',
-                'guard_name' => 'web',
-                'id' => 455,
-                'name' => 'Vision Mission create',
-                'parent' => 'Vision Mission',
-                'updated_at' => '2024-02-12 13:15:59',
-            ),
-            174 => 
-            array (
-                'created_at' => '2024-02-12 13:15:59',
-                'guard_name' => 'web',
-                'id' => 456,
-                'name' => 'Vision Mission index',
-                'parent' => 'Vision Mission',
-                'updated_at' => '2024-02-12 13:15:59',
-            ),
-            175 => 
-            array (
-                'created_at' => '2024-02-12 13:15:59',
-                'guard_name' => 'web',
-                'id' => 457,
-                'name' => 'Vision Mission show',
-                'parent' => 'Vision Mission',
-                'updated_at' => '2024-02-12 13:15:59',
-            ),
-            176 => 
-            array (
-                'created_at' => '2024-02-12 13:15:59',
-                'guard_name' => 'web',
-                'id' => 458,
-                'name' => 'Vision Mission edit',
-                'parent' => 'Vision Mission',
-                'updated_at' => '2024-02-12 13:15:59',
-            ),
-            177 => 
-            array (
-                'created_at' => '2024-02-12 13:15:59',
-                'guard_name' => 'web',
-                'id' => 459,
-                'name' => 'Vision Mission destroy',
-                'parent' => 'Vision Mission',
-                'updated_at' => '2024-02-12 13:15:59',
-            ),
-            178 => 
-            array (
-                'created_at' => '2024-02-12 13:16:00',
-                'guard_name' => 'web',
-                'id' => 460,
-                'name' => 'Vision Mission trash',
-                'parent' => 'Vision Mission',
-                'updated_at' => '2024-02-12 13:16:00',
-            ),
-            179 => 
-            array (
-                'created_at' => '2024-02-12 13:16:00',
-                'guard_name' => 'web',
-                'id' => 461,
-                'name' => 'Vision Mission restore',
-                'parent' => 'Vision Mission',
-                'updated_at' => '2024-02-12 13:16:00',
-            ),
-            180 => 
-            array (
-                'created_at' => '2024-02-12 13:16:00',
-                'guard_name' => 'web',
-                'id' => 462,
-                'name' => 'Vision Mission delete',
-                'parent' => 'Vision Mission',
-                'updated_at' => '2024-02-12 13:16:00',
-            ),
-            181 => 
-            array (
-                'created_at' => '2024-02-12 13:16:00',
-                'guard_name' => 'web',
-                'id' => 463,
-                'name' => 'Vision Mission status',
-                'parent' => 'Vision Mission',
-                'updated_at' => '2024-02-12 13:16:00',
-            ),
-            182 => 
-            array (
-                'created_at' => '2024-02-12 13:16:00',
-                'guard_name' => 'web',
-                'id' => 464,
-                'name' => 'Vision Mission properties',
-                'parent' => 'Vision Mission',
-                'updated_at' => '2024-02-12 13:16:00',
-            ),
-            183 => 
-            array (
-                'created_at' => '2024-02-12 13:16:00',
-                'guard_name' => 'web',
-                'id' => 465,
-                'name' => 'Vision Mission print',
-                'parent' => 'Vision Mission',
-                'updated_at' => '2024-02-12 13:16:00',
-            ),
-            184 => 
-            array (
-                'created_at' => '2024-02-12 14:14:31',
-                'guard_name' => 'web',
-                'id' => 466,
-                'name' => 'Terms & Conditions create',
-                'parent' => 'Terms & Conditions',
-                'updated_at' => '2024-02-12 14:14:31',
-            ),
-            185 => 
-            array (
-                'created_at' => '2024-02-12 14:14:31',
-                'guard_name' => 'web',
-                'id' => 467,
-                'name' => 'Terms & Conditions index',
-                'parent' => 'Terms & Conditions',
-                'updated_at' => '2024-02-12 14:14:31',
-            ),
-            186 => 
-            array (
-                'created_at' => '2024-02-12 14:14:31',
-                'guard_name' => 'web',
-                'id' => 468,
-                'name' => 'Terms & Conditions show',
-                'parent' => 'Terms & Conditions',
-                'updated_at' => '2024-02-12 14:14:31',
-            ),
-            187 => 
-            array (
-                'created_at' => '2024-02-12 14:14:31',
-                'guard_name' => 'web',
-                'id' => 469,
-                'name' => 'Terms & Conditions edit',
-                'parent' => 'Terms & Conditions',
-                'updated_at' => '2024-02-12 14:14:31',
-            ),
-            188 => 
-            array (
-                'created_at' => '2024-02-12 14:14:31',
-                'guard_name' => 'web',
-                'id' => 470,
-                'name' => 'Terms & Conditions destroy',
-                'parent' => 'Terms & Conditions',
-                'updated_at' => '2024-02-12 14:14:31',
-            ),
-            189 => 
-            array (
-                'created_at' => '2024-02-12 14:14:31',
-                'guard_name' => 'web',
-                'id' => 471,
-                'name' => 'Terms & Conditions trash',
-                'parent' => 'Terms & Conditions',
-                'updated_at' => '2024-02-12 14:14:31',
-            ),
-            190 => 
-            array (
-                'created_at' => '2024-02-12 14:14:31',
-                'guard_name' => 'web',
-                'id' => 472,
-                'name' => 'Terms & Conditions restore',
-                'parent' => 'Terms & Conditions',
-                'updated_at' => '2024-02-12 14:14:31',
-            ),
-            191 => 
-            array (
-                'created_at' => '2024-02-12 14:14:32',
-                'guard_name' => 'web',
-                'id' => 473,
-                'name' => 'Terms & Conditions delete',
-                'parent' => 'Terms & Conditions',
-                'updated_at' => '2024-02-12 14:14:32',
-            ),
-            192 => 
-            array (
-                'created_at' => '2024-02-12 14:14:32',
-                'guard_name' => 'web',
-                'id' => 474,
-                'name' => 'Terms & Conditions status',
-                'parent' => 'Terms & Conditions',
-                'updated_at' => '2024-02-12 14:14:32',
-            ),
-            193 => 
-            array (
-                'created_at' => '2024-02-12 14:14:32',
-                'guard_name' => 'web',
-                'id' => 475,
-                'name' => 'Terms & Conditions properties',
-                'parent' => 'Terms & Conditions',
-                'updated_at' => '2024-02-12 14:14:32',
-            ),
-            194 => 
-            array (
-                'created_at' => '2024-02-12 14:14:32',
-                'guard_name' => 'web',
-                'id' => 476,
-                'name' => 'Terms & Conditions print',
-                'parent' => 'Terms & Conditions',
-                'updated_at' => '2024-02-12 14:14:32',
-            ),
-            152 => 
-            array (
                 'id' => 412,
                 'name' => 'Cash Out Requst create',
                 'parent' => 'Cash Out Requst',
-                'guard_name' => 'web',
+                'updated_at' => '2024-02-12 00:05:57',
+            ),
+            152 => 
+            array (
                 'created_at' => '2024-02-12 00:05:57',
+                'guard_name' => 'web',
+                'id' => 413,
+                'name' => 'Cash Out Requst index',
+                'parent' => 'Cash Out Requst',
                 'updated_at' => '2024-02-12 00:05:57',
             ),
             153 => 
             array (
-                'id' => 413,
-                'name' => 'Cash Out Requst index',
-                'parent' => 'Cash Out Requst',
-                'guard_name' => 'web',
                 'created_at' => '2024-02-12 00:05:57',
+                'guard_name' => 'web',
+                'id' => 414,
+                'name' => 'Cash Out Requst show',
+                'parent' => 'Cash Out Requst',
                 'updated_at' => '2024-02-12 00:05:57',
             ),
             154 => 
             array (
-                'id' => 414,
-                'name' => 'Cash Out Requst show',
-                'parent' => 'Cash Out Requst',
-                'guard_name' => 'web',
                 'created_at' => '2024-02-12 00:05:57',
+                'guard_name' => 'web',
+                'id' => 415,
+                'name' => 'Cash Out Requst edit',
+                'parent' => 'Cash Out Requst',
                 'updated_at' => '2024-02-12 00:05:57',
             ),
             155 => 
             array (
-                'id' => 415,
-                'name' => 'Cash Out Requst edit',
-                'parent' => 'Cash Out Requst',
-                'guard_name' => 'web',
                 'created_at' => '2024-02-12 00:05:57',
+                'guard_name' => 'web',
+                'id' => 416,
+                'name' => 'Cash Out Requst destroy',
+                'parent' => 'Cash Out Requst',
                 'updated_at' => '2024-02-12 00:05:57',
             ),
             156 => 
             array (
-                'id' => 416,
-                'name' => 'Cash Out Requst destroy',
-                'parent' => 'Cash Out Requst',
-                'guard_name' => 'web',
                 'created_at' => '2024-02-12 00:05:57',
+                'guard_name' => 'web',
+                'id' => 417,
+                'name' => 'Cash Out Requst trash',
+                'parent' => 'Cash Out Requst',
                 'updated_at' => '2024-02-12 00:05:57',
             ),
             157 => 
             array (
-                'id' => 417,
-                'name' => 'Cash Out Requst trash',
-                'parent' => 'Cash Out Requst',
-                'guard_name' => 'web',
                 'created_at' => '2024-02-12 00:05:57',
+                'guard_name' => 'web',
+                'id' => 418,
+                'name' => 'Cash Out Requst restore',
+                'parent' => 'Cash Out Requst',
                 'updated_at' => '2024-02-12 00:05:57',
             ),
             158 => 
             array (
-                'id' => 418,
-                'name' => 'Cash Out Requst restore',
-                'parent' => 'Cash Out Requst',
-                'guard_name' => 'web',
                 'created_at' => '2024-02-12 00:05:57',
+                'guard_name' => 'web',
+                'id' => 419,
+                'name' => 'Cash Out Requst delete',
+                'parent' => 'Cash Out Requst',
                 'updated_at' => '2024-02-12 00:05:57',
             ),
             159 => 
             array (
-                'id' => 419,
-                'name' => 'Cash Out Requst delete',
-                'parent' => 'Cash Out Requst',
+                'created_at' => '2024-02-12 00:05:58',
                 'guard_name' => 'web',
-                'created_at' => '2024-02-12 00:05:57',
-                'updated_at' => '2024-02-12 00:05:57',
-            ),
-            160 => 
-            array (
                 'id' => 420,
                 'name' => 'Cash Out Requst status',
                 'parent' => 'Cash Out Requst',
-                'guard_name' => 'web',
+                'updated_at' => '2024-02-12 00:05:58',
+            ),
+            160 => 
+            array (
                 'created_at' => '2024-02-12 00:05:58',
+                'guard_name' => 'web',
+                'id' => 421,
+                'name' => 'Cash Out Requst properties',
+                'parent' => 'Cash Out Requst',
                 'updated_at' => '2024-02-12 00:05:58',
             ),
             161 => 
             array (
-                'id' => 421,
-                'name' => 'Cash Out Requst properties',
-                'parent' => 'Cash Out Requst',
-                'guard_name' => 'web',
                 'created_at' => '2024-02-12 00:05:58',
+                'guard_name' => 'web',
+                'id' => 422,
+                'name' => 'Cash Out Requst print',
+                'parent' => 'Cash Out Requst',
                 'updated_at' => '2024-02-12 00:05:58',
             ),
             162 => 
             array (
-                'id' => 422,
-                'name' => 'Cash Out Requst print',
-                'parent' => 'Cash Out Requst',
+                'created_at' => '2024-02-13 01:52:07',
                 'guard_name' => 'web',
-                'created_at' => '2024-02-12 00:05:58',
-                'updated_at' => '2024-02-12 00:05:58',
+                'id' => 477,
+                'name' => 'User Banner create',
+                'parent' => 'User Banner',
+                'updated_at' => '2024-02-13 01:52:07',
+            ),
+            163 => 
+            array (
+                'created_at' => '2024-02-13 01:52:07',
+                'guard_name' => 'web',
+                'id' => 478,
+                'name' => 'User Banner index',
+                'parent' => 'User Banner',
+                'updated_at' => '2024-02-13 01:52:07',
+            ),
+            164 => 
+            array (
+                'created_at' => '2024-02-13 02:00:47',
+                'guard_name' => 'web',
+                'id' => 481,
+                'name' => 'About Us create',
+                'parent' => 'About Us',
+                'updated_at' => '2024-02-13 02:00:47',
+            ),
+            165 => 
+            array (
+                'created_at' => '2024-02-13 02:01:41',
+                'guard_name' => 'web',
+                'id' => 482,
+                'name' => 'Vision Mission create',
+                'parent' => 'Vision Mission',
+                'updated_at' => '2024-02-13 02:01:41',
             ),
         ));
         
