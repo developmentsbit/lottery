@@ -18,6 +18,7 @@ Route::get('member_lottery',[MemberDashboardController::class,'lottery'])->name(
 Route::get('member_cash_in',[MemberDashboardController::class,'cash_in'])->name('member.cash_in')->middleware('member_auth');
 
 Route::get('get_method_info',[MemberDashboardController::class,'get_method_info'])->name('member.get_method_info');
+Route::get('get_method_vat',[MemberDashboardController::class,'get_method_vat'])->name('member.get_method_vat');
 Route::post('store_cash_in',[MemberDashboardController::class,'cash_in_store'])->name('member.store_cash_in');
 Route::get('cash_in_hoistory',[MemberDashboardController::class,'cash_in_history'])->name('member.cash_in_history');
 
@@ -30,3 +31,13 @@ Route::post('store_cash_out',[MemberDashboardController::class,'store_cash_out']
 Route::get('cash_out_history',[MemberDashboardController::class,'cash_out_history'])->name('member.cash_out_history');
 
 Route::Get('memberLogout',[MemberDashboardController::class,'logout'])->name('member.logout');
+
+Route::get('referral_history',[MemberDashboardController::class,'referral_history'])->name('member.referral_history');
+
+Route::get('cash_to_win',[MemberDashboardController::class,'cash_to_win'])->name('member.cash_to_win');
+Route::get('win_to_cash',[MemberDashboardController::class,'win_to_cash'])->name('member.win_to_cash');
+Route::post('balance_convert',[MemberDashboardController::class,'balance_convert'])->name('member.balance_convert');
+
+Route::get('cash_transfer',[MemberDashboardController::class,'cash_transfer'])->name('member.cash_transfer');
+Route::get('win_transfer',[MemberDashboardController::class,'win_transfer'])->name('member.win_transfer');
+Route::post('balance_transfer',[MemberDashboardController::class,'balance_transfer'])->name('member.balance_transfer');

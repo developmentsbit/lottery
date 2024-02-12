@@ -112,6 +112,7 @@ class PaymentMethodRepository implements PaymentMethodInterface{
         $data = array(
             'method_name' => $request->method_name,
             'method_name_bn' => $request->method_name_bn,
+            'vat' => $request->vat,
             'status' => 1,
             'number' => $request->number,
         );
@@ -146,6 +147,7 @@ class PaymentMethodRepository implements PaymentMethodInterface{
         $data = array(
             'method_name' => $request->method_name,
             'method_name_bn' => $request->method_name_bn,
+            'vat' => $request->vat,
             'number' => $request->number,
         );
 

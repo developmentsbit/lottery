@@ -51,6 +51,13 @@
                                     <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
                             </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 mt-2">
+                                <label for="vat">WWithdraw Vat(%)</label> <span class="text-danger">*</span>
+                                <input type="number" name="vat" class="form-control  mt-1  @error('vat') is-invalid @enderror" id="vat" value="{{$params['data']->vat}}">
+                                @error('vat')
+                                    <div class="alert alert-danger">{{ $message }}</div>
+                                @enderror
+                            </div>
                             <div class="col-lg-12 col-md-12 col-sm-12 mt-2">
                                 <label for="number">@lang('payment_method.number')</label>
                                 <textarea class="form-control" name="number" id="number" placeholder="@lang('payment_method.number_place')">{!! $params['data']->number !!}</textarea>

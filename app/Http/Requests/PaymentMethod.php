@@ -24,6 +24,7 @@ class PaymentMethod extends FormRequest
         return [
             'method_name' => 'required',
             'number' => 'required',
+            'vat' => 'required',
         ];
     }
 
@@ -32,6 +33,7 @@ class PaymentMethod extends FormRequest
         return [
             'method_name.required' => __('payment_method.method_name_required'),
             'number.required' => __('payment_method.number_required'),
+            'vat.required' => 'Please Give Withdraw Vat Amount',
         ];
     }
 }

@@ -15,6 +15,7 @@ use App\Models\GameLedger;
 use App\Models\GameEntry;
 use App\Traits\Date;
 use App\Traits\Member;
+use App\Models\Member as MemberModel;
 
 
 class MemberDashboardController extends Controller
@@ -71,6 +72,19 @@ class MemberDashboardController extends Controller
         else
         {
             return '<span style="font-weight:bold;" class="text-success">Account No : '.$data->number.'</span>';
+        }
+    }
+    public function get_method_vat(Request $request)
+    {
+        $data = PaymentMethod::find($request->method);
+
+        if($data->status == 0)
+        {
+            return '<span style="font-weight:bold;" class="text-danger">This Service Is Unavailable</span>';
+        }
+        else
+        {
+            return '<span style="font-weight:bold;" class="text-success">Cash Out Charge : '.$data->vat.'%</span>';
         }
     }
 
@@ -196,9 +210,18 @@ class MemberDashboardController extends Controller
             'status' => '0',
         );
 
+        $method  = PaymentMethod::find($request->method);
+
         $amount = $request->amount;
-        $vatper = 10;
-        $vat = ($amount * $vatper) / 100;
+        $vatper = $method->vat;
+        if($vatper > 0)
+        {
+            $vat = ($amount * $vatper) / 100;
+        }
+        else
+        {
+            $vat = 0;
+        }
 
         $amountWithVat = $amount + $vat;
 
@@ -236,5 +259,167 @@ class MemberDashboardController extends Controller
         ->with('method')
         ->get();
         return $this->view($this->path,'cash_out_history',$param);
+    }
+
+    public function referral_history()
+    {
+        $param['data'] = MemberModel::where('referral_no',Auth::guard('member')->user()->memebr_id)->get();
+        return $this->view($this->path,'referral_history',$param);
+    }
+
+    public function cash_to_win()
+    {
+        return $this->view($this->path,'cash_to_win');
+    }
+    public function win_to_cash()
+    {
+        return $this->view($this->path,'win_to_cash');
+    }
+
+    public function balance_convert(Request $request)
+    {
+
+        if($request->post_type == 'cash_to_win')
+        {
+            $balance = Member::getBalance(Auth::guard('member')->user()->member_id);
+            if($request->amount > $balance)
+            {
+                Alert::error('Error', 'Insuficient Balance');
+                return redirect()->back();
+            }
+            $vat = ($request->amount * 1) / 100;
+
+            $balanceWithvat = $request->amount + $vat;
+
+            CustomerTransaction::create([
+                'date' => date('Y-m-d'),
+                'time' => date('H:i:s'),
+                'member_id' => Auth::guard('member')->user()->member_id,
+                'transaction_type' => '6',
+                'winbalance' => $request->amount,
+                'balance' => $balanceWithvat * -1,
+                'vat' => $vat,
+                'status' => 1,
+            ]);
+            Alert::success('Success', 'Your Cash To Win Balance Coverted');
+            return redirect()->back();
+        }
+        else
+        {
+            $balance = Member::getWinBalance(Auth::guard('member')->user()->member_id);
+            if($request->amount > $balance)
+            {
+                Alert::error('Error', 'Insuficient Balance');
+                return redirect()->back();
+            }
+            $vat = ($request->amount * 1) / 100;
+
+            $balanceWithvat = $request->amount + $vat;
+
+            CustomerTransaction::create([
+                'date' => date('Y-m-d'),
+                'time' => date('H:i:s'),
+                'member_id' => Auth::guard('member')->user()->member_id,
+                'transaction_type' => '7',
+
+                'balance' => $request->amount,
+                'winbalance' => $balanceWithvat  * -1,
+                'vat' => $vat,
+                'status' => 1,
+            ]);
+            Alert::success('Success', 'Your Win To Cash Balance Coverted');
+            return redirect()->back();
+        }
+    }
+
+    public function cash_transfer()
+    {
+        $param['member'] = MemberModel::all();
+        return $this->view($this->path,'cash_transfer',$param);
+    }
+    public function win_transfer()
+    {
+        $param['member'] = MemberModel::all();
+        return $this->view($this->path,'win_transfer',$param);
+    }
+
+    public function balance_transfer(Request $request)
+    {
+        if($request->post_type == 'cash_transfer')
+        {
+            $balance = Member::getBalance(Auth::guard('member')->user()->member_id);
+            if($request->amount > $balance)
+            {
+                Alert::error('Error', 'Insuficient Balance');
+                return redirect()->back();
+            }
+
+            $vat = 3;
+
+            $vatAmount = ($request->amount * $vat) / 100;
+
+            $balanceWithVat = $request->amount + $vatAmount;
+
+            CustomerTransaction::create([
+                'date' => date('Y-m-d'),
+                'time' => date('H:i:s'),
+                'member_id' => Auth::guard('member')->user()->member_id,
+                'transaction_type' => '2',
+                'transfer' => $balanceWithVat,
+                'vat' => $vatAmount,
+                'transfer_to' => $request->member_id,
+                'status' => 1,
+            ]);
+            CustomerTransaction::create([
+                'date' => date('Y-m-d'),
+                'time' => date('H:i:s'),
+                'member_id' => $request->member_id,
+                'transaction_type' => '2',
+                'balance' => $request->amount,
+                'transfer_from' => Auth::guard('member')->user()->member_id,
+                'status' => 1,
+            ]);
+
+            Alert::success('Success', 'Cash Balance Transfered');
+            return redirect()->back();
+        }
+        else
+        {
+            $balance = Member::getWinBalance(Auth::guard('member')->user()->member_id);
+            if($request->amount > $balance)
+            {
+                Alert::error('Error', 'Insuficient Balance');
+                return redirect()->back();
+            }
+
+            $vat = 2;
+
+            $vatAmount = ($request->amount * $vat) / 100;
+
+            $balanceWithVat = $request->amount + $vatAmount;
+
+            CustomerTransaction::create([
+                'date' => date('Y-m-d'),
+                'time' => date('H:i:s'),
+                'member_id' => Auth::guard('member')->user()->member_id,
+                'transaction_type' => '2',
+                'winbalance_transfer' => $balanceWithVat,
+                'vat' => $vatAmount,
+                'transfer_to' => $request->member_id,
+                'status' => 1,
+            ]);
+            CustomerTransaction::create([
+                'date' => date('Y-m-d'),
+                'time' => date('H:i:s'),
+                'member_id' => $request->member_id,
+                'transaction_type' => '2',
+                'winbalance' => $request->amount,
+                'transfer_from' => Auth::guard('member')->user()->member_id,
+                'status' => 1,
+            ]);
+
+            Alert::success('Success', 'Win Balance Transfered');
+            return redirect()->back();
+        }
     }
 }

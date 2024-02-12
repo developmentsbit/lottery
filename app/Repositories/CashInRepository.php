@@ -133,7 +133,7 @@ class CashInRepository implements CashInInterface {
         }
         else
         {
-            $data['win_balance'] = $request->amount;
+            $data['winbalance'] = $request->amount;
         }
 
         try {
