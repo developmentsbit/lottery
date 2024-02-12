@@ -3,12 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\photo_info;
+use App\Models\missionvision;
 use DataTables;
 use Auth;
 use Brian2694\Toastr\Facades\Toastr;
 
-class PhotoController extends Controller
+class MissionVisionController extends Controller
 {
     protected $sl;
     /**
@@ -18,7 +18,7 @@ class PhotoController extends Controller
     {
         $this->sl = 0;
         if ($request->ajax()) {
-            $data = photo_info::select('*');
+            $data = missionvision::select('*');
             return Datatables::of($data)
                     ->addIndexColumn()
                     ->addColumn('sl',function($row){
@@ -46,18 +46,18 @@ class PhotoController extends Controller
 
                         return '<div class="form-check form-switch">
                                     <label class="form-check-label">
-                                    <input class="form-check-input" type="checkbox" id="photoStatus-'.$v->id.'" '.$checked.' onclick="return ChangePhotoInfoStatus('.$v->id.')">
+                                    <input class="form-check-input" type="checkbox" id="missionvisionStatus-'.$v->id.'" '.$checked.' onclick="return ChangeMissionVisionStatus('.$v->id.')">
                             </label>
                         </div>';
                         })
                     ->addColumn('image', function ($row) { 
-                        $url=asset("/Backend/img/photo_info/$row->image");
+                        $url=asset("/Backend/img/mission_vision/$row->image");
                         return ' <a href="'.$url.'" download="'.$row->title.'" class="btn btn-success btn-sm">Download</a>';
                     })
                     ->addColumn('action', function($row){
                         return '<div class="btn-group">
-                        <a href="'.route('photo_info.edit',$row->id).'" class="btn btn-info">'.__('common.edit').'</a>
-                        <form action="'.route('photo_info.destroy',$row->id).'" method="POST">
+                        <a href="'.route('mission_vision.edit',$row->id).'" class="btn btn-info">'.__('common.edit').'</a>
+                        <form action="'.route('mission_vision.destroy',$row->id).'" method="POST">
                         '.csrf_field().'
                         '.method_field('DELETE').'
                             <button type="submit" class="btn btn-danger">'.__('common.delete').'</button>
@@ -66,7 +66,7 @@ class PhotoController extends Controller
                     ->rawColumns(['action','sl','title','title_bn','image','status'])
                     ->make(true);
         }
-        return view('backend.photo_info.index');
+        return view('backend.mission_vision.index');
     }
 
     /**
@@ -74,7 +74,7 @@ class PhotoController extends Controller
      */
     public function create()
     {
-        return view('backend.photo_info.create');
+        return view('backend.mission_vision.create');
     }
 
     /**
@@ -85,7 +85,8 @@ class PhotoController extends Controller
         $data = array(
             'title'=>$request->title,
             'title_bn'=>$request->title_bn,
-            'slider'=>$request->slider,
+            'details'=>$request->details,
+            'details_bn'=>$request->details_bn,
             'status'=>$request->status,
         );
 
@@ -95,23 +96,23 @@ class PhotoController extends Controller
         {
             $imageName = rand().'.'.$file->getClientOriginalExtension();
 
-            $file->move(public_path().'/Backend/img/photo_info/',$imageName);
+            $file->move(public_path().'/Backend/img/mission_vision/',$imageName);
 
             $data['image'] = $imageName;
 
         }
 
-        $insert = photo_info::create($data);
+        $insert = missionvision::create($data);
 
         if($insert)
         {
             Toastr::success('Data Insert Success', 'success');
-            return redirect(route('photo_info.index'));
+            return redirect(route('mission_vision.index'));
         }
         else
         {
             Alert::error('Congrats', 'Data Insert Error');
-            return redirect(route('photo_info.index'));
+            return redirect(route('mission_vision.index'));
         }
     }
 
@@ -128,9 +129,9 @@ class PhotoController extends Controller
      */
     public function edit(string $id)
     {
-        $data = photo_info::where('id',$id)->first();
+        $data = missionvision::where('id',$id)->first();
 
-        return view('backend.photo_info.edit',compact('data'));
+        return view('backend.mission_vision.edit',compact('data'));
     }
 
     /**
@@ -142,9 +143,9 @@ class PhotoController extends Controller
 
         if($file)
         {
-            $pathImage = photo_info::find($id);
+            $pathImage = missionvision::find($id);
 
-            $path = public_path().'/Backend/img/photo_info/'.$pathImage->image;
+            $path = public_path().'/Backend/img/mission_vision/'.$pathImage->image;
 
             if(file_exists($path))
             {
@@ -157,77 +158,78 @@ class PhotoController extends Controller
         {
             $imageName = rand().'.'.$file->getClientOriginalExtension();
 
-            $file->move(public_path().'/Backend/img/photo_info/',$imageName);
+            $file->move(public_path().'/Backend/img/mission_vision/',$imageName);
 
-            photo_info::where('id',$id)->update(['image'=>$imageName]);
+            missionvision::where('id',$id)->update(['image'=>$imageName]);
 
         }
 
-        $update = photo_info::find($id)->update([
+        $update = missionvision::find($id)->update([
             'title'=>$request->title,
             'title_bn'=>$request->title_bn,
-            'slider'=>$request->slider,
+            'details'=>$request->details,
+            'details_bn'=>$request->details_bn,
             'status'=>$request->status,
         ]);
 
         if($update)
         {
             Toastr::success('Data Update Success', 'success');
-            return redirect(route('photo_info.index'));
+            return redirect(route('mission_vision.index'));
         }
         else
         {
             Toastr::error('Data Update Error', 'success');
-            return redirect(route('photo_info.index'));
+            return redirect(route('mission_vision.index'));
         }
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy($id)
+    public function destroy(string $id)
     {
-        photo_info::find($id)->delete();
+        missionvision::find($id)->delete();
 
         Toastr::success('Data Temporarily Deleted', 'success');
-        return redirect(route('photo_info.index'));
+        return redirect(route('mission_vision.index'));
     }
 
     public function restore($id){
-        photo_info::where('id',$id)->withTrashed()->restore();
+        missionvision::where('id',$id)->withTrashed()->restore();
 
         Toastr::success('Deleted Data Restore', 'success');
-        return redirect(route('photo_info.index'));
+        return redirect(route('mission_vision.index'));
     }
     
     public function deletedListIndex($id)
     {
-        $pathImage= photo_info::where('id',$id)->withTrashed()->select('image')->first();
+        $pathImage= missionvision::where('id',$id)->withTrashed()->select('image')->first();
         
-        $path=public_path().'Backend/img/photo_info/'.$pathImage->image;
+        $path=public_path().'Backend/img/mission_vision/'.$pathImage->image;
         // return $path;
         if(file_exists($path))
         {
             unlink($path);
         }
 
-        photo_info::where('id',$id)->withTrashed()->forceDelete();
+        missionvision::where('id',$id)->withTrashed()->forceDelete();
 
         Toastr::success('Data Permanently Deleted', 'success');
-        return redirect(route('photo_info.index'));
+        return redirect(route('mission_vision.index'));
     }
 
-    public function ChangedPhotoInfoStatus($id)
+    public function ChangedMissionVisionStatus($id)
     {
-        $check = photo_info::find($id);
+        $check = missionvision::find($id);
         
         if ($check->status == 1) 
         {
-            photo_info::find($id)->update(['status'=>0]);
+            missionvision::find($id)->update(['status'=>0]);
         }
         else 
         {
-            photo_info::find($id)->update(['status'=>1]);
+            missionvision::find($id)->update(['status'=>1]);
         }
 
         return 1;

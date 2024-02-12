@@ -7,13 +7,13 @@
 
         {{-- /*Page Title Goese Here in this slot variable*/ --}}
         @slot('title')
-        @lang('photo_info.index_title')
+        @lang('mission_vision.index_title')
         @endslot
 
         @if(Auth::user()->can('Payment Method create'))
         {{-- /* Create New Route Will Be goes here */ --}}
         @slot('route_name')
-        photo_info.create
+        mission_vision.create
         @endslot
         @slot('btn_class')
         btn btn-primary
@@ -22,17 +22,17 @@
         fa fa-plus
         @endslot
         @slot('btn_name')
-        @lang('photo_info.create_new')
+        @lang('mission_vision.create_new')
         @endslot
 
         @if(Auth::user()->can('Payment Method trash'))
         {{-- for deleted list index 
         @slot('deleted_list_btn_name')
-        @lang('photo_info.deleted_list')
+        @lang('mission_vision.deleted_list')
         @endslot
 
         @slot('deleted_list_route')
-        photo_info.trash_list
+        mission_vision.trash_list
         @endslot --}}
         @endif
 
@@ -62,9 +62,9 @@
                                     <thead>
                                         <tr>
                                             <th>@lang('common.sl')</th>
-                                            <th>@lang('photo_info.title_en')</th>
-                                            <th>@lang('photo_info.title_bn')</th>
-                                            <th>@lang('photo_info.image')</th>
+                                            <th>@lang('mission_vision.title_en')</th>
+                                            <th>@lang('mission_vision.title_bn')</th>
+                                            <th>@lang('mission_vision.image')</th>
                                             <th>@lang('common.status')</th>
                                             <th>@lang('common.actions')</th>
                                         </tr>
@@ -77,8 +77,8 @@
 
                             <div class="tab-pane" id="users-tab-deleted">
                                 @php
-                                use App\Models\photo_info;
-                                $data=  photo_info::onlyTrashed()->get();
+                                use App\Models\missionvision;
+                                $data=  missionvision::onlyTrashed()->get();
                                 $sl=1;
                                 @endphp
 
@@ -86,9 +86,9 @@
                                     <thead>
                                         <tr>
                                             <th>@lang('common.sl')</th>
-                                            <th>@lang('photo_info.title_en')</th>
-                                            <th>@lang('photo_info.title_bn')</th>
-                                            <th>@lang('photo_info.image')</th>
+                                            <th>@lang('mission_vision.title_en')</th>
+                                            <th>@lang('mission_vision.title_bn')</th>
+                                            <th>@lang('mission_vision.image')</th>
                                             <th>@lang('common.status')</th>
                                             <th>@lang('common.actions')</th>
                                         </tr>
@@ -101,11 +101,11 @@
                                             <td>{{$sl++}}</td>
                                             <td>{{$v->title}}</td>
                                             <td>{{$v->title_bn}}</td>
-                                            <td><img src="{{asset('/Backend/img/photo_info')}}/{{$v->image}}" style="max-height: 100px;"></td>
+                                            <td><img src="{{asset('/Backend/img/mission_vision')}}/{{$v->image}}" style="max-height: 100px;"></td>
                                             <td>{{$v->status}}</td>
                                             <td>
-                                            <a href="{{ url('photo_info_restore') }}/{{ $v->id }}" class="btn btn-sm btn-info">@lang('common.restore')</a>
-                                            <a href="{{ url('photo_info_delete') }}/{{ $v->id }}" class="btn btn-sm btn-danger">@lang('common.permenantly_delete')</a>  
+                                            <a href="{{ url('mission_vision_restore') }}/{{ $v->id }}" class="btn btn-sm btn-info">@lang('common.restore')</a>
+                                            <a href="{{ url('mission_vision_delete') }}/{{ $v->id }}" class="btn btn-sm btn-danger">@lang('common.permenantly_delete')</a>  
                                             </td>    
                                         </tr>
                                         @endforeach
@@ -129,7 +129,7 @@
         $("#datatables-reponsive").DataTable({
             processing: true,
             serverSide: true,
-            ajax: "{{ route('photo_info.index') }}",
+            ajax: "{{ route('mission_vision.index') }}",
             columns: [
                 {data: 'sl', name: 'sl'},
                 {data: 'title', name: 'title'},
@@ -143,7 +143,7 @@
 </script>
 
 <script>
-    function ChangePhotoInfoStatus(id)
+    function ChangeMissionVisionStatus(id)
     {
         // alert(id);
         $.ajax({
@@ -151,7 +151,7 @@
                 'X-CSRF-TOKEN' : '{{ csrf_token() }}'
             },
 
-            url : '{{ url('ChangedPhotoInfoStatus') }}/'+id,
+            url : '{{ url('ChangedMissionVisionStatus') }}/'+id,
 
             type : 'GET',
 
