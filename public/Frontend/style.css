@@ -7,7 +7,7 @@ a{
 }
 body{
   font-family: 'Ubuntu', sans-serif;
-  background: #043b35;
+  background: #8458B3;
   color: #fff;
 }
 .header {
@@ -47,7 +47,7 @@ nav.navbar.navbar-expand-lg.bg-body-tertiary {
   background-color: white;
 }
 section.section_div {
-  background: #043b35;
+  background: #8458B3;
   padding: 4px 4px;
 }
 section.section {
@@ -77,7 +77,7 @@ div#prize_box {
   background-color: #09524b;
 }
 .page-title {
-  background: #043b35;
+  background: #8458B3;
   padding: 44px 3px;
 }
 
@@ -252,7 +252,7 @@ html, body {
 }
 
 .youtube_live_blog_post{
-  background: #043b35;
+  background: #8458B3;
 }
 
 .youtube_live_blog_post h4{
@@ -498,7 +498,7 @@ font-size: 16px;
 
 
 .section-box {
-  background-color: #043b35;
+  background-color: #8458B3;
   color: #fff;
 }
 
@@ -542,7 +542,7 @@ font-size: 16px;
   width: 95%;
   height: 865px;
   margin: 20px;
-  background: #104747;
+  background: #d0bdf4;
   padding: 40px 20px;
   -webkit-transition: 0.4s;
 }
@@ -660,7 +660,7 @@ font-size: 16px;
 
 /* featuresSection */
 .featuresSection {
-  background: #043b35;
+  background: #8458B3;
   padding: 26px;
 }
 
@@ -708,7 +708,7 @@ font-size: 16px;
 /* featureSection */
 
 .featureSection {
-  background: #043b35;
+  background: #8458B3;
   padding: 26px;
 }
 
@@ -778,15 +778,14 @@ font-size: 16px;
 
 /* CARD */
 #services {
-  background: #043b35;
+  background: #8458B3;
   color: #fff;
 }
 .card {
   margin: 25px 0px;
 }
 .card-block {
-  height: 120px;
-  padding: 25px;
+  padding: 26px;
 }
 
 .element-item svg {
@@ -803,8 +802,8 @@ font-size: 16px;
   width: 50px;
   height: 50px;
   position: absolute;
-  top: -30px;
-  left: 140px;
+  top: -3px;
+  left: 142px;
   background: #000;
   z-index: 0;
   margin-top: 15px;

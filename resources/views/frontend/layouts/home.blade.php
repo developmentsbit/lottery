@@ -619,11 +619,11 @@ $youlive = youtubelive::get();
     </div>
     <!-- SERVICES !-->
     <div class="container">
-        <div class="row grid row_grid" style="margin-top: 80px;">
+        <div class="row grid row_grid">
             <!-- SERVICE 01 !-->
             <div class="col-xs-12 col-md-6 col-lg-4 element-item service01" data-category="service01">
                 <!-- CARD SERVICE 01 !-->
-                <div class="card" style="background: #043b35;border: none;">
+                <div class="card" style="background: #3bbdaf;border: none;padding: 37px 6px 0px 7px;">
                     <div class="circle point-blue"><p>Level</p><p>01</p></div>
                     <!-- CARD SERVICE IMAGE !-->
                     <i class="fa-solid fa-coins blue"></i>
@@ -636,7 +636,7 @@ $youlive = youtubelive::get();
             <!-- SERVICE 02 !-->
             <div class="col-xs-12 col-md-6 col-lg-4 element-item service02 service03" data-category="service02">
                 <!-- CARD SERVICE 02 !-->
-                <div class="card" style="background: #043b35;border: none;">
+                <div class="card" style="background: #3bbdaf;border: none;padding: 37px 6px 0px 7px;">
                     <div class="circle point-orange"><p>Level</p><p>02</p></div>
                     <!-- CARD SERVICE IMAGE !-->
                     <i class="fa-solid fa-layer-group orange"></i>
@@ -649,7 +649,7 @@ $youlive = youtubelive::get();
             <!-- SERVICE 03 !-->
             <div class="col-xs-12 col-md-6 col-lg-4 element-item service01 service03" data-category="service03">
                 <!-- CARD SERVICE 03 !-->
-                <div class="card" style="background: #043b35;border: none;">
+                <div class="card" style="background: #3bbdaf;border: none;padding: 37px 6px 0px 7px;">
                     <div class="circle point-green"><p>Level</p><p>03</p></div>
                     <!-- CARD SERVICE IMAGE !-->
                     <i class="fa-solid fa-chart-simple green"></i>
@@ -666,49 +666,51 @@ $youlive = youtubelive::get();
 
 <!-- thai lottery section about -->
 <section class="section_div p-4">
-    <div class="row">
-        <div class="col-lg-4 col-md-4 col-12">
-            <div class="card">
-                <div class="card-header">
-                    @lang('frontend.thai_gov_lottery')
-                </div>
-                <div class="card-body">
-                    <span>
-                        Thai Lottery with 3up drawings are held twice a month at approximately 03:00 PM,
-                        1.Thai Lottery numbers between 0-9 or select Quick Pick (QP) for the Lottery computer to randomly select your numbers.
-                        2.Select a bet type.There are five different ways to play National Lottery
-                        3.Select the amount you’d like to wager from $.1 to $100+
-                    </span>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-4 col-12">
-            <div class="card">
-                <div class="card-header">
-                    @lang('frontend.thai_gov_lottery')
-                </div>
-                <div class="card-body">
-                    <span>
-                        Thai Lottery with 3up drawings are held twice a month at approximately 03:00 PM,
-                        1.Thai Lottery numbers between 0-9 or select Quick Pick (QP) for the Lottery computer to randomly select your numbers.
-                        2.Select a bet type.There are five different ways to play National Lottery
-                        3.Select the amount you’d like to wager from $.1 to $100+
-                    </span>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-12">
+                <div class="card">
+                    <div class="card-header">
+                        @lang('frontend.thai_gov_lottery')
+                    </div>
+                    <div class="card-body">
+                        <span>
+                            Thai Lottery with 3up drawings are held twice a month at approximately 03:00 PM,
+                            1.Thai Lottery numbers between 0-9 or select Quick Pick (QP) for the Lottery computer to randomly select your numbers.
+                            2.Select a bet type.There are five different ways to play National Lottery
+                            3.Select the amount you’d like to wager from $.1 to $100+
+                        </span>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-lg-4 col-md-4 col-12">
-            <div class="card">
-                <div class="card-header">
-                    @lang('frontend.thai_gov_lottery')
+            <div class="col-lg-4 col-md-4 col-12">
+                <div class="card">
+                    <div class="card-header">
+                        @lang('frontend.thai_gov_lottery')
+                    </div>
+                    <div class="card-body">
+                        <span>
+                            Thai Lottery with 3up drawings are held twice a month at approximately 03:00 PM,
+                            1.Thai Lottery numbers between 0-9 or select Quick Pick (QP) for the Lottery computer to randomly select your numbers.
+                            2.Select a bet type.There are five different ways to play National Lottery
+                            3.Select the amount you’d like to wager from $.1 to $100+
+                        </span>
+                    </div>
                 </div>
-                <div class="card-body">
-                    <span>
-                        Thai Lottery with 3up drawings are held twice a month at approximately 03:00 PM,
-                        1.Thai Lottery numbers between 0-9 or select Quick Pick (QP) for the Lottery computer to randomly select your numbers.
-                        2.Select a bet type.There are five different ways to play National Lottery
-                        3.Select the amount you’d like to wager from $.1 to $100+
-                    </span>
+            </div>
+            <div class="col-lg-4 col-md-4 col-12">
+                <div class="card">
+                    <div class="card-header">
+                        @lang('frontend.thai_gov_lottery')
+                    </div>
+                    <div class="card-body">
+                        <span>
+                            Thai Lottery with 3up drawings are held twice a month at approximately 03:00 PM,
+                            1.Thai Lottery numbers between 0-9 or select Quick Pick (QP) for the Lottery computer to randomly select your numbers.
+                            2.Select a bet type.There are five different ways to play National Lottery
+                            3.Select the amount you’d like to wager from $.1 to $100+
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>
