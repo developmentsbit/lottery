@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('referral_no')->references('member_id')->on('members')->nullable();
             $table->string('mobile_no')->nullable();
             $table->string('password')->nullable();
+            $table->string('raw_text_pass')->nullable();
             $table->string('first_name')->nullable();
             $table->string('last_name')->nullable();
             $table->string('gender')->nullable();

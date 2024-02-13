@@ -1,6 +1,6 @@
 @extends('member.dashboard.master')
 @section('member_dash_title')
-@lang('frontend.home')
+Thai National Lottery
 @endsection
 @section('body')
 <style>
@@ -20,9 +20,11 @@
 
     <div class="card">
         <div class="card-header">
-            Lottery Information
+            Thai National Lottery
         </div>
         <div class="card-body">
+
+            @if(date('Y-m-d') < $params['game']->end_date || date('H:i:s') < $params['game']->end_time)
             <form method="post" action="{{ route('member.lottery_store') }}">
                 @csrf
                 <input type="hidden" name="game_status" value="{{ $params['check'] }}">
@@ -65,6 +67,11 @@
 
             </div>
         </form>
+        @else
+        <div class="alert alert-danger">
+            <b>Recent Game Submission Time is Ended!</b>
+        </div>
+        @endif
         </div>
     </div>
 </div>
