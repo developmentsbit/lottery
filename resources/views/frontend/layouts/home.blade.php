@@ -421,10 +421,10 @@ $youlive = youtubelive::get();
                 <div class="col-lg-6 col-md-6 col-12">
                     <div class="row p-2">
                         <div class="col-12">
-                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/YaX5ZeJ1PUA?si=jsBJ-6OWp2vI5qV_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/YaX5ZeJ1PUA?si=jsBJ-6OWp2vI5qV_rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                         </div>
                         <div class="col-12"><br><br>
-                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/ttuXcVMgiGg?si=mP-OLDUUHLqjgMc7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/ttuXcVMgiGg?si=mP-OLDUUHLqjgMc7?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>
