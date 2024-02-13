@@ -418,6 +418,16 @@ $youlive = youtubelive::get();
                         </div>
                     </div>
                 </div>
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="row p-2">
+                        <div class="col-12">
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/YaX5ZeJ1PUA?si=jsBJ-6OWp2vI5qV_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                        <div class="col-12"><br><br>
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/ttuXcVMgiGg?si=mP-OLDUUHLqjgMc7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -435,7 +445,7 @@ $youlive = youtubelive::get();
                                 <img src="https://www.thailotto.club/image_directory/about/achive1.png" alt="" />
                             </div>
                             <div class="col-lg-8 col-md-8 col-12" style="padding: 30px 0px 0px 0px;">
-                                <h2>16600+</h2>
+                                <h2>12220+</h2>
                                 <h6><span style="color:#fff">&bull;</span>LIVE ONLINE</h6>
                             </div>
                         </div>
@@ -448,7 +458,7 @@ $youlive = youtubelive::get();
                                 <img src="https://www.thailotto.club/image_directory/about/achive2.png" alt="" />
                             </div>
                             <div class="col-lg-8 col-md-8 col-12" style="padding: 30px 0px 0px 0px;">
-                                <h2>183300+</h2>
+                                <h2>18013+</h2>
                                 <h6><span style="color:#fff">&bull;</span>TOTAL MEMBERS</h6>
                             </div>
                         </div>
@@ -461,7 +471,7 @@ $youlive = youtubelive::get();
                                 <img src="https://www.thailotto.club/image_directory/about/achive3.png" alt="" />
                             </div>
                             <div class="col-lg-8 col-md-8 col-12" style="padding: 30px 0px 0px 0px;">
-                                <h2>13800+</h2>
+                                <h2>13100+</h2>
                                 <h6><span style="color:#fff">&bull;</span>MONTHLY REWARD</h6>
                             </div>
                         </div>
