@@ -14,21 +14,22 @@ class BannersTableSeeder extends Seeder
      */
     public function run()
     {
-        
+
+
 
         \DB::table('banners')->delete();
-        
+
         \DB::table('banners')->insert(array (
-            0 => 
+            0 =>
             array (
-                'id' => 1,
-                'title' => 'Banner For User Dashboard',
-                'image' => '1465822567.gif',
                 'created_at' => NULL,
-                'updated_at' => '2024-02-13 12:37:47',
+                'id' => 1,
+                'image' => '831617964.gif',
+                'title' => '0',
+                'updated_at' => '2024-02-13 17:22:46',
             ),
         ));
-        
-        
+
+
     }
 }

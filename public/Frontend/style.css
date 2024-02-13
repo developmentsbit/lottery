@@ -16,8 +16,8 @@ body{
 }
 
 .logo__header img {
-  height: 60px;
-  width : 100px;
+  /* height: 60px;
+  width : 100px; */
 }
 .login_register_area{
   padding-top: 10px;
