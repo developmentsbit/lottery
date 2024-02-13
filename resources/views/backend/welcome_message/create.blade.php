@@ -26,7 +26,6 @@
                     <div class="card-body">
                         <form action="{{route('welcome_message.store')}}" method="post" enctype="multipart/form-data" id="formData">
                             @csrf
-                            @method('PUT')
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-12 mt-2">
                                 <label for="title ">@lang('welcome_message.title_en')</label><span class="text-danger">*</span>

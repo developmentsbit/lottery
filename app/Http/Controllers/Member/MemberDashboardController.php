@@ -16,6 +16,7 @@ use App\Models\GameEntry;
 use App\Traits\Date;
 use App\Traits\Member;
 use App\Models\Member as MemberModel;
+use App\Models\Country;
 
 
 class MemberDashboardController extends Controller
@@ -29,6 +30,37 @@ class MemberDashboardController extends Controller
     public function dashboard()
     {
         return $this->view($this->path,'home');
+    }
+
+    public function personal_profile()
+    {
+        $param['data'] = MemberModel::where('member_id',Auth::guard('member')->user()->member_id)->get();
+        $param['country'] = Country::all();
+        return $this->view($this->path,'personal_profile',$param);
+    }
+    
+    public function personal_profile_update(Request $request, string $id)
+    {
+        $update = MemberModel::find($id)->update([
+            'first_name'=>$request->first_name,
+            'last_name'=>$request->last_name,
+            'gender'=>$request->gender,
+            'city'=>$request->city,
+            'country'=>$request->country,
+            'email'=>$request->email,
+            'nationality'=>$request->nationality,
+        ]);
+
+        if($update)
+        {
+            Alert::success('Success', 'Data Update Success');
+            return redirect()->back();
+        }
+        else
+        {
+            Alert::error('Congrats', 'Data Update Error');
+            return redirect()->back();
+        }
     }
 
     public function logout()

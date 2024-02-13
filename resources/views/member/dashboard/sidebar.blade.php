@@ -20,7 +20,7 @@
         </a>
         <div class="collapse" id="ui-basic">
           <ul class="nav flex-column sub-menu">
-            <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">@lang('frontend.personal_profile')</a></li>
+            <li class="nav-item"> <a class="nav-link" href="{{route('member.personal_profile')}}">@lang('frontend.personal_profile')</a></li>
             <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.html">@lang('frontend.change_password')</a></li>
           </ul>
         </div>

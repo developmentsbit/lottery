@@ -17,6 +17,9 @@ Route::get('member_lottery',[MemberDashboardController::class,'lottery'])->name(
 
 Route::get('member_cash_in',[MemberDashboardController::class,'cash_in'])->name('member.cash_in')->middleware('member_auth');
 
+Route::get('personal_profile',[MemberDashboardController::class,'personal_profile'])->name('member.personal_profile')->middleware('member_auth');
+Route::get('personal_profile/{id}', [MemberDashboardController::class, 'personal_profile_update'])->name('personal_profile.update');
+
 Route::get('get_method_info',[MemberDashboardController::class,'get_method_info'])->name('member.get_method_info');
 Route::get('get_method_vat',[MemberDashboardController::class,'get_method_vat'])->name('member.get_method_vat');
 Route::post('store_cash_in',[MemberDashboardController::class,'cash_in_store'])->name('member.store_cash_in');
