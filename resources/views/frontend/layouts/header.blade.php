@@ -1,10 +1,21 @@
 <!DOCTYPE html>
 <html lang="en"style="background: #8458B3;">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title> @yield('page_title') - Lottery</title>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title> @yield('page_title') - Thai Government Lottery</title>
+  <link rel="icon" href="{{ asset('Backend/settings/') }}/{{ $settings->favicon }}" type="image/gif" sizes="16x16">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="language" content="English">
+  <meta name="title" content="Thai Government Lottery">
+  <meta name="description" content="359 Nonthaburi Road, Tha Sai Amphoe Mueang Nonthaburi, NONTHABURI 11000">
+  <meta name="robots" content="index, follow">
+  <meta name="msvalidate.01" content="121EC13E8C812735A798174D5207138F" />
+  <meta name="keywords" content="thailotto3up">
+
+
+
+ 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css
     ">
     <!-- font awsome css -->

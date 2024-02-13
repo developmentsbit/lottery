@@ -1,6 +1,6 @@
 <!-- section pay method -->
 <section class="p-4" style="background: #8458B3">
-    <div class="container" style="background: #d0bdf4;padding: 34px;border-radius: 1% 1% 1% 1%;">
+    <div class="container" style="background: #51297b;padding: 34px;border-radius: 1% 1% 1% 1%;">
         <div class="title">
             <h3 style="padding: 12px;color: #fff;font-size: 45px;font-weight: 500;">@lang('frontend.pay_method')</h3>
         </div>
@@ -20,7 +20,7 @@
 <!-- Remove the container if you want to extend the Footer to full width. -->
 <div class="container my-5">
     <!-- Footer -->
-    <footer class="text-center text-lg-start text-white"style="background-color: #d0bdf4">
+    <footer class="text-center text-lg-start text-white"style="background-color: #51297b">
         <div class="container p-4 pb-0">
             <section class="">
                 <div class="row">

@@ -356,114 +356,75 @@ $youlive = youtubelive::get();
 <!-- thai goverment lottery online -->
 <section class="section-box">
     <div class="container">
-        <div class="section_title">
-            <h1>Lottery Result</h1>
-        </div>
-        <div class="card-box">
-            <div class="col-lg-6 col-md-6 col-12">
-                <div class="card-item">
-                    <div class="content">
-                        <div class="imgBx">
-                            <img src="https://www.thailotto.club/image_directory/logo/logo.png">
-                            <h3>National Lottery Result</h3>
-                            <h4>Draw Date: 01 Feb 2567</h4>
-                        </div>
-                        <div class="result-inner">
-                            <div class="result-single">
-                                <h4>1st Prize</h4>
-                                <ul>
-                                    <li>6 </li>
-                                    <li>0 </li>
-                                    <li>7 </li>
-                                    <li>0 </li>
-                                    <li>6 </li>
-                                    <li>3 </li>
-                                </ul>
+        <div class="row">
+            <div class="section_title">
+                <h1>Lottery Result</h1>
+            </div>
+            <div class="card-box">
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="card-item">
+                        <div class="content">
+                            <div class="imgBx">
+                                <img src="{{ asset('Backend/settings/') }}/{{ $settings->logo }}">
+                                <h3>National Lottery Result</h3>
+                                <h4>Draw Date: 01 Feb 2567</h4>
                             </div>
-                            <div class="result-single">
-                                <h4>3Up</h4>
-                                <ul>
-                                    <li>0 </li>
-                                    <li>6 </li>
-                                    <li>3 </li>
-                                </ul>
-                            </div>
-                            <div class="result-single">
-                                <h4>2Up</h4>
-                                <ul>
-                                    <li>6 </li>
-                                    <li>3 </li>
-                                </ul>
-                            </div>
-                            <div class="result-single">
-                                <h4>2Down</h4>
-                                <ul>
-                                    <li>0 </li>
-                                    <li>9 </li>
-                                </ul>
-                            </div>
-                            <div class="result-single pt-20 remain-time">
-                                <h5>Next Draw Date:
-                                    <span>16 Feb 2567 </span>
-                                </h5>
-                                <ul>
-                                    <li id="day">10</li><span> D</span>
-                                    <li id="hour">16</li><span> H</span>
-                                    <li id="min">15</li><span> M</span>
-                                    <li id="sec">0</li><span> S</span>
-                                </ul>
+                            <div class="result-inner">
+                                <div class="result-single">
+                                    <h4>1st Prize</h4>
+                                    <ul>
+                                        <li>6 </li>
+                                        <li>0 </li>
+                                        <li>7 </li>
+                                        <li>0 </li>
+                                        <li>6 </li>
+                                        <li>3 </li>
+                                    </ul>
+                                </div>
+                                <div class="result-single">
+                                    <h4>3Up</h4>
+                                    <ul>
+                                        <li>0 </li>
+                                        <li>6 </li>
+                                        <li>3 </li>
+                                    </ul>
+                                </div>
+                                <div class="result-single">
+                                    <h4>2Up</h4>
+                                    <ul>
+                                        <li>6 </li>
+                                        <li>3 </li>
+                                    </ul>
+                                </div>
+                                <div class="result-single">
+                                    <h4>2Down</h4>
+                                    <ul>
+                                        <li>0 </li>
+                                        <li>9 </li>
+                                    </ul>
+                                </div>
+                                <div class="result-single pt-20 remain-time">
+                                    <h5>Next Draw Date:
+                                        <span>16 Feb 2567 </span>
+                                    </h5>
+                                    <ul>
+                                        <li id="day">10</li><span> D</span>
+                                        <li id="hour">16</li><span> H</span>
+                                        <li id="min">15</li><span> M</span>
+                                        <li id="sec">0</li><span> S</span>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-6 col-md-6 col-12">
-                <div class="card-item">
-                    <div class="content">
-                        <div class="imgBx">
-                            <img src="https://www.thailotto.club/image_directory/logo/logo.png">
-                            <h3>Bangkok Lottery Result</h3>
-                            <h4>Draw Date: 02 Feb 2567</h4>
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="row p-2">
+                        <div class="col-12">
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/YaX5ZeJ1PUA?si=jsBJ-6OWp2vI5qV_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                         </div>
-                        <div class="result-inner">
-                            <div class="result-single">
-                                <h4>6 Ball</h4>
-                                <ul>
-                                    <li>3 </li>
-                                    <li>6 </li>
-                                    <li>2 </li>
-                                    <li>1 </li>
-                                    <li>7 </li>
-                                    <li>3 </li>
-                                </ul>
-                            </div>
-                            <div class="result-single">
-                                <h4>3 Ball</h4>
-                                <ul>
-                                    <li>0 </li>
-                                    <li>6 </li>
-                                    <li>3 </li>
-                                </ul>
-                            </div>
-                            <div class="result-single">
-                                <h4>2 Ball</h4>
-                                <ul>
-                                    <li>5 </li>
-                                    <li>7 </li>
-                                </ul>
-                            </div>
-
-                            <div class="result-single pt-120 remain-time">
-                                <h5>Next Draw Date:
-                                    <span>16 Feb 2567 </span>
-                                </h5>
-                                <ul>
-                                    <li id="day">10</li><span> D</span>
-                                    <li id="hour">16</li><span> H</span>
-                                    <li id="min">15</li><span> M</span>
-                                    <li id="sec">0</li><span> S</span>
-                                </ul>
-                            </div>
+                        <div class="col-12"><br><br>
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/ttuXcVMgiGg?si=mP-OLDUUHLqjgMc7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>
@@ -478,40 +439,40 @@ $youlive = youtubelive::get();
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-12 text-content">
-                    <div class="card" style="background: #104747;padding: 23px 62px 0px 0px;margin-left: 50px;">
+                    <div class="card" style="background: #51297b;padding: 23px 62px 0px 0px;margin-left: 50px;">
                         <div class="d-flex flex-row">
                             <div class="col-lg-4 col-md-4 col-12">
                                 <img src="https://www.thailotto.club/image_directory/about/achive1.png" alt="" />
                             </div>
                             <div class="col-lg-8 col-md-8 col-12" style="padding: 30px 0px 0px 0px;">
-                                <h2>16600+</h2>
-                                <h6>LIVE ONLINE</h6>
+                                <h2>12220+</h2>
+                                <h6><span style="color:#fff">&bull;</span>LIVE ONLINE</h6>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-12 text-content">
-                    <div class="card" style="background: #104747;padding: 23px 62px 0px 0px;margin-left: 50px;">
+                    <div class="card" style="background: #51297b;padding: 23px 62px 0px 0px;margin-left: 50px;">
                         <div class="d-flex flex-row">
                             <div class="col-lg-4 col-md-4 col-12">
                                 <img src="https://www.thailotto.club/image_directory/about/achive2.png" alt="" />
                             </div>
                             <div class="col-lg-8 col-md-8 col-12" style="padding: 30px 0px 0px 0px;">
-                                <h2>183300+</h2>
-                                <h6>TOTAL MEMBERS</h6>
+                                <h2>18013+</h2>
+                                <h6><span style="color:#fff">&bull;</span>TOTAL MEMBERS</h6>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-12 text-content">
-                    <div class="card" style="background: #104747;padding: 23px 62px 0px 0px;margin-left: 50px;">
+                    <div class="card" style="background: #51297b;padding: 23px 62px 0px 0px;margin-left: 50px;">
                         <div class="d-flex flex-row">
                             <div class="col-lg-4 col-md-4 col-12">
                                 <img src="https://www.thailotto.club/image_directory/about/achive3.png" alt="" />
                             </div>
                             <div class="col-lg-8 col-md-8 col-12" style="padding: 30px 0px 0px 0px;">
-                                <h2>13800+</h2>
-                                <h6>MONTHLY REWARD</h6>
+                                <h2>13100+</h2>
+                                <h6><span style="color:#fff">&bull;</span>MONTHLY REWARD</h6>
                             </div>
                         </div>
                     </div>
@@ -572,7 +533,7 @@ $youlive = youtubelive::get();
                             </div>
                             <div class="col-lg-10 col-md-10 col-12 text">
                                 <h2>Instant Payout System</h2>
-                                <p>We have an immediate payment system for our customers.</p>
+                                <p>We have an immediate payment system.</p>
                             </div>
                         </div>
                     </div>
@@ -598,7 +559,7 @@ $youlive = youtubelive::get();
                             </div>
                             <div class="col-lg-10 col-md-10 col-12 text">
                                 <h2>Performance Bonuses</h2>
-                                <p>Bonuses based on contributions will be given to eligible applicants.</p>
+                                <p>Bonuses based on contributions.</p>
                             </div>
                         </div>
                     </div>
@@ -610,52 +571,54 @@ $youlive = youtubelive::get();
 
 <!-- thai goverment lottery online -->
 <section id="services">
-    <div class="col-md-10 offset-1">
-        <!-- Section Title !-->
-        <div class="section-title">
-            <h2>Bonus Level</h2>
-            <p>We provide bonuses at various levels.</p>
-        </div>
-    </div>
-    <!-- SERVICES !-->
     <div class="container">
-        <div class="row grid row_grid">
-            <!-- SERVICE 01 !-->
-            <div class="col-xs-12 col-md-6 col-lg-4 element-item service01" data-category="service01">
-                <!-- CARD SERVICE 01 !-->
-                <div class="card" style="background: #3bbdaf;border: none;padding: 37px 6px 0px 7px;">
-                    <div class="circle point-blue"><p>Level</p><p>01</p></div>
-                    <!-- CARD SERVICE IMAGE !-->
-                    <i class="fa-solid fa-coins blue"></i>
-                    <!-- CARD TEXT !-->
-                    <div class="card-block">
-                        <h4 class="card-title">Refferal Bonus</h4>
-                    </div>
+        <div class="row">
+                <!-- Section Title !-->
+                <div class="section-title">
+                    <h2>Bonus Level</h2>
+                    <p>We provide bonuses at various levels.</p>
                 </div>
-            </div>
-            <!-- SERVICE 02 !-->
-            <div class="col-xs-12 col-md-6 col-lg-4 element-item service02 service03" data-category="service02">
-                <!-- CARD SERVICE 02 !-->
-                <div class="card" style="background: #3bbdaf;border: none;padding: 37px 6px 0px 7px;">
-                    <div class="circle point-orange"><p>Level</p><p>02</p></div>
-                    <!-- CARD SERVICE IMAGE !-->
-                    <i class="fa-solid fa-layer-group orange"></i>
-                    <!-- CARD TEXT !-->
-                    <div class="card-block">
-                        <h4 class="card-title">Current Offer Bonus</h4>
+            <!-- SERVICES !-->
+            <div class="container">
+                <div class="row grid">
+                    <!-- SERVICE 01 !-->
+                    <div class="col-xs-12 col-md-6 col-lg-4 element-item service01" data-category="service01">
+                        <!-- CARD SERVICE 01 !-->
+                        <div class="card" style="background: #51297b;border: none;padding: 37px 6px 0px 7px;">
+                            <div class="circle point-blue"><p>Level</p><p>01</p></div>
+                            <!-- CARD SERVICE IMAGE !-->
+                            <i class="fa-solid fa-coins blue"></i>
+                            <!-- CARD TEXT !-->
+                            <div class="card-block">
+                                <h4 class="card-title">Refferal Bonus</h4>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <!-- SERVICE 03 !-->
-            <div class="col-xs-12 col-md-6 col-lg-4 element-item service01 service03" data-category="service03">
-                <!-- CARD SERVICE 03 !-->
-                <div class="card" style="background: #3bbdaf;border: none;padding: 37px 6px 0px 7px;">
-                    <div class="circle point-green"><p>Level</p><p>03</p></div>
-                    <!-- CARD SERVICE IMAGE !-->
-                    <i class="fa-solid fa-chart-simple green"></i>
-                    <!-- CARD TEXT !-->
-                    <div class="card-block">
-                        <h4 class="card-title">Affiliate Commission Bonus</h4>
+                    <!-- SERVICE 02 !-->
+                    <div class="col-xs-12 col-md-6 col-lg-4 element-item service02 service03" data-category="service02">
+                        <!-- CARD SERVICE 02 !-->
+                        <div class="card" style="background: #51297b;border: none;padding: 37px 6px 0px 7px;">
+                            <div class="circle point-orange"><p>Level</p><p>02</p></div>
+                            <!-- CARD SERVICE IMAGE !-->
+                            <i class="fa-solid fa-layer-group orange"></i>
+                            <!-- CARD TEXT !-->
+                            <div class="card-block">
+                                <h4 class="card-title">Current Offer Bonus</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- SERVICE 03 !-->
+                    <div class="col-xs-12 col-md-6 col-lg-4 element-item service01 service03" data-category="service03">
+                        <!-- CARD SERVICE 03 !-->
+                        <div class="card" style="background: #51297b;border: none;padding: 37px 6px 0px 7px;">
+                            <div class="circle point-green"><p>Level</p><p>03</p></div>
+                            <!-- CARD SERVICE IMAGE !-->
+                            <i class="fa-solid fa-chart-simple green"></i>
+                            <!-- CARD TEXT !-->
+                            <div class="card-block">
+                                <h4 class="card-title">Affiliate Commission Bonus</h4>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -675,10 +638,7 @@ $youlive = youtubelive::get();
                     </div>
                     <div class="card-body">
                         <span>
-                            Thai Lottery with 3up drawings are held twice a month at approximately 03:00 PM,
-                            1.Thai Lottery numbers between 0-9 or select Quick Pick (QP) for the Lottery computer to randomly select your numbers.
-                            2.Select a bet type.There are five different ways to play National Lottery
-                            3.Select the amount you’d like to wager from $.1 to $100+
+                            หวยไทยออก 3 ตัว 2 ครั้งต่อเดือน เวลาประมาณ 15.00 น. 1.หวยไทยเลขระหว่าง 0-9 หรือเลือก Quick Pick (QP) ให้คอมพิวเตอร์ลอตเตอรี่สุ่มเลือกหมายเลขของคุณ 2.เลือกประเภทการเดิมพัน มีห้าวิธีในการเล่นลอตเตอรีแห่งชาติ 3.เลือกจำนวนเงินที่คุณต้องการเดิมพันตั้งแต่ $.1 ถึง $100+
                         </span>
                     </div>
                 </div>
@@ -690,10 +650,7 @@ $youlive = youtubelive::get();
                     </div>
                     <div class="card-body">
                         <span>
-                            Thai Lottery with 3up drawings are held twice a month at approximately 03:00 PM,
-                            1.Thai Lottery numbers between 0-9 or select Quick Pick (QP) for the Lottery computer to randomly select your numbers.
-                            2.Select a bet type.There are five different ways to play National Lottery
-                            3.Select the amount you’d like to wager from $.1 to $100+
+                            หวยไทยออก 3 ตัว 2 ครั้งต่อเดือน เวลาประมาณ 15.00 น. 1.หวยไทยเลขระหว่าง 0-9 หรือเลือก Quick Pick (QP) ให้คอมพิวเตอร์ลอตเตอรี่สุ่มเลือกหมายเลขของคุณ 2.เลือกประเภทการเดิมพัน มีห้าวิธีในการเล่นลอตเตอรีแห่งชาติ 3.เลือกจำนวนเงินที่คุณต้องการเดิมพันตั้งแต่ $.1 ถึง $100+
                         </span>
                     </div>
                 </div>
@@ -705,10 +662,7 @@ $youlive = youtubelive::get();
                     </div>
                     <div class="card-body">
                         <span>
-                            Thai Lottery with 3up drawings are held twice a month at approximately 03:00 PM,
-                            1.Thai Lottery numbers between 0-9 or select Quick Pick (QP) for the Lottery computer to randomly select your numbers.
-                            2.Select a bet type.There are five different ways to play National Lottery
-                            3.Select the amount you’d like to wager from $.1 to $100+
+                            หวยไทยออก 3 ตัว 2 ครั้งต่อเดือน เวลาประมาณ 15.00 น. 1.หวยไทยเลขระหว่าง 0-9 หรือเลือก Quick Pick (QP) ให้คอมพิวเตอร์ลอตเตอรี่สุ่มเลือกหมายเลขของคุณ 2.เลือกประเภทการเดิมพัน มีห้าวิธีในการเล่นลอตเตอรีแห่งชาติ 3.เลือกจำนวนเงินที่คุณต้องการเดิมพันตั้งแต่ $.1 ถึง $100+
                         </span>
                     </div>
                 </div>
