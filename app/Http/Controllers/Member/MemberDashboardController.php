@@ -17,7 +17,6 @@ use App\Traits\Date;
 use App\Traits\Member;
 use App\Models\Member as MemberModel;
 use App\Models\Country;
-=======
 use Hash;
 
 
@@ -40,7 +39,7 @@ class MemberDashboardController extends Controller
         $param['country'] = Country::all();
         return $this->view($this->path,'personal_profile',$param);
     }
-    
+
     public function personal_profile_update(Request $request, string $id)
     {
         $update = MemberModel::find($id)->update([
