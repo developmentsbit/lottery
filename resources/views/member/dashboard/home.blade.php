@@ -21,10 +21,10 @@
     use App\Models\banner;
     $banner = banner::first();
     @endphp
-    
+
     <div class="row mb-2" id="proBanner">
       <div class="col-12 bg-white p-2">
-        <img src="{{ asset('Backend/settings/') }}/{{ $banner->image }}" alt="">
+        <img src="{{ asset('Backend/settings/') }}/{{ $banner->image }}" alt="" class="img-fluid">
       </div>
     </div>
 
