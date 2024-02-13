@@ -499,7 +499,7 @@ $youlive = youtubelive::get();
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-6 col-12">
+                <!-- <div class="col-lg-6 col-md-6 col-12">
                     <div class="card">
                         <div class="d-flex flex-row">
                             <div class="col-lg-2 col-md-2 col-12">
@@ -524,7 +524,7 @@ $youlive = youtubelive::get();
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <div class="col-lg-6 col-md-6 col-12">
                     <div class="card">
                         <div class="d-flex flex-row">
@@ -567,64 +567,6 @@ $youlive = youtubelive::get();
             </div>
         </div>
     </div>
-<!-- thai goverment lottery online -->
-
-<!-- thai goverment lottery online -->
-<section id="services">
-    <div class="container">
-        <div class="row">
-                <!-- Section Title !-->
-                <div class="section-title">
-                    <h2>Bonus Level</h2>
-                    <p>We provide bonuses at various levels.</p>
-                </div>
-            <!-- SERVICES !-->
-            <div class="container">
-                <div class="row grid">
-                    <!-- SERVICE 01 !-->
-                    <div class="col-xs-12 col-md-6 col-lg-4 element-item service01" data-category="service01">
-                        <!-- CARD SERVICE 01 !-->
-                        <div class="card" style="background: #51297b;border: none;padding: 37px 6px 0px 7px;">
-                            <div class="circle point-blue"><p>Level</p><p>01</p></div>
-                            <!-- CARD SERVICE IMAGE !-->
-                            <i class="fa-solid fa-coins blue"></i>
-                            <!-- CARD TEXT !-->
-                            <div class="card-block">
-                                <h4 class="card-title">Refferal Bonus</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- SERVICE 02 !-->
-                    <div class="col-xs-12 col-md-6 col-lg-4 element-item service02 service03" data-category="service02">
-                        <!-- CARD SERVICE 02 !-->
-                        <div class="card" style="background: #51297b;border: none;padding: 37px 6px 0px 7px;">
-                            <div class="circle point-orange"><p>Level</p><p>02</p></div>
-                            <!-- CARD SERVICE IMAGE !-->
-                            <i class="fa-solid fa-layer-group orange"></i>
-                            <!-- CARD TEXT !-->
-                            <div class="card-block">
-                                <h4 class="card-title">Current Offer Bonus</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- SERVICE 03 !-->
-                    <div class="col-xs-12 col-md-6 col-lg-4 element-item service01 service03" data-category="service03">
-                        <!-- CARD SERVICE 03 !-->
-                        <div class="card" style="background: #51297b;border: none;padding: 37px 6px 0px 7px;">
-                            <div class="circle point-green"><p>Level</p><p>03</p></div>
-                            <!-- CARD SERVICE IMAGE !-->
-                            <i class="fa-solid fa-chart-simple green"></i>
-                            <!-- CARD TEXT !-->
-                            <div class="card-block">
-                                <h4 class="card-title">Affiliate Commission Bonus</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 <!-- thai goverment lottery online -->
 
 <!-- thai lottery section about -->
