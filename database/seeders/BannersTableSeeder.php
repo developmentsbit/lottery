@@ -16,6 +16,7 @@ class BannersTableSeeder extends Seeder
     {
 
 
+
         \DB::table('banners')->delete();
 
         \DB::table('banners')->insert(array (
