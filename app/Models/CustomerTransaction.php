@@ -16,4 +16,6 @@ class CustomerTransaction extends Model
     {
         return $this->belongsTo('App\Models\PaymentMethod','payment_type');
     }
+
+
 }

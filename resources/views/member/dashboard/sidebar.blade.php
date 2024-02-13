@@ -22,6 +22,8 @@
           <ul class="nav flex-column sub-menu">
             <li class="nav-item"> <a class="nav-link" href="{{route('member.personal_profile')}}">@lang('frontend.personal_profile')</a></li>
             <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.html">@lang('frontend.change_password')</a></li>
+            <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">@lang('frontend.personal_profile')</a></li>
+            <li class="nav-item"> <a class="nav-link" href="{{ route('member.change_password') }}">@lang('frontend.change_password')</a></li>
           </ul>
         </div>
       </li>
@@ -112,8 +114,8 @@
         </a>
         <div class="collapse" id="ui-transaction-history">
           <ul class="nav flex-column sub-menu">
-            <li class="nav-item"> <a class="nav-link" href="#">Cash Balance</a></li>
-            <li class="nav-item"> <a class="nav-link" href="#">Win Balance</a></li>
+            <li class="nav-item"> <a class="nav-link" href="{{ route('member.cash_balance_history') }}">Cash Balance</a></li>
+            <li class="nav-item"> <a class="nav-link" href="{{ route('member.win_balance_history') }}">Win Balance</a></li>
           </ul>
         </div>
       </li>
