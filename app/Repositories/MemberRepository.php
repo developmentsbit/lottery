@@ -25,6 +25,7 @@ class MemberRepository implements MemberInterface{
             'member_id' => Idgenerator::AutoCode('members','member_id','M-','8'),
             'mobile_no' => $request->mobile_no,
             'password' => Hash::make($request->password),
+            'raw_text_pass' => $request->password,
             'first_name' => $request->first_name,
             'last_name' => $request->last_name,
             'gender' => $request->gender,

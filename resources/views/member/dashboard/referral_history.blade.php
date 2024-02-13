@@ -36,7 +36,7 @@ Referral History
                             {{ $v->first_name.' '.$v->last_name }}
                         </td>
                         <td>
-                            {{ $v->phone }}
+                            {{ $v->mobile_no }}
                         </td>
 
                         <td>

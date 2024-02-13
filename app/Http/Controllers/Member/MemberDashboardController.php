@@ -16,6 +16,7 @@ use App\Models\GameEntry;
 use App\Traits\Date;
 use App\Traits\Member;
 use App\Models\Member as MemberModel;
+use Hash;
 
 
 class MemberDashboardController extends Controller
@@ -421,5 +422,47 @@ class MemberDashboardController extends Controller
             Alert::success('Success', 'Win Balance Transfered');
             return redirect()->back();
         }
+    }
+
+    public function change_password()
+    {
+        return $this->view($this->path,'change_password');
+    }
+
+    public function check_password(Request $request)
+    {
+        $check = MemberModel::where('member_id',Auth::guard('member')->user()->member_id)->where('raw_text_pass',$request->existing_password)->count();
+
+        if($check > 0)
+        {
+            return 1;
+        }
+        else
+        {
+            return '<span class="text-danger">Password Does Not Matched</span>';
+        }
+    }
+
+    public function submit_change_password(Request $request)
+    {
+        if($request->password != $request->confirm_password)
+        {
+            Alert::error('Error', 'Password & Confirm Password Does Not Matched');
+            return redirect()->back();
+        }
+
+        MemberModel::where('member_id',Auth::guard('member')->user()->member_id)->update([
+            'password' => Hash::make($request->password),
+            'raw_text_pass' => $request->password,
+        ]);
+
+        Auth::guard('member')->logout();
+        return redirect(route('member.login'));
+    }
+
+    public function cash_balance_history()
+    {
+        $param['data'] = CustomerTransaction::where('member_id',Auth::guard('member')->user()->member_id)->orderBy('date','DESC')->where('transaction_type','!=',4)->where('transaction_type','!=',5)->with('method')->get();
+        return $this->view($this->path,'cash_balance_history',$param);
     }
 }

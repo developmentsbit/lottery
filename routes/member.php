@@ -41,3 +41,10 @@ Route::post('balance_convert',[MemberDashboardController::class,'balance_convert
 Route::get('cash_transfer',[MemberDashboardController::class,'cash_transfer'])->name('member.cash_transfer');
 Route::get('win_transfer',[MemberDashboardController::class,'win_transfer'])->name('member.win_transfer');
 Route::post('balance_transfer',[MemberDashboardController::class,'balance_transfer'])->name('member.balance_transfer');
+
+Route::get('change_password',[MemberDashboardController::class,'change_password'])->name('member.change_password');
+Route::get('cehck_password',[MemberDashboardController::class,'check_password'])->name('member.check_password');
+
+Route::post('submit_change_pass',[MemberDashboardController::class,'submit_change_password'])->name('member.submit_change_pass');
+Route::get('cash_balance_history',[MemberDashboardController::class,'cash_balance_history'])->name('member.cash_balance_history');
+Route::get('win_balance_history',[MemberDashboardController::class,'win_balance_history'])->name('member.win_balance_history');
