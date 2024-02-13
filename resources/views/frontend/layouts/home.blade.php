@@ -477,7 +477,7 @@ $youlive = youtubelive::get();
     <div class="featuresSection">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-md-4 col-12">
+                <div class="col-lg-4 col-md-4 col-12 text-content">
                     <div class="card" style="background: #104747;padding: 23px 62px 0px 0px;margin-left: 50px;">
                         <div class="d-flex flex-row">
                             <div class="col-lg-4 col-md-4 col-12">
@@ -490,7 +490,7 @@ $youlive = youtubelive::get();
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4 col-12">
+                <div class="col-lg-4 col-md-4 col-12 text-content">
                     <div class="card" style="background: #104747;padding: 23px 62px 0px 0px;margin-left: 50px;">
                         <div class="d-flex flex-row">
                             <div class="col-lg-4 col-md-4 col-12">
@@ -503,7 +503,7 @@ $youlive = youtubelive::get();
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4 col-12">
+                <div class="col-lg-4 col-md-4 col-12 text-content">
                     <div class="card" style="background: #104747;padding: 23px 62px 0px 0px;margin-left: 50px;">
                         <div class="d-flex flex-row">
                             <div class="col-lg-4 col-md-4 col-12">

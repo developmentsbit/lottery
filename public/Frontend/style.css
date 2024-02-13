@@ -289,36 +289,48 @@ html, body {
 
   .featureSection .card {
     margin-right: -8px !important;
+    
+    margin-left: 6px !important;
 }
 
-  .featuresSection img {
-    width: 35% !important;
-    padding: 16px 5px 9px 12px !important;
-    margin-left: -45% !important;
-    margin-top: -19px !important;
+
+.featureSection img {
+  width: 20% !important;
+  padding: 22px 2px 15px 6px !important;
+  margin-left: -70% !important;
+}
+.featureSection .text {
+padding: 30px 0px 0px 0px !important;
+margin-left: -90% !important;
+}
+.featureSection p {
+font-size: 10px !important;
+}
+
+.featureSection h2 {
+font-size: 15px !important;
+}
+
+/*  */
+
+.featuresSection .text-content {
+  margin-left: -20px !important;
+}
+.featuresSection img {
+  width: 35% !important;
+  padding: 16px 5px 9px 12px !important;
+  margin-left: -45% !important;
+  margin-top: -19px !important;
 }
 .featuresSection h2 {
-  margin-left: -40% !important;
-    margin-top: -12px !important;
-    float: left !important;
+  margin-left: -59% !important;
+  margin-top: -28px !important;
+  float: left !important;
 }
 .featuresSection h6 {
   float: left !important;
-  margin-left: -40% !important;
-  margin-top: 39px !important;
-}
-
-  .featureSection img {
-    width: 20% !important;
-    padding: 22px 2px 15px 6px !important;
-    margin-left: -70% !important;
-}
-.featureSection .text {
-  padding: 30px 0px 0px 0px !important;
-  margin-left: -90% !important;
-}
-.featureSection p {
-  font-size: 12px !important;
+  margin-left: -78% !important;
+  margin-top: 31px !important;
 }
 
 .circle {
@@ -332,6 +344,15 @@ html, body {
   width: 13% !important;
   padding: 0% !important;
 }
+
+.youtube_blog_post iframe {
+  width: 101%;
+}
+
+.result-single ul li {
+  padding: 5px 8px !important;
+}
+
 
 }
 
@@ -947,16 +968,17 @@ ul li ul:hover {
 .nav-mobile {
   display: none;
   position: absolute;
-  top: 64%;
+  top: 73%;
   right: 11px;
-  background: #0092D2;
-  height: 70px;
-  width: 70px;
+  background: #000000;
+  height: 39px;
+  width: 58px;
 }
 
 @media only screen and (max-width: 798px) {
   .nav-mobile {
     display: block;
+    margin-top: 3px;
   }
 
   nav {
@@ -965,6 +987,7 @@ ul li ul:hover {
   }
   nav ul {
     display: none;
+    margin-top: -25px;
   }
   nav ul li {
     float: none;
@@ -989,9 +1012,9 @@ ul li ul:hover {
 #nav-toggle {
   position: absolute;
   left: 18px;
-  top: 22px;
+  top: 9px;
   cursor: pointer;
-  padding: 10px 35px 16px 0px;
+  padding: 9px 0px 0px 0px;
 }
 #nav-toggle span,
 #nav-toggle span:before,
@@ -999,7 +1022,7 @@ ul li ul:hover {
   cursor: pointer;
   border-radius: 1px;
   height: 5px;
-  width: 35px;
+  width: 26px;
   background: #ffffff;
   position: absolute;
   display: block;
