@@ -435,7 +435,7 @@ class MemberDashboardController extends Controller
                 'date' => date('Y-m-d'),
                 'time' => date('H:i:s'),
                 'member_id' => Auth::guard('member')->user()->member_id,
-                'transaction_type' => '2',
+                'transaction_type' => '8',
                 'winbalance_transfer' => $balanceWithVat,
                 'vat' => $vatAmount,
                 'transfer_to' => $request->member_id,
@@ -445,7 +445,7 @@ class MemberDashboardController extends Controller
                 'date' => date('Y-m-d'),
                 'time' => date('H:i:s'),
                 'member_id' => $request->member_id,
-                'transaction_type' => '2',
+                'transaction_type' => '8',
                 'winbalance' => $request->amount,
                 'transfer_from' => Auth::guard('member')->user()->member_id,
                 'status' => 1,
@@ -494,7 +494,12 @@ class MemberDashboardController extends Controller
 
     public function cash_balance_history()
     {
-        $param['data'] = CustomerTransaction::where('member_id',Auth::guard('member')->user()->member_id)->orderBy('date','DESC')->where('transaction_type','!=',4)->where('transaction_type','!=',5)->with('method')->get();
+        $param['data'] = CustomerTransaction::where('member_id',Auth::guard('member')->user()->member_id)->orderBy('date','DESC')->where('transaction_type','!=',4)->where('transaction_type','!=',5)->where('transaction_type','!=',8)->with('method')->get();
         return $this->view($this->path,'cash_balance_history',$param);
+    }
+    public function win_balance_history()
+    {
+        $param['data'] = CustomerTransaction::where('member_id',Auth::guard('member')->user()->member_id)->orderBy('date','DESC')->where('transaction_type','!=',3)->where('transaction_type','!=',1)->where('transaction_type','!=',2)->with('method')->get();
+        return $this->view($this->path,'win_balance_history',$param);
     }
 }

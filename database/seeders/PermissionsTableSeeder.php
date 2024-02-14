@@ -1513,6 +1513,15 @@ class PermissionsTableSeeder extends Seeder
                 'parent' => 'Vision Mission',
                 'updated_at' => '2024-02-13 02:01:41',
             ),
+            166 => 
+            array (
+                'created_at' => '2024-02-14 13:08:00',
+                'guard_name' => 'web',
+                'id' => 483,
+                'name' => 'Add Cash Balance create',
+                'parent' => 'Add Cash Balance',
+                'updated_at' => '2024-02-14 13:08:00',
+            ),
         ));
         
         

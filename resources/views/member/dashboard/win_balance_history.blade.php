@@ -1,6 +1,6 @@
 @extends('member.dashboard.master')
 @section('member_dash_title')
-Cash Balance History
+Win Balance History
 @endsection
 @section('body')
 <style>
@@ -11,7 +11,7 @@ Cash Balance History
 <div class="content-wrapper" style="color: black">
     <div class="card">
         <div class="card-header">
-            Cash Balance History
+            Win Balance History
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -37,9 +37,9 @@ Cash Balance History
                                 {{ App\Traits\Date::DbToOriginal('-',$v->date) }} <br> {{ App\Traits\Date::twelveHrTime($v->time) }}
                             </td>
                             <td>
-                                @if($v->transaction_type == 1)
+                                @if($v->transaction_type == 5)
                                 Cash In
-                                @elseif($v->transaction_type == 2)
+                                @elseif($v->transaction_type == 8)
                                     @if($v->transfer_to != NULL)
                                     @php
                                     $transfer_to = App\Models\Member::where('member_id',$v->transfer_to)->first();
@@ -51,8 +51,8 @@ Cash Balance History
                                     @endphp
                                     Transfer In From  {{ $transfer_in->first_name.' '.$transfer_in->last_name }}
                                     @endif
-                                @elseif($v->transaction_type == 3)
-                                Expense
+                                @elseif($v->transaction_type == 4)
+                                Withdraw
                                 @elseif($v->transaction_type == 6)
                                 Cash To Win
                                 @elseif($v->transaction_type == 7)
@@ -80,26 +80,26 @@ Cash Balance History
                                 @endif
                             </td>
                             <td>
-                                @if($v->transaction_type == 1)
-                                {{ $v->balance }}
-                                @elseif($v->transaction_type == 2)
+                                @if($v->transaction_type == 5)
+                                {{ $v->winbalance }}
+                                @elseif($v->transaction_type == 8)
 
                                 @if($v->transfer_to != NULL)
-                                {{ ($v->transfer - $v->vat) * -1 }}
+                                {{ ($v->winbalance_transfer - $v->vat) * -1 }}
                                 @else
-                                {{ $v->balance }}
+                                {{ $v->winbalance }}
                                 @endif
 
-                                @elseif($v->transaction_type == 3)
-                                {{ $v->expense }}
+                                @elseif($v->transaction_type == 4)
+                                {{ $v->withdraw }}
                                 @elseif($v->transaction_type == 6)
-                                {{ $v->balance + $v->vat }}
+                                {{ $v->winbalance }}
                                 @elseif($v->transaction_type == 7)
-                                {{ $v->balance}}
+                                {{ $v->winbalance + $v->vat }}
                                 @endif
                             </td>
                             <td>
-                                @if($v->transaction_type == 7)
+                                @if($v->transaction_type == 6)
                                 @else
                                 {{ $v->vat }}
                                 @endif
@@ -116,7 +116,6 @@ Cash Balance History
                                 @endif
                             </td>
                         </tr>
-
                         @endforeach
                         @endif
                     </tbody>

@@ -17,7 +17,7 @@ return new class extends Migration
             $table->time('time')->nullable();
             $table->string('member_id')->nullable();
             $table->string('payment_type')->nullable();
-            $table->integer('transaction_type')->nullable()->comment('1 = Cash In, 2 = Transfer, 3 = Expense, 4 = Withdraw, 5 = Win Balance, 6 = Cash To Win , 7 = Win To Cash');
+            $table->integer('transaction_type')->nullable()->comment('1 = Cash In, 2 = Transfer, 3 = Expense, 4 = Withdraw, 5 = Win Balance, 6 = Cash To Win , 7 = Win To Cash, 8 = Win Balance Trnasfer');
             $table->double('balance',10,2)->nullable();
             $table->double('transfer',10,2)->nullable();
             $table->double('expense',10,2)->nullable();
