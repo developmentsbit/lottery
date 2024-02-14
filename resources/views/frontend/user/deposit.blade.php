@@ -68,7 +68,7 @@ a {
 </div>
 <!-- page title -->
 
-<!-- thai lottery section award prize -->
+<!-- thai lottery section deposit -->
 <section class="section p-4">
     <h3 style="text-align:center;background: #ef0000;color: #fff;">Confirmation Statement</h3>
     <div class="row">
@@ -125,7 +125,7 @@ a {
         </div>
     </div>
 </section>
-<!-- thai lottery section about -->
+<!-- thai lottery section deposit -->
 
 @endsection
 

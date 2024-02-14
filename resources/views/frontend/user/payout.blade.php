@@ -59,7 +59,7 @@ td, th {
         </div>
     </div>
 </section>
-<!-- thai lottery section about -->
+<!-- thai lottery section payout -->
 
 @endsection
 

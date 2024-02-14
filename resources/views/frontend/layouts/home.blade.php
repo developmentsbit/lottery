@@ -421,9 +421,9 @@ $youlive = youtubelive::get();
                 <div class="col-lg-6 col-md-6 col-12">
                     <div class="row p-2">
                         <div class="col-12">
-                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/YaX5ZeJ1PUA?si=jsBJ-6OWp2vI5qV_rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        </div>
-                        <div class="col-12"><br><br>
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/NXt2_WYnAdw?si=8yG4NwurirxCtS3H?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allow="autoplay" allowfullscreen ></iframe>   
+                    </div>
+                    <div class="col-12"><br><br>
                             <iframe width="100%" height="315" src="https://www.youtube.com/embed/ttuXcVMgiGg?si=mP-OLDUUHLqjgMc7?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                         </div>
                     </div>
@@ -442,7 +442,7 @@ $youlive = youtubelive::get();
                     <div class="card" style="background: #51297b;padding: 23px 62px 0px 0px;margin-left: 50px;">
                         <div class="d-flex flex-row">
                             <div class="col-lg-4 col-md-4 col-12">
-                                <img src="https://www.thailotto.club/image_directory/about/achive1.png" alt="" />
+                                <img src="{{asset('Frontend/image/achive1.png')}}" alt="" />
                             </div>
                             <div class="col-lg-8 col-md-8 col-12" style="padding: 30px 0px 0px 0px;">
                                 <h2>12220+</h2>
@@ -455,7 +455,7 @@ $youlive = youtubelive::get();
                     <div class="card" style="background: #51297b;padding: 23px 62px 0px 0px;margin-left: 50px;">
                         <div class="d-flex flex-row">
                             <div class="col-lg-4 col-md-4 col-12">
-                                <img src="https://www.thailotto.club/image_directory/about/achive2.png" alt="" />
+                                <img src="{{asset('Frontend/image/achive2.png')}}" alt="" />
                             </div>
                             <div class="col-lg-8 col-md-8 col-12" style="padding: 30px 0px 0px 0px;">
                                 <h2>18013+</h2>
@@ -468,7 +468,7 @@ $youlive = youtubelive::get();
                     <div class="card" style="background: #51297b;padding: 23px 62px 0px 0px;margin-left: 50px;">
                         <div class="d-flex flex-row">
                             <div class="col-lg-4 col-md-4 col-12">
-                                <img src="https://www.thailotto.club/image_directory/about/achive3.png" alt="" />
+                                <img src="{{asset('Frontend/image/achive3.png')}}" alt="" />
                             </div>
                             <div class="col-lg-8 col-md-8 col-12" style="padding: 30px 0px 0px 0px;">
                                 <h2>13100+</h2>
@@ -490,7 +490,7 @@ $youlive = youtubelive::get();
                     <div class="card">
                         <div class="d-flex flex-row">
                             <div class="col-lg-2 col-md-2 col-12">
-                                <img src="https://www.thailotto.club/image_directory/about/ab-icon.png" alt="" />
+                                <img src="{{asset('Frontend/image/lotto1.png')}}" alt="" />
                             </div>
                             <div class="col-lg-10 col-md-10 col-12 text">
                                 <h2>Safe & Secure Playing</h2>
@@ -499,37 +499,11 @@ $youlive = youtubelive::get();
                         </div>
                     </div>
                 </div>
-                <!-- <div class="col-lg-6 col-md-6 col-12">
-                    <div class="card">
-                        <div class="d-flex flex-row">
-                            <div class="col-lg-2 col-md-2 col-12">
-                                <img src="https://www.thailotto.club/image_directory/about/ab-icon3.png" alt="" />
-                            </div>
-                            <div class="col-lg-10 col-md-10 col-12 text">
-                                <h2>No Comission On Winning</h2>
-                                <p>There is no commission to win the lottery.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <div class="col-lg-6 col-md-6 col-12">
                     <div class="card">
                         <div class="d-flex flex-row">
                             <div class="col-lg-2 col-md-2 col-12">
-                                <img src="https://www.thailotto.club/image_directory/about/ab-icon2.png" alt="" />
-                            </div>
-                            <div class="col-lg-10 col-md-10 col-12 text">
-                                <h2>Biggest Lottery Jackpots</h2>
-                                <p>4 winners, 12 million people in the latest lottery</p>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-                <div class="col-lg-6 col-md-6 col-12">
-                    <div class="card">
-                        <div class="d-flex flex-row">
-                            <div class="col-lg-2 col-md-2 col-12">
-                                <img src="https://www.thailotto.club/image_directory/about/ab-icon4.png" alt="" />
+                                <img src="{{asset('Frontend/image/lotto2.png')}}" alt="" />
                             </div>
                             <div class="col-lg-10 col-md-10 col-12 text">
                                 <h2>Instant Payout System</h2>
@@ -542,7 +516,7 @@ $youlive = youtubelive::get();
                     <div class="card">
                         <div class="d-flex flex-row">
                             <div class="col-lg-2 col-md-2 col-12">
-                                <img src="https://www.thailotto.club/image_directory/about/ab-icon6.png" alt="" />
+                                <img src="{{asset('Frontend/image/lotto3.png')}}" alt="" />
                             </div>
                             <div class="col-lg-10 col-md-10 col-12 text">
                                 <h2>Dedicated Support</h2>
@@ -555,7 +529,7 @@ $youlive = youtubelive::get();
                     <div class="card">
                         <div class="d-flex flex-row">
                             <div class="col-lg-2 col-md-2 col-12">
-                                <img src="https://www.thailotto.club/image_directory/about/ab-icon5.png" alt="" />
+                                <img src="{{asset('Frontend/image/lotto4.png')}}" alt="" />
                             </div>
                             <div class="col-lg-10 col-md-10 col-12 text">
                                 <h2>Performance Bonuses</h2>
