@@ -76,9 +76,9 @@ $youlive = youtubelive::get();
 <!-- slider area -->
 
 <!-- sponsor image -->
-<section class="sponsor_image text-center">
+<!-- <section class="sponsor_image text-center">
     <img src="{{ asset('Frontend/image/thai_lottery_sponsor.png') }}" alt="" srcset="" class="img-fluid">
-</section>
+</section> -->
 <!-- sponsor image -->
 
 
@@ -325,6 +325,7 @@ $youlive = youtubelive::get();
                     @if($youlive)
                     @foreach($youlive as $y)
                     <h4>@if(config('app.locale') == 'en'){{$y->title ?: $y->title_bn}}@else {{$y->title_bn ?: $y->title}}@endif</h4>
+                    <p>(Draw Date: 01 Feb 2567) <span style="color: #fff">LIVE…</span></p>
                     <div class="youtube_blog_post">
                         <iframe width="500" height="315" src="{{$y->url}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
@@ -365,7 +366,7 @@ $youlive = youtubelive::get();
                     <div class="card-item">
                         <div class="content">
                             <div class="imgBx">
-                                <img src="{{ asset('Backend/settings/') }}/{{ $settings->logo }}">
+                                <img src="{{ asset('Backend/settings/455602170.png') }}">
                                 <h3>National Lottery Result</h3>
                                 <h4>Draw Date: 01 Feb 2567</h4>
                             </div>

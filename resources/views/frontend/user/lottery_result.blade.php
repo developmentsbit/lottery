@@ -26,7 +26,7 @@
                   <div class="card-item">
                       <div class="content">
                           <div class="imgBx">
-                              <img src="{{ asset('Backend/settings/') }}/{{ $settings->logo }}">
+                              <img src="{{ asset('Backend/settings/455602170.png') }}">
                               <h3>National Lottery Result</h3>
                               <h4>Draw Date: 01 Feb 2567</h4>
                           </div>

@@ -26,7 +26,7 @@
                 <div class="row">
                     <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
                         <h6 class="text-uppercase mb-4 font-weight-bold">
-                            <img src="{{ asset('Backend/settings/') }}/{{ $settings->logo }}">
+                            <img src="{{ asset('Backend/settings/455602170.png') }}">
                         </h6>
                         <!-- <p style="color: #fff;">
                             Here you can use rows and columns to organize your footer
@@ -48,10 +48,10 @@
                             <a href="{{url('VisionMission')}}" class="text-white">Vision & Mission</a>
                         </p>
                         <p>
-                            <a href="{{url('VisionMission')}}" class="text-white">Discount</a>
+                            <a href="{{url('AwardsPrize')}}" class="text-white">Discount</a>
                         </p>
                         <p>
-                            <a href="{{url('fees')}}" class="text-white">Our Fees</a>
+                            <a href="{{url('contact_us')}}" class="text-white">Contact Us</a>
                         </p>
                     </div>
                     <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
@@ -64,9 +64,6 @@
                         </p>
                         <p>
                             <a class="text-white">Email Chat</a>
-                        </p>
-                        <p>
-                            <a href="{{url('contact_us')}}" class="text-white">Contact</a>
                         </p>
                     </div>
                     <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3" style="color: #fff;">

@@ -49,58 +49,82 @@ td, th {
                     <tr>
                         <td>1</td>
                         <td>Super Agent</td>
-                        <td>Uchit Wai</td>
-                        <td>Burma</td>
+                        <td>Mohammad Faruque</td>
+                        <td>Pakistan</td>
                         <td>
-                            <span class="btn btn-success btn-sm">@lang('common.active')</span>
+                            <span class="btn btn-success btn-sm">Verified</span>
                         </td>
                         <td>
                             <a  class="btn btn-info border-0 edit text-light" data-toggle="modal" data-target="#exampleModalCenters" href="#">@lang('frontend.complain')</a>
                         </td>
                     </tr>
                     <tr>
-                        <td>1</td>
+                        <td>2</td>
                         <td>Super Agent</td>
-                        <td>Uchit Wai</td>
-                        <td>Burma</td>
+                        <td>Md Alamin</td>
+                        <td>Bangladesh</td>
                         <td>
-                            <span class="btn btn-success btn-sm">@lang('common.active')</span>
+                            <span class="btn btn-success btn-sm">Verified</span>
                         </td>
                         <td>
                             <a  class="btn btn-info border-0 edit text-light" data-toggle="modal" data-target="#exampleModalCenters" href="#">@lang('frontend.complain')</a>
                         </td>
                     </tr>
                     <tr>
-                        <td>1</td>
+                        <td>3</td>
                         <td>Super Agent</td>
-                        <td>Uchit Wai</td>
-                        <td>Burma</td>
+                        <td>Kamrul Hasan</td>
+                        <td>Bangladesh</td>
                         <td>
-                            <span class="btn btn-success btn-sm">@lang('common.active')</span>
+                            <span class="btn btn-success btn-sm">Verified</span>
                         </td>
                         <td>
                             <a  class="btn btn-info border-0 edit text-light" data-toggle="modal" data-target="#exampleModalCenters" href="#">@lang('frontend.complain')</a>
                         </td>
                     </tr>
                     <tr>
-                        <td>1</td>
+                        <td>4</td>
                         <td>Super Agent</td>
-                        <td>Uchit Wai</td>
-                        <td>Burma</td>
+                        <td>Samar Kumar Lal</td>
+                        <td>India (Kalkata)</td>
                         <td>
-                            <span class="btn btn-success btn-sm">@lang('common.active')</span>
+                            <span class="btn btn-success btn-sm">Verified</span>
                         </td>
                         <td>
                             <a  class="btn btn-info border-0 edit text-light" data-toggle="modal" data-target="#exampleModalCenters" href="#">@lang('frontend.complain')</a>
                         </td>
                     </tr>
                     <tr>
-                        <td>1</td>
+                        <td>5</td>
                         <td>Super Agent</td>
-                        <td>Uchit Wai</td>
+                        <td>Uchker Wai</td>
                         <td>Burma</td>
                         <td>
-                            <span class="btn btn-success btn-sm">@lang('common.active')</span>
+                            <span class="btn btn-danger btn-sm">Unverified</span>
+                        </td>
+                        <td>
+                            <a  class="btn btn-info border-0 edit text-light" data-toggle="modal" data-target="#exampleModalCenters" href="#">@lang('frontend.complain')</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Super Agent</td>
+                        <td>Umar Sheikh</td>
+                        <td>Saudi Arab</td>
+                        <td>
+                            <span class="btn btn-danger btn-sm">Unverified</span>
+                        </td>
+                        <td>
+                            <a  class="btn btn-info border-0 edit text-light" data-toggle="modal" data-target="#exampleModalCenters" href="#">@lang('frontend.complain')</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Super Agent</td>
+                        <td>Anowar Hossen</td>
+                        <td>Kuwit</td>
+                        <td>
+                            <span class="btn btn-danger btn-sm">Unverified</span>
                         </td>
                         <td>
                             <a  class="btn btn-info border-0 edit text-light" data-toggle="modal" data-target="#exampleModalCenters" href="#">@lang('frontend.complain')</a>
@@ -109,7 +133,19 @@ td, th {
                 </table>
             </div>
         </div>
+        <br>
+        <div  class="col-lg-12 col-md-12 col-12">
+            <h3 style="color: #fff;">If You are Intersted Thai lottery Online Please Sign Up 
+                <a href="{{ route('member.registration') }}" class="btn btn-sm btn-secondary">
+                    <i class="fa fa-users"></i> @lang('frontend.register')
+                </a>
+            </h3>
+        </div>
     </div>
+</section>
+<section class="p-4" style="background: #8458B3">
+    <div class="container" style="background: #51297b;padding: 34px;border-radius: 1% 1% 1% 1%;">
+        <p>Thaiglo Agent List gives you the opportunity to find agents in your local area of Any Country.For example, you can contact the Any district Thaoglo Agent from the List.</p>
 </section>
 <!-- thai lottery section about -->
 
