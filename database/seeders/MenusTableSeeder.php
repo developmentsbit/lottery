@@ -532,6 +532,25 @@ class MenusTableSeeder extends Seeder
                 'type' => 2,
                 'updated_at' => '2024-02-14 13:08:00',
             ),
+            27 => 
+            array (
+                'create_by' => 1,
+                'created_at' => '2024-02-14 16:08:24',
+                'deleted_at' => NULL,
+                'icon' => 'fa fa-users',
+                'id' => 46,
+                'label_id' => 7,
+                'menu_name_bn' => 'রেজিষ্ট্রেশনকৃত সদস্য সমূহ',
+                'menu_name_en' => 'Registered Member',
+                'order_by' => 1,
+                'parent_id' => NULL,
+                'route' => 'registerd_member',
+                'slug' => 'index',
+                'status' => 1,
+                'system_name' => 'Registered Member',
+                'type' => 3,
+                'updated_at' => '2024-02-14 16:08:24',
+            ),
         ));
         
         

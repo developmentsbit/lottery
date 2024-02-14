@@ -35,13 +35,32 @@ class MemberDashboardController extends Controller
 
     public function personal_profile()
     {
-        $param['data'] = MemberModel::where('member_id',Auth::guard('member')->user()->member_id)->get();
+        $param['data'] = MemberModel::where('member_id',Auth::guard('member')->user()->member_id)->first();
         $param['country'] = Country::all();
         return $this->view($this->path,'personal_profile',$param);
     }
 
-    public function personal_profile_update(Request $request, string $id)
+    public function personal_profile_update(Request $request,$id)
     {
+        $file = $request->file('profile');
+        if($file)
+        {
+            if(Auth::guard('member')->user()->profile != NULL)
+            {
+                $pathImage = MemberModel::find(Auth::guard('member')->user()->id);
+
+                $path = public_path().'/MemberProfile/'.$pathImage->profile;
+
+                if(file_exists($path))
+                {
+                    unlink($path);
+                }
+            }
+
+            $imageName = rand().'.'.$file->getClientOriginalExtension();
+            $file->move(public_path().'/MemberProfile/',$imageName);
+            MemberModel::find($id)->update(['profile' => $imageName]);
+        }
         $update = MemberModel::find($id)->update([
             'first_name'=>$request->first_name,
             'last_name'=>$request->last_name,
@@ -51,6 +70,8 @@ class MemberDashboardController extends Controller
             'email'=>$request->email,
             'nationality'=>$request->nationality,
         ]);
+
+
 
         if($update)
         {
@@ -193,17 +214,35 @@ class MemberDashboardController extends Controller
 
         GameLedger::create($ledger_data);
 
-        for ($i=0; $i < count($request->lottery_number) ; $i++)
+        if(isset($request->rumble_amount))
         {
-            $data = array(
-                'invoice_no' => $invoice_no,
-                'lottery_number' => $request->lottery_number[$i],
-                'direct_amount' => $request->direct_amount[$i],
-                'rumble_amount'=> $request->rumble_amount[$i],
-            );
 
-            GameEntry::create($data);
+            for ($i=0; $i < count($request->lottery_number) ; $i++)
+            {
+                $data = array(
+                    'invoice_no' => $invoice_no,
+                    'lottery_number' => $request->lottery_number[$i],
+                    'direct_amount' => $request->direct_amount[$i],
+                    'rumble_amount'=> $request->rumble_amount[$i],
+                );
+
+                GameEntry::create($data);
+            }
         }
+        else
+        {
+            for ($i=0; $i < count($request->lottery_number) ; $i++)
+            {
+                $data = array(
+                    'invoice_no' => $invoice_no,
+                    'lottery_number' => $request->lottery_number[$i],
+                    'direct_amount' => $request->direct_amount[$i],
+                );
+
+                GameEntry::create($data);
+            }
+        }
+
 
         CustomerTransaction::create([
             'date' => date('Y-m-d'),

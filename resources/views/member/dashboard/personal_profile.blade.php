@@ -8,29 +8,27 @@
     <div class="col-12">
         <div class="card">
             @if(isset($params['data']))
-            @foreach ($params['data'] as $d)
             <div class="card-header">
-                Hello Mr. {{$d->first_name}} {{$d->last_name}}
+                Hello Mr. {{$params['data']->first_name}} {{$params['data']->last_name}}
             </div>
             <div class="card-body">
-                <form action="{{route('personal_profile.update',$d->id)}}" enctype="multipart/form-data" id="formData">
+                <form action="{{route('personal_profile.update',$params['data']->id)}}" enctype="multipart/form-data" method="POST">
                     @csrf
-                    @method('PUT')
                     <div class="row">
                         <div class="col-lg-12 col-md-12 col-sm-12 mt-2">
                             <label>Mobile No :</label>
-                            <b><span>{{$d->mobile_no}}</span></b>
+                            <b><span>{{$params['data']->mobile_no}}</span></b>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 mt-2">
                             <label for="first_name">First Name</label><span class="text-danger">*</span>
-                            <input type="text" name="first_name" class="form-control  mt-1 @error('first_name') is-invalid @enderror" id="first_name" value="{{$d->first_name}}">
+                            <input type="text" name="first_name" class="form-control  mt-1 @error('first_name') is-invalid @enderror" id="first_name" value="{{$params['data']->first_name}}">
                             @error('first_name')
                                 <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 mt-2">
                             <label for="last_name">Last Name</label><span class="text-danger">*</span>
-                            <input type="text" name="last_name" class="form-control  mt-1 @error('last_name') is-invalid @enderror" id="last_name" value="{{$d->last_name}}">
+                            <input type="text" name="last_name" class="form-control  mt-1 @error('last_name') is-invalid @enderror" id="last_name" value="{{$params['data']->last_name}}">
                             @error('last_name')
                                 <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
@@ -38,9 +36,9 @@
                         <div class="col-lg-6 col-md-6 col-sm-6 mt-2">
                             <label for="gender">Gender</label><span class="text-danger">*</span>
                             <select class="form-control form-control-sm @error('gender') is-invalid @enderror" name="gender" id="gender">
-                                <option @if($d['gender'] == 'Male') selected @endif value="Male">Male</option>
-                                <option @if($d['gender'] == 'Female') selected @endif value="Female">Female</option>
-                                <option @if($d['gender'] == 'Others') selected @endif value="Others">Others</option>
+                                <option @if($params['data']->gender == 'Male') selected @endif value="Male">Male</option>
+                                <option @if($params['data']->gender == 'Female') selected @endif value="Female">Female</option>
+                                <option @if($params['data']->gender == 'Others') selected @endif value="Others">Others</option>
                             </select>
                             @error('gender')
                                 <div class="alert alert-danger">{{ $message }}</div>
@@ -48,7 +46,7 @@
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 mt-2">
                             <label for="city">City</label><span class="text-danger">*</span>
-                            <input type="text" name="city" class="form-control  mt-1 @error('city') is-invalid @enderror" id="city" value="{{$d->city}}">
+                            <input type="text" name="city" class="form-control  mt-1 @error('city') is-invalid @enderror" id="city" value="{{$params['data']->city}}">
                             @error('city')
                                 <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
@@ -75,8 +73,15 @@
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 mt-2">
                             <label for="email">Email</label><span class="text-danger">*</span>
-                            <input type="text" name="email" class="form-control  mt-1 @error('email') is-invalid @enderror" id="email" value="{{$d->email}}">
+                            <input type="text" name="email" class="form-control  mt-1 @error('email') is-invalid @enderror" id="email" value="{{$params['data']->email}}">
                             @error('email')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 mt-2">
+                            <label for="profile">Profile</label><span class="text-danger">*</span>
+                            <input type="file" name="profile" class="form-control  mt-1 @error('profile') is-invalid @enderror" id="profile">
+                            @error('profile')
                                 <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
                         </div>
@@ -86,7 +91,6 @@
                     </div>
                 </form>
             </div>
-            @endforeach
             @endif
         </div>
     </div>
