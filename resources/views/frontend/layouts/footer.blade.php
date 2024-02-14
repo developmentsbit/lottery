@@ -71,13 +71,14 @@
                     </div>
                     <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3" style="color: #fff;">
                         <h4 class="text-uppercase mb-4" style="color: #fff; font-weight: 600;">CONTACT</h4>
-                        <p>Email: support@thailotto.club</p>
+                        <p>Email: info.thailotto3up@gmail.com</p>
+                        <p>Website: www.thailotto3up.com</p>
                         <p>Address: The Government Lottery Office (Sanambin Nam)</p>
                         <p>359 Nonthaburi Road, Tha Sai Amphoe Mueang Nonthaburi, NONTHABURI 11000</p>
                     </div>
                 </section>
             </div>
-            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)"> Copyright © <?php echo date('Y'); ?> - GLO - by <a class="text-white">Thai Lotto Club</a> All Rights Reserved
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)"> Copyright © 2015  by <a class="text-white">thailotto3up.com</a> All Rights Reserved
         </div>
     </footer>
 </div>

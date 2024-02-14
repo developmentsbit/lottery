@@ -30,10 +30,10 @@
 </div>
 <!-- page title -->
 
-<!-- thai lottery section about -->
+<!-- thai lottery section terms conditions -->
 
-<section class="p-4" style="background: #043b35">
-    <div class="container" style="background: #104747;padding: 34px;border-radius: 1% 1% 1% 1%; color:#fff;">
+<section class="p-4" style="background: #8458B3">
+    <div class="container" style="background: #51297b;padding: 34px;border-radius: 1% 1% 1% 1%; color:#fff;">
         <div class="row">
             <div class="term">
                 <div class="col-md-12 col-sm-12 col-xs-12">
@@ -79,7 +79,7 @@
         </div>
     </div>
 </section>
-<!-- thai lottery section about -->
+<!-- thai lottery section terms conditions -->
 
 
 

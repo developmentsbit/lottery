@@ -12,7 +12,7 @@
     <div class="row mb-2" id="proBanner">
       <div class="col-12 bg-white p-2">
         <marquee behavior="" direction="">
-            থাইল্যান্ড লটারি সিস্টেম
+         <h2 style="color:green;"> The Government Approved 100% Trusted  Website www.thailotto3up.com. You will play 6 Digit 3up, 2up, Down, Single digit run, 3up, 2up, down & 3up, 2up, down game total.</h2>
         </marquee>
       </div>
     </div>
@@ -32,20 +32,98 @@
         <div class="card-header">
             <b>@lang('frontend.thai_national_lottery')</b>
         </div>
-        <div class="card-body bg-success text-white">
-            <ul>
-                <li>Affiliate Commission 2%.</li>
-                <li>Six Digit-(D-$1 X 3000 & R-$1 X $500 Win) Discount offer 35% .</li>
-                <li>3 Up (D-$1 X 500 & R-$1.00 X $100 Win) Discount offer 30%.</li>
-                <li>2 Up (D-$1 X 80 & R-$1 X $40 Win) Discount offer 15%.</li>
-                <li>2 Down (D-$1 X 80 & R-$1 X $40 Win) Discount offer 15%.</li>
-                <li>1 Of 3 Up Single Digit-($1 X $3 Win).</li>
-                <li>1 Of 2 Up Single Digit-($1 X $3 Win).</li>
-                <li>1 Of 2 Down Single Digit-($1 X $4 Win).</li>
-                <li>3 Up Game Total-($1 X $7 Win).</li>
-                <li>2 Up Game Total-($1 X $7 Win).</li>
-                <li>2 Down Game Total-($1 X $7 Win).</li>
-            </ul>
+        <div class="col-12">
+           <table class="table table-bordered table-success">
+                    <tr>
+                        <th>Game & Bhat Amount</th>
+                        <th>Win Amount</th>
+                        <th>Discount</th>
+                    </tr
+                    
+                    <tr>
+                        <td>Six Digit Direct Bhat Amount ($x1)</td>
+                        <td>$-2500</td>
+                        <td rowspan="2">40%</td>
+                    </tr>
+                    
+                     <tr>
+                        <td>Six Digit Rumbal Bhat Amount ($x1)</td>
+                        <td>$-400</td>
+                        
+                    </tr>
+                    
+                     
+                    <tr>
+                        <td>3up Direct Bhat Amount ($x1)</td>
+                        <td>$-400</td>
+                        <td rowspan="2">25%</td>
+                    </tr>
+                    
+                     <tr>
+                        <td>3up Rumbal Bhat Amount ($x1)</td>
+                        <td>$-80</td>
+                        
+                    </tr>
+                    
+                    
+                     <tr>
+                        <td>2up Direct Bhat Amount ($x1)</td>
+                        <td>$-80</td>
+                        <td rowspan="2">15%</td>
+                    </tr>
+                    
+                     <tr>
+                        <td>2up Rumbal Bhat Amount ($x1)</td>
+                        <td>$-40</td>
+                        
+                    </tr>
+                    
+                        <tr>
+                        <td>2 Down Direct Bhat Amount ($x1)</td>
+                        <td>$-60</td>
+                        <td rowspan="2">15%</td>
+                    </tr>
+                    
+                     <tr>
+                        <td>2 Down Rumbal Bhat Amount ($x1)</td>
+                        <td>$-40</td>
+                    </tr>
+
+
+      <tr>
+                        <td>1 of Single Digit Bhat Amount ($x1)</td>
+                        <td>$-3</td>
+                        <td></td>
+                    </tr>
+                    
+                     <tr>
+                        <td>1 of 2up Single Digit Bhat Amount ($x1)</td>
+                        <td>$-3</td>
+                        <td></td>
+                    </tr>  
+                    <tr>
+                        <td>1 of 2down Single Digit Bhat Amount ($x1)</td>
+                        <td>$-3</td>
+                        <td></td>
+                    </tr>
+                        <tr>
+                        <td>3up Game Total Bhat Amount ($x1)</td>
+                        <td>$-5</td>
+                        <td></td>
+                    </tr>       <tr>
+                        <td>2up Game Total Bhat Amount ($x1)</td>
+                        <td>$-5</td>
+                        <td></td>
+                    </tr>
+                    
+                       <tr>
+                        <td>2down Game Total Bhat Amount ($x1)</td>
+                        <td>$-5</td>
+                        <td></td>
+                    </tr>
+
+                    
+                </table>
         </div>
     </div>
 

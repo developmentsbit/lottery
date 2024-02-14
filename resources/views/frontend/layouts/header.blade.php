@@ -75,31 +75,31 @@
                     <div class="col-lg-8 col-md-8 col-12">
                         <div class="login_register_area">
                             <ul class="header_side_nav">
-                                <li class="nav-item dropdown">
-                                    <form method="post" action="{{url('changeLocale')}}" id="changeLocale">
-                                        @csrf
-                                        <input type="hidden" id="locale" name="locale" value="">
-                                        @if(config('app.locale') == 'en')
-                                    <a class="nav-flag dropdown-toggle" href="#" id="languageDropdown" data-bs-toggle="dropdown">
-                                        <img src="{{asset('Backend')}}/img/flags/us.png" alt="English" id="flag_up">
-                                    @elseif(config('app.locale') == 'bn')
-                                    <a class="nav-flag dropdown-toggle" href="#" id="languageDropdown" data-bs-toggle="dropdown">
-                                        <img src="{{asset('Backend')}}/img/flags/bd_big.png" alt="English" id="flag_up">
-                                        @endif
-                                    </a>
-                                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
-                                        <a class="dropdown-item" id="submitLoacaleEn" onclick="submitLoacle();">
-                                            <img src="{{asset('Backend')}}/img/flags/us.png" alt="English" width="20" class="align-middle me-1" />
-                                            <span class="align-middle">English</span>
-                                        </a>
-                                        <a class="dropdown-item" id="submitLoacaleBn" onclick="submitLoacle();">
-                                            <img src="{{asset('Backend')}}/img/flags/bd_big.png" alt="English" width="20" class="align-middle me-1" />
-                                            <span class="align-middle">বাংলা</span>
-                                        </a>
+                            <!--    <li class="nav-item dropdown">-->
+                            <!--        <form method="post" action="{{url('changeLocale')}}" id="changeLocale">-->
+                            <!--            @csrf-->
+                            <!--            <input type="hidden" id="locale" name="locale" value="">-->
+                            <!--            @if(config('app.locale') == 'en')-->
+                            <!--        <a class="nav-flag dropdown-toggle" href="#" id="languageDropdown" data-bs-toggle="dropdown">-->
+                            <!--            <img src="{{asset('Backend')}}/img/flags/us.png" alt="English" id="flag_up">-->
+                            <!--        @elseif(config('app.locale') == 'bn')-->
+                            <!--        <a class="nav-flag dropdown-toggle" href="#" id="languageDropdown" data-bs-toggle="dropdown">-->
+                            <!--            <img src="{{asset('Backend')}}/img/flags/bd_big.png" alt="English" id="flag_up">-->
+                            <!--            @endif-->
+                            <!--        </a>-->
+                            <!--        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">-->
+                            <!--            <a class="dropdown-item" id="submitLoacaleEn" onclick="submitLoacle();">-->
+                            <!--                <img src="{{asset('Backend')}}/img/flags/us.png" alt="English" width="20" class="align-middle me-1" />-->
+                            <!--                <span class="align-middle">English</span>-->
+                            <!--            </a>-->
+                            <!--            <a class="dropdown-item" id="submitLoacaleBn" onclick="submitLoacle();">-->
+                            <!--                <img src="{{asset('Backend')}}/img/flags/bd_big.png" alt="English" width="20" class="align-middle me-1" />-->
+                            <!--                <span class="align-middle">বাংলা</span>-->
+                            <!--            </a>-->
 
-                                    </div>
-                                </form>
-                            </li>
+                            <!--        </div>-->
+                            <!--    </form>-->
+                            <!--</li>-->
                             <li>
                                 <a href="{{ route('member.login') }}" class="btn btn-sm btn-info">
                                     <i class="fa fa-user"></i> @lang('frontend.login')
@@ -149,9 +149,9 @@
                     <li>
                       <a class="{{request()->Is('TermsCondition') ? 'active' : ''}}" aria-current="page" href="{{url('/TermsCondition')}}">@lang('frontend.terms_condition')</a>
                     </li>
-                    <li>
-                      <a class="{{request()->Is('BuySell') ? 'active' : ''}}" aria-current="page" href="{{url('/BuySell')}}">@lang('frontend.buy_sell')</a>
-                    </li>
+                    <!--<li>-->
+                    <!--  <a class="{{request()->Is('BuySell') ? 'active' : ''}}" aria-current="page" href="{{url('/BuySell')}}">@lang('frontend.buy_sell')</a>-->
+                    <!--</li>-->
                     <li>
                       <a class="{{request()->Is('AwardsPrize') ? 'active' : ''}}" aria-current="page" href="{{url('/AwardsPrize')}}">@lang('frontend.award_prize')</a>
                     </li>
@@ -160,9 +160,9 @@
                     </li>
                   </ul>
                 </li>
-                <li>
-                  <a class="{{request()->Is('Payout') ? 'active' : ''}}" aria-current="page" href="{{url('/Payout')}}">@lang('frontend.payout')</a>
-                </li>
+                <!--<li>-->
+                <!--  <a class="{{request()->Is('Payout') ? 'active' : ''}}" aria-current="page" href="{{url('/Payout')}}">@lang('frontend.payout')</a>-->
+                <!--</li>-->
                 <li>
                   <a class="{{request()->Is('AgentList') ? 'active' : ''}}" aria-current="page" href="{{url('/AgentList')}}">@lang('frontend.agent_list')</a>
                 </li>

@@ -19,11 +19,11 @@ td, th {
   padding: 8px;
 }
 th {
-  background: #043b35;
+  background: #8458B3;
 }
 
 tr:nth-child(even) {
-  background-color: #104747;
+  background-color: #51297b;
 }
 h2{
     color: #fff;
@@ -39,10 +39,10 @@ h2{
 </div>
 <!-- page title -->
 
-<!-- thai lottery section about -->
+<!-- thai lottery section fees -->
 
-<section class="p-4" style="background: #043b35">
-    <div class="container" style="background: #104747;padding: 34px;border-radius: 1% 1% 1% 1%; color:#fff;">
+<section class="p-4" style="background: #8458B3">
+    <div class="container" style="background: #51297b;padding: 34px;border-radius: 1% 1% 1% 1%; color:#fff;">
         <table>
             <h2>Our Fees</h2>
             <tr>
@@ -94,7 +94,7 @@ h2{
         </table>
     </div>
 </section>
-<!-- thai lottery section about -->
+<!-- thai lottery section fees -->
 
 
 
