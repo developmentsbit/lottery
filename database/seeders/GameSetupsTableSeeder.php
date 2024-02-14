@@ -37,7 +37,7 @@ class GameSetupsTableSeeder extends Seeder
             array (
                 'created_at' => '2024-02-10 16:20:46',
                 'deleted_at' => NULL,
-                'end_date' => '2024-02-13',
+                'end_date' => '2024-02-28',
                 'end_time' => '14:19:00',
                 'game_title' => 'Bangla Lottery',
                 'game_title_bn' => NULL,
@@ -45,7 +45,7 @@ class GameSetupsTableSeeder extends Seeder
                 'start_date' => '2024-02-10',
                 'start_time' => '16:20:00',
                 'status' => 1,
-                'updated_at' => '2024-02-13 14:16:13',
+                'updated_at' => '2024-02-15 00:56:51',
             ),
         ));
         

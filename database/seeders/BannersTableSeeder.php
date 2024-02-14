@@ -14,13 +14,12 @@ class BannersTableSeeder extends Seeder
      */
     public function run()
     {
-
-
+        
 
         \DB::table('banners')->delete();
-
+        
         \DB::table('banners')->insert(array (
-            0 =>
+            0 => 
             array (
                 'created_at' => NULL,
                 'id' => 1,
@@ -29,7 +28,7 @@ class BannersTableSeeder extends Seeder
                 'updated_at' => '2024-02-13 17:22:46',
             ),
         ));
-
-
+        
+        
     }
 }
