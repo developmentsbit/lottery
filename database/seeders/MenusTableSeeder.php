@@ -513,6 +513,25 @@ class MenusTableSeeder extends Seeder
                 'type' => 2,
                 'updated_at' => '2024-02-13 02:01:41',
             ),
+            26 => 
+            array (
+                'create_by' => 1,
+                'created_at' => '2024-02-14 13:08:00',
+                'deleted_at' => NULL,
+                'icon' => NULL,
+                'id' => 45,
+                'label_id' => NULL,
+                'menu_name_bn' => 'ক্যাশ ব্যালেন্স যুক্ত করুন',
+                'menu_name_en' => 'Add Cash Balance',
+                'order_by' => 2,
+                'parent_id' => 20,
+                'route' => 'add_cash_balance',
+                'slug' => 'create',
+                'status' => 1,
+                'system_name' => 'Add Cash Balance',
+                'type' => 2,
+                'updated_at' => '2024-02-14 13:08:00',
+            ),
         ));
         
         
