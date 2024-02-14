@@ -67,6 +67,13 @@
         <div class="container-fluid">
             <div class="header__wrapper">
                 <div class="row">
+                  <div class="col-lg-12 col-md-12 col-12">
+                      <span style="
+    font-size: 22px;
+    color: #208073;
+    font-weight: 600;
+">The Government Approved 100% Trusted Online Betting Website</span>
+                  </div>
                     <div class="col-lg-4 col-md-4 col-12">
                         <div class="logo__header">
                             <img src="{{ asset('Backend/settings/') }}/{{ $settings->logo }}" alt="" class="img-fluid">
@@ -155,9 +162,9 @@
                     <li>
                       <a class="{{request()->Is('AwardsPrize') ? 'active' : ''}}" aria-current="page" href="{{url('/AwardsPrize')}}">@lang('frontend.award_prize')</a>
                     </li>
-                    <li>
+                    <!-- <li>
                       <a class="{{request()->Is('fees') ? 'active' : ''}}" aria-current="page" href="{{url('/fees')}}">@lang('frontend.fees')</a>
-                    </li>
+                    </li> -->
                   </ul>
                 </li>
                 <!--<li>-->

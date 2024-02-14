@@ -22,9 +22,10 @@
             <div class="company-info">
                 <h3>Thai Lotto3up</h3>
                 <ul>
-                    <li><i class="fa fa-road"></i> 44 Main Street</li>
-                    <li><i class="fa fa-phone"></i> (555) 555-5555</li>
-                    <li><i class="fa fa-envelope"></i> test@phoenix.com</li>
+                    <li><i class="fa fa-road"></i>
+                        359 Nonthaburi Road, Tha Sai Amphoe Mueang Nonthaburi, NONTHABURI 11000
+                    </li>
+                    <li><i class="fa fa-envelope"></i> info.thailotto3up@gmail.com</li>
                 </ul>
             </div>
             <div class="contact">

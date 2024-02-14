@@ -349,9 +349,9 @@ font-size: 15px !important;
 .row_grid {
   margin-left: 52px !important;
 }
-.method_images img {
-  width: 13% !important;
-  padding: 0% !important;
+.method_images img {    
+  width: 33% !important;
+  padding: 1% !important;
 }
 
 .youtube_blog_post iframe {
@@ -359,7 +359,8 @@ font-size: 15px !important;
 }
 
 .result-single ul li {
-  padding: 5px 8px !important;
+  padding: 5px 15px !important;
+  font-size: 22px !important;
 }
 
 
@@ -389,8 +390,8 @@ font-size: 15px !important;
 
 .card-box .card-item {
   position: relative;
-  /* width: 95%; */
-  height: 865px;
+  width: 95%;
+  height: 908px;
   /* margin: 20px; */
   background: #51297b;
   -webkit-transition: 0.4s;
@@ -410,7 +411,6 @@ font-size: 15px !important;
 }
 
 .card-box .card-item .content .imgBx img {
-  width: 40%;
   margin-bottom: -44px;
 }
 
@@ -489,7 +489,7 @@ font-size: 15px !important;
 .result-single ul li {
   display: inline-block;
   background: #0093D3;
-  border-radius: 50%;
+  /* border-radius: 50%; */
   padding: 6px 15px;
   color: #fff;
   margin: 0px 10px;
@@ -833,7 +833,6 @@ ul li ul:hover {
   background: #51297b;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
-  border-right: 6px solid;
 }
 
 .company-info h3,
@@ -845,9 +844,10 @@ ul li ul:hover {
 }
 
 .company-info ul li {
-  font-size: 22px;
-  padding: 12px;
+  font-size: 18px;
+  padding: 11px 0px 16px 0px;
   list-style: none;
+  line-height: 2.3;
 }
 
 .contact {
@@ -869,6 +869,8 @@ ul li ul:hover {
 
 .contact form label {
   display: block;
+  text-align: left;
+  margin-bottom: 9px;
 }
 
 .contact form p {
@@ -883,7 +885,7 @@ ul li ul:hover {
 .contact form input,
 .contact form textarea {
   width: 100%;
-  padding: 1em;
+  padding: 6px;
   border: solid 1px #627EDC;
   border-radius: 4px;
 }
