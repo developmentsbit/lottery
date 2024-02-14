@@ -1522,6 +1522,78 @@ class PermissionsTableSeeder extends Seeder
                 'parent' => 'Add Cash Balance',
                 'updated_at' => '2024-02-14 13:08:00',
             ),
+            167 => 
+            array (
+                'created_at' => '2024-02-14 16:08:24',
+                'guard_name' => 'web',
+                'id' => 484,
+                'name' => 'Registered Member create',
+                'parent' => 'Registered Member',
+                'updated_at' => '2024-02-14 16:08:24',
+            ),
+            168 => 
+            array (
+                'created_at' => '2024-02-14 16:08:24',
+                'guard_name' => 'web',
+                'id' => 485,
+                'name' => 'Registered Member index',
+                'parent' => 'Registered Member',
+                'updated_at' => '2024-02-14 16:08:24',
+            ),
+            169 => 
+            array (
+                'created_at' => '2024-02-14 16:08:24',
+                'guard_name' => 'web',
+                'id' => 486,
+                'name' => 'Registered Member show',
+                'parent' => 'Registered Member',
+                'updated_at' => '2024-02-14 16:08:24',
+            ),
+            170 => 
+            array (
+                'created_at' => '2024-02-14 16:08:24',
+                'guard_name' => 'web',
+                'id' => 487,
+                'name' => 'Registered Member destroy',
+                'parent' => 'Registered Member',
+                'updated_at' => '2024-02-14 16:08:24',
+            ),
+            171 => 
+            array (
+                'created_at' => '2024-02-14 16:08:24',
+                'guard_name' => 'web',
+                'id' => 488,
+                'name' => 'Registered Member trash',
+                'parent' => 'Registered Member',
+                'updated_at' => '2024-02-14 16:08:24',
+            ),
+            172 => 
+            array (
+                'created_at' => '2024-02-14 16:08:24',
+                'guard_name' => 'web',
+                'id' => 489,
+                'name' => 'Registered Member restore',
+                'parent' => 'Registered Member',
+                'updated_at' => '2024-02-14 16:08:24',
+            ),
+            173 => 
+            array (
+                'created_at' => '2024-02-14 16:08:24',
+                'guard_name' => 'web',
+                'id' => 490,
+                'name' => 'Registered Member delete',
+                'parent' => 'Registered Member',
+                'updated_at' => '2024-02-14 16:08:24',
+            ),
+            174 => 
+            array (
+                'created_at' => '2024-02-14 16:08:24',
+                'guard_name' => 'web',
+                'id' => 491,
+                'name' => 'Registered Member status',
+                'parent' => 'Registered Member',
+                'updated_at' => '2024-02-14 16:08:24',
+            ),
         ));
         
         

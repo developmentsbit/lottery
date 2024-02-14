@@ -40,12 +40,6 @@
 
         @endcomponent
         <div class="row">
-            <div class="col-3">
-                <select class="form-control" name="" id="" onchange="">
-                    <option>---Select Game---</option>
-                    <option value=""></option>
-                </select>
-            </div>
             <div class="col-12 mt-2">
                 <div class="card">
                     <div class="card-body">
@@ -56,6 +50,7 @@
                                         <th>@lang('common.sl')</th>
                                         <th>Date & Time</th>
                                         <th>@lang('lottery.invoice_no')</th>
+                                        <th>Member</th>
                                         <th>@lang('lottery.game_name')</th>
                                         <th>@lang('lottery.slot')</th>
                                         <th>@lang('lottery.total_amount')</th>
@@ -89,6 +84,7 @@
                 {data: 'sl', name: 'sl'},
                 {data: 'date_time', name: 'date_time'},
                 {data: 'invoice_no', name: 'invoice_no'},
+                {data: 'member', name: 'member'},
                 {data: 'game_name', name: 'game_name'},
                 {data: 'slot', name: 'slot'},
                 {data: 'total_amount', name: 'total_amount'},

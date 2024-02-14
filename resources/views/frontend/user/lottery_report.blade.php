@@ -46,7 +46,7 @@
                 <td>Sl</td>
                 <td>Lottery Number</td>
                 <td>Direct Amount</td>
-                <td>Rumble Amount Amount</td>
+                <td>Rumble Amount</td>
             </tr>
             @if(isset($params['game_entry']))
             @foreach ($params['game_entry'] as $v)
@@ -59,22 +59,24 @@
                     $ {{ $v->direct_amount }}
                 </td>
                 <td>
-                    $ {{ $v->rumble_amount }}
+                    @if(isset($v->rumble_amount))
+                     {{ '$'.$v->rumble_amount  }}
+                     @endif
                 </td>
             </tr>
             @endforeach
             @endif
             <tr>
-                <td colspan="3" style="text-align: right;">Total Amount</td>
-                <td>{{ $params['ledger']->total_amount }}</td>
+                <td colspan="2" style="text-align: right;">Total Amount</td>
+                <td colspan="2">{{ $params['ledger']->total_amount }}</td>
             </tr>
             <tr>
-                <td colspan="3" style="text-align: right;">Discount</td>
-                <td>{{ $params['ledger']->discount }}</td>
+                <td colspan="2" style="text-align: right;">Discount</td>
+                <td colspan="2">{{ $params['ledger']->discount }}</td>
             </tr>
             <tr>
-                <td colspan="3" style="text-align: right;">Bet Amount</td>
-                <td>{{ $params['ledger']->bet_amount }}</td>
+                <td colspan="2" style="text-align: right;">Bet Amount</td>
+                <td colspan="2">{{ $params['ledger']->bet_amount }}</td>
             </tr>
         </table>
         <br>

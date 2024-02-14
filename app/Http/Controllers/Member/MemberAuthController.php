@@ -11,6 +11,7 @@ use Toastr;
 use RealRashid\SweetAlert\Facades\Alert;
 use Auth;
 use App\Models\Country;
+use App\Models\Member;
 
 class MemberAuthController extends Controller
 {
@@ -53,12 +54,22 @@ class MemberAuthController extends Controller
 
     public function loginAttempt(Request $request)
     {
+        $check = Member::where('mobile_no',$request->mobile_no)->first();
+        if(isset($check))
+        {
+            if($check->status != 1)
+            {
+                Alert::warning('Warning', 'Your Request Did Not Accepted. Wait For Approval');
+                return redirect(route('member.login'));
+            }
+        }
         if(Auth::guard('member')->attempt(['mobile_no' => $request->mobile_no, 'password' => $request->password]))
         {
             return redirect(route('member.dashboard'));
         }
         else
         {
+            Alert::error('Error', 'Your Credential Does Not Matched Our Records');
             return redirect(route('member.login'));
         }
     }

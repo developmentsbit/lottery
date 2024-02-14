@@ -23,7 +23,7 @@ use App\Http\Controllers\BannerController;
 use App\Http\Controllers\AboutUsController;
 use App\Http\Controllers\MissionVisionController;
 use App\Http\Controllers\CashOutRequestController;
-
+use App\Http\Controllers\RegisteredMemberController;
 
 /*
 |--------------------------------------------------------------------------
@@ -108,7 +108,10 @@ Route::middleware('auth')->group(function () {
         'about_us' => AboutUsController::class,
         'mission_vision' => MissionVisionController::class,
         'cash_out_request' => CashOutRequestController::class,
+        'registerd_member' => RegisteredMemberController::class,
    ]);
+
+   Route::post('member_status',[RegisteredMemberController::class,'status'])->name('registerd_member.status');
 
    Route::get('add_cash_balance',[CashInRequestController::class,'create'])->name('add_cash_balance.create');
 
@@ -207,7 +210,7 @@ Route::middleware('auth')->group(function () {
 
     Route::get('cash_out_request_trash',[CashOutRequestController::class,'trash_list'])->name('cash_out_request.trash_list');
 
-    
+
 
 
 });

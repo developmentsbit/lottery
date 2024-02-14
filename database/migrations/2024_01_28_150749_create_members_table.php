@@ -26,6 +26,7 @@ return new class extends Migration
             $table->string('email')->nullable();
             $table->string('nationality')->nullable();
             $table->string('profile')->nullable();
+            $table->integer('status')->nullable()->comment(' 1- Approved || 0 - Pending');
             $table->date('deleted_at')->nullable();
             $table->timestamps();
         });

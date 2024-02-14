@@ -9,6 +9,7 @@ use App\Models\game_setup;
 use App\Traits\ViewDirective;
 use App\Traits\Date;
 use DataTables;
+use App\Models\Member;
 
 class LotteryHistoryController extends Controller
 {
@@ -30,6 +31,10 @@ class LotteryHistoryController extends Controller
                     ->addIndexColumn()
                     ->addColumn('sl',function($row){
                         return $this->sl = $this->sl +1;
+                    })
+                    ->addColumn('member',function($row){
+                        $member = Member::where('member_id',$row->member_id)->first();
+                        return $member->first_name.' '.$member->last_name;
                     })
                     ->addColumn('date_time',function($row){
                         return Date::DbtoOriginal('-',$row->date).' <br> '.Date::twelveHrTime($row->time);
