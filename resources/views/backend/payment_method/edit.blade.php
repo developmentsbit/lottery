@@ -52,9 +52,16 @@
                                 @enderror
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-12 mt-2">
-                                <label for="vat">WWithdraw Vat(%)</label> <span class="text-danger">*</span>
+                                <label for="vat">Withdraw Vat(%)</label> <span class="text-danger">*</span>
                                 <input type="number" name="vat" class="form-control  mt-1  @error('vat') is-invalid @enderror" id="vat" value="{{$params['data']->vat}}">
                                 @error('vat')
+                                    <div class="alert alert-danger">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 mt-2">
+                                <label for="dollar_rate">Dollar Rate</label> <span class="text-danger">*</span>
+                                <input type="number" name="dollar_rate" class="form-control  mt-1  @error('dollar_rate') is-invalid @enderror" id="dollar_rate" value="{{$params['data']->dollar_rate}}">
+                                @error('dollar_rate')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
                             </div>

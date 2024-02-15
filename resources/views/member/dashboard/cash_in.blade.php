@@ -20,7 +20,7 @@ Cash In
                     <tr>
                         <th>Select Method</th>
                         <td>
-                            <select class="form-control form-control-sm" name="method" id="method" onchange="return getMethodInfo()" required>
+                            <select class="form-control form-control-sm" name="method" id="method" onchange="getMethodInfo();getOriginalAmount();" required>
                                 <option value="">Select Method</option>
                                 @if(isset($params['method']))
                                 @foreach ($params['method'] as $m)
@@ -37,8 +37,11 @@ Cash In
                         <th>Amount</th>
                         <td>
                             <div class="input-group">
-                                <input type="number" class="form-control" name="amount" id="amount" placeholder="Enter Amount" required>
+                                <input type="number" class="form-control" name="amount" id="amount" placeholder="Enter Amount" required onchange="return getOriginalAmount()">
                                 <span class="input-group-append btn btn-dark" style="border-radius: 0px;">$</span>
+                            </div>
+                            <div class="show_original_amount p-2">
+
                             </div>
                         </td>
                     </tr>
@@ -46,6 +49,7 @@ Cash In
                         <th>Payment Account</th>
                         <td>
                         <input type="text" class="form-control" name="payment_account" id="payment_account" placeholder="Payment Account Number" required>
+
                         </td>
                     </tr>
                     <tr>
@@ -97,6 +101,33 @@ Cash In
         else
         {
             $('.message').html('');
+        }
+    }
+
+    function getOriginalAmount()
+    {
+        // alert();
+        let method = $('#method').val();
+        let amount = $('#amount').val();
+
+        if(method != '' && amount != '')
+        {
+            $.ajax({
+                headers : {
+                    'X-CSRF-TOKEN' : '{{ csrf_token() }}'
+                },
+
+                url : '{{ route('member.get_original_amount') }}',
+
+                type : 'GET',
+
+                data : {method,amount},
+
+                success : function(res)
+                {
+                    $('.show_original_amount').html(res);
+                }
+            })
         }
     }
 </script>

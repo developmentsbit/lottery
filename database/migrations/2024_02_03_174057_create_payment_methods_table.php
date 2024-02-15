@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('number')->nullable();
             $table->double('vat',10,2)->nullable();
             $table->integer('status')->nullable();
+            $table->double('dollar_rate')->nullable();
             $table->bigInteger('create_by')->unsigned()->nullable();
             $table->foreign('create_by')->references('id')->on('users');
             $table->date('deleted_at')->nullable();
