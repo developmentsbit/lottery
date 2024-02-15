@@ -51,6 +51,7 @@
                                     <th>@lang('payment_method.method_name')</th>
                                     <th>@lang('payment_method.number')</th>
                                     <th>Withdraw Vat(%)</th>
+                                    <th>Dollar Rate</th>
                                     <th>@lang('common.status')</th>
                                     <th>@lang('common.actions')</th>
                                 </tr>
@@ -80,6 +81,7 @@
                 {data: 'method_name', name: 'method_name'},
                 {data: 'number', name: 'number'},
                 {data: 'vat', name: 'vat'},
+                {data: 'dollar_rate', name: 'dollar_rate'},
                 {data: 'status', name: 'status'},
                 {data: 'action', name: 'action', orderable: false, searchable: false},
             ]

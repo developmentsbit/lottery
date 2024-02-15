@@ -51,3 +51,6 @@ Route::get('cehck_password',[MemberDashboardController::class,'check_password'])
 Route::post('submit_change_pass',[MemberDashboardController::class,'submit_change_password'])->name('member.submit_change_pass');
 Route::get('cash_balance_history',[MemberDashboardController::class,'cash_balance_history'])->name('member.cash_balance_history');
 Route::get('win_balance_history',[MemberDashboardController::class,'win_balance_history'])->name('member.win_balance_history');
+
+Route::get('get_original_amount',[MemberDashboardController::class,'get_original_amount'])->name('member.get_original_amount');
+Route::get('get_cash_out_amount',[MemberDashboardController::class,'get_cash_out_amount'])->name('member.get_cash_out_amount');

@@ -20,7 +20,7 @@ Cash Out
                     <tr>
                         <th>Select Method</th>
                         <td>
-                            <select class="form-control form-control-sm" name="method" id="method" onchange="return getMethodInfo()" required>
+                            <select class="form-control form-control-sm" name="method" id="method" onchange="getMethodInfo();getOriginalAmount()" required>
                                 <option value="">Select Cashout Method</option>
                                 @if(isset($params['method']))
                                 @foreach ($params['method'] as $m)
@@ -37,8 +37,11 @@ Cash Out
                         <th>Amount</th>
                         <td>
                             <div class="input-group">
-                                <input type="number" class="form-control" name="amount" id="amount" placeholder="Enter Amount" required>
+                                <input type="number" class="form-control" name="amount" id="amount" placeholder="Enter Amount" required onchange="getOriginalAmount()">
                                 <span class="input-group-append btn btn-dark" style="border-radius: 0px;">$</span>
+                            </div>
+                            <div class="cashout_message p-2">
+
                             </div>
                         </td>
                     </tr>
@@ -79,6 +82,36 @@ Cash Out
 
                     success : (res) => {
                         $('.message').html(res);
+                    },
+                })
+            }
+            else
+            {
+                $('.message').html('');
+            }
+        }
+    </script>
+    <script>
+        function getOriginalAmount()
+        {
+            let method = $('#method').val();
+            let amount = $('#amount').val();
+
+            if(method != '' && amount != '')
+            {
+                $.ajax({
+                    headers : {
+                        'X-CSRF-TOKEN' : '{{ csrf_token() }}'
+                    },
+
+                    url : '{{ route('member.get_cash_out_amount') }}',
+
+                    type : 'GET',
+
+                    data : {method,amount},
+
+                    success : (res) => {
+                        $('.cashout_message').html(res);
                     },
                 })
             }

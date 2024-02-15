@@ -541,4 +541,21 @@ class MemberDashboardController extends Controller
         $param['data'] = CustomerTransaction::where('member_id',Auth::guard('member')->user()->member_id)->orderBy('date','DESC')->where('transaction_type','!=',3)->where('transaction_type','!=',1)->where('transaction_type','!=',2)->with('method')->get();
         return $this->view($this->path,'win_balance_history',$param);
     }
+
+    public function get_original_amount(Request $request)
+    {
+        $method = PaymentMethod::find($request->method);
+
+        $result = $request->amount * $method->dollar_rate;
+
+        return '<span class="text-success">You Have To Pay : <b>'.$result.'</b></span>';
+    }
+    public function get_cash_out_amount(Request $request)
+    {
+        $method = PaymentMethod::find($request->method);
+
+        $result = $request->amount * $method->dollar_rate;
+
+        return '<span class="text-success">You Will Recive : <b>'.$result.'</b></span>';
+    }
 }
