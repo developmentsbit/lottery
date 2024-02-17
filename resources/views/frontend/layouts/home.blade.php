@@ -324,8 +324,8 @@ $youlive = youtubelive::get();
                 <div class="col-lg-6 col-md-6 col-12" style="text-align: left">
                     @if($youlive)
                     @foreach($youlive as $y)
-                    <h4>@if(config('app.locale') == 'en'){{$y->title ?: $y->title_bn}}@else {{$y->title_bn ?: $y->title}}@endif</h4>
-                    <p>(Draw Date: 01 Feb 2567) <span style="color: #fff">LIVE…</span></p>
+                    <h3 style="color: #fff;font-weight: 600;">Thai Lottery Live Draw</h3>
+                    <p style="font-size: 19px;">( @if(config('app.locale') == 'en'){{$y->title ?: $y->title_bn}}@else {{$y->title_bn ?: $y->title}}@endif ) <span style="color: #ff2b2b">LIVE…</span></p>
                     <div class="youtube_blog_post">
                         <iframe width="500" height="315" src="{{$y->url}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
@@ -339,7 +339,7 @@ $youlive = youtubelive::get();
                     <div class="blog_single">
                         <div class="row">
                             <div class="col-lg-12 col-md-12 col-12" style="text-align: left;margin-top: -24px;">
-                                <p style="font-size: 15px;">
+                                <p style="font-size: 16px;">
                                 @if(config('app.locale') == 'en'){!! $w->details ?: $w->details_bn !!}@elseif(config('app.locale') == 'bn'){!! $w->details_bn ?: $w->details !!}@endif
                                 </p>
                             </div>
@@ -405,11 +405,9 @@ $youlive = youtubelive::get();
                                     </ul>
                                 </div>
                                 <div class="result-single pt-20 remain-time">
-                                    <h5>Next Draw Date:
-                                        <span>01 Mar <?php echo date('Y'); ?> </span>
-                                    </h5>
+                                    <h5>Next Draw Date: 01 Mar <?php echo date('Y'); ?> </h5>
                                     <ul>
-                                        <li><span id="day"></span></li><span>days</span>
+                                        <li><span id="day"></span></li><span>Days</span>
                                         <li><span id="hour"></span></li><span>Hours</span>
                                         <li><span id="minute"></span></li><span>Minutes</span>
                                         <li><span id="second"></span></li><span>Seconds</span>
