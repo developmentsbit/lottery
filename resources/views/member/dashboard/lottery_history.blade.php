@@ -9,6 +9,15 @@ Lottery
     }
 </style>
 <div class="content-wrapper" style="color: black">
+    @component('components.user_dashboard_breadcrumb')
+
+    @slot('title2')
+       Lottery
+    @endslot
+    @slot('title3')
+       Thai Lottery History
+    @endslot
+   @endcomponent
     <div class="card">
         <div class="card-header">
             Lottery

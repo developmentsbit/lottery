@@ -5,6 +5,17 @@
 @section('body')
 
 <div class="content-wrapper" style="color: black">
+    @component('components.user_dashboard_breadcrumb')
+
+     @slot('title2')
+        Profile
+     @endslot
+     @slot('title3')
+        Personal Profile
+     @endslot
+
+
+    @endcomponent
     <div class="col-12">
         <div class="card">
             @if(isset($params['data']))

@@ -9,6 +9,15 @@ Cash To Win
     }
 </style>
 <div class="content-wrapper" style="color: black">
+    @component('components.user_dashboard_breadcrumb')
+
+    @slot('title2')
+       Balance Convert
+    @endslot
+    @slot('title3')
+       Cash To Win
+    @endslot
+   @endcomponent
     <div class="card">
         <div class="card-header">
             Cash To Win

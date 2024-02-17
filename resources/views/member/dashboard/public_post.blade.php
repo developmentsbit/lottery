@@ -9,6 +9,15 @@ Public Post
     }
 </style>
 <div class="content-wrapper" style="color: black">
+    @component('components.user_dashboard_breadcrumb')
+
+    @slot('title2')
+       Buy & Sell
+    @endslot
+    @slot('title3')
+       Public Post
+    @endslot
+   @endcomponent
     <div class="card">
         <div class="card-header">
             Public Post

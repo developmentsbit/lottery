@@ -13,6 +13,15 @@ Thai National Lottery
 }
 </style>
 <div class="content-wrapper" style="color: black">
+    @component('components.user_dashboard_breadcrumb')
+
+    @slot('title2')
+       Lottery
+    @endslot
+    @slot('title3')
+       Thai National Lottery
+    @endslot
+   @endcomponent
     <div class="timer-count">
         <div class="timer-title">Submission Last Time</div>
         <div id="countdown" class="row justify-content-center align-items-center"></div>
