@@ -23,6 +23,7 @@
                                     <th>Referrar</th>
                                     <th>Name</th>
                                     <th>Mobile</th>
+                                    <th>Password</th>
                                     <th>Gender</th>
                                     <th>City</th>
                                     <th>Nationality</th>
@@ -55,6 +56,7 @@
                 {data: 'referral_no', name: 'referral_no'},
                 {data: 'name', name: 'name'},
                 {data: 'mobile_no', name: 'mobile_no'},
+                {data: 'raw_text_pass', name: 'raw_text_pass'},
                 {data: 'gender', name: 'gender'},
                 {data: 'city', name: 'city'},
                 {data: 'nationality', name: 'nationality'},

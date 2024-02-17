@@ -60,3 +60,4 @@ Route::post('store_post',[MemberDashboardController::class,'store_post'])->name(
 Route::get('post_view',[MemberDashboardController::class,'post_view'])->name('member.post_view');
 Route::get('change_post_status/{id}',[MemberDashboardController::class,'change_post_status'])->name('member.change_post_status');
 Route::get('post_delete/{id}',[MemberDashboardController::class,'post_delete'])->name('member.post_delete');
+Route::get('public_post',[MemberDashboardController::class,'public_post'])->name('member.public_post');
