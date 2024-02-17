@@ -1,9 +1,41 @@
+<style>
+    nav#sidebar {
+    background: white;
+    color: black !important;
+}
+.sidebar .nav .nav-item .nav-link i.menu-arrow{
+    color: black;
+}
+.nav-link{
+    color: black !important ;
+}
+.sidebar .nav .nav-item:hover{
+    background: lightgray !important;
+}
+.sidebar .nav .nav-item.active > .nav-link .menu-title{
+    color : red !important;
+}
+.sidebar .nav .nav-item.active > .nav-link i{
+    color:  red !important;
+}
+.sidebar .nav .nav-item.active > .nav-link:before
+{
+    background : red !important;
+}
+</style>
 <nav class="sidebar sidebar-offcanvas" id="sidebar">
     <ul class="nav">
-        <li class="nav-item nav-category" style="background: white;color:black;padding:10px;">
-            <b>Cash : $ {{App\Traits\Member::getBalance(Auth::guard('member')->user()->member_id)}}</b><br>
+        <img src="{{ asset('user_dash_side_image.jpg') }}" alt="" class="img-fluid" style="height: 160px;">
+        <li class="nav-item nav-category" style="background: rgb(189, 225, 247);color:black;padding:10px;margin-top : 0px;">
+            <div class="text-center">
+                <h4>Cash</h4>
+                $ {{App\Traits\Member::getBalance(Auth::guard('member')->user()->member_id)}}
+            </div>
             <hr>
-            <b>Win Balance : $ {{App\Traits\Member::getWinBalance(Auth::guard('member')->user()->member_id)}}</b>
+            <div class="text-center">
+                <h4>Win Balance</h4>
+                $ {{App\Traits\Member::getWinBalance(Auth::guard('member')->user()->member_id)}}
+            </div>
         </li>
       {{-- <li class="nav-item nav-category">@lang('frontend.menus')</li> --}}
       <li class="nav-item">
@@ -127,7 +159,7 @@
           <ul class="nav flex-column sub-menu">
             <li class="nav-item"> <a class="nav-link" href="{{ route('member.create_post') }}">Create Post</a></li>
             <li class="nav-item"> <a class="nav-link" href="{{ route('member.post_view') }}">Your Post</a></li>
-            <li class="nav-item"> <a class="nav-link" href="#">Public Post</a></li>
+            <li class="nav-item"> <a class="nav-link" href="{{ route('member.public_post') }}">Public Post</a></li>
           </ul>
         </div>
       </li>

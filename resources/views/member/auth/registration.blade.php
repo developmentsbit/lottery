@@ -117,7 +117,7 @@
                             @enderror
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 form-group mt-2">
-                            <label>@lang('frontend.email')</label><span class="text-danger">*</span>
+                            <label>@lang('frontend.email')</label>
                             <input type="email" class="form-control form-control-sm @error('email') is-invalid @enderror" name="email" id="email" value="{{ old('email') }}">
                             @error('email')
                                 <div class="alert alert-danger">{{ $message }}</div>

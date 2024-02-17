@@ -619,4 +619,10 @@ class MemberDashboardController extends Controller
         Alert::success('Success', 'Your Post Removed');
         return redirect()->back();
     }
+    public function public_post()
+    {
+        $param['data'] = Post::where('member_id','!=',Auth::guard('member')->user()->member_id)->orderBy('date','DESC')->where('status',1)->get();
+
+        return $this->view($this->path,'public_post',$param);
+    }
 }

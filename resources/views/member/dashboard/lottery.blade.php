@@ -24,7 +24,7 @@ Thai National Lottery
         </div>
         <div class="card-body">
 
-            @if(date('Y-m-d') < $params['game']->end_date && date('H:i:s') < $params['game']->end_time)
+            @if(date('Y-m-d') < $params['game']->end_date || date('H:i:s') < $params['game']->end_time)
             <form method="post" action="{{ route('member.lottery_store') }}">
                 @csrf
                 <input type="hidden" name="game_status" value="{{ $params['check'] }}">
