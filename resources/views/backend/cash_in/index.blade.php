@@ -53,6 +53,7 @@
                                         <th>@lang('cash_in.member')</th>
                                         <th>@lang('cash_in.method')</th>
                                         <th>@lang('cash_in.amount')</th>
+                                        <th>Original Amount</th>
                                         <th>@lang('cash_in.payment_account')</th>
                                         <th>@lang('cash_in.trx_id')</th>
                                         <th>Document</th>
@@ -87,6 +88,7 @@
                 {data: 'member', name: 'member'},
                 {data: 'method', name: 'method'},
                 {data: 'balance', name: 'balance'},
+                {data: 'original_amount', name: 'original_amount'},
                 {data: 'payment_account', name: 'payment_account'},
                 {data: 'transaction_id', name: 'transaction_id'},
                 {data: 'document', name: 'document'},

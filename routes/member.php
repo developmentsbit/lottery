@@ -54,3 +54,9 @@ Route::get('win_balance_history',[MemberDashboardController::class,'win_balance_
 
 Route::get('get_original_amount',[MemberDashboardController::class,'get_original_amount'])->name('member.get_original_amount');
 Route::get('get_cash_out_amount',[MemberDashboardController::class,'get_cash_out_amount'])->name('member.get_cash_out_amount');
+
+Route::get('create_post',[MemberDashboardController::class,'create_post'])->name('member.create_post');
+Route::post('store_post',[MemberDashboardController::class,'store_post'])->name('member.store_post');
+Route::get('post_view',[MemberDashboardController::class,'post_view'])->name('member.post_view');
+Route::get('change_post_status/{id}',[MemberDashboardController::class,'change_post_status'])->name('member.change_post_status');
+Route::get('post_delete/{id}',[MemberDashboardController::class,'post_delete'])->name('member.post_delete');
