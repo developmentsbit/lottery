@@ -28,7 +28,7 @@
                         <th>Discount</th>
                     </tr>
                     <tr>
-                        <td>Six Digit Direct Bhat Amount ($x1)</td>
+                        <td>1st Prize Six Digit Direct Bhat Amount ($x1)</td>
                         <td>$-2500</td>
                         <td rowspan="2">40%</td>
                     </tr>
@@ -38,12 +38,12 @@
                     </tr> 
                     <tr>
                         <td>3up Direct Bhat Amount ($x1)</td>
-                        <td>$-400</td>
+                        <td>$-350</td>
                         <td rowspan="2">25%</td>
                     </tr>
                      <tr>
                         <td>3up Rumbal Bhat Amount ($x1)</td>
-                        <td>$-80</td>
+                        <td>$-60</td>
                     </tr>
                      <tr>
                         <td>2up Direct Bhat Amount ($x1)</td>

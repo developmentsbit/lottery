@@ -28,11 +28,9 @@
                         <h6 class="text-uppercase mb-4 font-weight-bold">
                             <img src="{{ asset('Backend/settings/455602170.png') }}">
                         </h6>
-                        <!-- <p style="color: #fff;">
-                            Here you can use rows and columns to organize your footer
-                            content. Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit.
-                        </p> -->
+                        <p style="color: #fff;">
+                        ลอตเตอรีในประเทศไทยตามประวัติเริ่มต้นในรัชสมัยพระบาทสมเด็จพระจุลจอมเกล้าเจ้าอยู่หัวรัชกาลที่โดยมีชื่ออังกฤษว่าเป็นครั้งแรกที่ได้รับการตีพิมพ์ในรูปแบบการออกรางวัลลอตเตอรี่แบบยุโรปที่เรียกว่า"ลอตเตอรี"โดยพระบาทสมเด็จพระจุลจอมเกล้าเจ้าอยู่หัว .
+                        </p>
                     </div>
                     <hr class="w-100 clearfix d-md-none" />
                     <!-- Grid column -->
