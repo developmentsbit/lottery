@@ -31,8 +31,8 @@
       <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
 
         <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center" style="background: white;">
-          <a class="navbar-brand brand-logo" href="{{ route('member.dashboard') }}"><img src="{{ asset('Backend/settings/') }}/{{ $settings->logo }}" alt="logo" /></a>
-          <a class="navbar-brand brand-logo-mini" href="index.html"><img src="{{ asset('Backend/settings/') }}/{{ $settings->logo }}" alt="logo" /></a>
+          {{-- <a class="navbar-brand brand-logo" href="{{ route('member.dashboard') }}"><img src="{{ asset('user_logo.jpg') }}" alt="logo" /></a>
+          <a class="navbar-brand brand-logo-mini" href="{{ route('member.dashboard') }}"><img src="{{ asset('user_logo.jpg') }}" alt="logo" /></a> --}}
 
         </div>
         <div class="navbar-menu-wrapper d-flex align-items-stretch">

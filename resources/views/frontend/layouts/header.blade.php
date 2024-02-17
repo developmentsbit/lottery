@@ -51,7 +51,7 @@
 
     @if(config('app.locale') == 'bn')
     <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <style>
         body, h1, h2, h3, h4, h5, h6{
             font-family: 'Hind Siliguri', sans-serif;
@@ -71,7 +71,7 @@
                   <div class="col-lg-8 col-md-8 col-8">
                       <span style="font-size: 22px;color: #208073;font-weight: 600;">The Government Approved 100% Trusted Online Betting Website</span>
                   </div>
-                  <div class="col-lg-4 col-md-4 col-4" style="font-size: 18px;color: #208073;font-weight: 600;"><i class="fa-regular fa-envelope"></i> Any Question/ Any Inforamtion: <span style="color:#000;">info@sbit.com.bd</span></div>
+                  <div class="col-lg-4 col-md-4 col-4" style="font-size: 18px;color: #208073;font-weight: 600;"><i class="fa-regular fa-envelope"></i> Any Question/ Any Inforamtion: <span style="color:#000;">info.thailotto3up@gmail.com</span></div>
                     <div class="col-lg-4 col-md-4 col-12">
                         <div class="logo__header">
                             <img src="{{ asset('Backend/settings/') }}/{{ $settings->logo }}" alt="" class="img-fluid">

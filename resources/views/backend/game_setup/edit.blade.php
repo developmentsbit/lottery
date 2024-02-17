@@ -60,7 +60,7 @@
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-12 mt-2">
                                 <label for="end_date">@lang('game_setup.end_date')</label>
-                                <input type="text" name="end_date" class="form-control  mt-1  @error('end_date') is-invalid @enderror" id="end_date" value="{{ $data->end_date }}">
+                                <input type="date" name="end_date" class="form-control  mt-1  @error('end_date') is-invalid @enderror" id="end_date" value="{{ $data->end_date }}">
                                 @error('end_date')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror

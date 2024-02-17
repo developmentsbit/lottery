@@ -25,7 +25,7 @@
 </style>
 <nav class="sidebar sidebar-offcanvas" id="sidebar">
     <ul class="nav">
-        <img src="{{ asset('user_dash_side_image.jpg') }}" alt="" class="img-fluid" style="height: 160px;">
+        <img src="{{ asset('user_logo.jpg') }}" alt="" class="img-fluid" style="">
         <li class="nav-item nav-category" style="background: rgb(189, 225, 247);color:black;padding:10px;margin-top : 0px;">
             <div class="text-center">
                 <h4>Cash</h4>
@@ -93,6 +93,7 @@
         <div class="collapse" id="ui-cash-out">
           <ul class="nav flex-column sub-menu">
             <li class="nav-item"> <a class="nav-link" href="{{route('member.cash_out')}}">Cash Out</a></li>
+            <li class="nav-item"> <a class="nav-link" href="{{route('member.personal_to_agent')}}">Personal To Agent</a></li>
             <li class="nav-item"> <a class="nav-link" href="{{route('member.cash_out_history')}}">Cash Out History</a></li>
           </ul>
         </div>
