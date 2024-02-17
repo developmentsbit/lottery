@@ -406,13 +406,13 @@ $youlive = youtubelive::get();
                                 </div>
                                 <div class="result-single pt-20 remain-time">
                                     <h5>Next Draw Date:
-                                        <span>16 Feb 2567 </span>
+                                        <span>01 Mar <?php echo date('Y'); ?> </span>
                                     </h5>
                                     <ul>
-                                        <li id="day">10</li><span> D</span>
-                                        <li id="hour">16</li><span> H</span>
-                                        <li id="min">15</li><span> M</span>
-                                        <li id="sec">0</li><span> S</span>
+                                        <li><span id="day"></span></li><span>days</span>
+                                        <li><span id="hour"></span></li><span>Hours</span>
+                                        <li><span id="minute"></span></li><span>Minutes</span>
+                                        <li><span id="second"></span></li><span>Seconds</span>
                                     </ul>
                                 </div>
                             </div>
@@ -421,15 +421,13 @@ $youlive = youtubelive::get();
                 </div>
                 <div class="col-lg-6 col-md-6 col-12">
                     <div class="row p-2">
-                        <div class="col-6" style="
-    padding: 17px 13px;
-">
+                        <div class="col-12 gif-section">
                             <img src="{{asset('Frontend/image/test.gif')}}" alt="">
                         </div>
                         <div class="col-12">
-                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/NXt2_WYnAdw?si=8yG4NwurirxCtS3H?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allow="autoplay" allowfullscreen ></iframe>   
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/3EbslociEzc?si=0iZ5GK-_rgQQF1kg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allow="autoplay" allowfullscreen ></iframe>   
                         </div>
-                        <div class="col-12"><br><br>
+                        <div class="col-12"><br>
                             <iframe width="100%" height="315" src="https://www.youtube.com/embed/ttuXcVMgiGg?si=mP-OLDUUHLqjgMc7?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                         </div>
                     </div>
@@ -598,6 +596,52 @@ $youlive = youtubelive::get();
 <!-- timer js -->
 <script src="{{ asset('Frontend/timer.js') }}"></script>
 <!-- timer js -->
+
+<script>
+(function () {
+  const second = 1000,
+        minute = second * 60,
+        hour = minute * 60,
+        day = hour * 24;
+
+  //I'm adding this section so I don't have to keep updating this pen every year :-)
+  //remove this if you don't need it
+  let today = new Date(),
+      dd = String(today.getDate()).padStart(2, "0"),
+      mm = String(today.getMonth() + 1).padStart(2, "0"),
+      yyyy = today.getFullYear(),
+      nextYear = yyyy + 1,
+      dayMonth = "03/01/",
+      birthday = dayMonth + yyyy;
+  
+  today = mm + "/" + dd + "/" + yyyy;
+  if (today > birthday) {
+    birthday = dayMonth + nextYear;
+  }
+  //end
+  
+  const countDown = new Date(birthday).getTime(),
+      x = setInterval(function() {    
+
+        const now = new Date().getTime(),
+              distance = countDown - now;
+
+        document.getElementById("day").innerText = Math.floor(distance / (day)),
+          document.getElementById("hour").innerText = Math.floor((distance % (day)) / (hour)),
+          document.getElementById("minute").innerText = Math.floor((distance % (hour)) / (minute)),
+          document.getElementById("second").innerText = Math.floor((distance % (minute)) / second);
+
+        //do something later when date is reached
+        if (distance < 0) {
+          document.getElementById("headline").innerText = "It's my birthday!";
+          document.getElementById("countdown").style.display = "none";
+          document.getElementById("content").style.display = "block";
+          clearInterval(x);
+        }
+        //seconds
+      }, 0)
+  }());
+</script>
 @endpush
 
 @endsection
