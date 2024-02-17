@@ -15,7 +15,7 @@
 
 
 
- 
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css
     ">
     <!-- font awsome css -->
@@ -107,6 +107,14 @@
                             <!--        </div>-->
                             <!--    </form>-->
                             <!--</li>-->
+                            @if(Auth::guard('member')->check())
+                            <li>
+                                <a href="{{ route('member.dashboard') }}">
+                                    <img src="{{ asset('MemberProfile/') }}/{{ Auth::guard('member')->user()->profile }}" alt="" class="img-fluid" style="height: 50px;width:50px;border-radius : 100px;">
+                                    <span style="color: black"> {{ Auth::guard('member')->user()->first_name.' '.Auth::guard('member')->user()->last_name }} </span>
+                                </a>
+                            </li>
+                            @else
                             <li>
                                 <a href="{{ route('member.login') }}" class="btn btn-sm btn-info">
                                     <i class="fa fa-user"></i> @lang('frontend.login')
@@ -117,6 +125,7 @@
                                     <i class="fa fa-users"></i> @lang('frontend.register')
                                 </a>
                             </li>
+                            @endif
                         </ul>
                         </div>
                     </div>
@@ -185,4 +194,3 @@
   </div>
     <!-- nav area end -->
 
-    
