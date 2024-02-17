@@ -6,6 +6,7 @@ return array(
     'game_title' => 'গেইমের টাইটেল',
     'game_title_en' => 'গেইমের ইংরেজী টাইটেল',
     'game_title_bn' => 'গেইমের বাংলা টাইটেল',
+    'expire_message' => 'মেয়াদ শেষের বার্তা',
     'start_date' => 'শুরুর করার তারিখ',
     'end_date' => 'শেষ করার তারিখ',
     'start_time' => 'শুরু করার সময়',

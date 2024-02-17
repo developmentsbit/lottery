@@ -79,6 +79,13 @@
                                     <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
                             </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 mt-2">
+                                <label for="expire_message">@lang('game_setup.expire_message')</label>
+                                <textarea class="form-control w-100" rows="4" type="text" name="expire_message" placeholder="@lang('game_setup.expire_message')">{!! $data->expire_message !!}</textarea>
+                                @error('expire_message')
+                                    <div class="alert alert-danger">{{ $message }}</div>
+                                @enderror
+                            </div>
                             <div class="col-lg-4 col-md-6 col-12 mt-2">
                                 <label for="status">@lang('common.status')</label><span class="text-danger">*</span>
                                 <div>
