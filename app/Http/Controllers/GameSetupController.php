@@ -97,6 +97,7 @@ class GameSetupController extends Controller
             'game_title_bn'=>$request->game_title_bn,
             'start_time'=>$request->start_time.':00',
             'end_time'=>$request->end_time.':00',
+            'expire_message'=>$request->expire_message,
             'status'=>$request->status,
 
         );
@@ -147,6 +148,7 @@ class GameSetupController extends Controller
             'game_title_bn'=>$request->game_title_bn,
             'start_time'=>$request->start_time,
             'end_time'=>$request->end_time,
+            'expire_message'=>$request->expire_message,
             'status'=>1,
         ]);
 

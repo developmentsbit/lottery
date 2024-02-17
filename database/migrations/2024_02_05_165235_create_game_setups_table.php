@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('game_title_bn')->nullable();
             $table->time('start_time')->nullable();
             $table->time('end_time')->nullable();
+            $table->text('expire_message')->nullable();
             $table->integer('status')->nullable()->comment(' 1 - Active , 0 - Inactive');
             $table->date('deleted_at')->nullable();
             $table->timestamps();
@@ -30,6 +31,7 @@ return new class extends Migration
      */
     public function down(): void
     {
+        \DB::statement('SET FOREIGN_KEY_CHECKS=0');
         Schema::dropIfExists('game_setups');
     }
 };

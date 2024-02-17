@@ -15,7 +15,8 @@ class GameSetupsTableSeeder extends Seeder
     public function run()
     {
         
-
+        \DB::statement('SET FOREIGN_KEY_CHECKS=0');
+        
         \DB::table('game_setups')->delete();
         
         \DB::table('game_setups')->insert(array (

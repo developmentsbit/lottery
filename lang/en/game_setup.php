@@ -10,6 +10,7 @@ return array(
     'game_title' => 'Game Title',
     'game_title_en' => 'Game Title English',
     'game_title_bn' => 'Game Title Bangla',
+    'expire_message' => 'Expire Message',
     'start_date' => 'Start Date',
     'end_date' => 'End Date',
     'start_time' => 'Start Time',
