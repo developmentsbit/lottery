@@ -78,7 +78,7 @@ Thai National Lottery
         </form>
         @else
         <div class="alert alert-danger">
-            <b>Recent Game Submission Time is Ended!</b>
+            <b>{{$params['game']->expire_message}}</b>
         </div>
         @endif
         </div>
@@ -148,32 +148,38 @@ Thai National Lottery
         let game = $('#game').val();
         let set = $('#set').val();
         let sl = 0;
+        let game_title;
 
         let show_discount_per;
         let max_length;
 
         if(game == '1st_prize_six_digit')
         {
-            show_discount_per = 30.5;
+            show_discount_per = 40;
             max_length = 6;
+            game_title = 'Lottery Number 6';
         }
         else if(game == '3up')
         {
-            show_discount_per = 30;
+            show_discount_per = 25;
             max_length = 3;
+            game_title = '3up';
         }
         else if(game == '2up')
         {
             show_discount_per = 15;
             max_length = 2;
+            game_title = '2up';
         }
         else if(game == '2down')
         {
             show_discount_per = 15;
             max_length = 2;
+            game_title = '2down';
         }
         else
         {
+            game_title = 'Lottery Number 1';
             show_discount_per = 0;
             max_length =  1;
         }
@@ -189,7 +195,7 @@ Thai National Lottery
                     <thead>
                         <tr class="table-primary">
                             <th>SN</th>
-                            <th>Lottery Number 6</th>
+                            <th>${game_title}</th>
                             <th>Direct Amount</th>
                             <th>Rumble Amount</th>
                         </tr>
@@ -258,7 +264,7 @@ Thai National Lottery
                     <thead>
                         <tr class="table-primary">
                             <th>SN</th>
-                            <th>Lottery Number 6</th>
+                            <th>${game_title}</th>
                             <th>Direct Amount</th>
                         </tr>
                     </thead>

@@ -19,6 +19,7 @@ use App\Models\Member as MemberModel;
 use App\Models\Country;
 use Hash;
 use App\Models\Post;
+use App\Models\User;
 
 
 class MemberDashboardController extends Controller
@@ -624,5 +625,12 @@ class MemberDashboardController extends Controller
         $param['data'] = Post::where('member_id','!=',Auth::guard('member')->user()->member_id)->orderBy('date','DESC')->where('status',1)->get();
 
         return $this->view($this->path,'public_post',$param);
+    }
+
+    public function personal_to_agent()
+    {
+        $param['agent'] = User::all();
+
+        return $this->view($this->path,'personal_to_agent',$param);
     }
 }
