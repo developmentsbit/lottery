@@ -9,6 +9,15 @@ Win Balance History
     }
 </style>
 <div class="content-wrapper" style="color: black">
+    @component('components.user_dashboard_breadcrumb')
+
+    @slot('title2')
+       Transaction
+    @endslot
+    @slot('title3')
+       Win Balance History
+    @endslot
+   @endcomponent
     <div class="card">
         <div class="card-header">
             Win Balance History

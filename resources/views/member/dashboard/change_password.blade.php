@@ -9,6 +9,17 @@ Change Password
     }
 </style>
 <div class="content-wrapper" style="color: black">
+    @component('components.user_dashboard_breadcrumb')
+
+    @slot('title2')
+       Profile
+    @endslot
+    @slot('title3')
+       Change Password
+    @endslot
+
+
+   @endcomponent
     <div class="card">
         <div class="card-header">
             Change Password
