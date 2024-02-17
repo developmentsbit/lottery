@@ -117,6 +117,20 @@
           </ul>
         </div>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="collapse" href="#ui-buy-sell" aria-expanded="false" aria-controls="ui-lottery">
+          <span class="icon-bg"><i class="fa fa-certificate"></i></span>
+          <span class="menu-title">Buy & Sell</span>
+          <i class="menu-arrow"></i>
+        </a>
+        <div class="collapse" id="ui-buy-sell">
+          <ul class="nav flex-column sub-menu">
+            <li class="nav-item"> <a class="nav-link" href="{{ route('member.create_post') }}">Create Post</a></li>
+            <li class="nav-item"> <a class="nav-link" href="{{ route('member.post_view') }}">Your Post</a></li>
+            <li class="nav-item"> <a class="nav-link" href="#">Public Post</a></li>
+          </ul>
+        </div>
+      </li>
     </ul>
   </nav>
   <!-- partial -->

@@ -18,6 +18,7 @@ use App\Traits\Member;
 use App\Models\Member as MemberModel;
 use App\Models\Country;
 use Hash;
+use App\Models\Post;
 
 
 class MemberDashboardController extends Controller
@@ -557,5 +558,65 @@ class MemberDashboardController extends Controller
         $result = $request->amount * $method->dollar_rate;
 
         return '<span class="text-success">You Will Recive : <b>'.$result.'</b></span>';
+    }
+
+    public function create_post()
+    {
+        return $this->view($this->path,'create_post');
+    }
+
+    public function store_post(Request $request)
+    {
+        $data = array(
+            'date' => date('Y-m-d'),
+            'time' => date('H:i:s'),
+            'member_id' => Auth::guard('member')->user()->member_id,
+            'post_type' => $request->post_type,
+            'amount' => $request->amount,
+            'contact_type' => $request->contact_type,
+            'contact_number' => $request->contact_number,
+            'status' => 1,
+        );
+
+        try {
+            Post::create($data);
+            Alert::success('Success', 'Post Created');
+            return redirect()->back();
+        } catch (\Throwable $th) {
+            Alert::error('Error', 'Post Does Not Created');
+            return redirect()->back();
+        }
+    }
+
+    public function post_view()
+    {
+        $param['data'] = Post::where('member_id',Auth::guard('member')->user()->member_id)->orderBy('date','DESC')->get();
+
+        return $this->view($this->path,'post_view',$param);
+    }
+
+    public function change_post_status($id)
+    {
+        $check = Post::find($id);
+        if($check->status == 1)
+        {
+            $check->update([
+                'status' => 0,
+            ]);
+        }
+        else
+        {
+            $check->update([
+                'status' => 1,
+            ]);
+        }
+
+        return redirect()->back();
+    }
+    public function post_delete($id)
+    {
+        Post::find($id)->delete();
+        Alert::success('Success', 'Your Post Removed');
+        return redirect()->back();
     }
 }
