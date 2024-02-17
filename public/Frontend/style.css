@@ -363,6 +363,11 @@ font-size: 15px !important;
   font-size: 22px !important;
 }
 
+.gif-section {
+  padding: 18px 11px !important;
+  width: 96% !important;
+}
+
 
 }
 
@@ -935,4 +940,11 @@ ul li ul:hover {
   .brand {
     text-align: left;
   }
+}
+
+/*  */
+
+.gif-section{
+  padding: 12px 26px;
+  width: 80%;
 }
