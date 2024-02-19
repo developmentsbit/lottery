@@ -54,14 +54,12 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="col-12">
-                                    <div class="col-lg-6 col-md-6 col-sm-12 mt-2">
-                                        <label for="title">@lang('banner.title')</label><span class="text-danger">*</span>
-                                        <input type="text" name="title" class="form-control  mt-1 @error('title') is-invalid @enderror" id="title" value="{{$data->title}}">
-                                        @error('title')
-                                            <div class="alert alert-danger">{{ $message }}</div>
-                                        @enderror
-                                    </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 mt-4">
+                                    <label for="running_notice">@lang('banner.running_notice')</label><span class="text-danger">*</span>
+                                    <input type="text" name="running_notice" class="form-control  mt-1 @error('running_notice') is-invalid @enderror" id="running_notice" value="{{$data->running_notice}}">
+                                    @error('running_notice')
+                                        <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
                                 <div class="col-12 mt-4" style="text-align: right">
                                     <button type="submit" id="submit" class="btn  btn-success"> <i class="fa fa-save"></i> @lang('common.update')</button>
