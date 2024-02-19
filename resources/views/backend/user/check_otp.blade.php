@@ -98,9 +98,9 @@
                                             <a id="resend_otp" href="{{route('user.resend_otp',$email)}}" class="d-none btn btn-success btn-lg  resend_code">@lang('user.resend_otp')</a>
                                             <div style="text-align: center">
                                                 <span id="timer">
-                                                  <span id="time">60</span>Seconds
+                                                    <span id="time">60</span>Seconds
                                                 </span>
-                                              </div>
+                                            </div>
 										</div>
 									</form>
 								</div>
