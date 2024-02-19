@@ -9,6 +9,15 @@ Cash Out
     }
 </style>
 <div class="content-wrapper" style="color: black">
+    @component('components.user_dashboard_breadcrumb')
+
+    @slot('title2')
+       Cash Out
+    @endslot
+    @slot('title3')
+       Cash Out History
+    @endslot
+   @endcomponent
     <div class="card">
         <div class="card-header">
             Cash Out History
@@ -17,7 +26,7 @@ Cash Out
                 <thead>
                     <tr>
                         <th>Date & Time</th>
-                        <th>Payment Method</th>
+                        <th>Payment Method/Agent</th>
                         <th>Payment Account</th>
                         <th>Amount</th>
                         <th>Vat</th>
@@ -38,6 +47,12 @@ Cash Out
                             @else
                             {{ $v->method->method_name_bn ?: $v->method->name}}
                             @endif
+
+                            @elseif(isset($v->agent_id))
+                            @php
+                                $user = App\Models\User::find($v->agent_id);
+                            @endphp
+                            {{ $user->name }}
                             @endif
                         </td>
                         <td>

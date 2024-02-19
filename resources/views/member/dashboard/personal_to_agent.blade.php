@@ -1,6 +1,6 @@
 @extends('member.dashboard.master')
 @section('member_dash_title')
-Cash Out
+Personal To Agent
 @endsection
 @section('body')
 <style>
@@ -15,25 +15,30 @@ Cash Out
        Cash Out
     @endslot
     @slot('title3')
-       Cash Out
+       Personal To Agent
     @endslot
    @endcomponent
     <div class="card">
         <div class="card-header">
-            Cash Out
+            Personal To Agent
         </div>
         <div class="card-body">
-            <form method="post" action="{{ route('member.store_cash_out') }}" enctype="multipart/form-data">
+            <div class="alert alert-warning">
+                <span>Personal To Agent  Transfer Fees 8.00%</span>
+            </div>
+            <form method="post" action="{{route('member.cashout_agent_store')}}" enctype="multipart/form-data">
                 @csrf
                 <table class="table">
                     <tr>
-                        <th>Select Method</th>
+                        <th>Select Agent</th>
                         <td>
-                            <select class="form-control form-control-sm" name="method" id="method" onchange="getMethodInfo();getOriginalAmount()" required>
-                                <option value="">Select Cashout Method</option>
-                                @if(isset($params['method']))
-                                @foreach ($params['method'] as $m)
-                                <option value="{{ $m->id }}">{{ $m->method_name }}</option>
+                            <select class="form-control form-control-sm" name="agent_id" id="agent_id" onchange="" required>
+                                <option value="">Select Agent</option>
+                                @if(isset($params['agent']))
+                                @foreach ($params['agent'] as $v)
+                                @if($v->roles()->pluck('name')->first() == 'Agent')
+                                <option value="{{ $v->id }}">{{ $v->name }}</option>
+                                @endif
                                 @endforeach
                                 @endif
                             </select>
@@ -46,7 +51,7 @@ Cash Out
                         <th>Amount</th>
                         <td>
                             <div class="input-group">
-                                <input type="number" class="form-control" name="amount" id="amount" placeholder="Enter Amount" required onchange="getOriginalAmount()">
+                                <input type="number" class="form-control" name="amount" id="amount" placeholder="Enter Amount" required onchange="">
                                 <span class="input-group-append btn btn-dark" style="border-radius: 0px;">$</span>
                             </div>
                             <div class="cashout_message p-2">

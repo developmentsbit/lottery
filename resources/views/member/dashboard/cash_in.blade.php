@@ -9,6 +9,16 @@ Cash In
     }
 </style>
 <div class="content-wrapper" style="color: black">
+    @component('components.user_dashboard_breadcrumb')
+
+    @slot('title2')
+       Cash In
+    @endslot
+    @slot('title3')
+       Cash In
+    @endslot
+   @endcomponent
+
     <div class="card">
         <div class="card-header">
             Cash In

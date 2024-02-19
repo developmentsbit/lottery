@@ -31,8 +31,8 @@
       <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
 
         <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center" style="background: white;">
-          <a class="navbar-brand brand-logo" href="{{ route('member.dashboard') }}"><img src="{{ asset('Backend/settings/') }}/{{ $settings->logo }}" alt="logo" /></a>
-          <a class="navbar-brand brand-logo-mini" href="index.html"><img src="{{ asset('Backend/settings/') }}/{{ $settings->logo }}" alt="logo" /></a>
+          {{-- <a class="navbar-brand brand-logo" href="{{ route('member.dashboard') }}"><img src="{{ asset('user_logo.jpg') }}" alt="logo" /></a>
+          <a class="navbar-brand brand-logo-mini" href="{{ route('member.dashboard') }}"><img src="{{ asset('user_logo.jpg') }}" alt="logo" /></a> --}}
 
         </div>
         <div class="navbar-menu-wrapper d-flex align-items-stretch">
@@ -128,5 +128,18 @@
             $('.select2').select2();
         });
     </script>
+    <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/65d076668d261e1b5f61ba81/1hmr4t0p6';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
   </body>
 </html>
