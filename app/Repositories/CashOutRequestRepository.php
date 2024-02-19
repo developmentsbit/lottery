@@ -9,6 +9,7 @@ use Auth;
 use App\Traits\Date;
 use App\Models\PaymentMethod;
 use App\Models\Member;
+use App\Models\User;
 
 class CashOutRequestRepository implements CashOutRequestInterface {
     protected $path,$sl;
@@ -46,6 +47,12 @@ class CashOutRequestRepository implements CashOutRequestInterface {
                     {
                         return $method->method_name_bn ?: $method->method_name;
                     }
+                }
+                elseif(isset($row->agent_id))
+                {
+                    $user = User::find($row->agent_id);
+
+                    return $user->name;
                 }
                 else
                 {
@@ -162,7 +169,7 @@ class CashOutRequestRepository implements CashOutRequestInterface {
                 $member = Member::where('member_id',$row->member_id)->first();
                 return $member->first_name.' '.$member->last_name;
             })
-           
+
             ->addColumn('action', function($row){
                 if(Auth::user()->can('Cash In Request restore'))
                 {

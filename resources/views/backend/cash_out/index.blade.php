@@ -51,7 +51,7 @@
                                         <th>@lang('common.sl')</th>
                                         <th>Date & Time</th>
                                         <th>@lang('cash_in.member')</th>
-                                        <th>@lang('cash_in.method')</th>
+                                        <th>Payment Method / Agent</th>
                                         <th>@lang('cash_in.amount')</th>
                                         <th>Vat</th>
                                         <th>@lang('cash_in.payment_account')</th>

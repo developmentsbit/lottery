@@ -303,7 +303,7 @@ class MemberDashboardController extends Controller
 
         $data['vat'] = $vat;
 
-        $balance = Member::getBalance(Auth::guard('member')->user()->member_id);
+        $balance = Member::getWinBalance(Auth::guard('member')->user()->member_id);
 
         // return $amountWithVat;
 
@@ -632,5 +632,51 @@ class MemberDashboardController extends Controller
         $param['agent'] = User::all();
 
         return $this->view($this->path,'personal_to_agent',$param);
+    }
+
+    public function cashout_agent_store(Request $request)
+    {
+        // dd($request->all());
+        $data = array(
+            'date' => date('Y-m-d'),
+            'time' => date('H:i:s'),
+            'transaction_type' => '4',
+            'member_id' => Auth::guard('member')->user()->member_id,
+            'agent_id' => $request->agent_id,
+            'payment_account' => $request->payment_account,
+            'status' => '0',
+        );
+
+        $amount = $request->amount;
+
+
+        $vat = ($amount * 8) / 100;
+
+
+        $amountWithVat = $amount + $vat;
+
+        $data['withdraw'] = $amountWithVat;
+
+        $data['vat'] = $vat;
+
+        $balance = Member::getWinBalance(Auth::guard('member')->user()->member_id);
+
+        // return $amountWithVat;
+
+
+        if($amountWithVat > $balance)
+        {
+            Alert::warning('Warning', 'Insuficient Balance');
+            return redirect()->back();
+        }
+
+        try {
+            CustomerTransaction::create($data);
+            Alert::success('Success', 'Your Request Is Sent Wait For Confirmation');
+            return redirect()->back();
+        } catch (\Throwable $th) {
+            Alert::error('Error', 'Something Went Wrong');
+            return redirect()->back();
+        }
     }
 }
