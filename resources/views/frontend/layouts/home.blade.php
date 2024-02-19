@@ -19,46 +19,11 @@ $youlive = youtubelive::get();
 
 @endphp
 
-<!-- slider area -->
-<!-- <section class="carousel">
-    <div id="carouselExampleCaptions" class="carousel slide">
-    <div class="carousel-indicators">
-        {{-- <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button> --}}
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        {{-- <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button> --}}
-    </div>
-    <div class="carousel-inner">
-        {{-- <div class="carousel-item active">
-        <img src="{{ asset('Frontend/image/slider-1.jpg') }}" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-            <h5>Slide Title</h5>
-            <p>Slide Sub Title</p>
-        </div>
-        </div> --}}
-        <div class="carousel-item active">
-        <img src="{{ asset('Frontend/image/slider-2.jpg') }}" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-            <h1 style="color: #fff;font-weight:bold;margin-bottom: 0px;">THAI NATIONAL LOTTERY</h1>
-            <h4 style="color: #fff;padding: 78px;margin-top: -59px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, accusantium.</h4>
-        </div>
-        </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
-    </div>
-</section> -->
-
-<div id="carouselExample" class="carousel slide">
+<div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     @if(isset($slider))
-    @foreach($slider as $s)
-    <div class="carousel-item active">
+    @foreach($slider as $key => $s)
+    <div class="carousel-item @if(isset($key)) active @endif">
         <img src="{{asset('/Backend/img/photo_info')}}/{{$s->image}}" class="d-block w-100" alt="...">
     </div>
     @endforeach
@@ -365,57 +330,67 @@ $youlive = youtubelive::get();
                 <div class="col-lg-6 col-md-6 col-12">
                     <div class="card-item">
                         <div class="content">
+                        @if(isset($params['result']))
                             <div class="imgBx">
                                 <img src="{{ asset('Backend/settings/455602170.png') }}">
                                 <h3>National Lottery Result</h3>
-                                <h4>Draw Date: 01 Feb 2567</h4>
+                                <h4>Draw Date: {{ App\Traits\Date::DbToOriginal('-',$params['result']->draw_date) }}</h4>
                             </div>
                             <div class="result-inner">
                                 <div class="result-single">
                                     <h4>1st Prize</h4>
+                                    @php
+                                        $first_prize = App\Traits\Numbers::split($params['result']->first_prize);
+                                        $three_up = App\Traits\Numbers::split($params['result']->three_up);
+                                        $two_up = App\Traits\Numbers::split($params['result']->two_up);
+                                        $two_down = App\Traits\Numbers::split($params['result']->two_down);
+                                    @endphp
                                     <ul>
-                                        <li>6 </li>
-                                        <li>0 </li>
-                                        <li>7 </li>
-                                        <li>0 </li>
-                                        <li>6 </li>
-                                        <li>3 </li>
+                                    @for ($i = 0; $i < count($first_prize); $i++)
+                                        <li>{{ $first_prize[$i] }} </li>
+                                    @endfor
                                     </ul>
                                 </div>
                                 <div class="result-single">
                                     <h4>3Up</h4>
                                     <ul>
-                                        <li>0 </li>
-                                        <li>6 </li>
-                                        <li>3 </li>
+                                    @for ($i = 0; $i < count($three_up); $i++)
+                                    <li>{{ $three_up[$i] }} </li>
+                                @endfor
                                     </ul>
                                 </div>
                                 <div class="result-single">
                                     <h4>2Up</h4>
                                     <ul>
-                                        <li>6 </li>
-                                        <li>3 </li>
+                                    @for ($i = 0; $i < count($two_up); $i++)
+                                    <li>{{ $two_up[$i] }} </li>
+                                @endfor
                                     </ul>
                                 </div>
                                 <div class="result-single">
                                     <h4>2Down</h4>
                                     <ul>
-                                        <li>0 </li>
-                                        <li>9 </li>
+                                    @for ($i = 0; $i < count($two_down); $i++)
+                                    <li>{{ $two_down[$i] }} </li>
+                                @endfor
                                     </ul>
                                 </div>
                                 <div class="result-single pt-20 remain-time">
-                                    <h5>Next Draw Date: 01 Mar <?php echo date('Y'); ?> </h5>
-                                    <div class="row">
-                                        <ul>
-                                            <li><span id="day"></span></li><span>Days</span>
-                                            <li><span id="hour"></span></li><span>Hours</span>
-                                            <li><span id="minute"></span></li><span>Minutes</span>
-                                            <li><span id="second"></span></li><span>Seconds</span>
-                                        </ul>
-                                    </div>
+                                    <h5>Next Draw Date:
+                                    {{ App\Traits\Date::DbToOriginal('-',$params['result']->draw_date) }}
+                                    </h5>
+                                    {{-- <ul>
+                                        <li id="day">10</li><span> D</span>
+                                        <li id="hour">16</li><span> H</span>
+                                        <li id="min">15</li><span> M</span>
+                                        <li id="sec">0</li><span> S</span>
+                                    </ul> --}}
                                 </div>
                             </div>
+                            @else
+                            <br>
+                            <h3 class="text-light">No Result Found !</h3>
+                            @endif
                         </div>
                     </div>
                 </div>
@@ -425,7 +400,7 @@ $youlive = youtubelive::get();
                             <img src="{{asset('Frontend/image/test.gif')}}" alt="">
                         </div>
                         <div class="col-12">
-                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/3EbslociEzc?si=0iZ5GK-_rgQQF1kg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allow="autoplay" allowfullscreen ></iframe>   
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/3EbslociEzc?si=0iZ5GK-_rgQQF1kg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allow="autoplay" allowfullscreen ></iframe>
                         </div>
                     </div>
                 </div>
@@ -610,15 +585,15 @@ $youlive = youtubelive::get();
       nextYear = yyyy + 1,
       dayMonth = "03/01/",
       birthday = dayMonth + yyyy;
-  
+
   today = mm + "/" + dd + "/" + yyyy;
   if (today > birthday) {
     birthday = dayMonth + nextYear;
   }
   //end
-  
+
   const countDown = new Date(birthday).getTime(),
-      x = setInterval(function() {    
+      x = setInterval(function() {
 
         const now = new Date().getTime(),
               distance = countDown - now;
