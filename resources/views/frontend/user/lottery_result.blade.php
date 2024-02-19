@@ -25,6 +25,7 @@
               <div class="col-lg-6 col-md-6 col-12">
                   <div class="card-item">
                       <div class="content">
+                        @if(isset($params['result']))
                           <div class="imgBx">
                               <img src="{{ asset('Backend/settings/455602170.png') }}">
                               <h3>National Lottery Result</h3>
@@ -81,6 +82,10 @@
                                   </ul> --}}
                               </div>
                           </div>
+                          @else
+                          <br>
+                          <h3 class="text-light">No Result Found !</h3>
+                          @endif
                       </div>
                   </div>
               </div>
