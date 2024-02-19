@@ -42,8 +42,16 @@
           <ul class="navbar-nav navbar-nav-right">
             <li class="nav-item nav-profile dropdown">
               <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+                @php
+                    $profile = public_path().'/MemberProfile/'.Auth::guard('member')->user()->profile;
+                @endphp
                 <div class="nav-profile-img">
+                    @if(file_exists($profile))
                   <img src="{{ asset('MemberProfile') }}/{{Auth::guard('member')->user()->profile}}" alt="image">
+                  @else
+                  <img src="https://static.vecteezy.com/system/resources/previews/019/896/008/original/male-user-avatar-icon-in-flat-design-style-person-signs-illustration-png.png" alt="image">
+
+                  @endif
                 </div>
                 <div class="nav-profile-text">
                   <p class="mb-1 text-black">{{Auth::guard('member')->user()->first_name}} {{Auth::guard('member')->user()->last_name}}</p>
@@ -51,7 +59,12 @@
               </a>
               <div class="dropdown-menu navbar-dropdown dropdown-menu-right p-0 border-0 font-size-sm" aria-labelledby="profileDropdown" data-x-placement="bottom-end">
                 <div class="p-3 text-center bg-primary">
+                    @if(file_exists($profile))
                   <img class="img-avatar img-avatar48 img-avatar-thumb" src="{{ asset('MemberProfile') }}/{{Auth::guard('member')->user()->profile}}" alt="">
+                  @else
+                  <img class="img-avatar img-avatar48 img-avatar-thumb" src="https://static.vecteezy.com/system/resources/previews/019/896/008/original/male-user-avatar-icon-in-flat-design-style-person-signs-illustration-png.png" alt="">
+
+                  @endif
                 </div>
                 <div class="p-2">
                   <h5 class="dropdown-header text-uppercase pl-2 text-dark">User Options</h5>
