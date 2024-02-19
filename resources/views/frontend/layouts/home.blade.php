@@ -425,9 +425,6 @@ $youlive = youtubelive::get();
                         <div class="col-12">
                             <iframe width="100%" height="315" src="https://www.youtube.com/embed/3EbslociEzc?si=0iZ5GK-_rgQQF1kg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allow="autoplay" allowfullscreen ></iframe>   
                         </div>
-                        <div class="col-12"><br>
-                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/ttuXcVMgiGg?si=mP-OLDUUHLqjgMc7?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        </div>
                     </div>
                 </div>
             </div>
