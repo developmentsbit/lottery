@@ -11,9 +11,12 @@
 <div class="content-wrapper" style="color: black">
     <div class="row mb-2" id="proBanner">
       <div class="col-12 bg-white p-2">
-        <marquee behavior="" direction="">
-         <h2 style="color:green;"> The Government Approved 100% Trusted  Website www.thailotto3up.com. You will play 6 Digit 3up, 2up, Down, Single digit run, 3up, 2up, down & 3up, 2up, down game total.</h2>
-        </marquee>
+        <label for="" style="font-size: 30px; color:red; font-weight: bold;">Notice :</label>
+        <label for="">
+            <marquee behavior="" direction="">
+            <h2 style="color:green;"> The Government Approved 100% Trusted Website www.Thailotto3up.com . You will play 1st Prize Six Digit, 3up, 2up, Down Game. 3up, 2up, Down Single digit and 3up, 2up, Down Game Total, If you Interested about Thai Lottery game Now Signup This Site www.Thailotto3up.com . Try Your Luck & Enjoy your life. Have a Nice Good Day. THANK YOU.</h2>
+            </marquee>
+        </label>
       </div>
     </div>
 
@@ -128,6 +131,11 @@
     </div>
 
     <div class="row mt-2">
+        @php
+        use App\Traits\Member;
+        use App\Models\Member as MemberModel;
+        $data = MemberModel::where('member_id',Auth::guard('member')->user()->member_id)->first();
+        @endphp
         <div class="col-lg-6 col-md-6 col-12">
             <div class="card">
                 <div class="card-header bg-success">
@@ -137,23 +145,23 @@
                     <table class="table">
                         <tr>
                             <th>Account No : </th>
-                            <th></th>
+                            <th>{{$data->member_id}}</th>
                         </tr>
                         <tr>
                             <th>Name : </th>
-                            <th></th>
+                            <th>{{ $data->first_name.' '.$data->last_name }}</th>
                         </tr>
                         <tr>
                             <th>Email : </th>
-                            <th></th>
+                            <th>{{$data->email}}</th>
                         </tr>
                         <tr>
                             <th>Joined : </th>
-                            <th></th>
+                            <th>{{$data->created_at}}</th>
                         </tr>
                         <tr>
                             <th>Status : </th>
-                            <th></th>
+                            <th>Active</th>
                         </tr>
                     </table>
                 </div>
@@ -166,22 +174,26 @@
                 </div>
                 <div class="card-body p-2">
                     <table class="table">
+                        @if($data->referral_no->file_exists)
+                        @foreach ($data as $v)
                         <tr>
                             <th>Account No : </th>
-                            <th></th>
+                            <th>{{$v->member_id}}</th>
                         </tr>
                         <tr>
                             <th>Name : </th>
-                            <th></th>
+                            <th>{{ $v->first_name.' '.$v->last_name }}</th>
                         </tr>
                         <tr>
                             <th>Contact No : </th>
-                            <th></th>
+                            <th>{{ $v->mobile_no }}</th>
                         </tr>
                         <tr>
                             <th>Email : </th>
-                            <th></th>
+                            <th>{{ $v->email }}</th>
                         </tr>
+                        @endforeach
+                        @endif
                     </table>
                 </div>
             </div>
