@@ -26,13 +26,13 @@ Personal To Agent
             <div class="alert alert-warning">
                 <span>Personal To Agent  Transfer Fees 8.00%</span>
             </div>
-            <form method="post" action="#" enctype="multipart/form-data">
+            <form method="post" action="{{route('member.cashout_agent_store')}}" enctype="multipart/form-data">
                 @csrf
                 <table class="table">
                     <tr>
                         <th>Select Agent</th>
                         <td>
-                            <select class="form-control form-control-sm" name="method" id="method" onchange="" required>
+                            <select class="form-control form-control-sm" name="agent_id" id="agent_id" onchange="" required>
                                 <option value="">Select Agent</option>
                                 @if(isset($params['agent']))
                                 @foreach ($params['agent'] as $v)

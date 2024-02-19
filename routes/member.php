@@ -31,6 +31,7 @@ Route::get('lottery_hoistory',[MemberDashboardController::class,'lottery_history
 Route::get('cash_out',[MemberDashboardController::class,'cash_out'])->name('member.cash_out');
 Route::get('personal_to_agent',[MemberDashboardController::class,'personal_to_agent'])->name('member.personal_to_agent');
 Route::post('store_cash_out',[MemberDashboardController::class,'store_cash_out'])->name('member.store_cash_out');
+Route::post('cashout_agent_store',[MemberDashboardController::class,'cashout_agent_store'])->name('member.cashout_agent_store');
 
 Route::get('cash_out_history',[MemberDashboardController::class,'cash_out_history'])->name('member.cash_out_history');
 
