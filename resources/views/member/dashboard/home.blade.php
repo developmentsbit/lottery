@@ -174,26 +174,22 @@
                 </div>
                 <div class="card-body p-2">
                     <table class="table">
-                        @if($data->referral_no->file_exists)
-                        @foreach ($data as $v)
                         <tr>
                             <th>Account No : </th>
-                            <th>{{$v->member_id}}</th>
+                            <th></th>
                         </tr>
                         <tr>
                             <th>Name : </th>
-                            <th>{{ $v->first_name.' '.$v->last_name }}</th>
+                            <th></th>
                         </tr>
                         <tr>
                             <th>Contact No : </th>
-                            <th>{{ $v->mobile_no }}</th>
+                            <th></th>
                         </tr>
                         <tr>
                             <th>Email : </th>
-                            <th>{{ $v->email }}</th>
+                            <th></th>
                         </tr>
-                        @endforeach
-                        @endif
                     </table>
                 </div>
             </div>
