@@ -67,10 +67,10 @@
         <div class="container-fluid">
             <div class="header__wrapper">
                 <div class="row">
-                  <div class="col-lg-8 col-md-8 col-8">
-                      <span style="font-size: 22px;color: #208073;font-weight: 600;">The Government Approved 100% Trusted Online Betting Website</span>
+                  <div class="col-lg-8 col-md-8 col-8 header-text">
+                      <span>The Government Approved 100% Trusted Online Betting Website</span>
                   </div>
-                  <div class="col-lg-4 col-md-4 col-4" style="font-size: 18px;color: #208073;font-weight: 600;"><i class="fa-regular fa-envelope"></i> Any Question/ Any Inforamtion: <span style="color:#000;">info@sbit.com.bd</span></div>
+                  <div class="col-lg-4 col-md-4 col-4 header-info"><i class="fa-regular fa-envelope"></i> Any Question/ Any Inforamtion: <span style="color:#000;">info@sbit.com.bd</span></div>
                     <div class="col-lg-4 col-md-4 col-12">
                         <div class="logo__header">
                             <img src="{{ asset('Backend/settings/') }}/{{ $settings->logo }}" alt="" class="img-fluid">

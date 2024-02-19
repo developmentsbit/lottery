@@ -49,7 +49,7 @@
                             <a href="{{url('AwardsPrize')}}" class="text-white">Discount</a>
                         </p>
                         <p>
-                            <a href="{{url('contact_us')}}" class="text-white">Contact Us</a>
+                            <a href="{{url('ContactUs')}}" class="text-white">Contact Us</a>
                         </p>
                     </div>
                     <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
