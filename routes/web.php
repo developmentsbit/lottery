@@ -25,6 +25,8 @@ use App\Http\Controllers\MissionVisionController;
 use App\Http\Controllers\CashOutRequestController;
 use App\Http\Controllers\RegisteredMemberController;
 use App\Http\Controllers\LotteryNumbersController;
+use App\Http\Controllers\AllLotteryController;
+use App\Http\Controllers\ResultController;
 
 /*
 |--------------------------------------------------------------------------
@@ -111,6 +113,8 @@ Route::middleware('auth')->group(function () {
         'cash_out_request' => CashOutRequestController::class,
         'registerd_member' => RegisteredMemberController::class,
         'active_lottery_numbers' => LotteryNumbersController::class,
+        'all_lottery' => AllLotteryController::class,
+        'result' => ResultController::class,
    ]);
 
    Route::post('member_status',[RegisteredMemberController::class,'status'])->name('registerd_member.status');

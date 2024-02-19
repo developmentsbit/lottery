@@ -7,6 +7,7 @@ use App\Traits\ViewDirective;
 use App\Models\GameLedger;
 use App\Models\GameEntry;
 use App\Models\Member;
+use App\Models\Result;
 
 class FrontendController extends Controller
 {
@@ -35,7 +36,8 @@ class FrontendController extends Controller
 
     public function lottery_result()
     {
-        return $this->view($this->path,'lottery_result');
+        $result['result'] = Result::where('status',1)->first();
+        return $this->view($this->path,'lottery_result',$result);
     }
 
     public function awards_prize()
