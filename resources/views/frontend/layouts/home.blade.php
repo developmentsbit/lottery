@@ -406,12 +406,14 @@ $youlive = youtubelive::get();
                                 </div>
                                 <div class="result-single pt-20 remain-time">
                                     <h5>Next Draw Date: 01 Mar <?php echo date('Y'); ?> </h5>
-                                    <ul>
-                                        <li><span id="day"></span></li><span>Days</span>
-                                        <li><span id="hour"></span></li><span>Hours</span>
-                                        <li><span id="minute"></span></li><span>Minutes</span>
-                                        <li><span id="second"></span></li><span>Seconds</span>
-                                    </ul>
+                                    <div class="row">
+                                        <ul>
+                                            <li><span id="day"></span></li><span>Days</span>
+                                            <li><span id="hour"></span></li><span>Hours</span>
+                                            <li><span id="minute"></span></li><span>Minutes</span>
+                                            <li><span id="second"></span></li><span>Seconds</span>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
