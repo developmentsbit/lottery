@@ -23,7 +23,7 @@ Lottery
             Lottery
         </div>
         <div class="card-body">
-            <table class="table table-borderd" id="myTable">
+            <table class="table table-borderd table-responsive-sm" id="myTable">
                 <thead>
                     <tr>
                         <th>Date & Time</th>
