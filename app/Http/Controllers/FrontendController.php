@@ -19,6 +19,12 @@ class FrontendController extends Controller
         $this->path = 'frontend.user';
     }
 
+    public function index()
+    {
+        $params['result'] = Result::where('status',1)->first();
+        return $this->view('frontend.layouts','home',$params);
+    }
+    
     public function about_us()
     {
         return $this->view($this->path,'about_us');

@@ -38,15 +38,16 @@ use App\Http\Controllers\ResultController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-    Route::get('/', function () {
-       return view('frontend.layouts.home');
-    });
+    // Route::get('/', function () {
+    //    return view('frontend.layouts.home');
+    // });
 
 
 /**
  *
  * Frontend Routes Goes here
  */
+Route::get('/',[FrontendController::class,'index']);
 Route::get('/AboutUs',[FrontendController::class,'about_us']);
 Route::get('BuySell',[FrontendController::class,'buy_sell']);
 Route::get('LotteryResult',[FrontendController::class,'lottery_result']);
