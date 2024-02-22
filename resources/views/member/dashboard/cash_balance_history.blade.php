@@ -24,7 +24,7 @@ Cash Balance History
         </div>
         <div class="card-body">
             <div class="table-responsive">
-                <table class="table table-bordered" id="myTable">
+                <table class="table table-bordered table-responsive-sm" id="myTable">
                     <thead>
                         <tr>
                             <th>Date & Time</th>
