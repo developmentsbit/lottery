@@ -38,7 +38,7 @@ Thai National Lottery
                 @csrf
                 <input type="hidden" name="game_status" value="{{ $params['check'] }}">
                 <input type="hidden" name="game_id" value="{{ $params['game']->id }}">
-            <table class="table">
+            <table class="table table-responsive-sm">
                 <tr>
                     <th>Select Game</th>
                     <td>:</td>
@@ -191,16 +191,16 @@ Thai National Lottery
         {
             if(set > 0)
             {
-                let formData = `<table class="table">
+                let formData = `<table class="table table-responsive-sm">
                     <thead>
-                        <tr class="table-primary">
+                        <tr class="table-primary table-responsive-sm">
                             <th>SN</th>
                             <th>${game_title}</th>
                             <th>Direct Amount</th>
                             <th>Rumble Amount</th>
                         </tr>
                     </thead>
-                    <tbody class="table-secondary">`;
+                    <tbody class="table-secondary table-responsive-sm">`;
                         for (let index = 0; index < set; index++)
                         {
                             formData += `<tr>
@@ -219,7 +219,7 @@ Thai National Lottery
                             </tr>`;
                         }
                     formData += `</tbody>
-                    <tfoot class="table-success">
+                    <tfoot class="table-success table-responsive-sm">
                         <tr>
                             <td colspan="3" style="text-align: right">
                                 Total Amount
@@ -260,15 +260,15 @@ Thai National Lottery
         }
         else
             {
-                let formData = `<table class="table">
+                let formData = `<table class="table table-responsive-sm">
                     <thead>
-                        <tr class="table-primary">
+                        <tr class="table-primary table-responsive-sm">
                             <th>SN</th>
                             <th>${game_title}</th>
                             <th>Direct Amount</th>
                         </tr>
                     </thead>
-                    <tbody class="table-secondary">`;
+                    <tbody class="table-secondary table-responsive-sm">`;
                         for (let index = 0; index < 10; index++)
                         {
                             formData += `<tr>
@@ -284,7 +284,7 @@ Thai National Lottery
                             </tr>`;
                         }
                     formData += `</tbody>
-                    <tfoot class="table-success">
+                    <tfoot class="table-success table-responsive-sm">
                         <tr>
                             <td colspan="2" style="text-align: right">
                                 Total Amount
