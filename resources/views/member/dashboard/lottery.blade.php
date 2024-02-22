@@ -192,7 +192,7 @@ Thai National Lottery
             if(set > 0)
             {
                 let formData = `<table class="table table-responsive-sm">
-                    <thead>
+                    <thead class="table-responsive-sm">
                         <tr class="table-primary table-responsive-sm">
                             <th>SN</th>
                             <th>${game_title}</th>
@@ -208,13 +208,13 @@ Thai National Lottery
                                     formData += sl = sl + 1;
                                 formData += `</td>
                                 <td>
-                                    <input type="text" class="form-control form-control-sm" name="lottery_number[]" id="lottery_number-${index}" maxlength="${max_length}" required>
+                                    <input type="number" class="form-control form-control-sm" name="lottery_number[]" id="lottery_number-${index}" maxlength="${max_length}" required>
                                 </td>
                                 <td>
-                                    <input type="text" class="form-control form-control-sm" name="direct_amount[]" id="direct_amount-${index}" onkeyup="calculateDirectAmount()" value="0" required>
+                                    <input type="number" class="form-control form-control-sm" name="direct_amount[]" id="direct_amount-${index}" onkeyup="calculateDirectAmount()" value="0" required>
                                 </td>
                                 <td>
-                                    <input type="text" class="form-control form-control-sm" onkeyup="calculateDirectAmount()" name="rumble_amount[]" id="rumble_amount-${index}" value="0" required>
+                                    <input type="number" class="form-control form-control-sm" onkeyup="calculateDirectAmount()" name="rumble_amount[]" id="rumble_amount-${index}" value="0" required>
                                 </td>
                             </tr>`;
                         }
@@ -276,15 +276,15 @@ Thai National Lottery
                                     formData += sl = sl + 1;
                                 formData += `</td>
                                 <td>
-                                    <input type="text" class="form-control form-control-sm" name="lottery_number[]" id="lottery_number-${index}" maxlength="${max_length}" required>
+                                    <input type="number" class="form-control form-control-sm" name="lottery_number[]" id="lottery_number-${index}" maxlength="${max_length}" required>
                                 </td>
                                 <td>
-                                    <input type="text" class="form-control form-control-sm" name="direct_amount[]" id="direct_amount-${index}" onkeyup="calculateDirectAmount()" value="0" required>
+                                    <input type="number" class="form-control form-control-sm" name="direct_amount[]" id="direct_amount-${index}" onkeyup="calculateDirectAmount()" value="0" required>
                                 </td>
                             </tr>`;
                         }
                     formData += `</tbody>
-                    <tfoot class="table-success table-responsive-sm">
+                    <tfoot class="table-success table-responsive">
                         <tr>
                             <td colspan="2" style="text-align: right">
                                 Total Amount
