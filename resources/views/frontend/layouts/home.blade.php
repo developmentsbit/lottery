@@ -172,7 +172,7 @@ $youlive = youtubelive::get();
 <!-- thai goverment lottery online -->
 
 <!-- thai goverment lottery online -->
-    <div class="featuresSection">
+    <div class="featuresSection" style="padding: 0px;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-12 text-content">
@@ -220,7 +220,7 @@ $youlive = youtubelive::get();
 <!-- thai goverment lottery online -->
 
 <!-- thai goverment lottery online -->
-    <div class="featureSection">
+    <div class="featureSection" >
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-12">
