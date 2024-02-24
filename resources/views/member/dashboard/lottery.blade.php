@@ -216,7 +216,7 @@ Thai National Lottery
                     <tfoot class="table-success ">
                         <tr>
                             <td colspan="2" style="text-align: right">
-                                Total Amount
+                                Total Amount :
                             </td>
                             <td id="">
                                 <span id="totalAmount">$</span>
@@ -225,7 +225,7 @@ Thai National Lottery
                         </tr>
                         <tr>
                             <td colspan="2" style="text-align: right">
-                                Continue Discount (${show_discount_per}%)
+                                Continue Discount (${show_discount_per}%) :
                             </td>
                             <td>
                                     <span id="discountedAmount">$</span>
@@ -235,7 +235,7 @@ Thai National Lottery
                         </tr>
                         <tr>
                             <td colspan="2" style="text-align: right">
-                                Bet Amount
+                                Bet Amount : 
                             </td>
                             <td>
                                 <span id="betAmountText">$</span>
@@ -279,7 +279,7 @@ Thai National Lottery
                     <tfoot class="table-success ">
                         <tr>
                             <td colspan="0" style="text-align: right">
-                                Total Amount
+                                Total Amount :
                             </td>
                             <td id="">
                                 <span id="totalAmount">$</span>
@@ -288,7 +288,7 @@ Thai National Lottery
                         </tr>
                         <tr class="d-none">
                             <td colspan="0" style="text-align: right">
-                                Continue Discount (${show_discount_per}%)
+                                Continue Discount (${show_discount_per}%) :
                             </td>
                             <td>
                                     <span id="discountedAmount">$</span>
@@ -297,7 +297,7 @@ Thai National Lottery
                         </tr>
                         <tr>
                             <td colspan="0" style="text-align: right">
-                                Bet Amount
+                                Bet Amount :
                             </td>
                             <td>
                                 <span id="betAmountText">$</span>
