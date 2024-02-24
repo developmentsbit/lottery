@@ -185,16 +185,16 @@ Thai National Lottery
             if(set > 0)
             {
                 let formData = `
-                <table class=" p-2 ">
-                    <thead class="table-responsive-sm">
-                        <tr class="table-primary table-responsive-sm">
+                <table class=" p-2 "  style="width : 100%">
+                    <thead class="">
+                        <tr class="table-primary ">
 
                             <th>${game_title}</th>
                             <th>Direct Amount</th>
                             <th>Rumble Amount</th>
                         </tr>
                     </thead>
-                    <tbody class="table-secondary table-responsive-sm">`;
+                    <tbody class="table-secondary ">`;
                         for (let index = 0; index < set; index++)
                         {
                             formData += `<tr>
@@ -211,7 +211,7 @@ Thai National Lottery
                             </tr>`;
                         }
                     formData += `</tbody>
-                    <tfoot class="table-success table-responsive-sm">
+                    <tfoot class="table-success ">
                         <tr>
                             <td colspan="2" style="text-align: right">
                                 Total Amount
@@ -252,15 +252,15 @@ Thai National Lottery
         }
         else
             {
-                let formData = `<table class="table p-2 ">
+                let formData = `<table class=" p-2 " style="width : 100%">
                     <thead>
-                        <tr class="table-primary table-responsive-sm">
+                        <tr class="table-primary ">
 
                             <th>${game_title}</th>
                             <th>Direct Amount</th>
                         </tr>
                     </thead>
-                    <tbody class="table-secondary table-responsive-sm">`;
+                    <tbody class="table-secondary ">`;
                         for (let index = 0; index < 10; index++)
                         {
                             formData += `<tr>
