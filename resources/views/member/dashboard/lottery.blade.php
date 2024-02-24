@@ -38,11 +38,8 @@ Thai National Lottery
                 @csrf
                 <input type="hidden" name="game_status" value="{{ $params['check'] }}">
                 <input type="hidden" name="game_id" value="{{ $params['game']->id }}">
-            <table class="table table-responsive-sm">
-                <tr>
-                    <th>Select Game</th>
-                    <td>:</td>
-                    <td>
+                <div class="row">
+                    <div class="col-lg-6 col-md-4 col-12 mt-2">
                         <select class="form-control form-control-sm" onchange="showSet();showLotteryForm()" name="game" id="game">
                             <option value="">Select Game</option>
                             <option value="1st_prize_six_digit">1st. Prize Six Digits</option>
@@ -56,21 +53,17 @@ Thai National Lottery
                             <option value="2upgamettotal">2 Up Game Total</option>
                             <option value="2downgametotal">2 Down Game Total</option>
                         </select>
-                    </td>
-                </tr>
-                <tr class="d-none set">
-                    <th>Select Set</th>
-                    <td>:</td>
-                    <td>
+                    </div>
+                    <div class="col-lg-6 col-md-4 col-12 set mt-2 d-none">
                         <select class="form-control form-control-sm" id="set" name="set" onchange="showLotteryForm()">
                             <option value="">Select One</option>
                             @for ($i = 1; $i <= 100; $i++)
                             <option value="{{ $i }}">{{$i}}</option>
                             @endfor
                         </select>
-                    </td>
-                </tr>
-            </table>
+                    </div>
+                </div>
+
 
             <div class="show_form mt-2">
 
@@ -191,10 +184,11 @@ Thai National Lottery
         {
             if(set > 0)
             {
-                let formData = `<table class="table table-responsive-sm">
+                let formData = `
+                <table class=" p-2 ">
                     <thead class="table-responsive-sm">
                         <tr class="table-primary table-responsive-sm">
-                            <th>SN</th>
+
                             <th>${game_title}</th>
                             <th>Direct Amount</th>
                             <th>Rumble Amount</th>
@@ -204,24 +198,22 @@ Thai National Lottery
                         for (let index = 0; index < set; index++)
                         {
                             formData += `<tr>
-                                <td>`;
-                                    formData += sl = sl + 1;
-                                formData += `</td>
+
                                 <td>
-                                    <input type="number" class="form-control form-control-sm" name="lottery_number[]" id="lottery_number-${index}" maxlength="${max_length}" required>
+                                    <input type="number" class="form-control form-control-sm" name="lottery_number[]" id="lottery_number-${index}" onKeyPress="if(this.value.length==${max_length}) return false;">
                                 </td>
                                 <td>
-                                    <input type="number" class="form-control form-control-sm" name="direct_amount[]" id="direct_amount-${index}" onkeyup="calculateDirectAmount()" value="0" required>
+                                    <input type="number" class="form-control form-control-sm" name="direct_amount[]" id="direct_amount-${index}" onkeyup="calculateDirectAmount()" value="0" >
                                 </td>
                                 <td>
-                                    <input type="number" class="form-control form-control-sm" onkeyup="calculateDirectAmount()" name="rumble_amount[]" id="rumble_amount-${index}" value="0" required>
+                                    <input type="number" class="form-control form-control-sm" onkeyup="calculateDirectAmount()" name="rumble_amount[]" id="rumble_amount-${index}" value="0" >
                                 </td>
                             </tr>`;
                         }
                     formData += `</tbody>
                     <tfoot class="table-success table-responsive-sm">
                         <tr>
-                            <td colspan="3" style="text-align: right">
+                            <td colspan="2" style="text-align: right">
                                 Total Amount
                             </td>
                             <td id="">
@@ -230,7 +222,7 @@ Thai National Lottery
                             </td>
                         </tr>
                         <tr>
-                            <td colspan="3" style="text-align: right">
+                            <td colspan="2" style="text-align: right">
                                 Continue Discount (${show_discount_per}%)
                             </td>
                             <td>
@@ -240,7 +232,7 @@ Thai National Lottery
                             </td>
                         </tr>
                         <tr>
-                            <td colspan="3" style="text-align: right">
+                            <td colspan="2" style="text-align: right">
                                 Bet Amount
                             </td>
                             <td>
@@ -260,10 +252,10 @@ Thai National Lottery
         }
         else
             {
-                let formData = `<table class="table table-responsive-sm">
+                let formData = `<table class="table p-2 ">
                     <thead>
                         <tr class="table-primary table-responsive-sm">
-                            <th>SN</th>
+
                             <th>${game_title}</th>
                             <th>Direct Amount</th>
                         </tr>
@@ -272,21 +264,19 @@ Thai National Lottery
                         for (let index = 0; index < 10; index++)
                         {
                             formData += `<tr>
-                                <td>`;
-                                    formData += sl = sl + 1;
-                                formData += `</td>
+
                                 <td>
-                                    <input type="number" class="form-control form-control-sm" name="lottery_number[]" id="lottery_number-${index}" maxlength="${max_length}" required>
+                                    <input type="number" class="form-control form-control-sm" name="lottery_number[]" id="lottery_number-${index}" onKeyPress="if(this.value.length==${max_length}) return false;">
                                 </td>
                                 <td>
-                                    <input type="number" class="form-control form-control-sm" name="direct_amount[]" id="direct_amount-${index}" onkeyup="calculateDirectAmount()" value="0" required>
+                                    <input type="number" class="form-control form-control-sm" name="direct_amount[]" id="direct_amount-${index}" onkeyup="calculateDirectAmount()" value="0">
                                 </td>
                             </tr>`;
                         }
                     formData += `</tbody>
-                    <tfoot class="table-success table-responsive">
+                    <tfoot class="table-success ">
                         <tr>
-                            <td colspan="2" style="text-align: right">
+                            <td colspan="0" style="text-align: right">
                                 Total Amount
                             </td>
                             <td id="">
@@ -295,7 +285,7 @@ Thai National Lottery
                             </td>
                         </tr>
                         <tr class="d-none">
-                            <td colspan="2" style="text-align: right">
+                            <td colspan="0" style="text-align: right">
                                 Continue Discount (${show_discount_per}%)
                             </td>
                             <td>
@@ -304,7 +294,7 @@ Thai National Lottery
                             </td>
                         </tr>
                         <tr>
-                            <td colspan="2" style="text-align: right">
+                            <td colspan="0" style="text-align: right">
                                 Bet Amount
                             </td>
                             <td>

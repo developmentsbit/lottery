@@ -218,30 +218,38 @@ class MemberDashboardController extends Controller
 
         if(isset($request->rumble_amount))
         {
-
             for ($i=0; $i < count($request->lottery_number) ; $i++)
             {
-                $data = array(
-                    'invoice_no' => $invoice_no,
-                    'lottery_number' => $request->lottery_number[$i],
-                    'direct_amount' => $request->direct_amount[$i],
-                    'rumble_amount'=> $request->rumble_amount[$i],
-                );
-
-                GameEntry::create($data);
+                if($request->lottery_number[$i] != NULL)
+                {
+                    $data = array(
+                        'invoice_no' => $invoice_no,
+                        'lottery_number' => $request->lottery_number[$i],
+                        'direct_amount' => $request->direct_amount[$i],
+                        'rumble_amount'=> $request->rumble_amount[$i],
+                    );
+                    GameEntry::create($data);
+                }
             }
+
+
         }
         else
         {
             for ($i=0; $i < count($request->lottery_number) ; $i++)
             {
-                $data = array(
-                    'invoice_no' => $invoice_no,
-                    'lottery_number' => $request->lottery_number[$i],
-                    'direct_amount' => $request->direct_amount[$i],
-                );
-
-                GameEntry::create($data);
+                if($request->lottery_number[$i] != '')
+                {
+                    if($request->lottery_number[$i] != NULL)
+                    {
+                        $data = array(
+                            'invoice_no' => $invoice_no,
+                            'lottery_number' => $request->lottery_number[$i],
+                            'direct_amount' => $request->direct_amount[$i],
+                        );
+                        GameEntry::create($data);
+                    }
+                }
             }
         }
 
