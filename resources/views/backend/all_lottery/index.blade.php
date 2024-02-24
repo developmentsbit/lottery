@@ -42,6 +42,10 @@
                         </select>
                     </div>
                     <div class="col-lg-4 col-md-4 col-6">
+                        <label>Number</label>
+                        <input type="number" name="number" id="number" required class="form-control form-control-sm">
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12">
                         <br>
                         <button class="btn btn-sm btn-info"><i class="fa fa-search"></i> Search</button>
                     </div>

@@ -24,14 +24,16 @@ Thai National Lottery
    @endcomponent
     <div class="timer-count">
         <div class="timer-title">Submission Last Time</div>
-        <div id="countdown" class="row justify-content-center align-items-center"></div>
+        <div id="countdown" class="row justify-content-center align-items-center">
+
+        </div>
     </div>
 
     <div class="card">
         <div class="card-header">
             Thai National Lottery
         </div>
-        <div class="card-body">
+        <div class="card-body p-2">
 
             @if(date('Y-m-d') < $params['game']->end_date || date('H:i:s') < $params['game']->end_time)
             <form method="post" action="{{ route('member.lottery_store') }}">
@@ -189,9 +191,9 @@ Thai National Lottery
                     <thead class="">
                         <tr class="table-primary ">
 
-                            <th>${game_title}</th>
-                            <th>Direct Amount</th>
-                            <th>Rumble Amount</th>
+                            <th style="width : 50%;">${game_title}</th>
+                            <th style="width : 25%;">Direct Amount</th>
+                            <th style="width : 25%;">Rumble Amount</th>
                         </tr>
                     </thead>
                     <tbody class="table-secondary ">`;
@@ -256,8 +258,8 @@ Thai National Lottery
                     <thead>
                         <tr class="table-primary ">
 
-                            <th>${game_title}</th>
-                            <th>Direct Amount</th>
+                            <th style="width : 75%;">${game_title}</th>
+                            <th style="width : 25%;">Direct Amount</th>
                         </tr>
                     </thead>
                     <tbody class="table-secondary ">`;

@@ -32,6 +32,7 @@ Cash In
                         <th>Trx ID</th>
                         <th>Document</th>
                         <th>Amount</th>
+                        <th>Paid Amount</th>
                         <th>Status</th>
                     </tr>
                 </thead>
@@ -64,6 +65,9 @@ Cash In
                         </td>
                         <td>
                             {{ $v->balance }}
+                        </td>
+                        <td>
+                            {{ $v->original_amount }}
                         </td>
                         <td>
                             @if($v->deleted_at == NULL)

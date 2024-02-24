@@ -30,40 +30,33 @@ Win Balance Transfer
             <form method="post" action="{{ route('member.balance_transfer') }}" enctype="multipart/form-data">
                 @csrf
                 <input type="hidden" name="post_type" value="win_transfer">
-                <table class="table">
-                    <tr>
-                        <th>Amount</th>
-                        <td>
-                            <div class="input-group">
-                                <select class="form-control form-control-sm select2" name="member_id" id="member_id" required>
-                                    <option value="">Select One</option>
-                                    @if(isset($params['member']))
-                                    @foreach ($params['member'] as $v)
-                                    @if($v->member_id != Auth::guard('member')->user()->member_id)
-                                    <option value="{{ $v->member_id }}">{{ $v->member_id.'-'.$v->first_name.' '.$v->last_name.'('.$v->mobile_no.')' }}</option>
-                                    @endif
-                                    @endforeach
-                                    @endif
-                                </select>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Amount</th>
-                        <td>
-                            <div class="input-group">
-                                <input type="number" class="form-control" name="amount" id="amount" placeholder="Enter Amount" required>
-                                <span class="input-group-append btn btn-dark" style="border-radius: 0px;">$</span>
-                            </div>
-                        </td>
-                    </tr>
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-12 mt-2">
+                        <label>Select Member</label><span class="text-danger">*</span>
+                        <select class="form-control form-control-sm select2" name="member_id" id="member_id" required>
+                            <option value="">Select One</option>
+                            @if(isset($params['member']))
+                            @foreach ($params['member'] as $v)
+                            @if($v->member_id != Auth::guard('member')->user()->member_id)
+                            <option value="{{ $v->member_id }}">{{ $v->member_id.'-'.$v->first_name.' '.$v->last_name.'('.$v->mobile_no.')' }}</option>
+                            @endif
+                            @endforeach
+                            @endif
+                        </select>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12 mt-2">
+                        <label>Amount</label><span class="text-danger">*</span>
+                        <div class="input-group">
+                            <input type="number" class="form-control" name="amount" id="amount" placeholder="Enter Amount" required>
+                            <span class="input-group-append btn btn-dark" style="border-radius: 0px;">$</span>
+                        </div>
+                    </div>
+                </div>
 
-                    <tr>
-                        <td colspan="2" style="text-align: center">
-                            <button type="submit" class="btn btn-sm btn-success">Submit</button>
-                        </td>
-                    </tr>
-                </table>
+                    <div class="col-12 mt-2 text-center">
+                        <button type="submit" class="btn btn-sm btn-success">Submit</button>
+                    </div>
+
             </form>
         </div>
     </div>

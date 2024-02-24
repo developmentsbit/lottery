@@ -52,20 +52,7 @@ class CashInRepository implements CashInInterface {
                 $member = Member::where('member_id',$row->member_id)->first();
                 return $member->first_name.' '.$member->last_name;
             })
-            ->addColumn('original_amount',function($row){
-                if(isset($row->payment_type))
-                {
-                    $method = PaymentMethod::find($row->payment_type);
-                    if($method)
-                    {
-                        return $row->balance * $method->dollar_rate;
-                    }
-                }
-                else
-                {
-                    return '';
-                }
-            })
+
             ->addColumn('status',function($row){
                 if($row->status == 1)
                 {
@@ -118,7 +105,7 @@ class CashInRepository implements CashInInterface {
 
                     return $btn;
             })
-            ->rawColumns(['action','method','sl','status','member','document','date_time','original_amount'])
+            ->rawColumns(['action','method','sl','status','member','document','date_time'])
             ->make(true);
         }
         return $this->view($this->path,'index');

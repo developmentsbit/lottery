@@ -26,60 +26,50 @@ Cash In
         <div class="card-body">
             <form method="post" action="{{ route('member.store_cash_in') }}" enctype="multipart/form-data">
                 @csrf
-                <table class="table">
-                    <tr>
-                        <th>Select Method</th>
-                        <td>
-                            <select class="form-control form-control-sm" name="method" id="method" onchange="getMethodInfo();getOriginalAmount();" required>
-                                <option value="">Select Method</option>
-                                @if(isset($params['method']))
-                                @foreach ($params['method'] as $m)
-                                <option value="{{ $m->id }}">{{ $m->method_name }}</option>
-                                @endforeach
-                                @endif
-                            </select>
-                            <div class="message mt-2">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-12 mt-2">
+                        <label>Select Method</label><span class="text-danger">*</span>
+                        <select class="form-control form-control-sm" name="method" id="method" onchange="getMethodInfo();getOriginalAmount();" required>
+                            <option value="">Select Method</option>
+                            @if(isset($params['method']))
+                            @foreach ($params['method'] as $m)
+                            <option value="{{ $m->id }}">{{ $m->method_name }}</option>
+                            @endforeach
+                            @endif
+                        </select>
+                        <div class="message mt-2">
 
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Amount</th>
-                        <td>
-                            <div class="input-group">
-                                <input type="number" class="form-control" name="amount" id="amount" placeholder="Enter Amount" required onchange="return getOriginalAmount()">
-                                <span class="input-group-append btn btn-dark" style="border-radius: 0px;">$</span>
-                            </div>
-                            <div class="show_original_amount p-2">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12 mt-2">
+                        <label>Amount</label><span class="text-danger">*</span>
+                        <div class="input-group">
+                            <input type="number" class="form-control" name="amount" id="amount" placeholder="Enter Amount" required onchange="return getOriginalAmount()">
+                            <span class="input-group-append btn btn-dark" style="border-radius: 0px;">$</span>
+                        </div>
+                        <div class="show_original_amount p-2">
 
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Payment Account</th>
-                        <td>
-                        <input type="text" class="form-control" name="payment_account" id="payment_account" placeholder="Payment Account Number" required>
+                        </div>
 
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Transaction ID</th>
-                        <td>
-                        <input type="text" class="form-control" name="transaction_id" id="transaction_id" placeholder="Transaction ID" required>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Document</th>
-                        <td>
+                        <input type="hidden" name="balance" id="balance">
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12 mt-2">
+                        <label>Payment Account</label>
+                        <input type="text" class="form-control" name="payment_account" id="payment_account" placeholder="Payment Account Number" >
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12 mt-2">
+                        <label>TRX ID</label>
+                        <input type="text" class="form-control" name="transaction_id" id="transaction_id" placeholder="Transaction ID" >
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12 mt-2">
+                        <label>Document</label>
                         <input type="file" class="form-control" name="document" id="document">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="2" style="text-align: center">
-                            <button type="submit" class="btn btn-sm btn-success">Submit</button>
-                        </td>
-                    </tr>
-                </table>
+                    </div>
+                </div>
+                <div class="col-12 mt-2 text-center">
+                    <button type="submit" class="btn btn-sm btn-success">Submit</button>
+                </div>
+
             </form>
         </div>
     </div>
@@ -135,7 +125,9 @@ Cash In
 
                 success : function(res)
                 {
-                    $('.show_original_amount').html(res);
+                    let message = '<span class="text-success">You Will Get : <b>'+res+'</b></span>'
+                    $('.show_original_amount').html(message);
+                    $('#balance').val(res);
                 }
             })
         }

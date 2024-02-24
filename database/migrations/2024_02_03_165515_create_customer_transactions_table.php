@@ -27,6 +27,7 @@ return new class extends Migration
             $table->double('winbalance_transfer',10,2)->nullable();
             $table->double('vat',10,2)->nullable();
             $table->string('payment_account')->nullable();
+            $table->double('original_amount',10,2)->nullable();
             $table->string('transaction_id')->nullable();
             $table->string('document')->nullable();
             $table->string('transfer_to')->nullable();

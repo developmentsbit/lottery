@@ -53,7 +53,7 @@
                                         <th>@lang('cash_in.member')</th>
                                         <th>@lang('cash_in.method')</th>
                                         <th>@lang('cash_in.amount')</th>
-                                        <th>Original Amount</th>
+                                        <th>Paid Amount</th>
                                         <th>@lang('cash_in.payment_account')</th>
                                         <th>@lang('cash_in.trx_id')</th>
                                         <th>Document</th>
