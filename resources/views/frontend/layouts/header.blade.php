@@ -68,13 +68,13 @@
         <div class="container-fluid">
             <div class="header__wrapper">
                 <div class="row">
-                  <div class="col-lg-8 col-md-8 col-8 header-text">
+                  {{-- <div class="col-lg-8 col-md-8 col-12 header-text">
                       <span>The Government Approved 100% Trusted Online Betting Website</span>
-                  </div>
-                  <div class="col-lg-4 col-md-4 col-4 header-info"><i class="fa-regular fa-envelope"></i> Any Question/ Any Inforamtion: <span style="color:#000;">info.thailotto3up@gmail.com</span></div>
+                  </div> --}}
+                  <div class="col-lg-12 col-md-12 col-12 header-info"><i class="fa-regular fa-envelope"></i> Any Question/ Any Inforamtion: <span style="color:#000;">info.thailotto3up@gmail.com</span></div>
                     <div class="col-lg-4 col-md-4 col-12">
                         <div class="logo__header">
-                            <img src="{{ asset('Backend/settings/') }}/{{ $settings->logo }}" alt="" class="img-fluid">
+                            <img src="{{ asset('Backend/settings/') }}/{{ $settings->logo }}" alt="" class="img-fluid" style="width:100%;">
                         </div>
                     </div>
                     <div class="col-lg-8 col-md-8 col-12">
@@ -107,9 +107,8 @@
                             <!--</li>-->
                             @if(Auth::guard('member')->check())
                             <li>
-                                <a href="{{ route('member.dashboard') }}">
-                                    <img src="{{ asset('MemberProfile/') }}/{{ Auth::guard('member')->user()->profile }}" alt="" class="img-fluid" style="height: 50px;width:50px;border-radius : 100px;">
-                                    <span style="color: black"> {{ Auth::guard('member')->user()->first_name.' '.Auth::guard('member')->user()->last_name }} </span>
+                                <a href="{{ route('member.dashboard') }}" class="btn btn-sm btn-info">
+                                    <i class="fa fa-user"></i> Dashboard
                                 </a>
                             </li>
                             @else

@@ -153,7 +153,8 @@ class MemberDashboardController extends Controller
             'member_id' => Auth::guard('member')->user()->member_id,
             'payment_type' => $request->method,
             'transaction_type' => 1,
-            'balance' => $request->amount,
+            'balance' => $request->balance,
+            'original_amount' => $request->amount,
             'payment_account' => $request->payment_account,
             'transaction_id' => $request->transaction_id,
             'status' => '0',
@@ -556,9 +557,13 @@ class MemberDashboardController extends Controller
     {
         $method = PaymentMethod::find($request->method);
 
-        $result = $request->amount * $method->dollar_rate;
+        $result = $request->amount / $method->dollar_rate;
 
-        return '<span class="text-success">You Have To Pay : <b>'.$result.'</b></span>';
+        $to_fixed = number_format((float)$result,2,'.','');
+
+        // return $to_fixed;
+
+        return $to_fixed;
     }
     public function get_cash_out_amount(Request $request)
     {

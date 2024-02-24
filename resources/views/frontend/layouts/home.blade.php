@@ -19,24 +19,26 @@ $youlive = youtubelive::get();
 
 @endphp
 
-<div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    @if(isset($slider))
-    @foreach($slider as $key => $s)
-    <div class="carousel-item @if(isset($key)) active @endif">
-        <img src="{{asset('/Backend/img/photo_info')}}/{{$s->image}}" class="d-block w-100" alt="...">
-    </div>
-    @endforeach
-    @endif
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
+<div class="container-fluid">
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          @if(isset($slider))
+          @foreach($slider as $key => $s)
+          <div class="carousel-item @if(isset($key)) active @endif">
+              <img src="{{asset('/Backend/img/photo_info')}}/{{$s->image}}" class="d-block w-100" alt="...">
+          </div>
+          @endforeach
+          @endif
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
 </div>
 <!-- slider area -->
 
@@ -174,8 +176,8 @@ $youlive = youtubelive::get();
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-12 text-content">
-                    <div class="card" style="background: #51297b;padding: 23px 62px 0px 0px;margin-left: 50px;">
-                        <div class="d-flex flex-row">
+                    <div class="card" style="background: #51297b;padding: 23px 62px 0px 0px;margin-left: 50px;overflow:hidden">
+                        <div class="d-flex">
                             <div class="col-lg-4 col-md-4 col-12">
                                 <img src="{{asset('Frontend/image/achive1.png')}}" alt="" />
                             </div>
@@ -187,8 +189,8 @@ $youlive = youtubelive::get();
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-12 text-content">
-                    <div class="card" style="background: #51297b;padding: 23px 62px 0px 0px;margin-left: 50px;">
-                        <div class="d-flex flex-row">
+                    <div class="card" style="background: #51297b;padding: 23px 62px 0px 0px;margin-left: 50px;overflow:hidden">
+                        <div class="d-flex">
                             <div class="col-lg-4 col-md-4 col-12">
                                 <img src="{{asset('Frontend/image/achive2.png')}}" alt="" />
                             </div>
@@ -200,8 +202,8 @@ $youlive = youtubelive::get();
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-12 text-content">
-                    <div class="card" style="background: #51297b;padding: 23px 62px 0px 0px;margin-left: 50px;">
-                        <div class="d-flex flex-row">
+                    <div class="card" style="background: #51297b;padding: 23px 62px 0px 0px;margin-left: 50px;overflow:hidden">
+                        <div class="d-flex">
                             <div class="col-lg-4 col-md-4 col-12">
                                 <img src="{{asset('Frontend/image/achive3.png')}}" alt="" />
                             </div>

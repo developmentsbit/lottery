@@ -9,6 +9,7 @@ body{
   font-family: 'Ubuntu', sans-serif;
   background: #8458B3;
   color: #fff;
+  overflow-x: hidden;
 }
 .header {
   background: #e2ede1;
@@ -358,7 +359,7 @@ font-size: 15px !important;
 .row_grid {
   margin-left: 52px !important;
 }
-.method_images img {    
+.method_images img {
   width: 33% !important;
   padding: 1% !important;
 }
