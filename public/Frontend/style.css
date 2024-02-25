@@ -337,6 +337,13 @@ margin-left: -51px;
   padding: 10px;
 }
 
+/* mobile_update */
+
+.nav-list li a{
+  font-size: 14px;
+  padding: 0px 7px 0px 0px !important;
+  /* margin-left: 10px;
+}
 /*  */
 
 .featuresSection .text-content {
@@ -775,7 +782,7 @@ ul li ul:hover {
 }
 
 /* Mobile navigation */
-.nav-mobile {
+/* .nav-mobile {
   display: none;
   position: absolute;
   right: 11px;
@@ -855,7 +862,7 @@ ul li ul:hover {
 }
 #nav-toggle.active span:after {
   transform: rotate(-45deg);
-}
+} */
 
 /* contact */
 
