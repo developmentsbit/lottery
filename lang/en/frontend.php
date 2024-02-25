@@ -9,7 +9,7 @@ return array(
     'result' => 'Result',
     'award_prize' => 'Award Prize',
     'fees' => 'Our Fees',
-    'contact_us' => 'Contact Us',
+    'contact_us' => 'Contact',
     'deposit' => 'Deposit',
     'payout' => 'Payout',
     'agent_list' => 'Agent List',
