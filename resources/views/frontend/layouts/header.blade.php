@@ -137,7 +137,7 @@
         <div class="nav-container">
             <div class="row">
             <nav>
-              <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+              <!-- <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div> -->
               <ul class="nav-list">
                 <li>
                   <a class="{{request()->Is('/') ? 'active' : ''}}" aria-current="page" href="{{url('/')}}">@lang('frontend.home')</a>
