@@ -89,12 +89,35 @@ Thai National Lottery
 
        for (let index = 0; index < direct_amount_array; index++)
        {
-            let direct_amount = $('#direct_amount-'+index).val();
+            let normal_direct_amount = $('#direct_amount-'+index).val();
+
+            let direct_amount
+
+            if(normal_direct_amount == '')
+            {
+                direct_amount = 0;
+            }
+            else
+            {
+                direct_amount = parseInt(normal_direct_amount);
+            }
 
             if(game == '1st_prize_six_digit' || game == '3up' || game == '2up' || game =='2down')
             {
 
-                let rumble_amount = $('#rumble_amount-'+index).val();
+                let normal_rumble_amount = $('#rumble_amount-'+index).val();
+
+                let rumble_amount;
+
+                if(normal_rumble_amount == '')
+                {
+                    rumble_amount = 0;
+                }
+                else
+                {
+                    rumble_amount = parseInt(normal_rumble_amount);
+                }
+
                 totalAmount = parseInt(totalAmount) + parseInt(direct_amount) + parseInt(rumble_amount);
             }
             else
@@ -205,10 +228,10 @@ Thai National Lottery
                                     <input type="number" class="form-control form-control-sm" name="lottery_number[]" id="lottery_number-${index}" onKeyPress="if(this.value.length==${max_length}) return false;">
                                 </td>
                                 <td>
-                                    <input type="number" class="form-control form-control-sm" name="direct_amount[]" id="direct_amount-${index}" onkeyup="calculateDirectAmount()" value="0" >
+                                    <input type="number" class="form-control form-control-sm" name="direct_amount[]" id="direct_amount-${index}" onkeyup="calculateDirectAmount()" value="" >
                                 </td>
                                 <td>
-                                    <input type="number" class="form-control form-control-sm" onkeyup="calculateDirectAmount()" name="rumble_amount[]" id="rumble_amount-${index}" value="0" >
+                                    <input type="number" class="form-control form-control-sm" onkeyup="calculateDirectAmount()" name="rumble_amount[]" id="rumble_amount-${index}" value="" >
                                 </td>
                             </tr>`;
                         }
@@ -220,7 +243,7 @@ Thai National Lottery
                             </td>
                             <td id="">
                                 <span id="totalAmount">$</span>
-                                <input type="hidden" name="totalAmount" id="total_amount" value="0">
+                                <input type="hidden" name="totalAmount" id="total_amount" value="">
                             </td>
                         </tr>
                         <tr>
@@ -235,11 +258,11 @@ Thai National Lottery
                         </tr>
                         <tr>
                             <td colspan="2" style="text-align: right">
-                                Bet Amount : 
+                                Bet Amount :
                             </td>
                             <td>
                                 <span id="betAmountText">$</span>
-                                <input type="hidden" name="bet_amount" id="betAmount" value="0">
+                                <input type="hidden" name="bet_amount" id="betAmount" value="">
                             </td>
                         </tr>
                     </tfoot>
@@ -271,7 +294,7 @@ Thai National Lottery
                                     <input type="number" class="form-control form-control-sm" name="lottery_number[]" id="lottery_number-${index}" onKeyPress="if(this.value.length==${max_length}) return false;">
                                 </td>
                                 <td>
-                                    <input type="number" class="form-control form-control-sm" name="direct_amount[]" id="direct_amount-${index}" onkeyup="calculateDirectAmount()" value="0">
+                                    <input type="number" class="form-control form-control-sm" name="direct_amount[]" id="direct_amount-${index}" onkeyup="calculateDirectAmount()" value="">
                                 </td>
                             </tr>`;
                         }
@@ -283,7 +306,7 @@ Thai National Lottery
                             </td>
                             <td id="">
                                 <span id="totalAmount">$</span>
-                                <input type="hidden" name="totalAmount" id="total_amount" value="0">
+                                <input type="hidden" name="totalAmount" id="total_amount" value="">
                             </td>
                         </tr>
                         <tr class="d-none">
@@ -301,7 +324,7 @@ Thai National Lottery
                             </td>
                             <td>
                                 <span id="betAmountText">$</span>
-                                <input type="hidden" name="bet_amount" id="betAmount" value="0">
+                                <input type="hidden" name="bet_amount" id="betAmount" value="">
                             </td>
                         </tr>
                     </tfoot>
