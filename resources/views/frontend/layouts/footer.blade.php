@@ -36,37 +36,25 @@
                     <!-- Grid column -->
                     <div class="col-md-9 col-lg-9 col-xl-9">
                         <div class="row">
-                            <div class="col-2">
+                            <div class="col-md-3 col-lg-3 col-xl-3 footer-list">
                                 <h4 class="text-uppercase mb-4" style="color: #fff; font-weight: 600;">USEFUL LINKS</h4>
-                                <p>
-                                    <a href="{{ url('/') }}" class="text-white">Home</a>
-                                </p>
-                                <p>
-                                    <a href="{{ url('AboutUs') }}" class="text-white">About Us</a>
-                                </p>
-                                <p>
-                                    <a href="{{url('VisionMission')}}" class="text-white">Vision & Mission</a>
-                                </p>
-                                <p>
-                                    <a href="{{url('AwardsPrize')}}" class="text-white">Discount</a>
-                                </p>
-                                <p>
-                                    <a href="{{url('ContactUs')}}" class="text-white">Contact Us</a>
-                                </p>
+                                <ul>
+                                    <li><i class="fa-regular fa-circle-right"></i>  <a href="{{ url('/') }}" class="text-white">Home</a></li>
+                                    <li><i class="fa-regular fa-circle-right"></i>  <a href="{{ url('AboutUs') }}" class="text-white">About Us</a></li>
+                                    <li><i class="fa-regular fa-circle-right"></i>  <a href="{{url('VisionMission')}}" class="text-white">Vision & Mission</a></li>
+                                    <li><i class="fa-regular fa-circle-right"></i>  <a href="{{url('AwardsPrize')}}" class="text-white">Discount</a></li>
+                                    <li><i class="fa-regular fa-circle-right"></i>  <a href="{{url('ContactUs')}}" class="text-white">Contact Us</a></li>
+                                </ul>
                             </div>
-                            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                            <div class="col-md-3 col-lg-3 col-xl-3 footer-list">
                                 <h4 class="text-uppercase mb-4" style="color: #fff; font-weight: 600;">SUPPORT</h4>
-                                <p>
-                                    <a class="text-white">Customer Care</a>
-                                </p>
-                                <p>
-                                    <a class="text-white">Live Chat</a>
-                                </p>
-                                <p>
-                                    <a class="text-white">Email Chat</a>
-                                </p>
+                                <ul>
+                                    <li><i class="fa-regular fa-circle-right"></i>  <a class="text-white">Customer Care</a></li>
+                                    <li><i class="fa-regular fa-circle-right"></i>  <a class="text-white">Live Chat</a></li>
+                                    <li><i class="fa-regular fa-circle-right"></i>  <a class="text-white">Email Chat</a></li>
+                                </ul>
                             </div>
-                            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3" style="color: #fff;">
+                            <div class="col-md-6 col-lg-6 col-xl-6 footer-list" style="color: #fff;">
                                 <h4 class="text-uppercase mb-4" style="color: #fff; font-weight: 600;">CONTACT</h4>
                                 <p>Email: info.thailotto3up@gmail.com</p>
                                 <p>Website: www.thailotto3up.com</p>
