@@ -65,7 +65,7 @@ $youlive = youtubelive::get();
                     <div class="blog_single">
                         <div class="row">
                             <div class="col-lg-12 col-md-12 col-12" style="text-align: left;margin-top: -24px;">
-                                <p style="font-size: 16px;">
+                                <p style="font-size: 20px;text-align: justify;">
                                 @if(config('app.locale') == 'en'){!! $w->details ?: $w->details_bn !!}@elseif(config('app.locale') == 'bn'){!! $w->details_bn ?: $w->details !!}@endif
                                 </p>
                             </div>
@@ -284,7 +284,7 @@ $youlive = youtubelive::get();
 <section class="section_div p-4">
     <div class="container">
         <div class="row">
-            <div class="col-lg-4 col-md-4 col-12">
+            <div class="col-lg-4 col-md-4 col-12 about-box">
                 <div class="card">
                     <div class="card-header">
                         @lang('frontend.thai_gov_lottery')
@@ -296,7 +296,7 @@ $youlive = youtubelive::get();
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-4 col-12">
+            <div class="col-lg-4 col-md-4 col-12 about-box">
                 <div class="card">
                     <div class="card-header">
                         @lang('frontend.thai_gov_lottery')
@@ -308,7 +308,7 @@ $youlive = youtubelive::get();
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-4 col-12">
+            <div class="col-lg-4 col-md-4 col-12 about-box">
                 <div class="card">
                     <div class="card-header">
                         @lang('frontend.thai_gov_lottery')
