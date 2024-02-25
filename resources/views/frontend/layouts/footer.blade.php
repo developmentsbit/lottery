@@ -2,13 +2,13 @@
 <section class="p-4" style="background: #8458B3">
     <div class="container" style="background: #51297b;padding: 34px;border-radius: 1% 1% 1% 1%;">
         <div class="title">
-            <h3 style="padding: 12px;color: #fff;font-size: 45px;font-weight: 500;">@lang('frontend.pay_method')</h3>
+            <h3>@lang('frontend.pay_method')</h3>
         </div>
         <div class="method_images">
             <img src="{{ asset('Frontend/image/pay_method/bank.png') }}" alt="" class="img-fluid">
             <img src="{{ asset('Frontend/image/pay_method/mastercard.png') }}" alt="" class="img-fluid">
             <img src="{{ asset('Frontend/image/pay_method/visacard.png') }}" alt="" class="img-fluid">
-            <img src="{{ asset('Frontend/image/pay_method/paypal.png') }}" alt="" class="img-fluid">
+            <!-- <img src="{{ asset('Frontend/image/pay_method/paypal.png') }}" alt="" class="img-fluid"> -->
             <img src="{{ asset('Frontend/image/pay_method/neteller.png') }}" alt="" class="img-fluid">
             <img src="{{ asset('Frontend/image/pay_method/perfectmoney.png') }}" alt="" class="img-fluid">
             <img src="{{ asset('Frontend/image/pay_method/skrill.png') }}" alt="" class="img-fluid">
@@ -34,42 +34,46 @@
                     </div>
                     <hr class="w-100 clearfix d-md-none" />
                     <!-- Grid column -->
-                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                        <h4 class="text-uppercase mb-4" style="color: #fff; font-weight: 600;">USEFUL LINKS</h4>
-                        <p>
-                            <a href="{{ url('/') }}" class="text-white">Home</a>
-                        </p>
-                        <p>
-                            <a href="{{ url('AboutUs') }}" class="text-white">About Us</a>
-                        </p>
-                        <p>
-                            <a href="{{url('VisionMission')}}" class="text-white">Vision & Mission</a>
-                        </p>
-                        <p>
-                            <a href="{{url('AwardsPrize')}}" class="text-white">Discount</a>
-                        </p>
-                        <p>
-                            <a href="{{url('ContactUs')}}" class="text-white">Contact Us</a>
-                        </p>
-                    </div>
-                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                        <h4 class="text-uppercase mb-4" style="color: #fff; font-weight: 600;">SUPPORT</h4>
-                        <p>
-                            <a class="text-white">Customer Care</a>
-                        </p>
-                        <p>
-                            <a class="text-white">Live Chat</a>
-                        </p>
-                        <p>
-                            <a class="text-white">Email Chat</a>
-                        </p>
-                    </div>
-                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3" style="color: #fff;">
-                        <h4 class="text-uppercase mb-4" style="color: #fff; font-weight: 600;">CONTACT</h4>
-                        <p>Email: info.thailotto3up@gmail.com</p>
-                        <p>Website: www.thailotto3up.com</p>
-                        <p>Address: The Government Lottery Office (Sanambin Nam)</p>
-                        <p>359 Nonthaburi Road, Tha Sai Amphoe Mueang Nonthaburi, NONTHABURI 11000</p>
+                    <div class="col-md-9 col-lg-9 col-xl-9">
+                        <div class="row">
+                            <div class="col-2">
+                                <h4 class="text-uppercase mb-4" style="color: #fff; font-weight: 600;">USEFUL LINKS</h4>
+                                <p>
+                                    <a href="{{ url('/') }}" class="text-white">Home</a>
+                                </p>
+                                <p>
+                                    <a href="{{ url('AboutUs') }}" class="text-white">About Us</a>
+                                </p>
+                                <p>
+                                    <a href="{{url('VisionMission')}}" class="text-white">Vision & Mission</a>
+                                </p>
+                                <p>
+                                    <a href="{{url('AwardsPrize')}}" class="text-white">Discount</a>
+                                </p>
+                                <p>
+                                    <a href="{{url('ContactUs')}}" class="text-white">Contact Us</a>
+                                </p>
+                            </div>
+                            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                                <h4 class="text-uppercase mb-4" style="color: #fff; font-weight: 600;">SUPPORT</h4>
+                                <p>
+                                    <a class="text-white">Customer Care</a>
+                                </p>
+                                <p>
+                                    <a class="text-white">Live Chat</a>
+                                </p>
+                                <p>
+                                    <a class="text-white">Email Chat</a>
+                                </p>
+                            </div>
+                            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3" style="color: #fff;">
+                                <h4 class="text-uppercase mb-4" style="color: #fff; font-weight: 600;">CONTACT</h4>
+                                <p>Email: info.thailotto3up@gmail.com</p>
+                                <p>Website: www.thailotto3up.com</p>
+                                <p>Address: The Government Lottery Office (Sanambin Nam)</p>
+                                <p>359 Nonthaburi Road, Tha Sai Amphoe Mueang Nonthaburi, NONTHABURI 11000</p>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </div>
