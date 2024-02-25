@@ -341,8 +341,8 @@ margin-left: -51px;
 
 .nav-list li a{
   font-size: 13px;
-  padding: 0px 7px 0px 0px !important;
-  margin-left: 1px;
+  padding: 0px 6px 0px 0px !important;
+  margin-left: 2px;
 }
 /*  */
 
@@ -760,7 +760,9 @@ nav ul li a:visited:not(:only-child):after {
   content: " ▾";
 }
 nav ul li ul li {
-  min-width: 190px;
+  min-width: 150px;
+  padding: 12px;
+  background: #0092D2;
 }
 nav ul li ul li a {
   padding: 15px;
