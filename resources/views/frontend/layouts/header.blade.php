@@ -179,9 +179,9 @@
                 <li>
                   <a class="{{request()->Is('AgentList') ? 'active' : ''}}" aria-current="page" href="{{url('/AgentList')}}">@lang('frontend.agent_list')</a>
                 </li>
-                <li>
+                <!-- <li>
                   <a class="{{request()->Is('ContactUs') ? 'active' : ''}}" aria-current="page" href="{{url('/ContactUs')}}">@lang('frontend.contact_us')</a>
-                </li>
+                </li> -->
               </ul>
             </nav>
             </div>
