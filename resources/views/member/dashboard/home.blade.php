@@ -18,9 +18,9 @@ $banner = banner::first();
     <div class="row mb-2" id="proBanner">
       <div class="col-12 bg-white p-2">
         <label for="" style="font-size: 30px; color:red; font-weight: bold;">Notice :</label>
-        <label for="">
+        <label for="" style="background: #21c759;padding: 8px;">
             <marquee behavior="" direction="">
-            <h2 style="color:green;"> {{$banner->running_notice}}</h2>
+            <h2 style="color:white;"> {{$banner->running_notice}}</h2>
             </marquee>
         </label>
       </div>
@@ -37,7 +37,7 @@ $banner = banner::first();
             <b>@lang('frontend.thai_national_lottery')</b>
         </div>
         <div class="col-12 table-responsive">
-           <table class="table table-bordered table-success">
+           <table class="w-100">
                     <tr>
                         <th>Game & Bhat Amount</th>
                         <th>Win Amount</th>
@@ -92,9 +92,7 @@ $banner = banner::first();
                         <td>2 Down Rumbal Bhat Amount ($x1)</td>
                         <td>$-40</td>
                     </tr>
-
-
-      <tr>
+                    <tr>
                         <td>1 of Single Digit Bhat Amount ($x1)</td>
                         <td>$-3</td>
                         <td></td>
@@ -230,6 +228,7 @@ $banner = banner::first();
                 </div>
                 <div class="card-body p-2">
                     <table class="table">
+                    @if(isset($params['result']))
                         <tr>
                             <th>1st Prize : </th>
                             <th>{{ $params['result']->first_prize }}</th>
@@ -246,6 +245,7 @@ $banner = banner::first();
                             <th>2DOWN : </th>
                             <th>{{ $params['result']->two_down }}</th>
                         </tr>
+                        @endif
                     </table>
                 </div>
             </div>

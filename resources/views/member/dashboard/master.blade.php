@@ -29,9 +29,9 @@
   <body>
     <div class="container-scroller">
       <!-- partial:partials/_navbar.html -->
-      <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row" style="background-color:#afc7e5;">
 
-        <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center" style="background: white;">
+        <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center" style="background: #afc7e5;">
           {{-- <a class="navbar-brand brand-logo" href="{{ route('member.dashboard') }}"><img src="{{ asset('user_logo.jpg') }}" alt="logo" /></a>
           <a class="navbar-brand brand-logo-mini" href="{{ route('member.dashboard') }}"><img src="{{ asset('user_logo.jpg') }}" alt="logo" /></a> --}}
 
@@ -82,7 +82,7 @@
               </div>
             </li>
           </ul>
-          <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+          <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas" style="color:#fff;">
             <span class="mdi mdi-menu"></span>
           </button>
         </div>
@@ -149,4 +149,24 @@
     </script>
     <!--End of Tawk.to Script-->
   </body>
+  
+  <footer>
+    <div class="row">
+      <div class="col-12" >
+        <div class="row text-center">
+        <div class="col-lg-3 col-md-3 col-12">
+            <img  src="{{ asset('Frontend/image/test.gif') }}" alt="" class="img-fluid" style="max-height:150px;">
+          </div>
+
+          <div class="col-lg-3 col-md-3 col-12">
+            <img  src="{{ asset('user_logo.jpg') }}" alt="" class="img-fluid">
+          </div>
+          <div class="col-lg-6 col-md-6 col-12">
+            <div class="text-center p-3" style="background-color: #fff"> Copyright © 2015  by <a class="text-black">Thai Government Lottery Office.</a> All Rights Reserved <br><br>
+              <img class="img-fluid" src="{{ asset('Frontend/image/payment-method.png') }}" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 </html>

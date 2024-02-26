@@ -47,17 +47,6 @@ $youlive = youtubelive::get();
     <div class="section">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 col-md-6 col-12" style="text-align: left">
-                    @if($youlive)
-                    @foreach($youlive as $y)
-                    <h3 style="color: #fff;font-weight: 600;">Thai Lottery Live Draw</h3>
-                    <p style="font-size: 19px;">( @if(config('app.locale') == 'en'){{$y->title ?: $y->title_bn}}@else {{$y->title_bn ?: $y->title}}@endif ) <span style="color: #ff2b2b">LIVE…</span></p>
-                    <div class="youtube_blog_post">
-                        <iframe width="500" height="315" src="{{$y->url}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    </div>
-                    @endforeach
-                    @endif
-                </div>
                 <div class="col-lg-6 col-md-6 col-12 p-2" style="text-align: left;margin-top: -9px;">
                     @if($welmessage)
                     @foreach($welmessage as $w)
@@ -70,6 +59,17 @@ $youlive = youtubelive::get();
                                 </p>
                             </div>
                         </div>
+                    </div>
+                    @endforeach
+                    @endif
+                </div>
+                <div class="col-lg-6 col-md-6 col-12" style="text-align: left">
+                    @if($youlive)
+                    @foreach($youlive as $y)
+                    <h3 style="color: #fff;font-weight: 600;">Thai Lottery Live Draw</h3>
+                    <p style="font-size: 19px;">( @if(config('app.locale') == 'en'){{$y->title ?: $y->title_bn}}@else {{$y->title_bn ?: $y->title}}@endif ) <span style="color: #ff2b2b">LIVE…</span></p>
+                    <div class="youtube_blog_post">
+                        <iframe width="500" height="315" src="{{$y->url}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                     @endforeach
                     @endif
