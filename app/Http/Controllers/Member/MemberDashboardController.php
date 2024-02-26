@@ -20,6 +20,7 @@ use App\Models\Country;
 use Hash;
 use App\Models\Post;
 use App\Models\User;
+use App\Models\Result;
 
 
 class MemberDashboardController extends Controller
@@ -32,7 +33,9 @@ class MemberDashboardController extends Controller
     }
     public function dashboard()
     {
-        return $this->view($this->path,'home');
+        $data['result'] = Result::where('status',1)->first();
+        $data['referrar'] = MemberModel::where('member_id',Auth::guard('member')->user()->referral_no)->first();
+        return $this->view($this->path,'home',$data);
     }
 
     public function personal_profile()
