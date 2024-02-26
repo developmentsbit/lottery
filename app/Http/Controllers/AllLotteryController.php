@@ -30,7 +30,8 @@ class AllLotteryController extends Controller
             ->leftjoin('members','members.member_id','game_ledgers.member_id')
             ->where('game_ledgers.game_id',$setup_id)
             ->where('game_ledgers.game_name',$game_id)
-            ->select('game_entries.*','members.first_name','members.last_name','game_ledgers.date','game_ledgers.time')
+            ->where('game_entries.lottery_number','LIKE','%'.$request->number.'%')
+            ->select('game_entries.*','members.first_name','members.last_name','game_ledgers.date','game_ledgers.time','game_ledgers.game_name')
             ->get();
 
             $param['setup_id'] = $setup_id;

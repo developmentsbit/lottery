@@ -64,6 +64,7 @@
                             <table id="datatables-reponsive" class="table table-striped" style="width:100%">
                                 <thead>
                                     <tr>
+                                        <th>Game</th>
                                         <th>Lottery Numbers</th>
                                         <th>Direct Amount</th>
                                         <th>Rumble Amount</th>
@@ -77,6 +78,9 @@
                                 @if(count($params['data']) > 0)
                                 @foreach ($params['data'] as $v)
                                     <tr>
+                                        <td>
+                                            {{ $v->game_name }}
+                                        </td>
                                         <td>{{ $v->lottery_number }}</td>
                                         <td>{{ $v->direct_amount }}</td>
                                         <td>{{ $v->rumble_amount }}</td>
