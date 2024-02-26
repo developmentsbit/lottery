@@ -92,7 +92,7 @@
         </a>
         <div class="collapse" id="ui-cash-out">
           <ul class="nav flex-column sub-menu">
-            <li class="nav-item"> <a class="nav-link" href="{{route('member.cash_out')}}">Cash Out</a></li>
+            <li class="nav-item"> <a class="nav-link" href="{{route('member.cash_out')}}">Win Balance Cash Out</a></li>
             <li class="nav-item"> <a class="nav-link" href="{{route('member.personal_to_agent')}}">Personal To Agent</a></li>
             <li class="nav-item"> <a class="nav-link" href="{{route('member.cash_out_history')}}">Cash Out History</a></li>
           </ul>
@@ -163,6 +163,16 @@
             <li class="nav-item"> <a class="nav-link" href="{{ route('member.public_post') }}">Public Post</a></li>
           </ul>
         </div>
+
+        <li class="nav-item">
+        <a class="nav-link" href="{{route('member.logout')}}">
+          <span class="icon-bg"><i class="fa fa-home"></i></span>
+          <span class="menu-title">Logout</span>
+        </a>
+      </li>
+
+        
+        
       </li>
     </ul>
   </nav>
