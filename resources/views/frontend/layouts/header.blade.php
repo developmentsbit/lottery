@@ -72,12 +72,12 @@
                       <span>The Government Approved 100% Trusted Online Betting Website</span>
                   </div> --}}
                   <!-- <div class="col-lg-12 col-md-12 col-12 header-info"><i class="fa-regular fa-envelope"></i> Any Question/ Any Inforamtion: <span style="color:#000;">info.thailotto3up@gmail.com</span></div> -->
-                    <div class="col-lg-4 col-md-4 col-7">
+                    <div class="col-lg-4 col-md-4 col-6">
                         <div class="logo__header">
                             <img src="{{ asset('user_logo.jpg') }}" alt="" class="img-fluid" style="max-height:100px">
                         </div>
                     </div>
-                    <div class="col-lg-8 col-md-8 col-5">
+                    <div class="col-lg-8 col-md-8 col-6">
                         <div class="login_register_area">
                             <ul class="header_side_nav">
                             <!--    <li class="nav-item dropdown">-->
