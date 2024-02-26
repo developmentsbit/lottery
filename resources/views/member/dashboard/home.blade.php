@@ -36,7 +36,7 @@ $banner = banner::first();
         <div class="card-header">
             <b>@lang('frontend.thai_national_lottery')</b>
         </div>
-        <div class="col-12">
+        <div class="col-12 table-responsive">
            <table class="table table-bordered table-success">
                     <tr>
                         <th>Game & Bhat Amount</th>
@@ -168,6 +168,7 @@ $banner = banner::first();
                 </div>
             </div>
         </div>
+        @if(isset($params['referrar']))
         <div class="col-lg-6 col-md-6 col-12">
             <div class="card">
                 <div class="card-header bg-success">
@@ -177,24 +178,25 @@ $banner = banner::first();
                     <table class="table">
                         <tr>
                             <th>Account No : </th>
-                            <th></th>
+                            <th>{{ $params['referrar']->member_id }}</th>
                         </tr>
                         <tr>
                             <th>Name : </th>
-                            <th></th>
+                            <th>{{ $params['referrar']->first_name.' '.$params['referrar']->last_name }}</th>
                         </tr>
                         <tr>
                             <th>Contact No : </th>
-                            <th></th>
+                            <th>{{ $params['referrar']->mobile_no }}</th>
                         </tr>
                         <tr>
                             <th>Email : </th>
-                            <th></th>
+                            <th>{{ $params['referrar']->email }}</th>
                         </tr>
                     </table>
                 </div>
             </div>
         </div>
+        @endif
         <div class="col-lg-6 col-md-6 col-12">
             <div class="card">
                 <div class="card-header bg-success">
@@ -230,19 +232,19 @@ $banner = banner::first();
                     <table class="table">
                         <tr>
                             <th>1st Prize : </th>
-                            <th></th>
+                            <th>{{ $params['result']->first_prize }}</th>
                         </tr>
                         <tr>
                             <th>3UP : </th>
-                            <th></th>
+                            <th>{{ $params['result']->three_up }}</th>
                         </tr>
                         <tr>
                             <th>2UP : </th>
-                            <th></th>
+                            <th>{{ $params['result']->two_up }}</th>
                         </tr>
                         <tr>
                             <th>2DOWN : </th>
-                            <th></th>
+                            <th>{{ $params['result']->two_down }}</th>
                         </tr>
                     </table>
                 </div>
