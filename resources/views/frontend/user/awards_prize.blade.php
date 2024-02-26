@@ -23,74 +23,74 @@
             <div class="col-lg-12 col-md-12 col-12">
                 <table style="width: 100%;" class="table-table-bordered table-striped">
                     <tr>
-                        <th>Game & Bhat Amount</th>
+                        <th>Game & Bet Amount</th>
                         <th>Win Amount</th>
                         <th>Discount</th>
                     </tr>
                     <tr>
-                        <td>1st Prize Six Digit Direct Bhat Amount ($x1)</td>
+                        <td>1st Prize Six Digit Direct Bet Amount ($x1)</td>
                         <td>$-2500</td>
                         <td rowspan="2">40%</td>
                     </tr>
                      <tr>
-                        <td>Six Digit Rumbal Bhat Amount ($x1)</td>
+                        <td>Six Digit Rumbal Bet Amount ($x1)</td>
                         <td>$-400</td>
                     </tr> 
                     <tr>
-                        <td>3up Direct Bhat Amount ($x1)</td>
+                        <td>3up Direct Bet Amount ($x1)</td>
                         <td>$-350</td>
                         <td rowspan="2">25%</td>
                     </tr>
                      <tr>
-                        <td>3up Rumbal Bhat Amount ($x1)</td>
+                        <td>3up Rumbal Bet Amount ($x1)</td>
                         <td>$-60</td>
                     </tr>
                      <tr>
-                        <td>2up Direct Bhat Amount ($x1)</td>
+                        <td>2up Direct Bet Amount ($x1)</td>
                         <td>$-80</td>
                         <td rowspan="2">15%</td>
                     </tr>
                      <tr>
-                        <td>2up Rumbal Bhat Amount ($x1)</td>
+                        <td>2up Rumbal Bet Amount ($x1)</td>
                         <td>$-40</td>
                     </tr>
                     <tr>
-                        <td>2 Down Direct Bhat Amount ($x1)</td>
+                        <td>2 Down Direct Bet Amount ($x1)</td>
                         <td>$-60</td>
                         <td rowspan="2">15%</td>
                     </tr>
                      <tr>
-                        <td>2 Down Rumbal Bhat Amount ($x1)</td>
+                        <td>2 Down Rumbal Bet Amount ($x1)</td>
                         <td>$-40</td>
                     </tr>
                     <tr>
-                        <td>1 of Single Digit Bhat Amount ($x1)</td>
+                        <td>1 of Single Digit Bet Amount ($x1)</td>
                         <td>$-3</td>
                         <td></td>
                     </tr>
                     
                      <tr>
-                        <td>1 of 2up Single Digit Bhat Amount ($x1)</td>
+                        <td>1 of 2up Single Digit Bet Amount ($x1)</td>
                         <td>$-3</td>
                         <td></td>
                     </tr>  
                     <tr>
-                        <td>1 of 2down Single Digit Bhat Amount ($x1)</td>
+                        <td>1 of 2down Single Digit Bet Amount ($x1)</td>
                         <td>$-3</td>
                         <td></td>
                     </tr>
                         <tr>
-                        <td>3up Game Total Bhat Amount ($x1)</td>
+                        <td>3up Game Total Bet Amount ($x1)</td>
                         <td>$-5</td>
                         <td></td>
                     </tr>
                     <tr>
-                        <td>2up Game Total Bhat Amount ($x1)</td>
+                        <td>2up Game Total Bet Amount ($x1)</td>
                         <td>$-5</td>
                         <td></td>
                     </tr>
                     <tr>
-                        <td>2down Game Total Bhat Amount ($x1)</td>
+                        <td>2down Game Total Bet Amount ($x1)</td>
                         <td>$-5</td>
                         <td></td>
                     </tr>
