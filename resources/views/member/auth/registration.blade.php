@@ -44,21 +44,21 @@
                         @endif
                         <div class="col-lg-6 col-md-6 col-12 form-group mt-2">
                             <label>@lang('frontend.mobile_no')</label><span class="text-danger">*</span>
-                            <input type="text" class="form-control form-control-sm @error('mobile_no') is-invalid @enderror" name="mobile_no" id="mobile_no" value="{{ old('mobile_no') }}">
+                            <input type="text" class="form-control form-control-sm @error('mobile_no') is-invalid @enderror" name="mobile_no" id="mobile_no" value="{{ old('mobile_no') }}"  autocomplete="off">
                             @error('mobile_no')
                                 <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 form-group mt-2">
                             <label>@lang('frontend.password')</label><span class="text-danger">*</span>
-                            <input type="text" class="form-control form-control-sm @error('password') is-invalid @enderror" name="password" id="password" value="{{ old('password') }}" onkeyup="checkPass()">
+                            <input type="text" class="form-control form-control-sm @error('password') is-invalid @enderror" name="password" id="password" value="{{ old('password') }}" onkeyup="checkPass()" autocomplete="off">
                             @error('password')
                                 <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 form-group mt-2">
                             <label>@lang('frontend.confirm_password')</label><span class="text-danger">*</span>
-                            <input type="text" class="form-control form-control-sm @error('confirm_password') is-invalid @enderror" name="confirm_password" id="confirm_password" value="{{ old('confirm_password') }}" onkeyup="checkPass()">
+                            <input type="text" class="form-control form-control-sm @error('confirm_password') is-invalid @enderror" name="confirm_password" id="confirm_password" value="{{ old('confirm_password') }}" onkeyup="checkPass()" autocomplete="off">
                             @error('confirm_password')
                                 <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
@@ -71,21 +71,21 @@
                     <div class="row mt-2">
                         <div class="col-lg-6 col-md-6 col-12 form-group mt-2">
                             <label>@lang('frontend.first_name')</label><span class="text-danger">*</span>
-                            <input type="text" class="form-control form-control-sm @error('first_name') is-invalid @enderror" name="first_name" id="first_name" value="{{ old('first_name') }}">
+                            <input type="text" class="form-control form-control-sm @error('first_name') is-invalid @enderror" name="first_name" id="first_name" value="{{ old('first_name') }}" autocomplete="off">
                             @error('first_name')
                             <div class="alert alert-danger">{{ $message }}</div>
-                        @enderror
+                            @enderror
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 form-group mt-2">
                             <label>@lang('frontend.last_name')</label><span class="text-danger">*</span>
-                            <input type="text" class="form-control form-control-sm @error('last_name') is-invalid @enderror" name="last_name" id="last_name" value="{{ old('last_name') }}">
+                            <input type="text" class="form-control form-control-sm @error('last_name') is-invalid @enderror" name="last_name" id="last_name" value="{{ old('last_name') }}" autocomplete="off">
                             @error('last_name')
                                 <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 form-group mt-2">
                             <label>@lang('frontend.gender')</label><span class="text-danger">*</span>
-                            <select class="form-control form-control-sm @error('gender') is-invalid @enderror" name="gender" id="gender">
+                            <select class="form-control form-control-sm @error('gender') is-invalid @enderror" name="gender" id="gender" autocomplete="off">
                                 <option value="">@lang('common.select_one')</option>
                                 <option @if(old('gender') == 'Male') selected @endif value="Male">@lang('frontend.male')</option>
                                 <option @if(old('gender') == 'Female') selected @endif value="Female">@lang('frontend.female')</option>
@@ -97,14 +97,14 @@
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 form-group mt-2">
                             <label>@lang('frontend.city')</label><span class="text-danger">*</span>
-                            <input type="text" class="form-control form-control-sm @error('city') is-invalid @enderror" name="city" id="city" value="{{ old('city') }}">
+                            <input type="text" class="form-control form-control-sm @error('city') is-invalid @enderror" name="city" id="city" value="{{ old('city') }}" autocomplete="off">
                             @error('city')
                                 <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 form-group mt-2">
                             <label>@lang('frontend.country')</label><span class="text-danger">*</span>
-                            <select class="form-control form-control-sm @error('country') is-invalid @enderror" name="country" id="country">
+                            <select class="form-control form-control-sm @error('country') is-invalid @enderror" name="country" id="country" autocomplete="off">
                                 @if(isset($params['country']))
                                 @foreach ($params['country'] as $v)
 
@@ -118,14 +118,14 @@
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 form-group mt-2">
                             <label>@lang('frontend.email')</label>
-                            <input type="email" class="form-control form-control-sm @error('email') is-invalid @enderror" name="email" id="email" value="{{ old('email') }}">
+                            <input type="email" class="form-control form-control-sm @error('email') is-invalid @enderror" name="email" id="email" value="{{ old('email') }}" autocomplete="off">
                             @error('email')
                                 <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 form-group mt-2">
                             <label>@lang('frontend.nationality')</label><span class="text-danger">*</span>
-                            <select class="form-control form-control-sm @error('nationality') is-invalid @enderror" name="nationality" id="nationality">
+                            <select class="form-control form-control-sm @error('nationality') is-invalid @enderror" name="nationality" id="nationality" autocomplete="off">
                                 @if(isset($params['country']))
                                 @foreach ($params['country'] as $v)
 

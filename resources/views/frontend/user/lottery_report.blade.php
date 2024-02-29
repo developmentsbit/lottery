@@ -36,7 +36,31 @@
                     <span>Buying Date & Time: </span> : {{App\Traits\Date::DbtoOriginal('-',$params['ledger']->date)}} || {{App\Traits\Date::twelveHrTime($params['ledger']->time)}}<br>
                     <span>Member Name :</span> {{ $params['member']->first_name.' '.$params['member']->last_name }} <br>
                     <span>Member ID :</span> {{$params['ledger']->member_id}} <br>
-                    <span>Game :</span> {{$params['ledger']->game_name}} <br>
+                    <span>Game :</span> 
+                    
+                
+                    @if($params['ledger']->game_name == "1st_prize_six_digit")
+                        1st. Prize Six Digits
+                    @elseif($params['ledger']->game_name == "3up")
+                        3 Up
+                    @elseif($params['ledger']->game_name == "2up")
+                        2 Up
+                    @elseif($params['ledger']->game_name == "2down")
+                        2 Down
+                    @elseif($params['ledger']->game_name == "1of3upsingledigit")
+                        1 Of 3 Up Single Digit
+                    @elseif($params['ledger']->game_name == "1of2upsingledigit")
+                        1 Of 2 Up Single Digit
+                    @elseif($params['ledger']->game_name == "1of2updowndigit")
+                        1 Of 2 Down Single Digit
+                    @elseif($params['ledger']->game_name == "3upgamettotal")
+                        3 Up Game Total
+                    @elseif($params['ledger']->game_name == "2upgamettotal")
+                        2 Up Game Total
+                    @elseif($params['ledger']->game_name == "2downgametotal")
+                        2 Down Game Total
+                    @endif
+                    <br>
                 </td>
                 <td colspan="2">
                     <span>Print Date & Time :</span> {{ date('d M Y').' || '. date('h:i:s a') }}
