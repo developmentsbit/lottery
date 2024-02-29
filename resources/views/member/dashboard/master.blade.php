@@ -156,12 +156,7 @@
         <div class="row text-center">
           <div class="col-lg-3 col-md-3 col-12">
             <br><br>
-              <a href="#" style="
-    text-decoration: none;
-    color: #000;
-    font-weight: bold;
-    font-size: 19px;
-"><div style="color: #000">Click Here For facebook
+              <a href="https://www.facebook.com/drjoshim777?mibextid=ZbWKwL" style="text-decoration: none;color: #000;font-weight: bold;font-size: 19px;"><div style="color: #000">Click Here For facebook
                 <i class="fa fa-facebook-official" aria-hidden="true"></i></a><br><br>
               </div>
               <img  src="{{ asset('Frontend/image/test.gif') }}" alt="" class="img-fluid" style="max-height:150px;">

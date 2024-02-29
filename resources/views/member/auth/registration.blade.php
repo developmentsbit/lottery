@@ -51,14 +51,14 @@
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 form-group mt-2">
                             <label>@lang('frontend.password')</label><span class="text-danger">*</span>
-                            <input type="text" class="form-control form-control-sm @error('password') is-invalid @enderror" name="password" id="password" value="{{ old('password') }}" onkeyup="checkPass()" autocomplete="off">
+                            <input type="password" class="form-control form-control-sm @error('password') is-invalid @enderror" name="password" id="password" value="{{ old('password') }}" onkeyup="checkPass()" autocomplete="off">
                             @error('password')
                                 <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 form-group mt-2">
                             <label>@lang('frontend.confirm_password')</label><span class="text-danger">*</span>
-                            <input type="text" class="form-control form-control-sm @error('confirm_password') is-invalid @enderror" name="confirm_password" id="confirm_password" value="{{ old('confirm_password') }}" onkeyup="checkPass()" autocomplete="off">
+                            <input type="password" class="form-control form-control-sm @error('confirm_password') is-invalid @enderror" name="confirm_password" id="confirm_password" value="{{ old('confirm_password') }}" onkeyup="checkPass()" autocomplete="off">
                             @error('confirm_password')
                                 <div class="alert alert-danger">{{ $message }}</div>
                             @enderror

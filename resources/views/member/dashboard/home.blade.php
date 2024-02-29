@@ -20,7 +20,7 @@ $banner = banner::first();
         <label for="" style="font-size: 30px; color:red; font-weight: bold;">Notice :</label>
         <label for="" style="background: #21c759;padding: 8px;">
             <marquee behavior="" direction="">
-            <h2 style="color:white;"><span class="text-danger">**</span> {{$banner->running_notice}} <span class="text-danger">**</span></h2>
+            <h2 style="color:white;"><span class="text-danger" style="font-size: 40px">**</span> {{$banner->running_notice}} <span class="text-danger" style="font-size: 40px">**</span></h2>
             </marquee>
         </label>
       </div>
