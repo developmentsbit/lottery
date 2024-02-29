@@ -52,7 +52,7 @@ Change Password
 
                     <tr id="submit-row" class="d-none">
                         <td colspan="2" style="text-align: center">
-                            <button type="submit" class="btn btn-sm btn-success">Submit</button>
+                            <button type="submit" class="btn btn-sm btn-success">Update</button>
                         </td>
                     </tr>
                 </table>
