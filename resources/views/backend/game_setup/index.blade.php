@@ -26,7 +26,7 @@
         @endslot
 
         @if(Auth::user()->can('Payment Method trash'))
-        {{-- for deleted list index 
+        {{-- for deleted list index
         @slot('deleted_list_btn_name')
         @lang('game_setup.deleted_list')
         @endslot
@@ -69,6 +69,7 @@
                                             <th>@lang('game_setup.start_time')</th>
                                             <th>@lang('game_setup.end_time')</th>
                                             <th>@lang('common.status')</th>
+                                            <th>On/Off</th>
                                             <th>@lang('common.actions')</th>
                                         </tr>
                                     </thead>
@@ -120,8 +121,8 @@
 											</td>
                                             <td>
                                             <a href="{{ url('game_setup_restore') }}/{{ $v->id }}" class="btn btn-sm btn-info">@lang('common.restore')</a>
-                                            <a href="{{ url('game_setup_delete') }}/{{ $v->id }}" class="btn btn-sm btn-danger">@lang('common.permenantly_delete')</a>  
-                                            </td>    
+                                            <a href="{{ url('game_setup_delete') }}/{{ $v->id }}" class="btn btn-sm btn-danger">@lang('common.permenantly_delete')</a>
+                                            </td>
                                         </tr>
                                         @endforeach
                                         @endif
@@ -154,6 +155,7 @@
                 {data: 'start_time', name: 'start_time'},
                 {data: 'end_time', name: 'end_time'},
                 {data: 'status', name: 'status'},
+                {data: 'on_off', name: 'on_off'},
                 {data: 'action', name: 'action', orderable: false, searchable: false},
             ]
         });

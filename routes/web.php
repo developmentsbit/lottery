@@ -126,6 +126,7 @@ Route::middleware('auth')->group(function () {
     game setup extra routes are below
     */
    Route::get('game_setup_status/{id}',[GameSetupController::class,'status'])->name('game_setup.status');
+   Route::get('game_setup_on_off/{id}',[GameSetupController::class,'on_off'])->name('game_setup.on_off');
    Route::get('game_setup_trash',[GameSetupController::class,'trash_list'])->name('game_setup.trash_list');
    Route::get('game_setup_restore/{id}',[GameSetupController::class,'restore'])->name('game_setup.restore');
    Route::get('game_setup_delete/{id}',[GameSetupController::class,'delete'])->name('game_setup.delete');

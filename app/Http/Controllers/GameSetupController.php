@@ -60,6 +60,20 @@ class GameSetupController extends Controller
                         return '<div class="btn-group">
                         <a href="'.route('game_setup.status',$row->id).'" class="'.$class.'">'.$status.'</a></div>';
                     })
+                    ->addColumn('on_off',function($row){
+                        if($row->on_off == '1')
+                        {
+                            $status = 'On';
+                            $class = 'btn btn-sm btn-success';
+                        }
+                        else
+                        {
+                            $status = 'Off';
+                            $class = 'btn btn-sm btn-danger';
+                        }
+                        return '<div class="btn-group">
+                        <a href="'.route('game_setup.on_off',$row->id).'" class="'.$class.'">'.$status.'</a></div>';
+                    })
                     ->addColumn('action', function($row){
                         return '<div class="btn-group">
                         <a href="'.route('game_setup.edit',$row->id).'" class="btn btn-info">'.'<i class="fa-regular fa-pen-to-square"></i>'.'</a>
@@ -69,7 +83,7 @@ class GameSetupController extends Controller
                             <button type="submit" class="btn btn-danger"><i class="fa fa-trash"></i></button>
                         </form></div>';
                     })
-                    ->rawColumns(['action','sl','game_title','game_title_bn','start_date','end_date','start_time','end_time','status'])
+                    ->rawColumns(['action','sl','game_title','game_title_bn','start_date','end_date','start_time','end_time','status','on_off'])
                     ->make(true);
         }
         return view('backend.game_setup.index');
@@ -99,6 +113,7 @@ class GameSetupController extends Controller
             'end_time'=>$request->end_time.':00',
             'expire_message'=>$request->expire_message,
             'status'=>$request->status,
+            'on_off' => 1,
 
         );
 
@@ -193,17 +208,47 @@ class GameSetupController extends Controller
     public function status($id)
     {
         $games = game_setup::all();
-        
+
         foreach($games as $g)
         {
             $g->update([
                 'status' => 0,
+                'on_off' => 0,
             ]);
         }
 
         game_setup::where('id',$id)->update([
             'status' => 1,
+            'on_off' => 1,
         ]);
+
+        Toastr::success('Status Changed', 'success');
+        return redirect(route('game_setup.index'));
+    }
+    public function on_off($id)
+    {
+        // $games = game_setup::all();
+
+        // foreach($games as $g)
+        // {
+        //     $g->update([
+        //         'on_off' => 0,
+        //     ]);
+        // }
+
+        $game = game_setup::find($id);
+        if(isset($game))
+        {
+            if($game->on_off == 0)
+            {
+                $game->update(['on_off' => 1]);
+            }
+            else
+            {
+                $game->update(['on_off' => 0]);
+
+            }
+        }
 
         Toastr::success('Status Changed', 'success');
         return redirect(route('game_setup.index'));
