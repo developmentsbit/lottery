@@ -234,7 +234,7 @@ Thai National Lottery
                                     <input type="number" class="form-control form-control-sm" onkeyup="calculateDirectAmount()" name="rumble_amount[]" id="rumble_amount-${index}" value="" >
                                 </td>
                             </tr>`;
-                        }k
+                        }
                     formData += `</tbody>
                     <tfoot class="table-success ">
                         <tr>
