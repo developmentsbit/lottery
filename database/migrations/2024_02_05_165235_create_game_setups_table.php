@@ -21,11 +21,12 @@ return new class extends Migration
             $table->time('end_time')->nullable();
             $table->text('expire_message')->nullable();
             $table->integer('status')->nullable()->comment(' 1 - Active , 0 - Inactive');
+            $table->integer('on_off')->nullable()->comment(' 0 - Off, 1 - On');
             $table->date('deleted_at')->nullable();
             $table->timestamps();
         });
     }
-    
+
     /**
      * Reverse the migrations.
      */
