@@ -27,35 +27,35 @@ Change Password
         <div class="card-body">
             <form method="post" action="{{ route('member.submit_change_pass') }}" enctype="multipart/form-data">
                 @csrf
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 col-12 mt-2">
-                        <label>Existing Password</label><span class="text-danger">*</span>
+                <table class="table">
+                    <tr>
+                        <th>Existing Password</th>
+                        <td>
                         <input type="password" class="form-control" name="existing_password" id="existing_password" required onkeyup="checkPassword()">
                         <div class="message">
 
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12 mt-2">
-                        <label>New Password</label><span class="text-danger">*</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>New Password</th>
+                        <td>
                         <input type="password" class="form-control" name="password" id="password" placeholder="Password" required>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12 mt-2">
-                        <label>Confirm Password</label><span class="text-danger">*</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Confirm Password</th>
+                        <td>
                         <input type="password" class="form-control" name="confirm_password" id="confirm_password" placeholder="Confirm Password" required>
                         </td>
                     </tr>
 
                     <tr id="submit-row" class="d-none">
                         <td colspan="2" style="text-align: center">
-                            <button type="submit" class="btn btn-sm btn-success">Update</button>
+                            <button type="submit" class="btn btn-sm btn-success">Submit</button>
                         </td>
                     </tr>
                 </table>
-                    </div>
-                </div>
-                <div class="col-12 text-center mt-2">
-                    <button id="submit" type="submit" class="btn btn-sm btn-success" disabled>Submit</button>
-                </div>
             </form>
         </div>
     </div>
@@ -83,11 +83,11 @@ Change Password
                     if(res == 1)
                     {
                         $('.message').html('');
-                        $('#submit').prop('disabled',false);
+                        $('#submit-row').removeClass('d-none');
                     }
                     else
                     {
-                        $('#submit').prop('disabled',true);
+                        $('#submit-row').addClass('d-none');
                         $('.message').html(res);
                     }
                 },
