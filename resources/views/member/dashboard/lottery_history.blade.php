@@ -47,7 +47,27 @@ Lottery
                             {{ $v->invoice_no }}
                         </td>
                         <td>
-                            {{ $v->game_name }}
+                            @if($v->game_name == "1st_prize_six_digit")
+                                1st. Prize Six Digits
+                            @elseif($v->game_name == "3up")
+                                3 Up
+                            @elseif($v->game_name == "2up")
+                                2 Up
+                            @elseif($v->game_name == "2down")
+                                2 Down
+                            @elseif($v->game_name == "1of3upsingledigit")
+                                1 Of 3 Up Single Digit
+                            @elseif($v->game_name == "1of2upsingledigit")
+                                1 Of 2 Up Single Digit
+                            @elseif($v->game_name == "1of2updowndigit")
+                                1 Of 2 Down Single Digit
+                            @elseif($v->game_name == "3upgamettotal")
+                                3 Up Game Total
+                            @elseif($v->game_name == "2upgamettotal")
+                                2 Up Game Total
+                            @elseif($v->game_name == "2downgametotal")
+                                2 Down Game Total
+                            @endif
                         </td>
                         <td>
                             {{ $v->slot }}

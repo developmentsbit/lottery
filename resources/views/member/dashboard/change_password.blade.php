@@ -42,6 +42,15 @@ Change Password
                     <div class="col-lg-4 col-md-6 col-12 mt-2">
                         <label>Confirm Password</label><span class="text-danger">*</span>
                         <input type="password" class="form-control" name="confirm_password" id="confirm_password" placeholder="Confirm Password" required>
+                        </td>
+                    </tr>
+
+                    <tr id="submit-row" class="d-none">
+                        <td colspan="2" style="text-align: center">
+                            <button type="submit" class="btn btn-sm btn-success">Update</button>
+                        </td>
+                    </tr>
+                </table>
                     </div>
                 </div>
                 <div class="col-12 text-center mt-2">

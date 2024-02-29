@@ -97,7 +97,7 @@
                             @enderror
                         </div>
                         <div class="col-12 mt-4" style="text-align: right">
-                            <button type="submit" id="submit" class="btn  btn-success"> <i class="fa fa-save"></i> @lang('common.update')</button>
+                            <button type="submit" id="submit" class="btn  btn-success"> <i class="fa fa-save"></i> @lang('common.submit')</button>
                         </div>
                     </div>
                 </form>
