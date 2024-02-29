@@ -31,7 +31,7 @@ class MemberRequest extends FormRequest
             'gender' => 'required',
             'city' => 'required',
             'country' => 'required',
-            'email' => 'required',
+            // 'email' => 'required',
             'nationality' => 'required',
         ];
     }
@@ -54,7 +54,7 @@ class MemberRequest extends FormRequest
             'gender.required' => __('frontend.gender_required'),
             'city.required' => __('frontend.city_required'),
             'country.required' => __('frontend.country_required'),
-            'email.required' => __('frontend.email_required'),
+            // 'email.required' => __('frontend.email_required'),
             'nationality.required' => __('frontend.nationality_required'),
         ];
      }
