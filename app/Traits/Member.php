@@ -15,7 +15,9 @@ trait Member {
 
         $cash_balance = $balance - ($transfer + $expense);
 
-        return $cash_balance;
+        $number_format = number_format((float)$cash_balance, 2, '.', '');
+
+        return $number_format;
     }
     public static function getWinBalance($member_id)
     {
@@ -26,6 +28,8 @@ trait Member {
 
         $win_balance = $winbalance - ($withdraw + $transfer);
 
-        return $win_balance;
+        $number_format = number_format((float)$win_balance, 2, '.', '');
+
+        return $number_format;
     }
 }
