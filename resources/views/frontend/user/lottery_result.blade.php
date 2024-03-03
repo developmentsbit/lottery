@@ -27,7 +27,7 @@
                       <div class="content">
                         @if(isset($params['result']))
                           <div class="imgBx">
-                              <img src="{{ asset('Backend/settings/455602170.png') }}">
+                              <img src="{{ asset('Backend/settings') }}/{{ $settings->logo }}">
                               <h3>National Lottery Result</h3>
                               <h4>Draw Date: {{ App\Traits\Date::DbToOriginal('-',$params['result']->draw_date) }}</h4>
                           </div>

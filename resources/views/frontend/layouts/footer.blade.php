@@ -26,7 +26,7 @@
                 <div class="row">
                     <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
                         <h6 class="text-uppercase mb-4 font-weight-bold">
-                            <img src="{{ asset('Backend/settings/455602170.png') }}">
+                            <img src="{{ asset('Backend/settings') }}/{{ $settings->logo }}">
                         </h6>
                         <p style="color: #fff;">
                         ลอตเตอรีในประเทศไทยตามประวัติเริ่มต้นในรัชสมัยพระบาทสมเด็จพระจุลจอมเกล้าเจ้าอยู่หัวรัชกาลที่โดยมีชื่ออังกฤษว่าเป็นครั้งแรกที่ได้รับการตีพิมพ์ในรูปแบบการออกรางวัลลอตเตอรี่แบบยุโรปที่เรียกว่า"ลอตเตอรี"โดยพระบาทสมเด็จพระจุลจอมเกล้าเจ้าอยู่หัว .

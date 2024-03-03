@@ -39,28 +39,28 @@
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-12 mt-2">
                                 <label for="method_name ">@lang('payment_method.method_name')</label><span class="text-danger">*</span>
-                                <input type="text" name="method_name" class="form-control  mt-1 @error('method_name') is-invalid @enderror" id="method_name" value="{{ $params['data']->method_name }}">
+                                <input type="text" name="method_name" class="form-control  mt-1 @error('method_name') is-invalid @enderror" id="method_name" value="{{ $params['data']->method_name }}" autocomplete="off">
                                 @error('method_name')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-12 mt-2">
                                 <label for="method_name_bn">@lang('payment_method.method_name_bn')</label>
-                                <input type="text" name="method_name_bn" class="form-control  mt-1  @error('method_name_bn') is-invalid @enderror" id="method_name_bn" value="{{$params['data']->method_name_bn}}">
+                                <input type="text" name="method_name_bn" class="form-control  mt-1  @error('method_name_bn') is-invalid @enderror" id="method_name_bn" value="{{$params['data']->method_name_bn}}" autocomplete="off">
                                 @error('method_name_bn')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-12 mt-2">
                                 <label for="vat">Withdraw Vat(%)</label> <span class="text-danger">*</span>
-                                <input type="number" name="vat" class="form-control  mt-1  @error('vat') is-invalid @enderror" id="vat" value="{{$params['data']->vat}}">
+                                <input type="number" name="vat" class="form-control  mt-1  @error('vat') is-invalid @enderror" id="vat" value="{{$params['data']->vat}}" autocomplete="off">
                                 @error('vat')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-12 mt-2">
                                 <label for="dollar_rate">Dollar Rate</label> <span class="text-danger">*</span>
-                                <input type="number" name="dollar_rate" class="form-control  mt-1  @error('dollar_rate') is-invalid @enderror" id="dollar_rate" value="{{$params['data']->dollar_rate}}">
+                                <input type="number" name="dollar_rate" class="form-control  mt-1  @error('dollar_rate') is-invalid @enderror" id="dollar_rate" value="{{$params['data']->dollar_rate}}" autocomplete="off">
                                 @error('dollar_rate')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror

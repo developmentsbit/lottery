@@ -40,7 +40,7 @@ Create Post
                     <div class="col-lg-4 col-md-4 col-12 mt-2">
                         <label>Amount</label><span class="text-danger">*</span>
                         <div class="input-group">
-                            <input type="number" class="form-control" name="amount" id="amount" placeholder="Enter Amount" required onchange="return getOriginalAmount()">
+                            <input type="number" class="form-control" name="amount" id="amount" placeholder="Enter Amount" required onchange="return getOriginalAmount()" autocomplete="off">
                             <span class="input-group-append btn btn-dark" style="border-radius: 0px;">$</span>
                         </div>
                     </div>
@@ -54,7 +54,7 @@ Create Post
                                     <option value="Whatsapp">Whatsapp</option>
                                 </select>
                             {{-- </span> --}}
-                            <input type="number" class="form-control" name="contact_number" id="contact_number" placeholder="Enter Contact Number" required>
+                            <input type="number" class="form-control" name="contact_number" id="contact_number" placeholder="Enter Contact Number" required autocomplete="off">
                         </div>
                     </div>
                 </div>

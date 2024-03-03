@@ -18,9 +18,9 @@ $banner = banner::first();
     <div class="row mb-2" id="proBanner">
       <div class="col-12 bg-white p-2">
         <label for="" style="font-size: 30px; color:red; font-weight: bold;">Notice :</label>
-        <label for="" style="background: #21c759;padding: 8px;">
+        <label for="" style="background: #21c759;padding: 0px 32px 0px 33px;box-shadow: 0px 3px 3px #999;">
             <marquee behavior="" direction="">
-            <h2 style="color:white;"><span class="text-danger" style="font-size: 40px">**</span> {{$banner->running_notice}} <span class="text-danger" style="font-size: 40px">**</span></h2>
+            <h4 style="color:white;"><span class="text-danger" style="font-size: 40px">**</span> {{$banner->running_notice}} <span class="text-danger" style="font-size: 40px">**</span></h4>
             </marquee>
         </label>
       </div>
