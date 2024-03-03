@@ -39,14 +39,14 @@
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-12 mt-2">
                                 <label for="game_title">@lang('game_setup.game_title')</label><span class="text-danger">*</span>
-                                <input type="text" name="game_title" class="form-control  mt-1 @error('game_title') is-invalid @enderror" id="game_title" value="{{ $data->game_title }}">
+                                <input type="text" name="game_title" class="form-control  mt-1 @error('game_title') is-invalid @enderror" id="game_title" value="{{ $data->game_title }}" autocomplete="off">
                                 @error('game_title')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-12 mt-2">
                                 <label for="game_title_bn">@lang('game_setup.game_title_bn')</label>
-                                <input type="text" name="game_title_bn" class="form-control  mt-1  @error('game_title_bn') is-invalid @enderror" id="game_title_bn" value="{{ $data->game_title_bn }}">
+                                <input type="text" name="game_title_bn" class="form-control  mt-1  @error('game_title_bn') is-invalid @enderror" id="game_title_bn" value="{{ $data->game_title_bn }}" autocomplete="off">
                                 @error('game_title_bn')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror

@@ -40,7 +40,7 @@
                             <div class="col-lg-6 col-md-6 col-sm-12 mt-2">
                                 <label for="branch_name_en">Amount</label><span class="text-danger">*</span>
                                 <div class="input-group">
-                                    <input type="number" class="form-control @error('amount') is-invalid @enderror" name="amount" id="amount" value="{{ old('amount') }}">
+                                    <input type="number" class="form-control @error('amount') is-invalid @enderror" name="amount" id="amount" value="{{ old('amount') }}" autocomplete="off">
                                     <span class="input-group-text">$</span>
                                 </div>
                                 @error('amount')
@@ -50,7 +50,7 @@
                             <div class="col-lg-6 col-md-6 col-sm-12 mt-2">
                                 <label for="branch_name_en">Payment Account</label>
                                 <div class="input-group">
-                                    <input type="number" class="form-control @error('payment_account') is-invalid @enderror" name="payment_account" id="payment_account" value="{{ old('payment_account') }}">
+                                    <input type="number" class="form-control @error('payment_account') is-invalid @enderror" name="payment_account" id="payment_account" value="{{ old('payment_account') }}" autocomplete="off">
 
                                 </div>
                                 @error('payment_account')

@@ -43,7 +43,7 @@ Cash Out
                     <div class="col-lg-4 col-md-6 col-12 mt-2">
                         <label>Amount</label><span class="text-danger">*</span>
                         <div class="input-group">
-                            <input type="number" class="form-control" name="amount" id="amount" placeholder="Enter Amount" required onchange="getOriginalAmount()">
+                            <input type="number" class="form-control" name="amount" id="amount" placeholder="Enter Amount" required onchange="getOriginalAmount()" autocomplete="off">
                             <span class="input-group-append btn btn-dark" style="border-radius: 0px;">$</span>
                         </div>
                         <div class="cashout_message p-2">
@@ -52,7 +52,7 @@ Cash Out
                     </div>
                     <div class="col-lg-4 col-md-6 col-12 mt-2">
                         <label>Your Payment Account</label>
-                        <input type="text" class="form-control" name="payment_account" id="payment_account" placeholder="Your Payment Account Number" required>
+                        <input type="text" class="form-control" name="payment_account" id="payment_account" placeholder="Your Payment Account Number" required autocomplete="off">
                     </div>
                 </div>
 

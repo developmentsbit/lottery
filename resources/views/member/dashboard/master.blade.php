@@ -54,8 +54,8 @@
 
                   @endif
                 </div>
-                <div class="nav-profile-text">
-                  <p class="mb-1 text-black">{{Auth::guard('member')->user()->first_name}} {{Auth::guard('member')->user()->last_name}}</p>
+                <div style="padding:5px">
+                  {{Auth::guard('member')->user()->first_name}} {{Auth::guard('member')->user()->last_name}}
                 </div>
               </a>
               <div class="dropdown-menu navbar-dropdown dropdown-menu-right p-0 border-0 font-size-sm" aria-labelledby="profileDropdown" data-x-placement="bottom-end">

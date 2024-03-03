@@ -18,6 +18,10 @@ td, th {
   text-align: left;
   padding: 8px;
 }
+td i{
+    font-size: 25px;
+    color: #fff;
+}
 </style>
 
 <!-- page title -->
@@ -43,14 +47,16 @@ td, th {
                         <th>AGENT TYPE</th>
                         <th>NAME</th>
                         <th>COUNTRY</th>
+                        <th>CONTACT US</th>
                         <th>REMARK</th>
                         <th>ACTION</th>
                     </tr>
                     <tr>
                         <td>1</td>
                         <td>Super Agent</td>
-                        <td>Mohammad Faruque</td>
-                        <td>Pakistan</td>
+                        <td>Lotto Mastermind 3up</td>
+                        <td>Bangladesh</td>
+                        <td><a href="https://www.facebook.com/drjoshim777?mibextid=ZbWKwL" style="color: #fff;"><i class="fa-brands fa-facebook"></i></a></td>
                         <td>
                             <span class="btn btn-success btn-sm">Verified</span>
                         </td>
@@ -61,8 +67,9 @@ td, th {
                     <tr>
                         <td>2</td>
                         <td>Super Agent</td>
-                        <td>Md Alamin</td>
-                        <td>Bangladesh</td>
+                        <td>Mohammad Faruque</td>
+                        <td>Pakistan</td>
+                        <td><i class="fa-brands fa-facebook"></i></td>
                         <td>
                             <span class="btn btn-success btn-sm">Verified</span>
                         </td>
@@ -73,8 +80,9 @@ td, th {
                     <tr>
                         <td>3</td>
                         <td>Super Agent</td>
-                        <td>Kamrul Hasan</td>
+                        <td>Md Alamin</td>
                         <td>Bangladesh</td>
+                        <td><i class="fa-brands fa-facebook"></i></td>
                         <td>
                             <span class="btn btn-success btn-sm">Verified</span>
                         </td>
@@ -85,8 +93,9 @@ td, th {
                     <tr>
                         <td>4</td>
                         <td>Super Agent</td>
-                        <td>Samar Kumar Lal</td>
-                        <td>India (Kalkata)</td>
+                        <td>Kamrul Hasan</td>
+                        <td>Bangladesh</td>
+                        <td><i class="fa-brands fa-facebook"></i></td>
                         <td>
                             <span class="btn btn-success btn-sm">Verified</span>
                         </td>
@@ -97,10 +106,11 @@ td, th {
                     <tr>
                         <td>5</td>
                         <td>Super Agent</td>
-                        <td>Uchker Wai</td>
-                        <td>Burma</td>
+                        <td>Samar Kumar Lal</td>
+                        <td>India (Kalkata)</td>
+                        <td><i class="fa-brands fa-facebook"></i></td>
                         <td>
-                            <span class="btn btn-danger btn-sm">Unverified</span>
+                            <span class="btn btn-success btn-sm">Verified</span>
                         </td>
                         <td>
                             <a  class="btn btn-info border-0 edit text-light" data-toggle="modal" data-target="#exampleModalCenters" href="#">@lang('frontend.complain')</a>
@@ -109,8 +119,9 @@ td, th {
                     <tr>
                         <td>6</td>
                         <td>Super Agent</td>
-                        <td>Umar Sheikh</td>
-                        <td>Saudi Arab</td>
+                        <td>Uchker Wai</td>
+                        <td>Burma</td>
+                        <td><i class="fa-brands fa-facebook"></i></td>
                         <td>
                             <span class="btn btn-danger btn-sm">Unverified</span>
                         </td>
@@ -121,8 +132,22 @@ td, th {
                     <tr>
                         <td>7</td>
                         <td>Super Agent</td>
+                        <td>Umar Sheikh</td>
+                        <td>Saudi Arab</td>
+                        <td><i class="fa-brands fa-facebook"></i></td>
+                        <td>
+                            <span class="btn btn-danger btn-sm">Unverified</span>
+                        </td>
+                        <td>
+                            <a  class="btn btn-info border-0 edit text-light" data-toggle="modal" data-target="#exampleModalCenters" href="#">@lang('frontend.complain')</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Super Agent</td>
                         <td>Anowar Hossen</td>
                         <td>Kuwit</td>
+                        <td><i class="fa-brands fa-facebook"></i></td>
                         <td>
                             <span class="btn btn-danger btn-sm">Unverified</span>
                         </td>

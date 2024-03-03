@@ -47,7 +47,7 @@ Win Balance Transfer
                     <div class="col-lg-4 col-md-4 col-12 mt-2">
                         <label>Amount</label><span class="text-danger">*</span>
                         <div class="input-group">
-                            <input type="number" class="form-control" name="amount" id="amount" placeholder="Enter Amount" required>
+                            <input type="number" class="form-control" name="amount" id="amount" placeholder="Enter Amount" required autocomplete="off">
                             <span class="input-group-append btn btn-dark" style="border-radius: 0px;">$</span>
                         </div>
                     </div>

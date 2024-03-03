@@ -38,14 +38,14 @@
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-12 mt-2">
                                 <label for="title ">@lang('photo_info.title_en')</label><span class="text-danger">*</span>
-                                <input type="text" name="title" class="form-control  mt-1 @error('title') is-invalid @enderror" id="title" value="{{old('title')}}">
+                                <input type="text" name="title" class="form-control  mt-1 @error('title') is-invalid @enderror" id="title" value="{{old('title')}}" autocomplete="off">
                                 @error('title')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-12 mt-2">
                                 <label for="title_bn">@lang('photo_info.title_bn')</label>
-                                <input type="text" name="title_bn" class="form-control  mt-1  @error('title_bn') is-invalid @enderror" id="title_bn" value="{{old('title_bn')}}">
+                                <input type="text" name="title_bn" class="form-control  mt-1  @error('title_bn') is-invalid @enderror" id="title_bn" value="{{old('title_bn')}}" autocomplete="off">
                                 @error('title_bn')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
