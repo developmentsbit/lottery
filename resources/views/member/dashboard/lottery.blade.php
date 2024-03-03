@@ -231,13 +231,13 @@ Thai National Lottery
                             formData += `<tr>
 
                                 <td>
-                                    <input type="number" class="form-control form-control-sm" name="lottery_number[]" id="lottery_number-${index}" onKeyPress="if(this.value.length==${max_length}) return false;">
+                                    <input type="number" class="form-control form-control-sm" name="lottery_number[]" id="lottery_number-${index}" onKeyPress="if(this.value.length==${max_length}) return false;" autocomplete="off">
                                 </td>
                                 <td>
-                                    <input type="number" class="form-control form-control-sm" name="direct_amount[]" id="direct_amount-${index}" onkeyup="calculateDirectAmount()" value="" >
+                                    <input type="number" class="form-control form-control-sm" name="direct_amount[]" id="direct_amount-${index}" onkeyup="calculateDirectAmount()" value="" autocomplete="off">
                                 </td>
                                 <td>
-                                    <input type="number" class="form-control form-control-sm" onkeyup="calculateDirectAmount()" name="rumble_amount[]" id="rumble_amount-${index}" value="" >
+                                    <input type="number" class="form-control form-control-sm" onkeyup="calculateDirectAmount()" name="rumble_amount[]" id="rumble_amount-${index}" value="" autocomplete="off">
                                 </td>
                             </tr>`;
                         }
@@ -249,7 +249,7 @@ Thai National Lottery
                             </td>
                             <td id="">
                                 <span id="totalAmount">$</span>
-                                <input type="hidden" name="totalAmount" id="total_amount" value="">
+                                <input type="hidden" name="totalAmount" id="total_amount" value="" autocomplete="off">
                             </td>
                         </tr>
                         <tr>
@@ -258,8 +258,8 @@ Thai National Lottery
                             </td>
                             <td>
                                     <span id="discountedAmount">$</span>
-                                    <input type="hidden" name="cont_discount" id="contDiscount" value="${show_discount_per}">
-                                    <input type="hidden" name="discount" id="discount" value="">
+                                    <input type="hidden" name="cont_discount" id="contDiscount" value="${show_discount_per}" autocomplete="off">
+                                    <input type="hidden" name="discount" id="discount" value="" autocomplete="off">
                             </td>
                         </tr>
                         <tr>
@@ -268,7 +268,7 @@ Thai National Lottery
                             </td>
                             <td>
                                 <span id="betAmountText">$</span>
-                                <input type="hidden" name="bet_amount" id="betAmount" value="">
+                                <input type="hidden" name="bet_amount" id="betAmount" value="" autocomplete="off">
                             </td>
                         </tr>
                     </tfoot>
@@ -297,10 +297,10 @@ Thai National Lottery
                             formData += `<tr>
 
                                 <td>
-                                    <input type="number" class="form-control form-control-sm" name="lottery_number[]" id="lottery_number-${index}" onKeyPress="if(this.value.length==${max_length}) return false;">
+                                    <input type="number" class="form-control form-control-sm" name="lottery_number[]" id="lottery_number-${index}" onKeyPress="if(this.value.length==${max_length}) return false;" autocomplete="off">
                                 </td>
                                 <td>
-                                    <input type="number" class="form-control form-control-sm" name="direct_amount[]" id="direct_amount-${index}" onkeyup="calculateDirectAmount()" value="">
+                                    <input type="number" class="form-control form-control-sm" name="direct_amount[]" id="direct_amount-${index}" onkeyup="calculateDirectAmount()" value="" autocomplete="off">
                                 </td>
                             </tr>`;
                         }
