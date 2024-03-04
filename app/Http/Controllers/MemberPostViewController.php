@@ -8,8 +8,8 @@ use Auth;
 use App\Traits\Member;
 use App\Models\Member as MemberModel;
 use App\Models\Post;
-use App\Models\User;
 use RealRashid\SweetAlert\Facades\Alert;
+use DataTables;
 
 class MemberPostViewController extends Controller
 {
@@ -74,16 +74,8 @@ class MemberPostViewController extends Controller
      */
     public function destroy(string $id)
     {
-        // Post::find($id)->delete();
-        
-        // Alert::success('Success', 'This Member Post Removed');
-        
-        // return redirect()->back();
-
         Post::find($id)->delete();
-
         Alert::success('Success', 'This Member Post Removed');
-
         return redirect()->back();
     }
 
