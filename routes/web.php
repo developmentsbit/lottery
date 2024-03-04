@@ -27,6 +27,7 @@ use App\Http\Controllers\RegisteredMemberController;
 use App\Http\Controllers\LotteryNumbersController;
 use App\Http\Controllers\AllLotteryController;
 use App\Http\Controllers\ResultController;
+use App\Http\Controllers\MemberPostViewController;
 
 /*
 |--------------------------------------------------------------------------
@@ -116,7 +117,10 @@ Route::middleware('auth')->group(function () {
         'active_lottery_numbers' => LotteryNumbersController::class,
         'all_lottery' => AllLotteryController::class,
         'result' => ResultController::class,
+        'member_post' => MemberPostViewController::class,
    ]);
+
+   Route::get('changed_post_status/{id}',[MemberPostViewController::class,'status'])->name('member_post.status');
 
    Route::post('member_status',[RegisteredMemberController::class,'status'])->name('registerd_member.status');
 
