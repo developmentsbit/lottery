@@ -31,7 +31,7 @@ trait Date
         }
         elseif($explode[1] == '3')
         {
-            $month = __('common.mnar');
+            $month = __('common.mar');
         }
         elseif($explode[1] == '4')
         {

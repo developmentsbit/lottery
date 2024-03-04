@@ -17,10 +17,9 @@
                         <form action="{{route('result.store')}}" method="post" enctype="multipart/form-data" id="formData">
                             @csrf
                         <div class="row">
-
                             <div class="col-lg-4 col-md-6 col-12 mt-2">
                                 <label for="draw_date">Draw Date</label><span class="text-danger">*</span>
-                                <input type="date" name="draw_date" class="form-control  mt-1 @error('draw_date') is-invalid @enderror" id="draw_date" value="{{old('draw_date')}}" required>
+                                <input type="text" name="draw_date" class="form-control  mt-1 @error('draw_date') is-invalid @enderror" id="draw_date" value="{{old('draw_date')}}" required>
                                 @error('draw_date')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
@@ -56,7 +55,7 @@
 
                             <div class="col-lg-4 col-md-6 col-12 mt-2">
                                 <label for="next_draw">Next Draw Date</label><span class="text-danger">*</span>
-                                <input type="date" name="next_draw" class="form-control  mt-1 @error('next_draw') is-invalid @enderror" id="next_draw" value="{{old('next_draw')}}" required autocomplete="off">
+                                <input type="text" name="next_draw" class="form-control  mt-1 @error('next_draw') is-invalid @enderror" id="next_draw" value="{{old('next_draw')}}" required autocomplete="off">
                                 @error('next_draw')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
