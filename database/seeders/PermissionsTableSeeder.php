@@ -1711,6 +1711,204 @@ class PermissionsTableSeeder extends Seeder
                 'parent' => 'Result',
                 'updated_at' => '2024-02-19 15:57:58',
             ),
+            188 => 
+            array (
+                'created_at' => '2024-03-04 12:07:18',
+                'guard_name' => 'web',
+                'id' => 506,
+                'name' => 'Member Post create',
+                'parent' => 'Member Post',
+                'updated_at' => '2024-03-04 12:07:18',
+            ),
+            189 => 
+            array (
+                'created_at' => '2024-03-04 12:07:19',
+                'guard_name' => 'web',
+                'id' => 507,
+                'name' => 'Member Post index',
+                'parent' => 'Member Post',
+                'updated_at' => '2024-03-04 12:07:19',
+            ),
+            190 => 
+            array (
+                'created_at' => '2024-03-04 12:07:19',
+                'guard_name' => 'web',
+                'id' => 508,
+                'name' => 'Member Post show',
+                'parent' => 'Member Post',
+                'updated_at' => '2024-03-04 12:07:19',
+            ),
+            191 => 
+            array (
+                'created_at' => '2024-03-04 12:07:19',
+                'guard_name' => 'web',
+                'id' => 509,
+                'name' => 'Member Post edit',
+                'parent' => 'Member Post',
+                'updated_at' => '2024-03-04 12:07:19',
+            ),
+            192 => 
+            array (
+                'created_at' => '2024-03-04 12:07:19',
+                'guard_name' => 'web',
+                'id' => 510,
+                'name' => 'Member Post destroy',
+                'parent' => 'Member Post',
+                'updated_at' => '2024-03-04 12:07:19',
+            ),
+            193 => 
+            array (
+                'created_at' => '2024-03-04 12:07:19',
+                'guard_name' => 'web',
+                'id' => 511,
+                'name' => 'Member Post trash',
+                'parent' => 'Member Post',
+                'updated_at' => '2024-03-04 12:07:19',
+            ),
+            194 => 
+            array (
+                'created_at' => '2024-03-04 12:07:19',
+                'guard_name' => 'web',
+                'id' => 512,
+                'name' => 'Member Post restore',
+                'parent' => 'Member Post',
+                'updated_at' => '2024-03-04 12:07:19',
+            ),
+            195 => 
+            array (
+                'created_at' => '2024-03-04 12:07:19',
+                'guard_name' => 'web',
+                'id' => 513,
+                'name' => 'Member Post delete',
+                'parent' => 'Member Post',
+                'updated_at' => '2024-03-04 12:07:19',
+            ),
+            196 => 
+            array (
+                'created_at' => '2024-03-04 12:07:19',
+                'guard_name' => 'web',
+                'id' => 514,
+                'name' => 'Member Post status',
+                'parent' => 'Member Post',
+                'updated_at' => '2024-03-04 12:07:19',
+            ),
+            197 => 
+            array (
+                'created_at' => '2024-03-04 12:07:19',
+                'guard_name' => 'web',
+                'id' => 515,
+                'name' => 'Member Post properties',
+                'parent' => 'Member Post',
+                'updated_at' => '2024-03-04 12:07:19',
+            ),
+            198 => 
+            array (
+                'created_at' => '2024-03-04 12:07:19',
+                'guard_name' => 'web',
+                'id' => 516,
+                'name' => 'Member Post print',
+                'parent' => 'Member Post',
+                'updated_at' => '2024-03-04 12:07:19',
+            ),
+            199 => 
+            array (
+                'created_at' => '2024-03-04 14:14:20',
+                'guard_name' => 'web',
+                'id' => 528,
+                'name' => 'Public Post create',
+                'parent' => 'Public Post',
+                'updated_at' => '2024-03-04 14:14:20',
+            ),
+            200 => 
+            array (
+                'created_at' => '2024-03-04 14:14:20',
+                'guard_name' => 'web',
+                'id' => 529,
+                'name' => 'Public Post index',
+                'parent' => 'Public Post',
+                'updated_at' => '2024-03-04 14:14:20',
+            ),
+            201 => 
+            array (
+                'created_at' => '2024-03-04 14:14:20',
+                'guard_name' => 'web',
+                'id' => 530,
+                'name' => 'Public Post show',
+                'parent' => 'Public Post',
+                'updated_at' => '2024-03-04 14:14:20',
+            ),
+            202 => 
+            array (
+                'created_at' => '2024-03-04 14:14:20',
+                'guard_name' => 'web',
+                'id' => 531,
+                'name' => 'Public Post edit',
+                'parent' => 'Public Post',
+                'updated_at' => '2024-03-04 14:14:20',
+            ),
+            203 => 
+            array (
+                'created_at' => '2024-03-04 14:14:20',
+                'guard_name' => 'web',
+                'id' => 532,
+                'name' => 'Public Post destroy',
+                'parent' => 'Public Post',
+                'updated_at' => '2024-03-04 14:14:20',
+            ),
+            204 => 
+            array (
+                'created_at' => '2024-03-04 14:14:20',
+                'guard_name' => 'web',
+                'id' => 533,
+                'name' => 'Public Post trash',
+                'parent' => 'Public Post',
+                'updated_at' => '2024-03-04 14:14:20',
+            ),
+            205 => 
+            array (
+                'created_at' => '2024-03-04 14:14:20',
+                'guard_name' => 'web',
+                'id' => 534,
+                'name' => 'Public Post restore',
+                'parent' => 'Public Post',
+                'updated_at' => '2024-03-04 14:14:20',
+            ),
+            206 => 
+            array (
+                'created_at' => '2024-03-04 14:14:20',
+                'guard_name' => 'web',
+                'id' => 535,
+                'name' => 'Public Post delete',
+                'parent' => 'Public Post',
+                'updated_at' => '2024-03-04 14:14:20',
+            ),
+            207 => 
+            array (
+                'created_at' => '2024-03-04 14:14:20',
+                'guard_name' => 'web',
+                'id' => 536,
+                'name' => 'Public Post status',
+                'parent' => 'Public Post',
+                'updated_at' => '2024-03-04 14:14:20',
+            ),
+            208 => 
+            array (
+                'created_at' => '2024-03-04 14:14:20',
+                'guard_name' => 'web',
+                'id' => 537,
+                'name' => 'Public Post properties',
+                'parent' => 'Public Post',
+                'updated_at' => '2024-03-04 14:14:20',
+            ),
+            209 => 
+            array (
+                'created_at' => '2024-03-04 14:14:20',
+                'guard_name' => 'web',
+                'id' => 538,
+                'name' => 'Public Post print',
+                'parent' => 'Public Post',
+                'updated_at' => '2024-03-04 14:14:20',
+            ),
         ));
         
         

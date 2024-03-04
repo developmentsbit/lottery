@@ -15,7 +15,7 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                        <table id="myTable" class="table table-striped" style="width:100%">
+                        <table id="datatables-reponsive" class="table table-striped" style="width:100%">
                             <thead>
                                 <tr>
                                     <th>Date & Time</th>
