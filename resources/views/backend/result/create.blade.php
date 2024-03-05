@@ -19,7 +19,7 @@
                         <div class="row">
                             <div class="col-lg-4 col-md-6 col-12 mt-2">
                                 <label for="draw_date">Draw Date</label><span class="text-danger">*</span>
-                                <input type="text" name="draw_date" class="form-control  mt-1 @error('draw_date') is-invalid @enderror" id="draw_date" value="{{old('draw_date')}}" required>
+                                <input type="text" name="draw_date" class="form-control  mt-1 @error('draw_date') is-invalid @enderror" id="draw_date" value="{{old('draw_date')}}" required autocomplete="off">
                                 @error('draw_date')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
