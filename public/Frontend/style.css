@@ -294,6 +294,15 @@ html, body {
   color: #fff;
 }
 
+.blog_title{
+  margin: 0px;
+  border-bottom: 3px solid #fff;
+  padding: 5px;
+  margin-top: 21px;
+  margin-left: 32px;
+  font-size: 29px;
+}
+
 @media all and (max-width: 768px) {
   h1 {
     font-size: calc(1.5rem * var(--smaller));
@@ -429,6 +438,19 @@ nav ul li ul li {
   background: #0092D2 !important;
 }
 
+.blog_single {
+  padding: 5px;
+  margin-top: 10px;
+}
+
+.blog_title {
+  margin-left: 4px;
+}
+
+.youtube_blog_post iframe{
+  height: 200px;
+}
+
 }
 
 /* form */
@@ -551,6 +573,7 @@ nav ul li ul li {
 }
 .result-single ul {
   padding-bottom: 15px;
+  margin-left: -25px;
 }
 .result-single ul li {
   display: inline-block;
