@@ -17,38 +17,37 @@
                         <form action="{{route('result.store')}}" method="post" enctype="multipart/form-data" id="formData">
                             @csrf
                         <div class="row">
-
                             <div class="col-lg-4 col-md-6 col-12 mt-2">
                                 <label for="draw_date">Draw Date</label><span class="text-danger">*</span>
-                                <input type="date" name="draw_date" class="form-control  mt-1 @error('draw_date') is-invalid @enderror" id="draw_date" value="{{old('draw_date')}}" required>
+                                <input type="text" name="draw_date" class="form-control  mt-1 @error('draw_date') is-invalid @enderror" id="draw_date" value="{{old('draw_date')}}" required autocomplete="off">
                                 @error('draw_date')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
                             </div>
                             <div class="col-lg-4 col-md-6 col-12 mt-2">
                                 <label for="first_prize">1st Prize</label><span class="text-danger">*</span>
-                                <input type="text" name="first_prize" class="form-control  mt-1 @error('first_prize') is-invalid @enderror" id="first_prize" value="{{old('first_prize')}}" required maxlength="6">
+                                <input type="text" name="first_prize" class="form-control  mt-1 @error('first_prize') is-invalid @enderror" id="first_prize" value="{{old('first_prize')}}" required maxlength="6" autocomplete="off">
                                 @error('first_prize')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
                             </div>
                             <div class="col-lg-4 col-md-6 col-12 mt-2">
                                 <label for="three_up">3 Up</label><span class="text-danger">*</span>
-                                <input type="text" name="three_up" class="form-control  mt-1 @error('three_up') is-invalid @enderror" id="three_up" value="{{old('three_up')}}" required maxlength="3">
+                                <input type="text" name="three_up" class="form-control  mt-1 @error('three_up') is-invalid @enderror" id="three_up" value="{{old('three_up')}}" required maxlength="3" autocomplete="off">
                                 @error('three_up')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
                             </div>
                             <div class="col-lg-4 col-md-6 col-12 mt-2">
                                 <label for="two_up">2 Up</label><span class="text-danger">*</span>
-                                <input type="text" name="two_up" class="form-control  mt-1 @error('two_up') is-invalid @enderror" id="two_up" value="{{old('two_up')}}" required maxlength="2">
+                                <input type="text" name="two_up" class="form-control  mt-1 @error('two_up') is-invalid @enderror" id="two_up" value="{{old('two_up')}}" required maxlength="2" autocomplete="off">
                                 @error('two_up')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
                             </div>
                             <div class="col-lg-4 col-md-6 col-12 mt-2">
                                 <label for="two_down">2 Down</label><span class="text-danger">*</span>
-                                <input type="text" name="two_down" class="form-control  mt-1 @error('two_down') is-invalid @enderror" id="two_down" value="{{old('two_down')}}" required maxlength="2">
+                                <input type="text" name="two_down" class="form-control  mt-1 @error('two_down') is-invalid @enderror" id="two_down" value="{{old('two_down')}}" required maxlength="2" autocomplete="off">
                                 @error('two_down')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
@@ -56,7 +55,7 @@
 
                             <div class="col-lg-4 col-md-6 col-12 mt-2">
                                 <label for="next_draw">Next Draw Date</label><span class="text-danger">*</span>
-                                <input type="date" name="next_draw" class="form-control  mt-1 @error('next_draw') is-invalid @enderror" id="next_draw" value="{{old('next_draw')}}" required>
+                                <input type="text" name="next_draw" class="form-control  mt-1 @error('next_draw') is-invalid @enderror" id="next_draw" value="{{old('next_draw')}}" required autocomplete="off">
                                 @error('next_draw')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror

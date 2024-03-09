@@ -27,9 +27,9 @@
                       <div class="content">
                         @if(isset($params['result']))
                           <div class="imgBx">
-                              <img src="{{ asset('Backend/settings/455602170.png') }}">
+                              <img src="{{ asset('Backend/settings') }}/{{ $settings->logo }}">
                               <h3>National Lottery Result</h3>
-                              <h4>Draw Date: {{ App\Traits\Date::DbToOriginal('-',$params['result']->draw_date) }}</h4>
+                              <h4>Draw Date: {{ ($params['result']->draw_date) }}</h4>
                           </div>
                           <div class="result-inner">
                               <div class="result-single">
@@ -72,7 +72,7 @@
                               </div>
                               <div class="result-single pt-20 remain-time">
                                   <h5>Next Draw Date:
-                                    {{ App\Traits\Date::DbToOriginal('-',$params['result']->draw_date) }}
+                                    {{ ($params['result']->draw_date) }}
                                   </h5>
                                   {{-- <ul>
                                       <li id="day">10</li><span> D</span>

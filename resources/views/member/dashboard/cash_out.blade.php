@@ -18,6 +18,12 @@ Cash Out
        Cash Out
     @endslot
    @endcomponent
+   <div class="card">
+    <div class="card-body" style="background: #e7dec6;color:red;border: 16px solid #a0ad8b;padding: 16px;">
+        <p><h3><i class="fa fa-window-restore" aria-hidden="true"></i> Minimum Per Withdrawal Amount is $100.00 Maximum Per Withdrawal Amount is $1000.00</h3></p>
+        <p><h3><i class="fa fa-window-restore" aria-hidden="true"></i> Withdrawal Payment 6 working days.(Only Mobile Banking Withdrawal time 2 working Day.)</h3></p>
+    </div>
+   </div>
     <div class="card">
         <div class="card-header">
             Cash Out
@@ -43,7 +49,7 @@ Cash Out
                     <div class="col-lg-4 col-md-6 col-12 mt-2">
                         <label>Amount</label><span class="text-danger">*</span>
                         <div class="input-group">
-                            <input type="number" class="form-control" name="amount" id="amount" placeholder="Enter Amount" required onchange="getOriginalAmount()">
+                            <input type="number" class="form-control" name="amount" id="amount" placeholder="Enter Amount" required onchange="getOriginalAmount()" autocomplete="off">
                             <span class="input-group-append btn btn-dark" style="border-radius: 0px;">$</span>
                         </div>
                         <div class="cashout_message p-2">
@@ -52,7 +58,7 @@ Cash Out
                     </div>
                     <div class="col-lg-4 col-md-6 col-12 mt-2">
                         <label>Your Payment Account</label>
-                        <input type="text" class="form-control" name="payment_account" id="payment_account" placeholder="Your Payment Account Number" required>
+                        <input type="text" class="form-control" name="payment_account" id="payment_account" placeholder="Your Payment Account Number" required autocomplete="off">
                     </div>
                 </div>
 

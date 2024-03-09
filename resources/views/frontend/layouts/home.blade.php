@@ -50,12 +50,12 @@ $youlive = youtubelive::get();
                 <div class="col-lg-6 col-md-6 col-12 p-2" style="text-align: left;margin-top: -9px;">
                     @if($welmessage)
                     @foreach($welmessage as $w)
-                    <h4 style="margin: 0px;border-bottom: 3px solid #fff;padding: 5px;margin-top: 21px;margin-left: 32px;font-size: 29px;">@if(config('app.locale') == 'en'){{$w->title ?: $w->title_bn}}@else {{$w->title_bn ?: $w->title}}@endif</h4>
+                    <h4 class="blog_title">@if(config('app.locale') == 'en'){{$w->title ?: $w->title_bn}}@else {{$w->title_bn ?: $w->title}}@endif</h4>
                     <div class="blog_single">
                         <div class="row">
                             <div class="col-lg-12 col-md-12 col-12" style="text-align: left;margin-top: -24px;">
-                                <p style="font-size: 20px;text-align: justify;">
-                                @if(config('app.locale') == 'en'){!! $w->details ?: $w->details_bn !!}@elseif(config('app.locale') == 'bn'){!! $w->details_bn ?: $w->details !!}@endif
+                                <p style="text-align: justify;">
+                                <h4>@if(config('app.locale') == 'en'){!! $w->details ?: $w->details_bn !!}@elseif(config('app.locale') == 'bn'){!! $w->details_bn ?: $w->details !!}@endif</h4>
                                 </p>
                             </div>
                         </div>
@@ -93,9 +93,9 @@ $youlive = youtubelive::get();
                         <div class="content">
                         @if(isset($params['result']))
                             <div class="imgBx">
-                                <img src="{{ asset('Backend/settings/455602170.png') }}">
+                                <img src="{{ asset('Backend/settings') }}/{{ $settings->logo }}">
                                 <h3>National Lottery Result</h3>
-                                <h4>Draw Date: {{ App\Traits\Date::DbToOriginal('-',$params['result']->draw_date) }}</h4>
+                                <h4>Draw Date: {{ ($params['result']->draw_date) }}</h4>
                             </div>
                             <div class="result-inner">
                                 <div class="result-single">
@@ -133,12 +133,12 @@ $youlive = youtubelive::get();
                                     <ul>
                                     @for ($i = 0; $i < count($two_down); $i++)
                                     <li>{{ $two_down[$i] }} </li>
-                                @endfor
+                                    @endfor
                                     </ul>
                                 </div>
                                 <div class="result-single pt-20 remain-time">
                                     <h5>Next Draw Date:
-                                    {{ App\Traits\Date::DbToOriginal('-',$params['result']->draw_date) }}
+                                        {{ ($params['result']->next_draw_date) }}
                                     </h5>
                                     {{-- <ul>
                                         <li id="day">10</li><span> D</span>

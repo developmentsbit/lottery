@@ -32,7 +32,7 @@ Personal To Agent
                 <div class="row">
                     <div class="col-lg-4 col-md-6 col-12 mt-2">
                         <label>Select Agent</label><span class="text-danger">*</span>
-                        <select class="form-control form-control-sm" name="agent_id" id="agent_id" onchange="" required>
+                        <select class="form-control form-control-sm" name="agent_id" id="agent_id" onchange="" required autocomplete="off">
                             <option value="">Select Agent</option>
                             @if(isset($params['agent']))
                             @foreach ($params['agent'] as $v)
@@ -49,7 +49,7 @@ Personal To Agent
                     <div class="col-lg-4 col-md-6 col-12 mt-2">
                         <label>Amount</label><span class="text-danger">*</span>
                         <div class="input-group">
-                            <input type="number" class="form-control" name="amount" id="amount" placeholder="Enter Amount" required onchange="">
+                            <input type="number" class="form-control" name="amount" id="amount" placeholder="Enter Amount" required onchange="" autocomplete="off">
                             <span class="input-group-append btn btn-dark" style="border-radius: 0px;">$</span>
                         </div>
                         <div class="cashout_message p-2">
@@ -58,7 +58,7 @@ Personal To Agent
                     </div>
                     <div class="col-lg-4 col-md-6 col-12 mt-2">
                         <label>Your Payment Account Number</label><span class="text-danger">*</span>
-                        <input type="text" class="form-control" name="payment_account" id="payment_account" placeholder="Your Payment Account Number" required>
+                        <input type="text" class="form-control" name="payment_account" id="payment_account" placeholder="Your Payment Account Number" required autocomplete="off">
                     </div>
                 </div>
 

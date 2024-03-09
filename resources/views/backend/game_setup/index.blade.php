@@ -44,6 +44,7 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
+                        <div class="table-responsive">
                         <ul class="nav nav-tabs nav-bordered mb-3">
                             <li class="nav-item">
                                 <a href="#users-tab-all" data-bs-toggle="tab" aria-expanded="false" class="nav-link active">
@@ -130,6 +131,7 @@
                                 </table>
                             </div> <!-- end deleted-->
                         </div> <!-- end tab-content-->
+                        </div>
                     </div>
                 </div>
             </div>
