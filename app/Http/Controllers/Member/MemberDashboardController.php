@@ -101,15 +101,34 @@ class MemberDashboardController extends Controller
         $param['check'] = game_setup::where('status',1)->count();
         $param['game'] = game_setup::where('status',1)->first();
 
-        $param['year'] = Date::getYear('-', $param['game']->end_date);
-        $param['month'] = Date::getMonth('-', $param['game']->end_date);
-        $param['day'] = Date::getDay('-', $param['game']->end_date);
+        if($param['game']->on_off == 0)
+        {
+            $param['year'] = 0000;
+            $param['month'] = 00;
+            $param['day'] = 00;
 
-        $end_time = date('h:i:s', strtotime($param['game']->end_time));
+            $end_time = '00:00:00';
 
-        $param['hour'] = Date::getHours(':',$end_time);
-        $param['min'] = Date::getMin(':',$end_time);
-        $param['sec'] = Date::getSec(':',$end_time);
+            $param['hour'] = Date::getHours(':',$end_time);
+            $param['min'] = Date::getMin(':',$end_time);
+            $param['sec'] = Date::getSec(':',$end_time);
+        }
+        else
+        {
+            $param['year'] = Date::getYear('-', $param['game']->end_date);
+            $param['month'] = Date::getMonth('-', $param['game']->end_date);
+            $param['day'] = Date::getDay('-', $param['game']->end_date);
+
+            $end_time = date('h:i:s', strtotime($param['game']->end_time));
+
+            $param['hour'] = Date::getHours(':',$end_time);
+            $param['min'] = Date::getMin(':',$end_time);
+            $param['sec'] = Date::getSec(':',$end_time);
+        }
+
+
+
+
 
         return $this->view($this->path,'lottery',$param);
     }
