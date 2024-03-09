@@ -10,7 +10,7 @@
         Member Post
         @endslot
         @endcomponent
-        
+
         <div class="row">
             <div class="col-12">
                 <div class="card">
@@ -72,5 +72,14 @@
         </div>
     </div>
 </main>
+@push('footer_script')
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Datatables Responsive
+        $("#datatables-reponsive").DataTable();
+    });
+</script>
+    @endpush
 
 @endsection
