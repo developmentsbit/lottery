@@ -58,7 +58,8 @@ Cash Out
                     </div>
                     <div class="col-lg-4 col-md-6 col-12 mt-2">
                         <label>Your Payment Account</label>
-                        <input type="text" class="form-control" name="payment_account" id="payment_account" placeholder="Your Payment Account Number" required autocomplete="off">
+                        <!-- <input type="text" class="form-control" name="payment_account" id="payment_account" placeholder="Your Payment Account Number" required autocomplete="off"> -->
+                        <textarea name="payment_account" class="form-control" id="payment_account" cols="5" rows="2" placeholder="Your Payment Account Number" required autocomplete="off"></textarea>
                     </div>
                 </div>
 
