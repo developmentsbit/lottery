@@ -9,6 +9,9 @@ use App\Traits\Date;
 use App\Models\Member;
 use DataTables;
 use Auth;
+use App\Models\Country;
+use App\Models\Agent;
+use App\Models\AgentAccounts;
 
 class CashInRepository implements CashInInterface {
     protected $path,$sl;
@@ -33,14 +36,28 @@ class CashInRepository implements CashInInterface {
             ->addColumn('method',function($row){
                 if(isset($row->payment_type))
                 {
-                    $method = PaymentMethod::find($row->payment_type)->first();
-                    if(config('app.locale') == 'en')
+                    if($row->payment_type != 'mobile_banking')
                     {
-                        return $method->method_name ?: $method->method_name_bn;
+
+                        $method = PaymentMethod::find($row->payment_type)->first();
+                        if(config('app.locale') == 'en')
+                        {
+                            return $method->method_name ?: $method->method_name_bn;
+                        }
+                        else
+                        {
+                            return $method->method_name_bn ?: $method->method_name;
+                        }
                     }
                     else
                     {
-                        return $method->method_name_bn ?: $method->method_name;
+                        $country = Country::find($row->country_id);
+                        $agent_account = AgentAccounts::find($row->agent_accounts);
+                        $agent = Agent::find($row->agent_id);
+
+                        return 'Agent - '.$agent->name.'<br>
+                        Account - '.$agent_account->number.' '.$agent_account->account_name .'<br>
+                        Country - '. $country->name;
                     }
                 }
                 else
@@ -186,15 +203,29 @@ class CashInRepository implements CashInInterface {
                 return $this->sl = $this->sl +1;
             })
             ->addColumn('method',function($row){
-                $method = PaymentMethod::find($row->payment_type)->first();
-                if(config('app.locale') == 'en')
-                {
-                    return $method->method_name ?: $method->method_name_bn;
-                }
-                else
-                {
-                    return $method->method_name_bn ?: $method->method_name;
-                }
+                if($row->payment_type != 'mobile_banking')
+                    {
+
+                        $method = PaymentMethod::find($row->payment_type)->first();
+                        if(config('app.locale') == 'en')
+                        {
+                            return $method->method_name ?: $method->method_name_bn;
+                        }
+                        else
+                        {
+                            return $method->method_name_bn ?: $method->method_name;
+                        }
+                    }
+                    else
+                    {
+                        $country = Country::find($row->country_id);
+                        $agent_account = AgentAccounts::find($row->agent_accounts);
+                        $agent = Agent::find($row->agent_id);
+
+                        return 'Agent - '.$agent->name.'<br>
+                        Account - '.$agent_account->number.' '.$agent_account->account_name .'<br>
+                        Country - '. $country->name;
+                    }
             })
             ->addColumn('member',function($row){
                 $member = Member::where('member_id',$row->member_id)->first();

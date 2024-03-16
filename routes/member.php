@@ -63,3 +63,9 @@ Route::get('post_view',[MemberDashboardController::class,'post_view'])->name('me
 Route::get('change_post_status/{id}',[MemberDashboardController::class,'change_post_status'])->name('member.change_post_status');
 Route::get('post_delete/{id}',[MemberDashboardController::class,'post_delete'])->name('member.post_delete');
 Route::get('public_post',[MemberDashboardController::class,'public_post'])->name('member.public_post');
+
+Route::post('getCountry',[MemberDashboardController::class,'getCountry'])->name('member.get_country');
+Route::post('getAgentList',[MemberDashboardController::class,'getAgentList'])->name('member.get_agent_list');
+Route::post('getAgentAccounts',[MemberDashboardController::class,'getAgentAccounts'])->name('member.get_agent_accounts');
+Route::post('getOriginalAmount',[MemberDashboardController::class,'getOriginalAmount'])->name('member.get_original_amount');
+Route::post('getpay_method',[MemberDashboardController::class,'getpay_method'])->name('member.getpay_method');

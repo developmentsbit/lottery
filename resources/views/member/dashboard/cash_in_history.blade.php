@@ -22,8 +22,8 @@ Cash In
         <div class="card-header">
             Cash In
         </div>
-        <div class="card-body">
-            <table class="table table-borderd table-responsive-sm" id="myTable">
+        <div class="card-body table-responsive">
+            <table class="table table-borderd" id="myTable">
                 <thead>
                     <tr>
                         <th>Date & Time</th>
@@ -45,11 +45,28 @@ Cash In
                         </td>
                         <td>
                             @if(isset($v->payment_type))
+
+                            @if($v->payment_type != 'mobile_banking')
                             @if(config('app.locale') == 'en')
                             {{ $v->method->method_name ?: $v->method->name_bn}}
                             @else
                             {{ $v->method->method_name_bn ?: $v->method->name}}
                             @endif
+
+                            @else
+
+                            @php
+                                $country = App\Models\Country::find($v->country_id);
+                                $agent_account = App\Models\AgentAccounts::find($v->agent_accounts);
+                                $agent = App\Models\Agent::find($v->agent_id);
+                            @endphp
+
+                            Agent - {{ $agent->name }}<br>
+                            Account - {{ $agent_account->number.' '.$agent_account->account_name }}<br>
+                            Country - {{ $country->name }}
+
+                            @endif
+
                             @endif
                         </td>
                         <td>

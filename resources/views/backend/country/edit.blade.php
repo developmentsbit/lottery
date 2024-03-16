@@ -7,13 +7,13 @@
 
         {{-- /*Page Title Goese Here in this slot variable*/ --}}
         @slot('title')
-        @lang('payment_method.create_title')
+        Edit Country
         @endslot
 
-        @if(Auth::user()->can('Branch index'))
+        @if(Auth::user()->can('Country Setup index'))
         {{-- /* Create New Route Will Be goes here */ --}}
         @slot('route_name')
-        payment_method.index
+        country_setup.index
         @endslot
         @slot('btn_class')
         btn btn-primary
@@ -22,7 +22,7 @@
         fa fa-eye
         @endslot
         @slot('btn_name')
-        @lang('payment_method.view')
+        View All Country
         @endslot
 
         @endif
@@ -33,45 +33,31 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                        <form action="{{route('payment_method.store')}}" method="post" enctype="multipart/form-data" id="formData">
+                        <form action="{{route('country_setup.update',$params['data']->id)}}" method="post" enctype="multipart/form-data" id="formData">
                             @csrf
+                            @method('PUT')
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-12 mt-2">
-                                <label for="method_name ">@lang('payment_method.method_name')</label><span class="text-danger">*</span>
-                                <input type="text" name="method_name" class="form-control  mt-1 @error('method_name') is-invalid @enderror" id="method_name" value="{{old('method_name')}}" autocomplete="off">
-                                @error('method_name')
+                                <label for="name">Country Name</label><span class="text-danger">*</span>
+                                <input type="text" name="name" class="form-control  mt-1 @error('name') is-invalid @enderror" id="name" value="{{ $params['data']->name }}">
+                                @error('name')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-12 mt-2">
-                                <label for="method_name_bn">@lang('payment_method.method_name_bn')</label>
-                                <input type="text" name="method_name_bn" class="form-control  mt-1  @error('method_name_bn') is-invalid @enderror" id="method_name_bn" value="{{old('method_name_bn')}}" autocomplete="off">
-                                @error('method_name_bn')
-                                    <div class="alert alert-danger">{{ $message }}</div>
-                                @enderror
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-12 mt-2">
-                                <label for="vat">Withdraw Vat(%)</label> <span class="text-danger">*</span>
-                                <input type="number" name="vat" class="form-control  mt-1  @error('vat') is-invalid @enderror" id="vat" value="{{old('vat')}}" autocomplete="off">
-                                @error('vat')
-                                    <div class="alert alert-danger">{{ $message }}</div>
-                                @enderror
-                            </div>
-                            {{-- <div class="col-lg-6 col-md-6 col-sm-12 mt-2">
-                                <label for="dollar_rate">Dollar Rate</label> <span class="text-danger">*</span>
-                                <input type="number" name="dollar_rate" class="form-control  mt-1  @error('dollar_rate') is-invalid @enderror" id="vat" value="{{old('vat')}}" autocomplete="off">
+                                <label for="dollar_rate">Dollar Rate</label>
+                                <input type="number" name="dollar_rate" class="form-control  mt-1  @error('dollar_rate') is-invalid @enderror" id="dollar_rate" value="{{ $params['data']->dollar_rate }}">
                                 @error('dollar_rate')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
-                            </div> --}}
-                            <div class="col-lg-12 col-md-12 col-sm-12 mt-2">
-                                <label for="number">@lang('payment_method.number')</label>
-                                <textarea class="form-control" name="number" id="number" placeholder="@lang('payment_method.number_place')"></textarea>
-                                @error('number')
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 mt-2">
+                                <label for="currency_name">Currency Name</label>
+                                <input type="text" name="currency_name" class="form-control  mt-1  @error('currency_name') is-invalid @enderror" id="currency_name" value="{{ $params['data']->currency_name }}">
+                                @error('currency_name')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
                             </div>
-
                             <div class="col-12 mt-4" style="text-align: right">
                                 <button type="submit" id="submit" class="btn  btn-success"> <i class="fa fa-save"></i> @lang('common.save_now')</button>
                             </div>

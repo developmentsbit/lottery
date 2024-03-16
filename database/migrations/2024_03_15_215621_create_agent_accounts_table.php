@@ -11,12 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('countries', function (Blueprint $table) {
+        Schema::create('agent_accounts', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->double('dollar_rate',11,2)->nullable();
-            $table->string('currency_name')->nullable();
-            $table->integer('status')->default('1')->comment(' 0 - Inactive ; 1 - Active');
+            $table->bigInteger('agent_id')->unsigned()->nullable();
+            $table->foreign('agent_id')->references('id')->on('agents');
+            $table->string('account_name')->nullable();
+            $table->string('number')->nullable();
             $table->date('deleted_at')->nullable();
             $table->timestamps();
         });
@@ -27,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('countries');
+        Schema::dropIfExists('agent_accounts');
     }
 };

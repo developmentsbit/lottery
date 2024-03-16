@@ -21,6 +21,8 @@ use Hash;
 use App\Models\Post;
 use App\Models\User;
 use App\Models\Result;
+use App\Models\Agent;
+use App\Models\AgentAccounts;
 
 
 class MemberDashboardController extends Controller
@@ -175,12 +177,23 @@ class MemberDashboardController extends Controller
             'member_id' => Auth::guard('member')->user()->member_id,
             'payment_type' => $request->method,
             'transaction_type' => 1,
-            'balance' => $request->balance,
-            'original_amount' => $request->amount,
+            'balance' => $request->amount,
             'payment_account' => $request->payment_account,
             'transaction_id' => $request->transaction_id,
             'status' => '0',
         );
+
+        if($request->method == 'mobile_banking')
+        {
+            $data['original_amount'] = $request->original_amount;
+            $data['country_id'] = $request->country;
+            $data['agent_id'] = $request->agent;
+            $data['agent_accounts'] = $request->agent_account;
+        }
+        else
+        {
+            $data['original_amount'] = $request->amount;
+        }
         $file = $request->file('document');
         if($file)
         {
@@ -713,5 +726,65 @@ class MemberDashboardController extends Controller
             Alert::error('Error', 'Something Went Wrong');
             return redirect()->back();
         }
+    }
+
+    public function getCountry(Request $request)
+    {
+        $country = Country::where('dollar_rate','!=',NULL)->where('currency_name','!=',NULL)->where('status',1)->get();
+
+        $output = '<option value="">Select One</option>';
+
+        foreach($country as $c)
+        {
+            $output.='<option value="'.$c->id.'">'.$c->name.'</option>';
+        }
+
+        return $output;
+    }
+
+    public function getAgentList(Request $request)
+    {
+        $country = Agent::where('country_id',$request->country_id)->get();
+
+        $output = '<option value="">Select One</option>';
+
+        foreach($country as $c)
+        {
+            $output.='<option value="'.$c->id.'">'.$c->name.'</option>';
+        }
+
+        return $output;
+    }
+    public function getAgentAccounts(Request $request)
+    {
+        $country = AgentAccounts::where('agent_id',$request->agent_id)->get();
+
+        $output = '<option value="">Select One</option>';
+
+        foreach($country as $c)
+        {
+            $output.='<option value="'.$c->id.'">'.$c->number.'('.$c->account_name.')</option>';
+        }
+
+        return $output;
+    }
+
+    public function getOriginalAmount(Request $request)
+    {
+        $country = Country::find($request->country_id);
+
+        $info['dollar_rate'] = $country->dollar_rate;
+        $info['currency_name'] = $country->currency_name;
+
+        return response()->json($info);
+    }
+
+    public function getpay_method(Request $request)
+    {
+        $pay_method = PaymentMethod::find($request->payment_method);
+
+        $output = '<span class="text-danger">Account No : '.$pay_method->number.'</span>';
+
+        return $output;
     }
 }
