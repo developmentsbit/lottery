@@ -185,7 +185,7 @@ Thai National Lottery
         }
         else if(game == '3up')
         {
-            show_discount_per = 25;
+            show_discount_per = 30;
             max_length = 3;
             game_title = '3up';
         }

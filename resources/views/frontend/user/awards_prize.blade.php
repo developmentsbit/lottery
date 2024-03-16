@@ -35,11 +35,11 @@
                      <tr>
                         <td>Six Digit Rumbal Bet Amount ($x1)</td>
                         <td>$-400</td>
-                    </tr> 
+                    </tr>
                     <tr>
                         <td>3up Direct Bet Amount ($x1)</td>
                         <td>$-350</td>
-                        <td rowspan="2">25%</td>
+                        <td rowspan="2">30%</td>
                     </tr>
                      <tr>
                         <td>3up Rumbal Bet Amount ($x1)</td>
@@ -68,12 +68,12 @@
                         <td>$-3</td>
                         <td></td>
                     </tr>
-                    
+
                      <tr>
                         <td>1 of 2up Single Digit Bet Amount ($x1)</td>
                         <td>$-3</td>
                         <td></td>
-                    </tr>  
+                    </tr>
                     <tr>
                         <td>1 of 2down Single Digit Bet Amount ($x1)</td>
                         <td>$-3</td>
@@ -95,14 +95,14 @@
                         <td></td>
                     </tr>
 
-                    
+
                 </table>
             </div>
-       
+
         </div>
     </div>
-  
- 
+
+
 </section>
 <!-- thai lottery section about -->
 

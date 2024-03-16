@@ -46,7 +46,7 @@
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-12 mt-2">
                                 <label for="dollar_rate">Dollar Rate</label>
-                                <input type="number" name="dollar_rate" class="form-control  mt-1  @error('dollar_rate') is-invalid @enderror" id="dollar_rate" value="{{ $params['data']->dollar_rate }}">
+                                <input type="text" name="dollar_rate" class="form-control  mt-1  @error('dollar_rate') is-invalid @enderror" id="dollar_rate" value="{{ $params['data']->dollar_rate }}">
                                 @error('dollar_rate')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
