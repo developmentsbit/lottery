@@ -60,7 +60,7 @@ $banner = banner::first();
                     <tr>
                         <td>3up Direct Bet Amount ($x1)</td>
                         <td>$-350</td>
-                        <td rowspan="2">25%</td>
+                        <td rowspan="2">30%</td>
                     </tr>
 
                      <tr>
