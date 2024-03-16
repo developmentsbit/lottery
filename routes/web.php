@@ -28,6 +28,9 @@ use App\Http\Controllers\LotteryNumbersController;
 use App\Http\Controllers\AllLotteryController;
 use App\Http\Controllers\ResultController;
 use App\Http\Controllers\MemberPostViewController;
+use App\Http\Controllers\CountrySetupController;
+use App\Http\Controllers\AgentController;
+use App\Http\Controllers\AgentAccountsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -118,6 +121,9 @@ Route::middleware('auth')->group(function () {
         'all_lottery' => AllLotteryController::class,
         'result' => ResultController::class,
         'member_post' => MemberPostViewController::class,
+        'country_setup' => CountrySetupController::class,
+        'agent' => AgentController::class,
+        'agent_accounts' => AgentAccountsController::class,
    ]);
 
    Route::get('changed_post_status/{id}',[MemberPostViewController::class,'status'])->name('member_post.status');
@@ -222,7 +228,11 @@ Route::middleware('auth')->group(function () {
 
     Route::get('cash_out_request_trash',[CashOutRequestController::class,'trash_list'])->name('cash_out_request.trash_list');
 
+    Route::get('deleted_agent_list',[AgentController::class,'trash_list'])->name('agent.trash_list');
+    Route::get('restore_agent/{id}',[AgentController::class,'restore'])->name('agent.restore');
+    Route::get('delete_agent/{id}',[AgentController::class,'delete'])->name('agent.delete');
 
+    Route::post('getAgentList',[AgentAccountsController::class,'getAgentList']);
 
 
 });

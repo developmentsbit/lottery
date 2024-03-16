@@ -113,7 +113,7 @@ class PaymentMethodRepository implements PaymentMethodInterface{
             'method_name' => $request->method_name,
             'method_name_bn' => $request->method_name_bn,
             'vat' => $request->vat,
-            'dollar_rate' => $request->dollar_rate,
+            // 'dollar_rate' => $request->dollar_rate,
             'status' => 1,
             'number' => $request->number,
         );
@@ -149,7 +149,7 @@ class PaymentMethodRepository implements PaymentMethodInterface{
             'method_name' => $request->method_name,
             'method_name_bn' => $request->method_name_bn,
             'vat' => $request->vat,
-            'dollar_rate' => $request->dollar_rate,
+            // 'dollar_rate' => $request->dollar_rate,
             'number' => $request->number,
         );
 

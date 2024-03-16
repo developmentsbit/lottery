@@ -23,6 +23,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 1,
                 'name' => 'Afghanistan',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -30,6 +33,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 2,
             'name' => 'Åland (Finland)',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -37,6 +43,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 3,
                 'name' => 'Albania',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -44,6 +53,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 4,
                 'name' => 'Algeria',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -51,6 +63,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 5,
             'name' => 'American Samoa (US)',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -58,6 +73,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 6,
                 'name' => 'Andorra',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -65,6 +83,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 7,
                 'name' => 'Angola',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -72,6 +93,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 8,
             'name' => 'Anguilla (BOT)',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -79,6 +103,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 9,
                 'name' => 'Antigua and Barbuda',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -86,6 +113,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 10,
                 'name' => 'Argentina',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -93,6 +123,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 11,
                 'name' => 'Armenia',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -100,6 +133,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 12,
                 'name' => 'Artsakh',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -107,6 +143,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 13,
             'name' => 'Aruba (Netherlands)',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -114,6 +153,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 14,
                 'name' => 'Australia',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -121,6 +163,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 15,
                 'name' => 'Austria',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -128,6 +173,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 16,
                 'name' => 'Azerbaijan',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -135,6 +183,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 17,
                 'name' => 'Bahamas',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -142,6 +193,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 18,
                 'name' => 'Bahrain',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -149,6 +203,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 19,
                 'name' => 'Bangladesh',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -156,6 +213,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 20,
                 'name' => 'Barbados',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -163,6 +223,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 21,
                 'name' => 'Belarus',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -170,6 +233,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 22,
                 'name' => 'Belgium',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -177,6 +243,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 23,
                 'name' => 'Belize',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -184,6 +253,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 24,
                 'name' => 'Benin',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -191,6 +263,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 25,
             'name' => 'Bermuda (BOT)',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -198,6 +273,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 26,
                 'name' => 'Bhutan',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -205,6 +283,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 27,
                 'name' => 'Bolivia',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -212,6 +293,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 28,
             'name' => 'Bonaire (Netherlands)',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -219,6 +303,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 29,
                 'name' => 'Bosnia and Herzegovina',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -226,6 +313,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 30,
                 'name' => 'Botswana',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -233,6 +323,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 31,
                 'name' => 'Brazil',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -240,6 +333,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 32,
             'name' => 'British Virgin Islands (BOT)',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -247,6 +343,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 33,
                 'name' => 'Brunei',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -254,6 +353,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 34,
                 'name' => 'Bulgaria',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -261,6 +363,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 35,
                 'name' => 'Burkina Faso',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -268,6 +373,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 36,
                 'name' => 'Burundi',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -275,6 +383,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 37,
                 'name' => 'Cambodia',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -282,6 +393,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 38,
                 'name' => 'Cameroon',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -289,6 +403,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 39,
                 'name' => 'Canada',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -296,6 +413,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 40,
                 'name' => 'Cape Verde',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -303,6 +423,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 41,
             'name' => 'Cayman Islands (BOT)',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -310,6 +433,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 42,
                 'name' => 'Central African Republic',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -317,6 +443,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 43,
                 'name' => 'Chad',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -324,6 +453,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 44,
                 'name' => 'Chile',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -331,6 +463,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 45,
                 'name' => 'China',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -338,6 +473,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 46,
             'name' => 'Christmas Island (Australia)',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -345,6 +483,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 47,
             'name' => 'Cocos (Keeling) Islands (Australia)',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -352,6 +493,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 48,
                 'name' => 'Colombia',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -359,6 +503,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 49,
                 'name' => 'Comoros',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -366,6 +513,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 50,
                 'name' => 'Congo',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -373,6 +523,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 51,
                 'name' => 'Cook Islands',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -380,6 +533,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 52,
                 'name' => 'Costa Rica',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -387,6 +543,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 53,
                 'name' => 'Croatia',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -394,6 +553,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 54,
                 'name' => 'Cuba',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -401,6 +563,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 55,
             'name' => 'Curaçao (Netherlands)',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -408,6 +573,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 56,
                 'name' => 'Cyprus',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -415,6 +583,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 57,
                 'name' => 'Czech Republic',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -422,6 +593,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 58,
                 'name' => 'Denmark',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -429,6 +603,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 59,
                 'name' => 'Djibouti',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -436,6 +613,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 60,
                 'name' => 'Dominica',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -443,6 +623,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 61,
                 'name' => 'Dominican Republic',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -450,6 +633,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 62,
                 'name' => 'DR Congo',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -457,6 +643,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 63,
                 'name' => 'East Timor',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -464,6 +653,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 64,
                 'name' => 'Ecuador',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -471,6 +663,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 65,
                 'name' => 'Egypt',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -478,6 +673,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 66,
                 'name' => 'El Salvador',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -485,6 +683,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 67,
                 'name' => 'Equatorial Guinea',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -492,6 +693,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 68,
                 'name' => 'Eritrea',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -499,6 +703,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 69,
                 'name' => 'Estonia',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -506,6 +713,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 70,
                 'name' => 'Eswatini',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -513,6 +723,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 71,
                 'name' => 'Ethiopia',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -520,6 +733,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 72,
             'name' => 'Falkland Islands (BOT)',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -527,6 +743,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 73,
             'name' => 'Faroe Islands (Denmark)',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -534,6 +753,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 74,
                 'name' => 'Fiji',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -541,6 +763,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 75,
                 'name' => 'Finland',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -548,6 +773,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 76,
                 'name' => 'France',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -555,6 +783,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 77,
             'name' => 'French Guiana (France)',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -562,6 +793,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 78,
             'name' => 'French Polynesia (France)',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -569,6 +803,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 79,
                 'name' => 'Gabon',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -576,6 +813,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 80,
                 'name' => 'Gambia',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -583,6 +823,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 81,
                 'name' => 'Georgia',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -590,6 +833,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 82,
                 'name' => 'Germany',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -597,6 +843,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 83,
                 'name' => 'Ghana',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -604,6 +853,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 84,
             'name' => 'Gibraltar (BOT)',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -611,6 +863,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 85,
                 'name' => 'Greece',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -618,6 +873,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 86,
             'name' => 'Greenland (Denmark)',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -625,6 +883,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 87,
                 'name' => 'Grenada',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -632,6 +893,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 88,
             'name' => 'Guadeloupe (France)',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -639,6 +903,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 89,
             'name' => 'Guam (US)',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -646,6 +913,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 90,
                 'name' => 'Guatemala',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -653,6 +923,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 91,
             'name' => 'Guernsey (Crown Dependency)',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -660,6 +933,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 92,
                 'name' => 'Guinea',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -667,6 +943,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 93,
                 'name' => 'Guinea-Bissau',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -674,6 +953,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 94,
                 'name' => 'Guyana',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -681,6 +963,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 95,
                 'name' => 'Haiti',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -688,6 +973,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 96,
                 'name' => 'Honduras',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -695,6 +983,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 97,
                 'name' => 'Hong Kong',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -702,6 +993,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 98,
                 'name' => 'Hungary',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -709,6 +1003,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 99,
                 'name' => 'Iceland',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -716,6 +1013,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 100,
                 'name' => 'India',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -723,6 +1023,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 101,
                 'name' => 'Indonesia',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -730,6 +1033,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 102,
                 'name' => 'Iran',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -737,6 +1043,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 103,
                 'name' => 'Iraq',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -744,6 +1053,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 104,
                 'name' => 'Ireland',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -751,6 +1063,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 105,
             'name' => 'Isle of Man (Crown Dependency)',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -758,6 +1073,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 106,
                 'name' => 'Israel',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -765,6 +1083,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 107,
                 'name' => 'Italy',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -772,6 +1093,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 108,
                 'name' => 'Ivory Coast',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -779,6 +1103,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 109,
                 'name' => 'Jamaica',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -786,6 +1113,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 110,
                 'name' => 'Japan',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -793,6 +1123,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 111,
             'name' => 'Jersey (Crown Dependency)',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -800,6 +1133,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 112,
                 'name' => 'Jordan',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -807,6 +1143,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 113,
                 'name' => 'Kazakhstan',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -814,6 +1153,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 114,
                 'name' => 'Kenya',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -821,6 +1163,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 115,
                 'name' => 'Kiribati',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -828,6 +1173,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 116,
                 'name' => 'Kosovo',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -835,6 +1183,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 117,
                 'name' => 'Kuwait',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -842,6 +1193,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 118,
                 'name' => 'Kyrgyzstan',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -849,6 +1203,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 119,
                 'name' => 'Laos',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -856,6 +1213,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 120,
                 'name' => 'Latvia',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -863,6 +1223,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 121,
                 'name' => 'Lebanon',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -870,6 +1233,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 122,
                 'name' => 'Lesotho',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -877,6 +1243,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 123,
                 'name' => 'Liberia',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -884,6 +1253,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 124,
                 'name' => 'Libya',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -891,6 +1263,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 125,
                 'name' => 'Liechtenstein',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -898,6 +1273,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 126,
                 'name' => 'Lithuania',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -905,6 +1283,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 127,
                 'name' => 'Luxembourg',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -912,6 +1293,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 128,
                 'name' => 'Macau',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -919,6 +1303,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 129,
                 'name' => 'Madagascar',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -926,6 +1313,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 130,
                 'name' => 'Malawi',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -933,6 +1323,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 131,
                 'name' => 'Malaysia',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -940,6 +1333,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 132,
                 'name' => 'Maldives',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -947,6 +1343,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 133,
                 'name' => 'Mali',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -954,6 +1353,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 134,
                 'name' => 'Malta',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -961,6 +1363,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 135,
                 'name' => 'Marshall Islands',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -968,6 +1373,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 136,
             'name' => 'Martinique (France)',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -975,6 +1383,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 137,
                 'name' => 'Mauritania',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -982,6 +1393,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 138,
                 'name' => 'Mauritius',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -989,6 +1403,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 139,
             'name' => 'Mayotte (France)',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -996,6 +1413,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 140,
                 'name' => 'Mexico',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1003,6 +1423,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 141,
                 'name' => 'Micronesia',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1010,6 +1433,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 142,
                 'name' => 'Moldova',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1017,6 +1443,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 143,
                 'name' => 'Monaco',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1024,6 +1453,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 144,
                 'name' => 'Mongolia',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1031,6 +1463,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 145,
                 'name' => 'Montenegro',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1038,6 +1473,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 146,
             'name' => 'Montserrat (BOT)',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1045,6 +1483,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 147,
                 'name' => 'Morocco',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1052,6 +1493,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 148,
                 'name' => 'Mozambique',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1059,6 +1503,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 149,
                 'name' => 'Myanmar',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1066,6 +1513,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 150,
                 'name' => 'Namibia',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1073,6 +1523,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 151,
                 'name' => 'Nauru',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1080,6 +1533,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 152,
                 'name' => 'Nepal',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1087,6 +1543,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 153,
                 'name' => 'Netherlands',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1094,6 +1553,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 154,
             'name' => 'New Caledonia (France)',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1101,6 +1563,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 155,
                 'name' => 'New Zealand',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1108,6 +1573,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 156,
                 'name' => 'Nicaragua',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1115,6 +1583,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 157,
                 'name' => 'Niger',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1122,6 +1593,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 158,
                 'name' => 'Nigeria',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1129,6 +1603,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 159,
                 'name' => 'Niue',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1136,6 +1613,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 160,
             'name' => 'Norfolk Island (Australia)',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1143,6 +1623,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 161,
                 'name' => 'North Korea',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1150,6 +1633,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 162,
                 'name' => 'North Macedonia',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1157,6 +1643,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 163,
                 'name' => 'Northern Cyprus',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1164,6 +1653,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 164,
             'name' => 'Northern Mariana Islands (US)',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1171,6 +1663,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 165,
                 'name' => 'Norway',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1178,6 +1673,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 166,
                 'name' => 'Oman',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1185,6 +1683,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 167,
                 'name' => 'Pakistan',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1192,6 +1693,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 168,
                 'name' => 'Palau',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1199,6 +1703,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 169,
                 'name' => 'Palestine',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1206,6 +1713,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 170,
                 'name' => 'Panama',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1213,6 +1723,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 171,
                 'name' => 'Papua New Guinea',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1220,6 +1733,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 172,
                 'name' => 'Paraguay',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1227,6 +1743,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 173,
                 'name' => 'Peru',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1234,6 +1753,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 174,
                 'name' => 'Philippines',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1241,6 +1763,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 175,
             'name' => 'Pitcairn Islands (BOT)',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1248,6 +1773,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 176,
                 'name' => 'Poland',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1255,6 +1783,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 177,
                 'name' => 'Portugal',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1262,6 +1793,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 178,
             'name' => 'Puerto Rico (US)',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1269,6 +1803,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 179,
                 'name' => 'Qatar',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1276,6 +1813,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 180,
             'name' => 'Réunion (France)',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1283,6 +1823,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 181,
                 'name' => 'Romania',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1290,6 +1833,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 182,
                 'name' => 'Russia',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1297,6 +1843,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 183,
                 'name' => 'Rwanda',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1304,6 +1853,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 184,
             'name' => 'Saba (Netherlands)',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1311,6 +1863,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 185,
             'name' => 'Saint Barthélemy (France)',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1318,6 +1873,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 186,
             'name' => 'Saint Helena, Ascension and Tristan da Cunha (BOT)',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1325,6 +1883,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 187,
                 'name' => 'Saint Kitts and Nevis',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1332,6 +1893,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 188,
                 'name' => 'Saint Lucia',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1339,6 +1903,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 189,
             'name' => 'Saint Martin (France)',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1346,6 +1913,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 190,
             'name' => 'Saint Pierre and Miquelon (France)',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1353,6 +1923,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 191,
                 'name' => 'Saint Vincent and the Grenadines',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1360,6 +1933,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 192,
                 'name' => 'Samoa',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1367,6 +1943,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 193,
                 'name' => 'San Marino',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1374,6 +1953,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 194,
                 'name' => 'São Tomé and Príncipe',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1381,6 +1963,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 195,
                 'name' => 'Saudi Arabia',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1388,6 +1973,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 196,
                 'name' => 'Senegal',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1395,6 +1983,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 197,
                 'name' => 'Serbia',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1402,6 +1993,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 198,
                 'name' => 'Seychelles',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1409,6 +2003,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 199,
                 'name' => 'Sierra Leone',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1416,6 +2013,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 200,
                 'name' => 'Singapore',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1423,6 +2023,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 201,
             'name' => 'Sint Eustatius (Netherlands)',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1430,6 +2033,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 202,
             'name' => 'Sint Maarten (Netherlands)',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1437,6 +2043,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 203,
                 'name' => 'Slovakia',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1444,6 +2053,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 204,
                 'name' => 'Slovenia',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1451,6 +2063,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 205,
                 'name' => 'Solomon Islands',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1458,6 +2073,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 206,
                 'name' => 'Somalia',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1465,6 +2083,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 207,
                 'name' => 'South Africa',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1472,6 +2093,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 208,
                 'name' => 'South Korea',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1479,6 +2103,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 209,
                 'name' => 'South Sudan',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1486,6 +2113,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 210,
                 'name' => 'Spain',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1493,6 +2123,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 211,
                 'name' => 'Sri Lanka',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1500,6 +2133,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 212,
                 'name' => 'Sudan',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1507,6 +2143,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 213,
                 'name' => 'Suriname',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1514,6 +2153,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 214,
             'name' => 'Svalbard and Jan Mayen (Norway)',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1521,6 +2163,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 215,
                 'name' => 'Sweden',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1528,6 +2173,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 216,
                 'name' => 'Switzerland',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1535,6 +2183,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 217,
                 'name' => 'Syria',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1542,6 +2193,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 218,
                 'name' => 'Taiwan',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1549,6 +2203,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 219,
                 'name' => 'Tajikistan',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1556,6 +2213,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 220,
                 'name' => 'Tanzania',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1563,6 +2223,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 221,
                 'name' => 'Thailand',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1570,6 +2233,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 222,
                 'name' => 'Togo',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1577,6 +2243,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 223,
             'name' => 'Tokelau (NZ)',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1584,6 +2253,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 224,
                 'name' => 'Tonga',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1591,6 +2263,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 225,
                 'name' => 'Transnistria',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1598,6 +2273,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 226,
                 'name' => 'Trinidad and Tobago',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1605,6 +2283,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 227,
                 'name' => 'Tunisia',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1612,6 +2293,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 228,
                 'name' => 'Turkey',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1619,6 +2303,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 229,
                 'name' => 'Turkmenistan',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1626,6 +2313,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 230,
             'name' => 'Turks and Caicos Islands (BOT)',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1633,6 +2323,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 231,
                 'name' => 'Tuvalu',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1640,6 +2333,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 232,
             'name' => 'U.S. Virgin Islands (US)',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1647,6 +2343,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 233,
                 'name' => 'Uganda',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1654,6 +2353,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 234,
                 'name' => 'Ukraine',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1661,6 +2363,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 235,
                 'name' => 'United Arab Emirates',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1668,6 +2373,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 236,
                 'name' => 'United Kingdom',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1675,6 +2383,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 237,
                 'name' => 'United States',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1682,6 +2393,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 238,
                 'name' => 'Uruguay',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1689,6 +2403,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 239,
                 'name' => 'Uzbekistan',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1696,6 +2413,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 240,
                 'name' => 'Vanuatu',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1703,6 +2423,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 241,
                 'name' => 'Vatican City',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1710,6 +2433,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 242,
                 'name' => 'Venezuela',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1717,6 +2443,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 243,
                 'name' => 'Vietnam',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1724,6 +2453,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 244,
             'name' => 'Wallis and Futuna (France)',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1731,6 +2463,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 245,
                 'name' => 'Western Sahara',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1738,6 +2473,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 246,
                 'name' => 'Yemen',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1745,6 +2483,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 247,
                 'name' => 'Zambia',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
@@ -1752,6 +2493,9 @@ class CountriesTableSeeder extends Seeder
             array (
                 'id' => 248,
                 'name' => 'Zimbabwe',
+                'dollar_rate' => NULL,
+                'currency_name' => NULL,
+                'status' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),

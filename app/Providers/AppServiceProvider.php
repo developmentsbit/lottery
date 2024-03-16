@@ -70,6 +70,14 @@ class AppServiceProvider extends ServiceProvider
             'App\Interfaces\CashOutRequestInterface',
             'App\Repositories\CashOutRequestRepository',
         );
+        $this->app->bind(
+            'App\Interfaces\CountrySetupInterface',
+            'App\Repositories\CountrySetupRepository',
+        );
+        $this->app->bind(
+            'App\Interfaces\AgentInterface',
+            'App\Repositories\AgentRepository',
+        );
     }
 
     /**

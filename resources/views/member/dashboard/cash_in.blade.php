@@ -29,29 +29,54 @@ Cash In
                 <div class="row">
                     <div class="col-lg-4 col-md-6 col-12 mt-2">
                         <label>Select Method</label><span class="text-danger">*</span>
-                        <select class="form-control form-control-sm" name="method" id="method" onchange="getMethodInfo();getOriginalAmount();" required>
+                        <select class="form-control form-control-sm" name="method" id="method" onchange="getCountry()" required>
                             <option value="">Select Method</option>
                             @if(isset($params['method']))
                             @foreach ($params['method'] as $m)
                             <option value="{{ $m->id }}">{{ $m->method_name }}</option>
                             @endforeach
                             @endif
+                            <option value="mobile_banking">Mobile Banking</option>
                         </select>
                         <div class="message mt-2">
 
                         </div>
                     </div>
+                    <div class="col-lg-4 col-md-6 col-12 mt-2 d-none" id="country_box">
+                        <label>Select Country</label><span class="text-danger">*</span>
+                        <select class="form-control form-control-sm" name="country" id="country" onchange="getAgentList();getOriginalAmount();">
+                            <option value="">Select Country</option>
+
+                        </select>
+
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12 mt-2 d-none" id="agent_box">
+                        <label>Select Agent</label><span class="text-danger">*</span>
+                        <select class="form-control form-control-sm" name="agent" id="agent" onchange="getAgentAccounts()">
+                            <option value="">Select Agent</option>
+
+                        </select>
+
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12 mt-2 d-none" id="agent_account_box">
+                        <label>Select Agent Account</label><span class="text-danger">*</span>
+                        <select class="form-control form-control-sm" name="agent_account" id="agent_account" >
+                            <option value="">Select Account</option>
+
+                        </select>
+
+                    </div>
                     <div class="col-lg-4 col-md-6 col-12 mt-2">
                         <label>Amount</label><span class="text-danger">*</span>
                         <div class="input-group">
-                            <input type="number" class="form-control" name="amount" id="amount" placeholder="Enter Amount" required onchange="return getOriginalAmount()">
+                            <input type="number" class="form-control" name="amount" id="amount" placeholder="Enter Amount" required onkeyup="return getOriginalAmount()">
                             <span class="input-group-append btn btn-dark" style="border-radius: 0px;">$</span>
                         </div>
                         <div class="show_original_amount p-2">
 
                         </div>
 
-                        <input type="hidden" name="balance" id="balance">
+                        <input type="hidden" name="original_amount" id="original_amount">
                     </div>
                     <div class="col-lg-4 col-md-6 col-12 mt-2">
                         <label>Payment Account</label>
@@ -76,60 +101,161 @@ Cash In
 </div>
 
 <script>
-    function getMethodInfo()
+    function getCountry()
     {
-        let method = $('#method').val();
+        let payment_method = $('#method').val();
 
-        if(method != '')
+        if(payment_method == 'mobile_banking')
         {
             $.ajax({
                 headers : {
                     'X-CSRF-TOKEN' : '{{ csrf_token() }}'
                 },
 
-                url : '{{ route('member.get_method_info') }}',
+                url : '{{ route('member.get_country')  }}',
 
-                type : 'GET',
+                type : 'POST',
 
-                data : {method},
+                success : function(res)
+                {
+                    $('.message').html('');
+                    $('#country_box').removeClass('d-none');
 
-                success : (res) => {
-                    $('.message').html(res);
-                },
+                    $('#country').html(res);
+                }
             })
         }
         else
         {
-            $('.message').html('');
+
+            $.ajax({
+                headers : {
+                    'X-CSRF-TOKEN' : '{{ csrf_token() }}'
+                },
+
+                url : '{{ route('member.getpay_method') }}',
+
+                type : 'POST',
+
+                data : {payment_method},
+
+                success : function(res)
+                {
+                    $('.message').html(res);
+                }
+            });
+
+            $('#country_box').addClass('d-none');
+            $('#agent_box').addClass('d-none');
+            $('#agent_accounts_box').addClass('d-none');
         }
     }
 
-    function getOriginalAmount()
+    function getAgentList()
     {
-        // alert();
-        let method = $('#method').val();
-        let amount = $('#amount').val();
+        let country_id = $('#country').val();
 
-        if(method != '' && amount != '')
+        if(country != '')
         {
             $.ajax({
                 headers : {
                     'X-CSRF-TOKEN' : '{{ csrf_token() }}'
                 },
 
-                url : '{{ route('member.get_original_amount') }}',
+                url : '{{ route('member.get_agent_list') }}',
 
-                type : 'GET',
+                type : 'POST',
 
-                data : {method,amount},
+                data : {country_id},
 
                 success : function(res)
                 {
-                    let message = '<span class="text-success">You Will Get : <b>'+res+'</b></span>'
-                    $('.show_original_amount').html(message);
-                    $('#balance').val(res);
+                    $('#agent_box').removeClass('d-none');
+
+                    $('#agent').html(res);
                 }
             })
+        }
+        else
+        {
+            $('#agent_box').addClass('d-none');
+        }
+    }
+
+
+    function getAgentAccounts()
+    {
+        let agent_id = $('#agent').val();
+
+        if(country != '')
+        {
+            $.ajax({
+                headers : {
+                    'X-CSRF-TOKEN' : '{{ csrf_token() }}'
+                },
+
+                url : '{{ route('member.get_agent_accounts') }}',
+
+                type : 'POST',
+
+                data : {agent_id},
+
+                success : function(res)
+                {
+                    $('#agent_account_box').removeClass('d-none');
+
+                    $('#agent_account').html(res);
+                }
+            })
+        }
+        else
+        {
+            $('#agent_account_box').addClass('d-none');
+        }
+    }
+
+
+    function getOriginalAmount()
+    {
+        let payment_method = $('#method').val();
+
+        let country_id = $('#country').val();
+
+
+        if(payment_method == 'mobile_banking')
+        {
+            let amount = $('#amount').val();
+
+
+            if(amount > 0)
+            {
+
+                $.ajax({
+                    headers : {
+                        'X-CSRF-TOKEN' : '{{ csrf_token() }}'
+                    },
+
+                    url : '{{ route('member.get_original_amount') }}',
+
+                    type : "POST",
+
+                    data : {country_id},
+
+                    success : function(res)
+                    {
+                        let original_amount = amount * res.dollar_rate;
+                        $('.show_original_amount').html(original_amount+' '+res.currency_name);
+
+                        $('#original_amount').val(original_amount);
+                    }
+
+                })
+            }
+            else
+            {
+
+            }
+
         }
     }
 </script>

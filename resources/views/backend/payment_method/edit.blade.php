@@ -58,13 +58,13 @@
                                     <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
                             </div>
-                            <div class="col-lg-6 col-md-6 col-sm-12 mt-2">
+                            {{-- <div class="col-lg-6 col-md-6 col-sm-12 mt-2">
                                 <label for="dollar_rate">Dollar Rate</label> <span class="text-danger">*</span>
                                 <input type="number" name="dollar_rate" class="form-control  mt-1  @error('dollar_rate') is-invalid @enderror" id="dollar_rate" value="{{$params['data']->dollar_rate}}" autocomplete="off">
                                 @error('dollar_rate')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
-                            </div>
+                            </div> --}}
                             <div class="col-lg-12 col-md-12 col-sm-12 mt-2">
                                 <label for="number">@lang('payment_method.number')</label>
                                 <textarea class="form-control" name="number" id="number" placeholder="@lang('payment_method.number_place')">{!! $params['data']->number !!}</textarea>
