@@ -53,6 +53,7 @@
                                         <th>@lang('cash_in.member')</th>
                                         <th>Payment Method / Agent</th>
                                         <th>@lang('cash_in.amount')</th>
+                                        <th>Original Amount</th>
                                         <th>Vat</th>
                                         <th>@lang('cash_in.payment_account')</th>
                                         <th>@lang('common.status')</th>
@@ -86,6 +87,7 @@
                 {data: 'member', name: 'member'},
                 {data: 'method', name: 'method'},
                 {data: 'amount', name: 'amount'},
+                {data: 'original_amount', name: 'original_amount'},
                 {data: 'vat', name: 'vat'},
                 {data: 'payment_account', name: 'payment_account'},
                 {data: 'status', name: 'status'},

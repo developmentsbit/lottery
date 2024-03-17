@@ -68,4 +68,5 @@ Route::post('getCountry',[MemberDashboardController::class,'getCountry'])->name(
 Route::post('getAgentList',[MemberDashboardController::class,'getAgentList'])->name('member.get_agent_list');
 Route::post('getAgentAccounts',[MemberDashboardController::class,'getAgentAccounts'])->name('member.get_agent_accounts');
 Route::post('getOriginalAmount',[MemberDashboardController::class,'getOriginalAmount'])->name('member.get_original_amount');
+Route::post('getOriginalAmountCashout',[MemberDashboardController::class,'getOriginalAmountCashout'])->name('member.get_original_amount_cashout');
 Route::post('getpay_method',[MemberDashboardController::class,'getpay_method'])->name('member.getpay_method');

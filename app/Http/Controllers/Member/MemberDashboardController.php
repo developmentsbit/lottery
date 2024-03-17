@@ -328,10 +328,22 @@ class MemberDashboardController extends Controller
             'status' => '0',
         );
 
-        $method  = PaymentMethod::find($request->method);
+
 
         $amount = $request->amount;
-        $vatper = $method->vat;
+        if($request->method == 'mobile_banking')
+        {
+            $vatper = 8;
+        }
+        else
+        {
+            $method  = PaymentMethod::find($request->method);
+
+
+
+            $vatper = $method->vat;
+
+        }
         if($vatper > 0)
         {
             $vat = ($amount * $vatper) / 100;
@@ -350,6 +362,19 @@ class MemberDashboardController extends Controller
         $balance = Member::getWinBalance(Auth::guard('member')->user()->member_id);
 
         // return $amountWithVat;
+
+
+        if($request->method == 'mobile_banking')
+        {
+            $data['original_amount'] = $request->original_amount - $vat;
+            $data['country_id'] = $request->country;
+            $data['agent_id'] = $request->agent;
+            $data['agent_accounts'] = $request->agent_account;
+        }
+        else
+        {
+            $data['original_amount'] = $request->amount - $vat;
+        }
 
 
         if($amountWithVat > $balance)
@@ -775,6 +800,16 @@ class MemberDashboardController extends Controller
 
         $info['dollar_rate'] = $country->dollar_rate;
         $info['currency_name'] = $country->currency_name;
+
+        return response()->json($info);
+    }
+    public function getOriginalAmountCashout(Request $request)
+    {
+        $country = Country::find($request->country_id);
+
+        $info['dollar_rate'] = $country->dollar_rate;
+        $info['currency_name'] = $country->currency_name;
+
 
         return response()->json($info);
     }

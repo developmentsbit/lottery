@@ -21,7 +21,7 @@ Cash Out
     <div class="card">
         <div class="card-header">
             Cash Out History
-        <div class="card-body">
+        <div class="card-body table-responsive">
             <table class="table table-borderd table-responsive-sm" id="myTable">
                 <thead>
                     <tr>
@@ -29,6 +29,7 @@ Cash Out
                         <th>Payment Method/Agent</th>
                         <th>Payment Account</th>
                         <th>Amount</th>
+                        <th>Original Amount</th>
                         <th>Vat</th>
                         <th>Status</th>
                     </tr>
@@ -42,17 +43,28 @@ Cash Out
                         </td>
                         <td>
                             @if(isset($v->payment_type))
+
+                            @if($v->payment_type != 'mobile_banking')
                             @if(config('app.locale') == 'en')
                             {{ $v->method->method_name ?: $v->method->name_bn}}
                             @else
                             {{ $v->method->method_name_bn ?: $v->method->name}}
                             @endif
 
-                            @elseif(isset($v->agent_id))
+                            @else
+
                             @php
-                                $user = App\Models\User::find($v->agent_id);
+                                $country = App\Models\Country::find($v->country_id);
+                                $agent_account = App\Models\AgentAccounts::find($v->agent_accounts);
+                                $agent = App\Models\Agent::find($v->agent_id);
                             @endphp
-                            {{ $user->name }}
+
+                            Agent - {{ $agent->name }}<br>
+                            Account - {{ $agent_account->number.' '.$agent_account->account_name }}<br>
+                            Country - {{ $country->name }}
+
+                            @endif
+
                             @endif
                         </td>
                         <td>
@@ -61,6 +73,9 @@ Cash Out
 
                         <td>
                             ${{ $v->withdraw -  $v->vat}}
+                        </td>
+                        <td>
+                            {{ $v->original_amount}}
                         </td>
                         <td>
                             {{ $v->vat }}
