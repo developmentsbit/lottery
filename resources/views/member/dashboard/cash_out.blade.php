@@ -33,28 +33,53 @@ Cash Out
                 @csrf
                 <div class="row">
                     <div class="col-lg-4 col-md-6 col-12 mt-2">
-                        <label>Select Cash Out Method</label><span class="text-danger">*</span>
-                        <select class="form-control form-control-sm" name="method" id="method" onchange="getMethodInfo();getOriginalAmount()" required>
-                            <option value="">Select Cashout Method</option>
+                        <label>Select Method</label><span class="text-danger">*</span>
+                        <select class="form-control form-control-sm" name="method" id="method" onchange="getCountry()" required>
+                            <option value="">Select Method</option>
                             @if(isset($params['method']))
                             @foreach ($params['method'] as $m)
                             <option value="{{ $m->id }}">{{ $m->method_name }}</option>
                             @endforeach
                             @endif
+                            <option value="mobile_banking">Mobile Banking</option>
                         </select>
                         <div class="message mt-2">
 
                         </div>
                     </div>
+                    <div class="col-lg-4 col-md-6 col-12 mt-2 d-none" id="country_box">
+                        <label>Select Country</label><span class="text-danger">*</span>
+                        <select class="form-control form-control-sm" name="country" id="country" onchange="getAgentList();getOriginalAmountCashout();">
+                            <option value="">Select Country</option>
+
+                        </select>
+
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12 mt-2 d-none" id="agent_box">
+                        <label>Select Agent</label><span class="text-danger">*</span>
+                        <select class="form-control form-control-sm" name="agent" id="agent" onchange="getAgentAccounts()">
+                            <option value="">Select Agent</option>
+
+                        </select>
+
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12 mt-2 d-none" id="agent_account_box">
+                        <label>Select Agent Account</label><span class="text-danger">*</span>
+                        <select class="form-control form-control-sm" name="agent_account" id="agent_account" >
+                            <option value="">Select Account</option>
+
+                        </select>
+
+                    </div>
                     <div class="col-lg-4 col-md-6 col-12 mt-2">
                         <label>Amount</label><span class="text-danger">*</span>
                         <div class="input-group">
-                            <input type="number" class="form-control" name="amount" id="amount" placeholder="Enter Amount" required onchange="getOriginalAmount()" autocomplete="off">
+                            <input type="number" class="form-control" name="amount" id="amount" placeholder="Enter Amount" required onkeyup="getOriginalAmountCashout()" autocomplete="off">
                             <span class="input-group-append btn btn-dark" style="border-radius: 0px;">$</span>
                         </div>
-                        <div class="cashout_message p-2">
-
+                        <div class="show_original_amount p-2">
                         </div>
+                        <input type="hidden" id="original_amount" name="original_amount">
                     </div>
                     <div class="col-lg-4 col-md-6 col-12 mt-2">
                         <label>Your Payment Account</label>
@@ -72,64 +97,175 @@ Cash Out
     </div>
 </div>
 
-    <script>
-        function getMethodInfo()
+<script>
+    function getCountry()
+    {
+        let payment_method = $('#method').val();
+
+        if(payment_method == 'mobile_banking')
         {
-            let method = $('#method').val();
+            $.ajax({
+                headers : {
+                    'X-CSRF-TOKEN' : '{{ csrf_token() }}'
+                },
 
-            if(method != '')
-            {
-                $.ajax({
-                    headers : {
-                        'X-CSRF-TOKEN' : '{{ csrf_token() }}'
-                    },
+                url : '{{ route('member.get_country')  }}',
 
-                    url : '{{ route('member.get_method_vat') }}',
+                type : 'POST',
 
-                    type : 'GET',
+                success : function(res)
+                {
+                    $('.message').html('');
+                    $('#country_box').removeClass('d-none');
 
-                    data : {method},
-
-                    success : (res) => {
-                        $('.message').html(res);
-                    },
-                })
-            }
-            else
-            {
-                $('.message').html('');
-            }
+                    $('#country').html(res);
+                }
+            })
         }
-    </script>
-    <script>
-        function getOriginalAmount()
+        else
         {
-            let method = $('#method').val();
+
+            $.ajax({
+                headers : {
+                    'X-CSRF-TOKEN' : '{{ csrf_token() }}'
+                },
+
+                url : '{{ route('member.getpay_method') }}',
+
+                type : 'POST',
+
+                data : {payment_method},
+
+                success : function(res)
+                {
+                    $('.message').html(res);
+                }
+            });
+
+            $('#country_box').addClass('d-none');
+            $('#agent_box').addClass('d-none');
+            $('#agent_accounts_box').addClass('d-none');
+        }
+    }
+
+    function getAgentList()
+    {
+        let country_id = $('#country').val();
+
+        if(country != '')
+        {
+            $.ajax({
+                headers : {
+                    'X-CSRF-TOKEN' : '{{ csrf_token() }}'
+                },
+
+                url : '{{ route('member.get_agent_list') }}',
+
+                type : 'POST',
+
+                data : {country_id},
+
+                success : function(res)
+                {
+                    $('#agent_box').removeClass('d-none');
+
+                    $('#agent').html(res);
+                }
+            })
+        }
+        else
+        {
+            $('#agent_box').addClass('d-none');
+        }
+    }
+
+
+    function getAgentAccounts()
+    {
+        let agent_id = $('#agent').val();
+
+        if(country != '')
+        {
+            $.ajax({
+                headers : {
+                    'X-CSRF-TOKEN' : '{{ csrf_token() }}'
+                },
+
+                url : '{{ route('member.get_agent_accounts') }}',
+
+                type : 'POST',
+
+                data : {agent_id},
+
+                success : function(res)
+                {
+                    $('#agent_account_box').removeClass('d-none');
+
+                    $('#agent_account').html(res);
+                }
+            })
+        }
+        else
+        {
+            $('#agent_account_box').addClass('d-none');
+        }
+    }
+
+
+    function getOriginalAmountCashout()
+    {
+        let payment_method = $('#method').val();
+
+        let country_id = $('#country').val();
+
+
+        if(payment_method == 'mobile_banking')
+        {
             let amount = $('#amount').val();
 
-            if(method != '' && amount != '')
+
+            if(amount > 0)
             {
+
                 $.ajax({
                     headers : {
                         'X-CSRF-TOKEN' : '{{ csrf_token() }}'
                     },
 
-                    url : '{{ route('member.get_cash_out_amount') }}',
+                    url : '{{ route('member.get_original_amount_cashout') }}',
 
-                    type : 'GET',
+                    type : "POST",
 
-                    data : {method,amount},
+                    data : {country_id},
 
-                    success : (res) => {
-                        $('.cashout_message').html(res);
-                    },
+                    success : function(res)
+                    {
+                        // alert(res);
+
+                        let vatper = 8;
+
+
+                        let vatamount = amount * vatper / 100;
+
+
+                        let amountwithvat = parseInt(amount) - parseInt(vatamount);
+
+                        let original_amount = amountwithvat * res.dollar_rate;
+
+                        $('.show_original_amount').html(original_amount+' '+res.currency_name);
+
+                        $('#original_amount').val(original_amount);
+                    }
+
                 })
             }
             else
             {
-                $('.message').html('');
+
             }
+
         }
-    </script>
+    }
+</script>
 
 @endsection
