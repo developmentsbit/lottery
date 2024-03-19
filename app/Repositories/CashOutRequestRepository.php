@@ -40,28 +40,28 @@ class CashOutRequestRepository implements CashOutRequestInterface {
             })
             ->addColumn('method',function($row){
                 if($row->payment_type != 'mobile_banking')
+                {
+                    $method = PaymentMethod::where('id',$row->payment_type)->first();
+                    
+                    if(config('app.locale') == 'en')
                     {
-
-                        $method = PaymentMethod::find($row->payment_type)->first();
-                        if(config('app.locale') == 'en')
-                        {
-                            return $method->method_name ?: $method->method_name_bn;
-                        }
-                        else
-                        {
-                            return $method->method_name_bn ?: $method->method_name;
-                        }
+                        return $method->method_name ?: $method->method_name_bn;
                     }
                     else
                     {
-                        $country = Country::find($row->country_id);
-                        $agent_account = AgentAccounts::find($row->agent_accounts);
-                        $agent = Agent::find($row->agent_id);
-
-                        return 'Agent - '.$agent->name.'<br>
-                        Account - '.$agent_account->number.' '.$agent_account->account_name .'<br>
-                        Country - '. $country->name;
+                        return $method->method_name_bn ?: $method->method_name;
                     }
+                }
+                else
+                {
+                    $country = Country::find($row->country_id);
+                    $agent_account = AgentAccounts::find($row->agent_accounts);
+                    $agent = Agent::find($row->agent_id);
+
+                    return 'Agent - '.$agent->name.'<br>
+                    Account - '.$agent_account->number.' '.$agent_account->account_name .'<br>
+                    Country - '. $country->name;
+                }
             })
             ->addColumn('member',function($row){
                 $member = Member::where('member_id',$row->member_id)->first();
