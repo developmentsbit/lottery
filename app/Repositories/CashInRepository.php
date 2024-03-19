@@ -39,7 +39,7 @@ class CashInRepository implements CashInInterface {
                     if($row->payment_type != 'mobile_banking')
                     {
 
-                        $method = PaymentMethod::find($row->payment_type)->first();
+                        $method = PaymentMethod::where('id',$row->payment_type)->first();
                         if(config('app.locale') == 'en')
                         {
                             return $method->method_name ?: $method->method_name_bn;
