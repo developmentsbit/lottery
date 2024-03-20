@@ -36,20 +36,22 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                        <table id="datatables-reponsive" class="table table-striped" style="width:100%">
-                            <thead>
-                                <tr>
-                                    <th>@lang('common.sl')</th>
-                                    <th>Name</th>
-                                    <th>Dollar Rate</th>
-                                    <th>Currency Name</th>
-                                    <th>@lang('common.actions')</th>
-                                </tr>
-                            </thead>
-                            <tbody>
+                        <div class="table-responsive">
+                            <table id="datatables-reponsive" class="table table-striped" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>@lang('common.sl')</th>
+                                        <th>Name</th>
+                                        <th>Dollar Rate</th>
+                                        <th>Currency Name</th>
+                                        <th>@lang('common.actions')</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
 
-                            </tbody>
-                        </table>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
