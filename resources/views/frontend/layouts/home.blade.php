@@ -177,8 +177,8 @@ $youlive = youtubelive::get();
                                             <div>
 
                                                 <!-- Show No. of days -->
-                                                <span class="days" id="day"></span>
-                                                <div class="smalltext">Days</div>
+                                                <span style="color: #fff;" class="days" id="day"></span>
+                                                <div style="color: #fff;" class="smalltext">Days</div>
                                                 
                                             </div>
                                             <div>
