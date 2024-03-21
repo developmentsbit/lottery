@@ -20,20 +20,6 @@ $youlive = youtubelive::get();
 @endphp
 
 <style>
-    body {
-        text-align: center;
-        background: #00ecb9;
-        font-family: sans-serif;
-        font-weight: 100;
-    }
-
-    /* Styling for heading */
-    h1 {
-        color: #396;
-        font-weight: 100;
-        font-size: 40px;
-        margin: 40px 0px 20px;
-    }
     #clockdiv {
         font-family: sans-serif;
         color: #fff;
