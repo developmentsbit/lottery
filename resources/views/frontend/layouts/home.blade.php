@@ -171,10 +171,11 @@ $youlive = youtubelive::get();
                                     </ul>
                                 </div>
                                 <div class="result-single pt-20 remain-time">
-                                    <h5>Next Draw Date:
+                                    {{--<h5>Next Draw Date:
                                         {{ ($params['result']->next_draw_date) }}
-                                    </h5>
+                                    </h5>--}}
                                     <br>
+                                    <h5>Next Draw Date :</h5>
                                         <div id="clockdiv">
                                             <div>
 
