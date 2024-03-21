@@ -42,7 +42,7 @@ class CashOutRequestRepository implements CashOutRequestInterface {
                 if($row->payment_type != 'mobile_banking')
                 {
                     $method = PaymentMethod::where('id',$row->payment_type)->first();
-                    
+
                     if(config('app.locale') == 'en')
                     {
                         return $method->method_name ?: $method->method_name_bn;
@@ -59,7 +59,7 @@ class CashOutRequestRepository implements CashOutRequestInterface {
                     $agent = Agent::find($row->agent_id);
 
                     return 'Agent - '.$agent->name.'<br>
-                    Account - '.$agent_account->number.' '.$agent_account->account_name .'<br>
+                    Account - '.$agent_account->account_name .'<br>
                     Country - '. $country->name;
                 }
             })
@@ -179,7 +179,7 @@ class CashOutRequestRepository implements CashOutRequestInterface {
                     $agent = Agent::find($row->agent_id);
 
                     return 'Agent - '.$agent->name.'<br>
-                    Account - '.$agent_account->number.' '.$agent_account->account_name .'<br>
+                    Account - '.$agent_account->account_name .'<br>
                     Country - '. $country->name;
                 }
             })

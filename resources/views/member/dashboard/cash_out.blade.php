@@ -184,6 +184,8 @@ Cash Out
     {
         let agent_id = $('#agent').val();
 
+        let type = 'cashout';
+
         if(country != '')
         {
             $.ajax({
@@ -195,7 +197,7 @@ Cash Out
 
                 type : 'POST',
 
-                data : {agent_id},
+                data : {agent_id,type},
 
                 success : function(res)
                 {
@@ -250,7 +252,9 @@ Cash Out
 
                         let amountwithvat = parseInt(amount) - parseInt(vatamount);
 
-                        let original_amount = amountwithvat * res.dollar_rate;
+                        let result = amountwithvat * res.dollar_rate;
+
+                        let original_amount = Number(result).toFixed(2);
 
                         $('.show_original_amount').html(original_amount+' '+res.currency_name);
 
