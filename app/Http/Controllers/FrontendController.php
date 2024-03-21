@@ -50,8 +50,13 @@ class FrontendController extends Controller
 
     public function lottery_result()
     {
-        $result['result'] = Result::where('status',1)->first();
-        return $this->view($this->path,'lottery_result',$result);
+        $params['result'] = Result::where('status',1)->first();
+
+        $explodeDate = explode('-',$params['result']);
+
+        $params['draw_date'] = Date::DbToOriginalforTimer('-',$params['result']->next_draw_date);
+
+        return $this->view($this->path,'lottery_result',$params);
     }
 
     public function awards_prize()
