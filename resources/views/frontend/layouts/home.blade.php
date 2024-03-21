@@ -43,21 +43,24 @@ $youlive = youtubelive::get();
         font-size: 30px;
     }
     #clockdiv > div {
-        padding: 10px;
-        border-radius: 3px;
-        background: #00bf96;
+        /* padding: 10px; */
+        /* border-radius: 3px; */
+        /* background: #00bf96; */
         display: inline-block;
     }
     #clockdiv div > span {
-        padding: 15px;
-        border-radius: 3px;
-        background: #00816a;
+        padding: 9px;
+        border-radius: 50%;
+        background: #0093D3;
         display: inline-block;
+        font-size: 18px;
+        box-shadow: 3px 0px 3px 3px #0168fc;
     }
 
     /* Style for visible text */
     .smalltext {
-        padding-top: 5px;
+        padding-top: 8px;
+        padding-left: 3px;
         font-size: 16px;
     }
 </style>
@@ -181,14 +184,16 @@ $youlive = youtubelive::get();
                                 </div>
                                 <div class="result-single pt-20 remain-time">
                                     <h5>Next Draw Date:
-                                        {{-- {{ ($params['result']->next_draw_date) }} --}}
+                                        {{ ($params['result']->next_draw_date) }}
                                     </h5>
+                                    <br>
                                         <div id="clockdiv">
                                             <div>
 
                                                 <!-- Show No. of days -->
                                                 <span class="days" id="day"></span>
                                                 <div class="smalltext">Days</div>
+                                                
                                             </div>
                                             <div>
 
@@ -201,12 +206,14 @@ $youlive = youtubelive::get();
                                                 <!-- Show no. of minutes -->
                                                 <span class="minutes" id="minute"></span>
                                                 <div class="smalltext">Minutes</div>
+                                                
                                             </div>
                                             <div>
 
                                                 <!-- Show seconds -->
                                                 <span class="seconds" id="second"></span>
                                                 <div class="smalltext">Seconds</div>
+                                               
                                             </div>
                                         </div>
                                         <p id="demo"></p>
