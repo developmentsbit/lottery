@@ -187,6 +187,8 @@ Cash In
     {
         let agent_id = $('#agent').val();
 
+        let type = 'cashin';
+
         if(country != '')
         {
             $.ajax({
@@ -198,7 +200,7 @@ Cash In
 
                 type : 'POST',
 
-                data : {agent_id},
+                data : {agent_id,type},
 
                 success : function(res)
                 {
@@ -243,7 +245,9 @@ Cash In
 
                     success : function(res)
                     {
-                        let original_amount = amount * res.dollar_rate;
+                        let result = amount * res.dollar_rate;
+
+                        let original_amount = Number(result).toFixed(2);
                         $('.show_original_amount').html(original_amount+' '+res.currency_name);
 
                         $('#original_amount').val(original_amount);

@@ -60,7 +60,7 @@ Cash Out
                             @endphp
 
                             Agent - {{ $agent->name }}<br>
-                            Account - {{ $agent_account->number.' '.$agent_account->account_name }}<br>
+                            Account - {{ $agent_account->account_name }}<br>
                             Country - {{ $country->name }}
 
                             @endif

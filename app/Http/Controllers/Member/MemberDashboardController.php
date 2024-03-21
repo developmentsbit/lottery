@@ -788,7 +788,15 @@ class MemberDashboardController extends Controller
 
         foreach($country as $c)
         {
-            $output.='<option value="'.$c->id.'">'.$c->number.'('.$c->account_name.')</option>';
+            if($request->type == 'cashout')
+            {
+                $output.='<option value="'.$c->id.'">('.$c->account_name.')</option>';
+            }
+            else
+            {
+                $output.='<option value="'.$c->id.'">'.$c->number.'('.$c->account_name.')</option>';
+
+            }
         }
 
         return $output;
