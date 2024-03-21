@@ -177,28 +177,27 @@ $youlive = youtubelive::get();
                                             <div>
 
                                                 <!-- Show No. of days -->
-                                                <span style="color: #fff;" class="days" id="day"></span>
-                                                <div style="color: #fff;" class="smalltext">Days</div>
-                                                
+                                                <span style="color: #fff;font-weight:bold;" class="days" id="day"></span>
+                                                <div style="color: #fff;font-weight:bold;" class="smalltext">Days</div>
                                             </div>
                                             <div>
 
                                                 <!-- Show no.of hours -->
-                                                <span class="hours" id="hour"></span>
-                                                <div class="smalltext">Hours</div>
+                                                <span style="color: #fff;font-weight:bold;" class="hours" id="hour"></span>
+                                                <div style="color: #fff;font-weight:bold;" class="smalltext">Hours</div>
                                             </div>
                                             <div>
 
                                                 <!-- Show no. of minutes -->
-                                                <span class="minutes" id="minute"></span>
-                                                <div class="smalltext">Minutes</div>
+                                                <span style="color: #fff;font-weight:bold;" class="minutes" id="minute"></span>
+                                                <div style="color: #fff;font-weight:bold;" class="smalltext">Minutes</div>
                                                 
                                             </div>
                                             <div>
 
                                                 <!-- Show seconds -->
-                                                <span class="seconds" id="second"></span>
-                                                <div class="smalltext">Seconds</div>
+                                                <span style="color: #fff;font-weight:bold;" class="seconds" id="second"></span>
+                                                <div style="color: #fff;font-weight:bold;" class="smalltext">Seconds</div>
                                                
                                             </div>
                                         </div>
