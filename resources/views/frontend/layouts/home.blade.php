@@ -19,6 +19,49 @@ $youlive = youtubelive::get();
 
 @endphp
 
+<style>
+    body {
+        text-align: center;
+        background: #00ecb9;
+        font-family: sans-serif;
+        font-weight: 100;
+    }
+
+    /* Styling for heading */
+    h1 {
+        color: #396;
+        font-weight: 100;
+        font-size: 40px;
+        margin: 40px 0px 20px;
+    }
+    #clockdiv {
+        font-family: sans-serif;
+        color: #fff;
+        display: inline-block;
+        font-weight: 100;
+        text-align: center;
+        font-size: 30px;
+    }
+    #clockdiv > div {
+        padding: 10px;
+        border-radius: 3px;
+        background: #00bf96;
+        display: inline-block;
+    }
+    #clockdiv div > span {
+        padding: 15px;
+        border-radius: 3px;
+        background: #00816a;
+        display: inline-block;
+    }
+
+    /* Style for visible text */
+    .smalltext {
+        padding-top: 5px;
+        font-size: 16px;
+    }
+</style>
+
 <div class="container-fluid">
     <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
@@ -138,8 +181,35 @@ $youlive = youtubelive::get();
                                 </div>
                                 <div class="result-single pt-20 remain-time">
                                     <h5>Next Draw Date:
-                                        {{ ($params['result']->next_draw_date) }}
+                                        {{-- {{ ($params['result']->next_draw_date) }} --}}
                                     </h5>
+                                        <div id="clockdiv">
+                                            <div>
+
+                                                <!-- Show No. of days -->
+                                                <span class="days" id="day"></span>
+                                                <div class="smalltext">Days</div>
+                                            </div>
+                                            <div>
+
+                                                <!-- Show no.of hours -->
+                                                <span class="hours" id="hour"></span>
+                                                <div class="smalltext">Hours</div>
+                                            </div>
+                                            <div>
+
+                                                <!-- Show no. of minutes -->
+                                                <span class="minutes" id="minute"></span>
+                                                <div class="smalltext">Minutes</div>
+                                            </div>
+                                            <div>
+
+                                                <!-- Show seconds -->
+                                                <span class="seconds" id="second"></span>
+                                                <div class="smalltext">Seconds</div>
+                                            </div>
+                                        </div>
+                                        <p id="demo"></p>
                                     {{-- <ul>
                                         <li id="day">10</li><span> D</span>
                                         <li id="hour">16</li><span> H</span>
@@ -326,54 +396,68 @@ $youlive = youtubelive::get();
 <!-- thai lottery section about -->
 
 @push('footer_script')
-<!-- timer js -->
-<script src="{{ asset('Frontend/timer.js') }}"></script>
-<!-- timer js -->
-
+<!-- Adding JavaScript code -->
 <script>
-(function () {
-  const second = 1000,
-        minute = second * 60,
-        hour = minute * 60,
-        day = hour * 24;
 
-  //I'm adding this section so I don't have to keep updating this pen every year :-)
-  //remove this if you don't need it
-  let today = new Date(),
-      dd = String(today.getDate()).padStart(2, "0"),
-      mm = String(today.getMonth() + 1).padStart(2, "0"),
-      yyyy = today.getFullYear(),
-      nextYear = yyyy + 1,
-      dayMonth = "03/01/",
-      birthday = dayMonth + yyyy;
+    // Getting formated date from date string
+    let deadline = new Date(
+        "{{ $params['draw_date'] }} 00:00:00"
+    ).getTime();
 
-  today = mm + "/" + dd + "/" + yyyy;
-  if (today > birthday) {
-    birthday = dayMonth + nextYear;
-  }
-  //end
+    // Calling defined function at certain interval
+    let x = setInterval(function () {
 
-  const countDown = new Date(birthday).getTime(),
-      x = setInterval(function() {
+        // Getting current date and time in required format
+        let now = new Date().getTime();
 
-        const now = new Date().getTime(),
-              distance = countDown - now;
+        // Calculating difference
+        let t = deadline - now;
 
-        document.getElementById("day").innerText = Math.floor(distance / (day)),
-          document.getElementById("hour").innerText = Math.floor((distance % (day)) / (hour)),
-          document.getElementById("minute").innerText = Math.floor((distance % (hour)) / (minute)),
-          document.getElementById("second").innerText = Math.floor((distance % (minute)) / second);
+        // Getting values of days,hours,minutes, seconds
+        let days = Math.floor(
+            t / (1000 * 60 * 60 * 24)
+        );
+        let hours = Math.floor(
+            (t % (1000 * 60 * 60 * 24)) /
+                (1000 * 60 * 60)
+        );
+        let minutes = Math.floor(
+            (t % (1000 * 60 * 60)) / (1000 * 60)
+        );
+        let seconds = Math.floor(
+            (t % (1000 * 60)) / 1000
+        );
 
-        //do something later when date is reached
-        if (distance < 0) {
-          document.getElementById("headline").innerText = "It's my birthday!";
-          document.getElementById("countdown").style.display = "none";
-          document.getElementById("content").style.display = "block";
-          clearInterval(x);
+        // Show the output time
+        document.getElementById("day")
+                .innerHTML = days;
+        document.getElementById("hour")
+                .innerHTML = hours;
+        document.getElementById("minute")
+                .innerHTML = minutes;
+        document.getElementById("second")
+                .innerHTML = seconds;
+
+        // Show overtime output
+        if (t < 0) {
+            clearInterval(x);
+            document.getElementById(
+                "demo"
+            ).innerHTML = "TIME UP";
+            document.getElementById(
+                "day"
+            ).innerHTML = "0";
+            document.getElementById(
+                "hour"
+            ).innerHTML = "0";
+            document.getElementById(
+                "minute"
+            ).innerHTML = "0";
+            document.getElementById(
+                "second"
+            ).innerHTML = "0";
         }
-        //seconds
-      }, 0)
-  }());
+    }, 1000);
 </script>
 @endpush
 
