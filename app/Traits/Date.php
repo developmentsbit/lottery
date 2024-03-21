@@ -75,6 +75,66 @@ trait Date
 
         return $result;
     }
+    public static function DbToOriginalforTimer($sign,$data)
+    {
+        $explode = explode($sign,$data);
+
+        $month = '';
+
+        if($explode[1] == '1')
+        {
+            $month = __('common.jan');
+        }
+        elseif($explode[1] == '2')
+        {
+            $month = __('common.feb');
+        }
+        elseif($explode[1] == '3')
+        {
+            $month = __('common.mar');
+        }
+        elseif($explode[1] == '4')
+        {
+            $month = __('common.apr');
+        }
+        elseif($explode[1] == '5')
+        {
+            $month = __('common.may');
+        }
+        elseif($explode[1] == '6')
+        {
+            $month = __('common.jun');
+        }
+        elseif($explode[1] == '7')
+        {
+            $month = __('common.july');
+        }
+        elseif($explode[1] == '8')
+        {
+            $month = __('common.aug');
+        }
+        elseif($explode[1] == '9')
+        {
+            $month = __('common.sep');
+        }
+        elseif($explode[1] == '10')
+        {
+            $month = __('common.oct');
+        }
+        elseif($explode[1] == '11')
+        {
+            $month = __('common.nov');
+        }
+        elseif($explode[1] == '12')
+        {
+            $month = __('common.dec');
+        }
+
+
+        $result = $month.' '. $explode[2].', '. $explode[0];
+
+        return $result;
+    }
 
     public static function twelveHrTime(String $data)
     {

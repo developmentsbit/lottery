@@ -8,10 +8,11 @@ use App\Models\GameLedger;
 use App\Models\GameEntry;
 use App\Models\Member;
 use App\Models\Result;
+use App\Traits\Date;
 
 class FrontendController extends Controller
 {
-    use ViewDirective;
+    use ViewDirective,Date;
     protected $path;
 
     public function __construct()
@@ -22,9 +23,16 @@ class FrontendController extends Controller
     public function index()
     {
         $params['result'] = Result::where('status',1)->first();
+
+        $explodeDate = explode('-',$params['result']);
+
+        $params['draw_date'] = Date::DbToOriginalforTimer('-',$params['result']->next_draw_date);
+
+        // return $params['draw_date'];
+
         return $this->view('frontend.layouts','home',$params);
     }
-    
+
     public function about_us()
     {
         return $this->view($this->path,'about_us');
