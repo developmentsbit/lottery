@@ -69,7 +69,7 @@ Cash In
                     <div class="col-lg-4 col-md-6 col-12 mt-2">
                         <label>Amount</label><span class="text-danger">*</span>
                         <div class="input-group">
-                            <input type="number" class="form-control" name="amount" id="amount" placeholder="Enter Amount" required onkeyup="return getOriginalAmount()">
+                            <input type="number" class="form-control" name="amount" id="amount" placeholder="Enter Amount" required onkeyup="return getOriginalAmount()" autocomplete="off">
                             <span class="input-group-append btn btn-dark" style="border-radius: 0px;">$</span>
                         </div>
                         <div class="show_original_amount p-2">
@@ -80,11 +80,11 @@ Cash In
                     </div>
                     <div class="col-lg-4 col-md-6 col-12 mt-2">
                         <label>Payment Account</label>
-                        <input type="text" class="form-control" name="payment_account" id="payment_account" placeholder="Payment Account Number" >
+                        <input type="text" class="form-control" name="payment_account" id="payment_account" placeholder="Payment Account Number" autocomplete="off">
                     </div>
                     <div class="col-lg-4 col-md-6 col-12 mt-2">
                         <label>TRX ID</label>
-                        <input type="text" class="form-control" name="transaction_id" id="transaction_id" placeholder="Transaction ID" >
+                        <input type="text" class="form-control" name="transaction_id" id="transaction_id" placeholder="Transaction ID" autocomplete="off">
                     </div>
                     <div class="col-lg-4 col-md-6 col-12 mt-2">
                         <label>Document</label>
