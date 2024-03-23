@@ -22,7 +22,7 @@ Cash Out
     <div class="card-body" style="background: #e7dec6;color:red;border: 16px solid #a0ad8b;padding: 16px;">
         <p><h5><i class="fa fa-window-restore" aria-hidden="true"></i> Minimum Per Withdrawal Amount is $100.00 Maximum Per Withdrawal Amount is $1000.00</h5></p>
         <p><h5><i class="fa fa-window-restore" aria-hidden="true"></i> Withdrawal Payment 6 working days.(Only Mobile Banking Withdrawal time 2 working Day.)</h5></p>
-        <p><h5><i class="fa fa-window-restore" aria-hidden="true"></i> Skrill 8%, Visa 8%, Master Card 7%, Perfect Money 10% & Mobile Banking 8% Vat With Deduction.</h5></p>
+        <p><h5><i class="fa fa-window-restore" aria-hidden="true"></i> Skrill 8%, Visa 8%, Master Card 7%, Perfect Money 10% & Mobile Banking 8% Vat Will Deduction.</h5></p>
     </div>
    </div>
     <div class="card">
