@@ -406,7 +406,7 @@ class MemberDashboardController extends Controller
 
     public function referral_history()
     {
-        $param['data'] = MemberModel::where('referral_no',Auth::guard('member')->user()->memebr_id)->get();
+        $param['data'] = MemberModel::where('referral_no',Auth::guard('member')->user()->member_id)->get();
         return $this->view($this->path,'referral_history',$param);
     }
 
