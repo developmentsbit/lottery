@@ -7,6 +7,10 @@ interface UserInterface extends BaseInterface{
 
     public function reset_pass();
 
+    public function change_pass();
+
+    public function submit_change_pass($request);
+
     public function send_otp($request);
 
     public function check_otp($email);
