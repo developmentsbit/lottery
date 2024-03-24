@@ -508,7 +508,7 @@ class UserRepository implements UserInterface{
 
     public function submit_change_pass($request)
     {
-        // return $request->all();  
+        // return $request->all();
         if($request->password != $request->confirm_password)
         {
             toastr()->error('Password Does Not Matched','Error');

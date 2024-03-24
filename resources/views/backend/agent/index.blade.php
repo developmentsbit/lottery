@@ -55,6 +55,7 @@
                                         <th>Agent ID</th>
                                         <th>Name</th>
                                         <th>Phone</th>
+                                        <th>Image</th>
                                         <th>@lang('common.actions')</th>
                                     </tr>
                                 </thead>
@@ -85,6 +86,7 @@
                 {data: 'agent_id', name: 'agent_id'},
                 {data: 'name', name: 'name'},
                 {data: 'phone', name: 'phone'},
+                {data: 'image', name: 'image'},
                 {data: 'action', name: 'action', orderable: false, searchable: false},
             ]
         });

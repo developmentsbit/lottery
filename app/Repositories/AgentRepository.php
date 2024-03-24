@@ -30,6 +30,11 @@ class AgentRepository implements AgentInterface {
                 $country = Country::find($row->country_id);
                 return $country->name;
             })
+            ->addColumn('image',function($row){
+                // $path = base_path().'/AgentImage/'.$row->image;
+
+                return '<img src="'.asset('AgentImage/'.$row->image).'" class="img-fluid" style="height:60px;width:60px;border-radius:100%;">';
+            })
             ->addColumn('action', function($row){
                     if(Auth::user()->can('Agent edit'))
                     {
@@ -65,7 +70,7 @@ class AgentRepository implements AgentInterface {
 
                     return $btn;
             })
-            ->rawColumns(['action','country','sl'])
+            ->rawColumns(['action','country','sl','image'])
             ->make(true);
 
         }
