@@ -75,6 +75,8 @@ Route::post('changeLocale',[LanguageController::class,'changeLocale']);
 
 // use change password
 Route::get('reset_pass',[UserController::class,'reset_pass'])->name('user.reset_pass');
+Route::get('change_pass',[UserController::class,'change_pass'])->name('user.change_pass');
+Route::post('submit_change_pass',[UserController::class,'submit_change_pass'])->name('user.submit_change_pass');
 Route::post('submit_email',[UserController::class,'submit_email'])->name('user.submit_email');
 Route::get('check_otp/{email}',[UserController::class,'check_otp'])->name('user.check_otp');
 Route::get('checkingOtp/{otp}/{email}',[UserController::class,'checkingOtp']);

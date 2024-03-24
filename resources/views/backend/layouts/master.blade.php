@@ -322,7 +322,8 @@
 							</a>
 							<div class="dropdown-menu dropdown-menu-end">
 								<a class='dropdown-item' href='{{route('user.show',Auth::user()->id)}}'><i class="align-middle me-1" data-feather="user"></i> @lang('user.profile')</a>
-								<a class="dropdown-item" href="{{route('user.reset_pass')}}"><i class="fa fa-key"></i> @lang('user.change_pass')</a>
+								{{-- <a class="dropdown-item" href="{{route('user.reset_pass')}}"><i class="fa fa-key"></i> @lang('user.change_pass')</a> --}}
+                                <a class="dropdown-item" href="{{route('user.change_pass')}}"><i class="fa fa-key"></i> @lang('user.change_pass')</a>
 								<div class="dropdown-divider"></div>
 								<form method="POST" action="{{ route('logout') }}">
                                     @csrf

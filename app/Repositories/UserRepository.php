@@ -501,6 +501,29 @@ class UserRepository implements UserInterface{
     {
         return view($this->path.'.reset_pass');
     }
+    public function change_pass()
+    {
+        return view($this->path.'.change_pass');
+    }
+
+    public function submit_change_pass($request)
+    {
+        // return $request->all();  
+        if($request->password != $request->confirm_password)
+        {
+            toastr()->error('Password Does Not Matched','Error');
+            return redirect()->back();
+        }
+
+        User::ChangePassword($request->email,$request->password);
+
+        Auth::logout();
+
+        toastr()->success('Passwrod Changed','Succcess');
+        return redirect('/login');
+
+
+    }
 
     public function send_otp($request)
     {

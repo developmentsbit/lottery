@@ -127,6 +127,14 @@ class UserController extends Controller
     {
         return $this->interface->reset_pass();
     }
+    public function change_pass()
+    {
+        return $this->interface->change_pass();
+    }
+    public function submit_change_pass(Request $request)
+    {
+        return $this->interface->submit_change_pass($request);
+    }
 
     public function submit_email(Request $request)
     {
