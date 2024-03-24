@@ -34,7 +34,13 @@ class AgentAccountsController extends Controller
             })
             ->addColumn('agent',function($row){
                 $agent = Agent::find($row->agent_id);
-                return $agent->name;
+                if(isset($agent))
+                {
+                    return $agent->name;
+                }
+                else{
+                    return '';
+                }
             })
             ->addColumn('action', function($row){
                 if(Auth::user()->can('Agent Accounts edit'))
