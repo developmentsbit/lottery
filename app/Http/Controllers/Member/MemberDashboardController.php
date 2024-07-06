@@ -305,7 +305,7 @@ class MemberDashboardController extends Controller
 
     public function lottery_history()
     {
-        $param['data'] = GameLedger::withTrashed()->where('member_id',Auth::guard('member')->user()->member_id)->orderBy('date','DESC')->get();
+        $param['data'] = GameLedger::withTrashed()->where('game_ledgers.member_id',Auth::guard('member')->user()->member_id)->orderBy('date','DESC')->get();
         return $this->view($this->path,'lottery_history',$param);
     }
 
