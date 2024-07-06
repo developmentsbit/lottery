@@ -305,7 +305,13 @@ class MemberDashboardController extends Controller
 
     public function lottery_history()
     {
-        $param['data'] = GameLedger::withTrashed()->where('member_id',Auth::guard('member')->user()->member_id)->orderBy('date','DESC')->get();
+        $param['data'] = GameLedger::withTrashed()
+        ->leftjoin('game_setups','game_setups.id','game_ledgers.game_id')
+        ->where('game_ledgers.member_id',Auth::guard('member')->user()->member_id)
+        ->where('game_setups.status',1)
+        ->orderBy('date','DESC')
+        ->select('game_ledgers.*')
+        ->get();
         return $this->view($this->path,'lottery_history',$param);
     }
 
