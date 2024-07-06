@@ -67,8 +67,8 @@ td i{
                     <tr>
                         <td>2</td>
                         <td>Super Agent</td>
-                        <td>Mohammad Faruque</td>
-                        <td>Pakistan</td>
+                        <td>Jirawat Sutivani chsak</td>
+                        <td>Thailand</td>
                         <td><i class="fa-brands fa-facebook"></i></td>
                         <td>
                             <span class="btn btn-success btn-sm">Verified</span>
@@ -80,8 +80,8 @@ td i{
                     <tr>
                         <td>3</td>
                         <td>Super Agent</td>
-                        <td>Md Alamin</td>
-                        <td>Bangladesh</td>
+                        <td>Sultan</td>
+                        <td>Pakistan</td>
                         <td><i class="fa-brands fa-facebook"></i></td>
                         <td>
                             <span class="btn btn-success btn-sm">Verified</span>
@@ -93,8 +93,8 @@ td i{
                     <tr>
                         <td>4</td>
                         <td>Super Agent</td>
-                        <td>Kamrul Hasan</td>
-                        <td>Bangladesh</td>
+                        <td>Anower Hossain</td>
+                        <td>Saudi Arab</td>
                         <td><i class="fa-brands fa-facebook"></i></td>
                         <td>
                             <span class="btn btn-success btn-sm">Verified</span>
@@ -106,8 +106,8 @@ td i{
                     <tr>
                         <td>5</td>
                         <td>Super Agent</td>
-                        <td>Samar Kumar Lal</td>
-                        <td>India (Kalkata)</td>
+                        <td>Muman</td>
+                        <td>Kuwait</td>
                         <td><i class="fa-brands fa-facebook"></i></td>
                         <td>
                             <span class="btn btn-success btn-sm">Verified</span>
@@ -119,11 +119,11 @@ td i{
                     <tr>
                         <td>6</td>
                         <td>Super Agent</td>
-                        <td>Uchker Wai</td>
-                        <td>Burma</td>
+                        <td>Abu Tahir</td>
+                        <td>India</td>
                         <td><i class="fa-brands fa-facebook"></i></td>
                         <td>
-                            <span class="btn btn-danger btn-sm">Unverified</span>
+                            <span class="btn btn-success btn-sm">Verified</span>
                         </td>
                         <td>
                             <a  class="btn btn-info border-0 edit text-light" data-toggle="modal" data-target="#exampleModalCenters" href="#">@lang('frontend.complain')</a>
@@ -136,7 +136,7 @@ td i{
                         <td>Saudi Arab</td>
                         <td><i class="fa-brands fa-facebook"></i></td>
                         <td>
-                            <span class="btn btn-danger btn-sm">Unverified</span>
+                            <span class="btn btn-success btn-sm">Verified</span>
                         </td>
                         <td>
                             <a  class="btn btn-info border-0 edit text-light" data-toggle="modal" data-target="#exampleModalCenters" href="#">@lang('frontend.complain')</a>
@@ -149,7 +149,7 @@ td i{
                         <td>Kuwit</td>
                         <td><i class="fa-brands fa-facebook"></i></td>
                         <td>
-                            <span class="btn btn-danger btn-sm">Unverified</span>
+                            <span class="btn btn-success btn-sm">Verified</span>
                         </td>
                         <td>
                             <a  class="btn btn-info border-0 edit text-light" data-toggle="modal" data-target="#exampleModalCenters" href="#">@lang('frontend.complain')</a>
