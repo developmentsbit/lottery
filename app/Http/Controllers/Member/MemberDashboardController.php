@@ -307,7 +307,7 @@ class MemberDashboardController extends Controller
     {
 
         $param['data'] = GameLedger::withTrashed()
-        ->join('game_setups','game_setups.id','game_ledgers.game_id')
+        ->join('game_setups','game_setups.id','=','game_ledgers.game_id')
         ->where('game_ledgers.member_id',Auth::guard('member')->user()->member_id)
         ->orderBy('date','DESC')
         ->select('game_ledgers.*')
