@@ -310,6 +310,7 @@ class MemberDashboardController extends Controller
         ->join('game_setups','game_setups.id','=','game_ledgers.game_id')
         ->where('game_ledgers.member_id',Auth::guard('member')->user()->member_id)
         ->orderBy('date','DESC')
+        ->where('game_setups.deleted_at','=',NULL)
         ->select('game_ledgers.*')
         ->get();
 
